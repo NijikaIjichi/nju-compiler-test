@@ -1,0 +1,36 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        StructSpecifier (1)
+          STRUCT
+          Tag (1)
+            ID: wrHpwkQiTdEPZSMr_VP
+      FunDec (1)
+        ID: Ey6Xq7FijyEAEga7tl
+        LP
+        VarList (1)
+          ParamDec (1)
+            Specifier (1)
+              StructSpecifier (1)
+                STRUCT
+                OptTag (2)
+                LC
+                DefList (3)
+                RC
+            VarDec (3)
+              ID: aXuuv_ffQ
+          COMMA
+          VarList (3)
+            ParamDec (3)
+              Specifier (3)
+                TYPE: int
+              VarDec (3)
+                ID: Y47Oyz2dS4m5yriNMEp
+        RP
+      CompSt (3)
+        LC
+        DefList (4)
+        StmtList (4)
+        RC
+    ExtDefList (5)

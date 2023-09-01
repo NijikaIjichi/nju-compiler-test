@@ -1,0 +1,94 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      ExtDecList (1)
+        VarDec (1)
+          VarDec (1)
+            VarDec (1)
+              VarDec (1)
+                VarDec (1)
+                  ID: EonNOQq
+                LB
+                INT: 1076753961
+                RB
+              LB
+              INT: 1358789777
+              RB
+            LB
+            INT: 73882107
+            RB
+          LB
+          INT: 1621888119
+          RB
+        COMMA
+        ExtDecList (2)
+          VarDec (2)
+            VarDec (2)
+              VarDec (2)
+                ID: HlXABkFQQtl
+              LB
+              INT: 253495491
+              RB
+            LB
+            INT: 1594800395
+            RB
+      SEMI
+    ExtDefList (6)
+      ExtDef (6)
+        Specifier (6)
+          TYPE: float
+        FunDec (6)
+          ID: pF_IVzQabcc3
+          LP
+          VarList (6)
+            ParamDec (6)
+              Specifier (6)
+                StructSpecifier (6)
+                  STRUCT
+                  OptTag (6)
+                  LC
+                  DefList (7)
+                  RC
+              VarDec (7)
+                VarDec (7)
+                  VarDec (7)
+                    ID: W8ZI9wmQWx
+                  LB
+                  INT: 1657209753
+                  RB
+                LB
+                INT: 4010508
+                RB
+          RP
+        CompSt (7)
+          LC
+          DefList (8)
+          StmtList (8)
+          RC
+      ExtDefList (9)
+        ExtDef (9)
+          Specifier (9)
+            TYPE: float
+          ExtDecList (9)
+            VarDec (9)
+              ID: khHdub
+          SEMI
+        ExtDefList (11)
+          ExtDef (11)
+            Specifier (11)
+              TYPE: int
+            ExtDecList (11)
+              VarDec (11)
+                VarDec (11)
+                  ID: mwFWaw
+                LB
+                INT: 1227770550
+                RB
+              COMMA
+              ExtDecList (11)
+                VarDec (11)
+                  ID: fcgp
+            SEMI
+          ExtDefList (14)

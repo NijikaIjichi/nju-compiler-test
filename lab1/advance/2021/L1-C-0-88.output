@@ -1,0 +1,24 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        StructSpecifier (1)
+          STRUCT
+          OptTag (1)
+          LC
+          DefList (2)
+            Def (2)
+              Specifier (2)
+                TYPE: float
+              DecList (2)
+                Dec (2)
+                  VarDec (2)
+                    ID: UBN
+                  ASSIGNOP
+                  Exp (2)
+                    ID: o1YrI8LL
+              SEMI
+            DefList (3)
+          RC
+      SEMI
+    ExtDefList (4)

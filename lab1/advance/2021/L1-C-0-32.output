@@ -1,0 +1,45 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: foYkqf7vxUHGjRz
+        LP
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+        StmtList (2)
+          Stmt (2)
+            IF
+            LP
+            Exp (2)
+              Exp (2)
+                NOT
+                Exp (2)
+                  MINUS
+                  Exp (2)
+                    ID: dgKn
+              ASSIGNOP
+              Exp (2)
+                ID: VlQcu_huWliCk3ylfmiy
+            RP
+            Stmt (2)
+              Exp (2)
+                ID: L9V5do07tEWjRoe31
+              SEMI
+            ELSE
+            Stmt (4)
+              IF
+              LP
+              Exp (4)
+                ID: Hg
+              RP
+              Stmt (4)
+                Exp (4)
+                  ID: vVPUg2lmf
+                SEMI
+          StmtList (7)
+        RC
+    ExtDefList (8)

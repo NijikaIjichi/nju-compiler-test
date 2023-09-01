@@ -1,0 +1,23 @@
+int a;
+int N;
+float file[500];        
+
+struct Type myfunc1(){}
+
+int myfunc2(){   
+    int k;
+    int length=strlen(file); 
+    int spaces=012346;
+    while(k < length){
+      if(file[k] == a){
+        spaces = spaces + 1;
+      }
+    }
+  
+    if(0xabcdef > 01234567){
+      spaces = spaces + 1;
+    }
+    else{
+      spaces = spaces - 1;
+    }
+}

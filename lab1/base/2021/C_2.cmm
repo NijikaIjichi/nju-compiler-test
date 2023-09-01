@@ -1,0 +1,41 @@
+struct intset;
+struct uint8_t;
+struct int64_t;
+
+struct uint8_t intset_search(struct intset is, struct int64_t value, struct uint32_t pos) {
+    int min = 0, max = intrev32ifbe(is.length)-1, mid = -1;
+    struct int64_t cur = -1;
+
+    if (intrev32ifbe(is.length) == 0) {
+        if (pos) pos = 0;
+        return 0;
+    } else {
+        if (value > intset_get(is,max)) {
+            if (pos) pos = intrev32ifbe(is.length);
+            return 0;
+        } else if (value < intset_get(is,0)) {
+            if (pos) pos = 0;
+            return 0;
+        }
+    }
+
+    while(max >= min) {
+        mid = shr((min + max), 1);
+        cur = intset_get(is, mid);
+        if (value > cur) {
+            min = mid + 1;
+        } else if (value < cur) {
+            max = mid-1;
+        } else {
+            break;
+        }
+    }
+
+    if (value == cur) {
+        if (pos) pos = mid;
+        return 1;
+    } else {
+        if (pos) pos = min;
+        return 0;
+    }
+}

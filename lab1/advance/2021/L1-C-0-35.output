@@ -1,0 +1,87 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        StructSpecifier (1)
+          STRUCT
+          Tag (1)
+            ID: XW6fO
+      ExtDecList (1)
+        VarDec (1)
+          VarDec (1)
+            ID: Rp
+          LB
+          INT: 2123199700
+          RB
+        COMMA
+        ExtDecList (1)
+          VarDec (1)
+            VarDec (1)
+              ID: IwDPJ
+            LB
+            INT: 577164846
+            RB
+      SEMI
+    ExtDefList (5)
+      ExtDef (5)
+        Specifier (5)
+          TYPE: int
+        SEMI
+      ExtDefList (6)
+        ExtDef (6)
+          Specifier (6)
+            StructSpecifier (6)
+              STRUCT
+              OptTag (6)
+                ID: kmaz9I14sut4lHON_2
+              LC
+              DefList (7)
+                Def (7)
+                  Specifier (7)
+                    TYPE: float
+                  DecList (7)
+                    Dec (7)
+                      VarDec (7)
+                        VarDec (7)
+                          ID: IJbPo
+                        LB
+                        INT: 1831336003
+                        RB
+                    COMMA
+                    DecList (7)
+                      Dec (7)
+                        VarDec (7)
+                          ID: gPjUP_KC7VDyN2qVEt
+                  SEMI
+                DefList (9)
+                  Def (9)
+                    Specifier (9)
+                      TYPE: float
+                    DecList (9)
+                      Dec (9)
+                        VarDec (9)
+                          ID: KGNtnVWaVQ
+                    SEMI
+                  DefList (10)
+              RC
+          SEMI
+        ExtDefList (11)
+          ExtDef (11)
+            Specifier (11)
+              StructSpecifier (11)
+                STRUCT
+                Tag (11)
+                  ID: ga6s7DjzJWSaT0_im
+            ExtDecList (11)
+              VarDec (11)
+                VarDec (11)
+                  ID: Iqnpyb
+                LB
+                INT: 901969700
+                RB
+              COMMA
+              ExtDecList (11)
+                VarDec (11)
+                  ID: W
+            SEMI
+          ExtDefList (14)

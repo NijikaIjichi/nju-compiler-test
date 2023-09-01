@@ -1,0 +1,402 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: float
+      SEMI
+    ExtDefList (2)
+      ExtDef (2)
+        Specifier (2)
+          TYPE: int
+        FunDec (2)
+          ID: xEhHeSxE
+          LP
+          RP
+        CompSt (2)
+          LC
+          DefList (3)
+          StmtList (3)
+            Stmt (3)
+              IF
+              LP
+              Exp (3)
+                ID: h8lKu8909KxDgOHU
+              RP
+              Stmt (3)
+                Exp (3)
+                  ID: X_
+                SEMI
+              ELSE
+              Stmt (4)
+                IF
+                LP
+                Exp (4)
+                  ID: nDnqiun
+                RP
+                Stmt (4)
+                  WHILE
+                  LP
+                  Exp (4)
+                    ID: RFMJlLtOkmNJed2wkM
+                  RP
+                  Stmt (5)
+                    CompSt (5)
+                      LC
+                      DefList (6)
+                        Def (6)
+                          Specifier (6)
+                            StructSpecifier (6)
+                              STRUCT
+                              OptTag (6)
+                              LC
+                              DefList (7)
+                              RC
+                          DecList (7)
+                            Dec (7)
+                              VarDec (7)
+                                ID: v5RVqsr8uRDrP0fGmlx1
+                            COMMA
+                            DecList (7)
+                              Dec (7)
+                                VarDec (7)
+                                  VarDec (7)
+                                    ID: C_U2UGIwCn5lm
+                                  LB
+                                  INT: 409658824
+                                  RB
+                                ASSIGNOP
+                                Exp (8)
+                                  ID: KQUY
+                          SEMI
+                        DefList (9)
+                      StmtList (9)
+                        Stmt (9)
+                          IF
+                          LP
+                          Exp (9)
+                            ID: IoI8RC
+                          RP
+                          Stmt (9)
+                            IF
+                            LP
+                            Exp (9)
+                              ID: v
+                            RP
+                            Stmt (9)
+                              Exp (9)
+                                ID: ak_RtdPGTUXFtpd7sR
+                              SEMI
+                        StmtList (13)
+                          Stmt (13)
+                            IF
+                            LP
+                            Exp (13)
+                              ID: xB1NPNINcWqeSxTw
+                            RP
+                            Stmt (13)
+                              RETURN
+                              Exp (13)
+                                ID: j3zrOLr
+                              SEMI
+                            ELSE
+                            Stmt (14)
+                              Exp (14)
+                                Exp (14)
+                                  ID: _T
+                                ASSIGNOP
+                                Exp (14)
+                                  Exp (14)
+                                    ID: Yhs2HIccKazyU
+                                  MINUS
+                                  Exp (14)
+                                    Exp (14)
+                                      Exp (14)
+                                        ID: BggxpOf_0LLxanhtKy
+                                      STAR
+                                      Exp (15)
+                                        Exp (15)
+                                          ID: vAhPlWE
+                                        LB
+                                        Exp (15)
+                                          Exp (15)
+                                            ID: AskHfdLS7
+                                          OR
+                                          Exp (15)
+                                            Exp (15)
+                                              ID: ssagc1X7Avb7a_DuXi
+                                            AND
+                                            Exp (15)
+                                              Exp (15)
+                                                ID: KLM
+                                              RELOP: NE
+                                              Exp (16)
+                                                Exp (16)
+                                                  ID: XRuSipN
+                                                  LP
+                                                  Args (16)
+                                                    Exp (16)
+                                                      ID: vm
+                                                    COMMA
+                                                    Args (16)
+                                                      Exp (16)
+                                                        Exp (16)
+                                                          ID: NVL2XuviIl1XzWeoWt5
+                                                        RELOP: LT
+                                                        Exp (16)
+                                                          Exp (16)
+                                                            Exp (16)
+                                                              ID: yFJy
+                                                            PLUS
+                                                            Exp (16)
+                                                              Exp (16)
+                                                                NOT
+                                                                Exp (16)
+                                                                  Exp (16)
+                                                                    ID: wZu8XNj3km
+                                                                  LB
+                                                                  Exp (17)
+                                                                    Exp (17)
+                                                                      ID: lrD6Z4PBuuW
+                                                                    RELOP: GT
+                                                                    Exp (17)
+                                                                      Exp (17)
+                                                                        ID: NBqGkkwlG3ox9vP5Ank
+                                                                      PLUS
+                                                                      Exp (17)
+                                                                        ID: A
+                                                                        LP
+                                                                        Args (17)
+                                                                          Exp (17)
+                                                                            Exp (17)
+                                                                              ID: SWr2B
+                                                                            RELOP: GE
+                                                                            Exp (18)
+                                                                              Exp (18)
+                                                                                ID: RverRO3MecrzObgxz
+                                                                              MINUS
+                                                                              Exp (18)
+                                                                                LP
+                                                                                Exp (18)
+                                                                                  Exp (18)
+                                                                                    ID: V079l6mmhFJJod9ZMqJ2
+                                                                                  RELOP: LE
+                                                                                  Exp (18)
+                                                                                    Exp (18)
+                                                                                      ID: XrTxuIPeyyy
+                                                                                    PLUS
+                                                                                    Exp (19)
+                                                                                      Exp (19)
+                                                                                        MINUS
+                                                                                        Exp (19)
+                                                                                          NOT
+                                                                                          Exp (19)
+                                                                                            NOT
+                                                                                            Exp (19)
+                                                                                              ID: tLsrVDy11m2GUNb8
+                                                                                              LP
+                                                                                              Args (19)
+                                                                                                Exp (19)
+                                                                                                  Exp (19)
+                                                                                                    ID: ERKVGrRoh_ayahgcRSwC
+                                                                                                  RELOP: EQ
+                                                                                                  Exp (20)
+                                                                                                    ID: e7i6Sd4rEW0TKKi
+                                                                                              RP
+                                                                                      DIV
+                                                                                      Exp (20)
+                                                                                        ID: UyUHjfNdz
+                                                                                RP
+                                                                        RP
+                                                                  RB
+                                                              STAR
+                                                              Exp (20)
+                                                                FLOAT: 34360201.443560792
+                                                          PLUS
+                                                          Exp (21)
+                                                            MINUS
+                                                            Exp (21)
+                                                              NOT
+                                                              Exp (21)
+                                                                NOT
+                                                                Exp (21)
+                                                                  INT: 866012375
+                                                  RP
+                                                PLUS
+                                                Exp (21)
+                                                  Exp (21)
+                                                    ID: zGBKRkdiO9zxLI234dQ
+                                                    LP
+                                                    RP
+                                                  DOT
+                                                  ID: iXU9jZLSK
+                                        RB
+                                    DIV
+                                    Exp (22)
+                                      MINUS
+                                      Exp (22)
+                                        NOT
+                                        Exp (22)
+                                          ID: _XTTqg2
+                              SEMI
+                          StmtList (24)
+                      RC
+            StmtList (27)
+          RC
+      ExtDefList (28)
+        ExtDef (28)
+          Specifier (28)
+            TYPE: int
+          ExtDecList (28)
+            VarDec (28)
+              ID: _e_laq2lJ
+          SEMI
+        ExtDefList (30)
+          ExtDef (30)
+            Specifier (30)
+              TYPE: int
+            ExtDecList (30)
+              VarDec (30)
+                ID: mlJ01v
+              COMMA
+              ExtDecList (30)
+                VarDec (30)
+                  ID: j6Q7xk3EHsQ3AZ04azQ
+            SEMI
+          ExtDefList (33)
+            ExtDef (33)
+              Specifier (33)
+                StructSpecifier (33)
+                  STRUCT
+                  OptTag (33)
+                    ID: HCct5W
+                  LC
+                  DefList (34)
+                  RC
+              FunDec (34)
+                ID: eFKNYGT5Oz
+                LP
+                VarList (34)
+                  ParamDec (34)
+                    Specifier (34)
+                      StructSpecifier (34)
+                        STRUCT
+                        Tag (34)
+                          ID: qtiyaiELD
+                    VarDec (34)
+                      ID: u02y2mBj
+                RP
+              CompSt (34)
+                LC
+                DefList (35)
+                StmtList (35)
+                  Stmt (35)
+                    WHILE
+                    LP
+                    Exp (35)
+                      ID: WQn2DdLCJP1
+                    RP
+                    Stmt (35)
+                      CompSt (35)
+                        LC
+                        DefList (36)
+                          Def (36)
+                            Specifier (36)
+                              StructSpecifier (36)
+                                STRUCT
+                                Tag (36)
+                                  ID: nTO
+                            DecList (36)
+                              Dec (36)
+                                VarDec (36)
+                                  ID: WDiU
+                            SEMI
+                          DefList (37)
+                        StmtList (37)
+                          Stmt (37)
+                            Exp (37)
+                              ID: QJhArWhbFkFzfcMONxG3
+                            SEMI
+                          StmtList (38)
+                            Stmt (38)
+                              Exp (38)
+                                ID: Lz5EvitoM7s
+                              SEMI
+                            StmtList (39)
+                              Stmt (39)
+                                Exp (39)
+                                  ID: FxCITlKsMEx9935
+                                SEMI
+                              StmtList (40)
+                                Stmt (40)
+                                  IF
+                                  LP
+                                  Exp (40)
+                                    ID: A_
+                                  RP
+                                  Stmt (40)
+                                    Exp (40)
+                                      ID: A8BgxypIF6
+                                    SEMI
+                                  ELSE
+                                  Stmt (41)
+                                    IF
+                                    LP
+                                    Exp (41)
+                                      ID: JqsE4wmCAzX4TRM
+                                    RP
+                                    Stmt (41)
+                                      Exp (41)
+                                        ID: GEKT2M
+                                      SEMI
+                                    ELSE
+                                    Stmt (42)
+                                      IF
+                                      LP
+                                      Exp (42)
+                                        ID: RzWMfC9OA2d
+                                      RP
+                                      Stmt (42)
+                                        Exp (42)
+                                          ID: r
+                                        SEMI
+                                      ELSE
+                                      Stmt (43)
+                                        Exp (43)
+                                          ID: YSP7r0xveTb1WqOL
+                                        SEMI
+                                StmtList (47)
+                        RC
+                  StmtList (48)
+                RC
+            ExtDefList (49)
+              ExtDef (49)
+                Specifier (49)
+                  TYPE: int
+                SEMI
+              ExtDefList (50)
+                ExtDef (50)
+                  Specifier (50)
+                    TYPE: int
+                  FunDec (50)
+                    ID: LV4
+                    LP
+                    VarList (50)
+                      ParamDec (50)
+                        Specifier (50)
+                          TYPE: int
+                        VarDec (50)
+                          ID: PHIZ1Qn
+                      COMMA
+                      VarList (50)
+                        ParamDec (50)
+                          Specifier (50)
+                            TYPE: int
+                          VarDec (50)
+                            ID: zrXivml1E
+                    RP
+                  CompSt (50)
+                    LC
+                    DefList (51)
+                    StmtList (51)
+                    RC
+                ExtDefList (52)

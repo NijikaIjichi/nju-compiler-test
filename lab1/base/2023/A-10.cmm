@@ -1,0 +1,19 @@
+int a,b;
+
+int add(int x, int y){
+  return x + y;
+}
+
+int minus(int x,  int y){
+  return x - y;
+}
+
+int cal(int x, int y){
+    return;
+}
+
+int main(){
+  a = 1;
+  b = 2;
+  cal(add(a,b), minus(a,b));
+}

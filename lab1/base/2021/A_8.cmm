@@ -1,0 +1,15 @@
+struct A {} a[100];
+struct B {};
+
+int eq(struct A a, struct B b) {
+  return a == b;
+}
+
+int main() {
+  struct B b[100];
+  if (eq(A, B)) {
+    return a[1];
+  } else 
+    return b[200 * 30];
+  return A[d[b[(1 * ((5) + (b - a))) / 3 + a[A]]] * d.b[]];
+}

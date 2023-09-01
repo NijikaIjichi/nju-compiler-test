@@ -1,0 +1,56 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        StructSpecifier (1)
+          STRUCT
+          OptTag (1)
+            ID: cem2D74x
+          LC
+          DefList (2)
+          RC
+      SEMI
+    ExtDefList (3)
+      ExtDef (3)
+        Specifier (3)
+          StructSpecifier (3)
+            STRUCT
+            Tag (3)
+              ID: K33G
+        ExtDecList (3)
+          VarDec (3)
+            ID: QE
+        SEMI
+      ExtDefList (5)
+        ExtDef (5)
+          Specifier (5)
+            StructSpecifier (5)
+              STRUCT
+              OptTag (5)
+              LC
+              DefList (6)
+              RC
+          FunDec (6)
+            ID: B
+            LP
+            VarList (6)
+              ParamDec (6)
+                Specifier (6)
+                  TYPE: int
+                VarDec (6)
+                  ID: J2__HH21na_avAX
+            RP
+          CompSt (6)
+            LC
+            DefList (7)
+            StmtList (7)
+            RC
+        ExtDefList (8)
+          ExtDef (8)
+            Specifier (8)
+              TYPE: float
+            ExtDecList (8)
+              VarDec (8)
+                ID: c9_xLZRJjAvNb80XsS
+            SEMI
+          ExtDefList (10)

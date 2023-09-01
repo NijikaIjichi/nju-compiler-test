@@ -1,0 +1,11 @@
+int Octal(){
+  int o1 = 09888;
+  int o2 = 01234567;
+  int o3 = o2 + o1  + 0526454;
+}
+
+int Hex(){
+  int h1 = 0xfffffff;
+  int h2 = -0x14daf;
+  int h3 = h1 + h2  +0xggg;
+}

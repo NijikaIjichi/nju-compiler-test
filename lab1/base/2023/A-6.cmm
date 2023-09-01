@@ -1,0 +1,9 @@
+struct Taxi {
+  int id;
+  float speed;
+  float location;
+} taxis[10];
+
+int main(){
+  float speed = taxis[0,1].speed;
+}

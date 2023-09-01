@@ -1,0 +1,16 @@
+// This is the one line comment.
+
+/*
+* Traverse all elements in the array and find the max value
+*/
+
+int find_max(int array[100]){
+  int i = 0;
+  int maxm = 0;
+  while(i < 100){
+    if(maxm > array[i]){ /* compare with current maxm */
+      maxm = array[i];
+    }
+    i = i + 1; /* step further */
+  }
+}

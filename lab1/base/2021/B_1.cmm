@@ -1,0 +1,22 @@
+int change(int m) {
+  int n[2] = m;
+  int j = 0;
+  while (j < (n) {
+    n = n - 2;
+    j = j + 1;  
+  }
+  return n;
+}
+
+int main() {
+  int a[5];
+  int i = 0;
+  struct A { int a; };
+  a[i] = 100;
+  while (i < 4) {
+    i = i + 1;
+    a[i] = change(a[i-1]);
+    write(a[i]);
+  }
+  return 0;
+}

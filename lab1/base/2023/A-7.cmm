@@ -1,0 +1,23 @@
+int array[10];
+
+int initArray(int len){
+  int i = 0;
+  while(i < len){
+    array[i] = i;
+    i = i + 1;
+  }
+}
+
+int swapArray(int len,){
+  int i = 0;
+  while(i < len / 2){
+    int temp = array[i];
+    array[i] = array[len - i - 1];
+    array[len - i - 1] = temp; 
+  }
+}
+
+int main(){
+  initArray(10);
+  buble_sort(10);
+}

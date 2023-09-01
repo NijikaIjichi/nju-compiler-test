@@ -1,0 +1,15 @@
+int array[10];
+int a,b,d,c;
+
+struct Two{
+  int x, y;
+};
+
+int compare(struct Two t1, struct Two t2){
+  if(t1.x > t2.x && t1.y > t2.y)  else return 0;
+}
+
+int main(){
+  struct Two t1,t2;
+  compare(t1, t2);
+}

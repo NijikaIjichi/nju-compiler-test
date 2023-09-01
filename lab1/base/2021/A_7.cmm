@@ -1,0 +1,21 @@
+int BEIJING;
+int NEWYORK;
+int MOSCOW;
+
+struct WorldMap {
+  struct {
+    int capital;
+    float lat, lon, hei;
+  } countries[1000];
+};
+
+int main() {
+  struct WorldMap map;
+  BEIJING = 1;
+  NEWYORK = 2;
+  MOSCOW = 3;
+  map.countries[1].capital = BEIJING;
+  map.countries[2].capital = NEWYORK;
+  map.countries[3].capital = BEIJING, MOSCOW;
+  return map;
+}

@@ -1,0 +1,73 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: float
+      FunDec (1)
+        ID: right_floats
+        LP
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: float
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: f1
+                ASSIGNOP
+                Exp (2)
+                  Exp (2)
+                    ID: e1
+                  DOT
+                  ID: e1
+            SEMI
+          DefList (3)
+            Def (3)
+              Specifier (3)
+                TYPE: float
+              DecList (3)
+                Dec (3)
+                  VarDec (3)
+                    ID: f2
+                  ASSIGNOP
+                  Exp (3)
+                    MINUS
+                    Exp (3)
+                      FLOAT: inf
+              SEMI
+            DefList (4)
+              Def (4)
+                Specifier (4)
+                  TYPE: float
+                DecList (4)
+                  Dec (4)
+                    VarDec (4)
+                      ID: f3
+                    ASSIGNOP
+                    Exp (4)
+                      Exp (4)
+                        ID: f1
+                      DIV
+                      Exp (4)
+                        FLOAT: 0.050000
+                SEMI
+              DefList (5)
+                Def (5)
+                  Specifier (5)
+                    TYPE: float
+                  DecList (5)
+                    Dec (5)
+                      VarDec (5)
+                        ID: f4
+                      ASSIGNOP
+                      Exp (5)
+                        Exp (5)
+                          ID: f2
+                        STAR
+                        Exp (5)
+                          FLOAT: 5100000256.000000
+                  SEMI
+        RC

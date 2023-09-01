@@ -1,0 +1,200 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      ExtDecList (1)
+        VarDec (1)
+          VarDec (1)
+            ID: qThU9WGh4o
+          LB
+          INT: 1808396904
+          RB
+        COMMA
+        ExtDecList (1)
+          VarDec (1)
+            VarDec (1)
+              ID: UU2kb3Hk7i1QkHA
+            LB
+            INT: 891601082
+            RB
+          COMMA
+          ExtDecList (2)
+            VarDec (2)
+              VarDec (2)
+                VarDec (2)
+                  VarDec (2)
+                    VarDec (2)
+                      VarDec (2)
+                        VarDec (2)
+                          VarDec (2)
+                            VarDec (2)
+                              ID: RVdQXvkwfjmivZrR
+                            LB
+                            INT: 188412158
+                            RB
+                          LB
+                          INT: 1089377622
+                          RB
+                        LB
+                        INT: 1043003179
+                        RB
+                      LB
+                      INT: 1074493097
+                      RB
+                    LB
+                    INT: 574852443
+                    RB
+                  LB
+                  INT: 2076172727
+                  RB
+                LB
+                INT: 1831465558
+                RB
+              LB
+              INT: 1313561314
+              RB
+      SEMI
+    ExtDefList (8)
+      ExtDef (8)
+        Specifier (8)
+          TYPE: float
+        FunDec (8)
+          ID: M5ao
+          LP
+          RP
+        CompSt (8)
+          LC
+          DefList (9)
+            Def (9)
+              Specifier (9)
+                TYPE: int
+              DecList (9)
+                Dec (9)
+                  VarDec (9)
+                    VarDec (9)
+                      ID: ajvVlb6vem
+                    LB
+                    INT: 1645233491
+                    RB
+                COMMA
+                DecList (9)
+                  Dec (9)
+                    VarDec (9)
+                      VarDec (9)
+                        VarDec (9)
+                          VarDec (9)
+                            VarDec (9)
+                              ID: Np5RP5gNTqDw1JJ
+                            LB
+                            INT: 1187864004
+                            RB
+                          LB
+                          INT: 834855904
+                          RB
+                        LB
+                        INT: 318226730
+                        RB
+                      LB
+                      INT: 333092698
+                      RB
+                    ASSIGNOP
+                    Exp (11)
+                      Exp (11)
+                        Exp (11)
+                          Exp (11)
+                            Exp (11)
+                              Exp (11)
+                                Exp (11)
+                                  ID: OoNHAaAa_m_OMinP9
+                                  LP
+                                  RP
+                                DOT
+                                ID: Tk
+                              DOT
+                              ID: vUX6se2
+                            PLUS
+                            Exp (11)
+                              ID: c0C
+                          PLUS
+                          Exp (11)
+                            ID: hhnL_4GKlz2L
+                        PLUS
+                        Exp (12)
+                          ID: RDWOKal1qVJs7
+                      OR
+                      Exp (12)
+                        ID: MdntYVsj7US7Xt3v
+              SEMI
+            DefList (13)
+              Def (13)
+                Specifier (13)
+                  TYPE: int
+                DecList (13)
+                  Dec (13)
+                    VarDec (13)
+                      VarDec (13)
+                        VarDec (13)
+                          VarDec (13)
+                            ID: lM8JiLL0JY
+                          LB
+                          INT: 2040191274
+                          RB
+                        LB
+                        INT: 135355625
+                        RB
+                      LB
+                      INT: 369472043
+                      RB
+                SEMI
+              DefList (15)
+                Def (15)
+                  Specifier (15)
+                    StructSpecifier (15)
+                      STRUCT
+                      OptTag (15)
+                        ID: eLe8HJNbTanAlm3FMm
+                      LC
+                      DefList (16)
+                      RC
+                  DecList (16)
+                    Dec (16)
+                      VarDec (16)
+                        VarDec (16)
+                          ID: vFmxmSnbGuCuIznYSp82
+                        LB
+                        INT: 122944574
+                        RB
+                      ASSIGNOP
+                      Exp (16)
+                        Exp (16)
+                          MINUS
+                          Exp (16)
+                            NOT
+                            Exp (16)
+                              ID: iNf
+                        ASSIGNOP
+                        Exp (17)
+                          ID: nl
+                    COMMA
+                    DecList (17)
+                      Dec (17)
+                        VarDec (17)
+                          VarDec (17)
+                            ID: BiD0o9
+                          LB
+                          INT: 1035586285
+                          RB
+                        ASSIGNOP
+                        Exp (17)
+                          ID: khZRGKS
+                      COMMA
+                      DecList (17)
+                        Dec (17)
+                          VarDec (17)
+                            ID: F
+                  SEMI
+                DefList (18)
+          StmtList (18)
+          RC
+      ExtDefList (19)

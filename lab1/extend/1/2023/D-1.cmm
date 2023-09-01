@@ -1,0 +1,14 @@
+int main() {
+  int a = 0x33;
+  int b = 100;
+  int c = 015;
+  
+  if(a > b){
+    c = c + 0xa5;
+  }
+  else{
+    c = c + 077;
+  }
+
+  return c;
+}

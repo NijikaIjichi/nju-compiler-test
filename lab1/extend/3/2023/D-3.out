@@ -1,0 +1,108 @@
+Program (7)
+  ExtDefList (7)
+    ExtDef (7)
+      Specifier (7)
+        TYPE: int
+      FunDec (7)
+        ID: find_max
+        LP
+        VarList (7)
+          ParamDec (7)
+            Specifier (7)
+              TYPE: int
+            VarDec (7)
+              VarDec (7)
+                ID: array
+              LB
+              INT: 100
+              RB
+        RP
+      CompSt (7)
+        LC
+        DefList (8)
+          Def (8)
+            Specifier (8)
+              TYPE: int
+            DecList (8)
+              Dec (8)
+                VarDec (8)
+                  ID: i
+                ASSIGNOP
+                Exp (8)
+                  INT: 0
+            SEMI
+          DefList (9)
+            Def (9)
+              Specifier (9)
+                TYPE: int
+              DecList (9)
+                Dec (9)
+                  VarDec (9)
+                    ID: maxm
+                  ASSIGNOP
+                  Exp (9)
+                    INT: 0
+              SEMI
+        StmtList (10)
+          Stmt (10)
+            WHILE
+            LP
+            Exp (10)
+              Exp (10)
+                ID: i
+              RELOP
+              Exp (10)
+                INT: 100
+            RP
+            Stmt (10)
+              CompSt (10)
+                LC
+                StmtList (11)
+                  Stmt (11)
+                    IF
+                    LP
+                    Exp (11)
+                      Exp (11)
+                        ID: maxm
+                      RELOP
+                      Exp (11)
+                        Exp (11)
+                          ID: array
+                        LB
+                        Exp (11)
+                          ID: i
+                        RB
+                    RP
+                    Stmt (11)
+                      CompSt (11)
+                        LC
+                        StmtList (12)
+                          Stmt (12)
+                            Exp (12)
+                              Exp (12)
+                                ID: maxm
+                              ASSIGNOP
+                              Exp (12)
+                                Exp (12)
+                                  ID: array
+                                LB
+                                Exp (12)
+                                  ID: i
+                                RB
+                            SEMI
+                        RC
+                  StmtList (14)
+                    Stmt (14)
+                      Exp (14)
+                        Exp (14)
+                          ID: i
+                        ASSIGNOP
+                        Exp (14)
+                          Exp (14)
+                            ID: i
+                          PLUS
+                          Exp (14)
+                            INT: 1
+                      SEMI
+                RC
+        RC

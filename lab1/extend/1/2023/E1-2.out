@@ -1,0 +1,186 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      ExtDecList (1)
+        VarDec (1)
+          ID: a
+      SEMI
+    ExtDefList (2)
+      ExtDef (2)
+        Specifier (2)
+          TYPE: int
+        ExtDecList (2)
+          VarDec (2)
+            ID: N
+        SEMI
+      ExtDefList (3)
+        ExtDef (3)
+          Specifier (3)
+            TYPE: float
+          ExtDecList (3)
+            VarDec (3)
+              VarDec (3)
+                ID: file
+              LB
+              INT: 500
+              RB
+          SEMI
+        ExtDefList (5)
+          ExtDef (5)
+            Specifier (5)
+              StructSpecifier (5)
+                STRUCT
+                Tag (5)
+                  ID: Type
+            FunDec (5)
+              ID: myfunc1
+              LP
+              RP
+            CompSt (5)
+              LC
+              RC
+          ExtDefList (7)
+            ExtDef (7)
+              Specifier (7)
+                TYPE: int
+              FunDec (7)
+                ID: myfunc2
+                LP
+                RP
+              CompSt (7)
+                LC
+                DefList (8)
+                  Def (8)
+                    Specifier (8)
+                      TYPE: int
+                    DecList (8)
+                      Dec (8)
+                        VarDec (8)
+                          ID: k
+                    SEMI
+                  DefList (9)
+                    Def (9)
+                      Specifier (9)
+                        TYPE: int
+                      DecList (9)
+                        Dec (9)
+                          VarDec (9)
+                            ID: length
+                          ASSIGNOP
+                          Exp (9)
+                            ID: strlen
+                            LP
+                            Args (9)
+                              Exp (9)
+                                ID: file
+                            RP
+                      SEMI
+                    DefList (10)
+                      Def (10)
+                        Specifier (10)
+                          TYPE: int
+                        DecList (10)
+                          Dec (10)
+                            VarDec (10)
+                              ID: spaces
+                            ASSIGNOP
+                            Exp (10)
+                              INT: 5350
+                        SEMI
+                StmtList (11)
+                  Stmt (11)
+                    WHILE
+                    LP
+                    Exp (11)
+                      Exp (11)
+                        ID: k
+                      RELOP
+                      Exp (11)
+                        ID: length
+                    RP
+                    Stmt (11)
+                      CompSt (11)
+                        LC
+                        StmtList (12)
+                          Stmt (12)
+                            IF
+                            LP
+                            Exp (12)
+                              Exp (12)
+                                Exp (12)
+                                  ID: file
+                                LB
+                                Exp (12)
+                                  ID: k
+                                RB
+                              RELOP
+                              Exp (12)
+                                ID: a
+                            RP
+                            Stmt (12)
+                              CompSt (12)
+                                LC
+                                StmtList (13)
+                                  Stmt (13)
+                                    Exp (13)
+                                      Exp (13)
+                                        ID: spaces
+                                      ASSIGNOP
+                                      Exp (13)
+                                        Exp (13)
+                                          ID: spaces
+                                        PLUS
+                                        Exp (13)
+                                          INT: 1
+                                    SEMI
+                                RC
+                        RC
+                  StmtList (17)
+                    Stmt (17)
+                      IF
+                      LP
+                      Exp (17)
+                        Exp (17)
+                          INT: 11259375
+                        RELOP
+                        Exp (17)
+                          INT: 342391
+                      RP
+                      Stmt (17)
+                        CompSt (17)
+                          LC
+                          StmtList (18)
+                            Stmt (18)
+                              Exp (18)
+                                Exp (18)
+                                  ID: spaces
+                                ASSIGNOP
+                                Exp (18)
+                                  Exp (18)
+                                    ID: spaces
+                                  PLUS
+                                  Exp (18)
+                                    INT: 1
+                              SEMI
+                          RC
+                      ELSE
+                      Stmt (20)
+                        CompSt (20)
+                          LC
+                          StmtList (21)
+                            Stmt (21)
+                              Exp (21)
+                                Exp (21)
+                                  ID: spaces
+                                ASSIGNOP
+                                Exp (21)
+                                  Exp (21)
+                                    ID: spaces
+                                  MINUS
+                                  Exp (21)
+                                    INT: 1
+                              SEMI
+                          RC
+                RC
