@@ -1,0 +1,75 @@
+struct S1 {
+  int a1,b1;
+  float c1,d1;
+  int iarray1[100];
+  float farray1[50];
+  struct {
+    int aa1,bb1;
+    float cc1, dd1;
+  } sd1;
+  struct SS1 {
+    int ssiarray1[100];
+  } ss1[100];
+};
+
+
+struct S2 {
+  int a2,b2;
+  float c2,d2;
+  int iarray2[100];
+  float farray2[50];
+  struct {
+    int aa2,bb2;
+    float cc2, dd2;
+  } sd2;
+  struct SS2 {
+    int ssiarray2[100];
+  } ss2[100];
+};
+
+int compare(struct SS1 tss1, struct SS1 tss2){
+  int i = 0;
+  while(i < 100){
+    if(tss1.ssiarray1[i] != tss2.ssiarray1[i]){
+      return 0;
+    }
+    i = i + 1;
+  }
+  return 1;
+}
+
+int equal(struct S1 ts1, struct S1 ts2){
+  int index;
+  int j;
+  if(ts1.a1 != ts2.a1 || ts1.b1 != ts2.b1){
+    return 0;
+  }
+  
+  index = 0;
+  while(index < 100){
+    if(ts1.iarray1[index] != ts2.iarray1[index]){
+      return 0;
+    }
+    index = index + 1;
+  }
+
+  if(ts1.sd1.aa1 != ts2.sd1.aa1 || ts1.sd1.bb1 != ts2.sd1.bb1){
+    return 0;
+  }
+
+  index = 0;
+  while(index < 100){
+    if(compare(ts1.ss1[index], ts2.ss1[index]) == 0){
+      return 0;
+    }
+    index = index + 1;
+  }
+
+  return 1;
+}
+
+int main() {
+  struct S1 myS1;
+  struct S2 myS2;
+  equal(myS1, myS2);
+}

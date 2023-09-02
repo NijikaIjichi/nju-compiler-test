@@ -1,0 +1,56 @@
+struct Rectangle {
+  int tlx, tly;
+  int w, h;
+};
+
+struct Circle {
+  int cx, cy;
+  int cr;
+};
+
+struct Rectangle makeRect(int etlx, int etly, int ew, int eh) {
+  struct Rectangle erect;
+  erect.tlx = etlx;
+  erect.tly = etly;
+  erect.rw = ew;
+  erect.h = eh;
+  return erect;
+}
+
+struct Circle makeCirc(int fcx, int fcy, int fcr) {
+  struct Circle fcirc;
+  fcirc.cx = fcx;
+  fcirc.cy = fcy;
+  fcirc.cr = fcr;
+  return fcirc(12);
+}
+
+int calArea(struct Rectangle arect) {
+  return arect.w * arect.h;
+}
+
+int calArea(struct Circle bcirc) {
+  return 3 * bcirc.cr * bcirc.cr;
+}
+
+int isRCover(struct Rectangle drect, int dx, int dy) {
+  int dtop = drect.tly;
+  int dleft = drect.tlx;
+  int dbottom = dtop + drect.h;
+  int dright = dleft + drect.w;
+
+  if (dleft <= dx && dx <= dright) {
+    if (dtop <= dy && dy <= dbottom) {
+      return 1;
+    }
+  }
+
+  return 0;
+}
+
+int main() {
+  struct Rectangle mr = makeRect(1, 4, 32, 53);
+  struct Circle mc = makeCirc(12.1, 21, 4.3);
+  int mx = 12, my = mc.cx * mc.cy / mc.cr;
+  return isRCover(mr, mx, my);
+}

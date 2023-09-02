@@ -1,0 +1,36 @@
+struct ArithmeticalSequence{
+  int as_a0;
+  int as_d;
+  int as_num;
+};
+
+struct GeometricSequence{
+  int gs_a0;
+  int gs_q;
+  int gs_num;
+};
+
+
+int arithmeticalSequenceSum(struct ArithmeticalSequence as){
+  int as_last = as.as_a0 + (as.as_num - 1) * as.as_d;
+  return (as.as_a0 + as_last) * as.as_num / 2;
+}
+
+int geometricSequenceSum(struct GeometricSequence gs){
+  int gs_sum = gs.gs_a0;
+  int gs_temp = gs.gs_a0;
+  int gs_index = 1;
+  while(gs_index < gs.gs_num){
+    gs_index = gs_index + 1;
+    gs_temp = gs_temp * gs.gs_q;
+    gs_sum = gs_sum + gs_temp;
+  }
+  return gs_sum;
+}
+
+int main(){
+  struct ArithmeticalSequence as1;
+  struct GeometricSequence gs1;
+  int sum = arithmeticalSequenceSum(as1) + geometricSequenceSum(gs1);
+  return sum;
+}

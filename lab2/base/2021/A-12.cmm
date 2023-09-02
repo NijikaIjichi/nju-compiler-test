@@ -1,0 +1,66 @@
+struct Point {
+    int   _mode;
+    float _x;
+    float _y;
+    float _r;
+    float _theta;
+};
+
+struct Point createCartPoint(float x, float y) {
+    struct Point cartPoint;
+    cartPoint._mode  = 0;
+    cartPoint._x     = x;
+    cartPoint._y     = y;
+    cartPoint._r     = 0.0;
+    cartPoint._theta = 0.0;
+    return cartPoint;
+}
+
+struct Point createPolarPoint(float r, float theta) {
+    struct Point polarPoint;
+    polarPoint._mode  = 1;
+    polarPoint._x     = 0.0;
+    polarPoint._y     = 0.0;
+    polarPoint._r     = r;
+    polarPoint._theta = theta;
+    return polarPoint;
+}
+
+float sqrt(float sqrtv) {
+    return -1.0;
+}
+
+float getX(struct Point px) {
+    return -1.0;
+}
+
+float getY(struct Point py) {
+    return -1.0;
+}
+
+float calDist(struct Point p1, struct Point p2) {
+    float p1x = getX(p1);
+    float p1y = getY(p1);
+    float p2x = getX(p2);
+    float p2y = getY(p2);
+    float xdist = p1x - p2x;
+    float ydist = p1y - p2y;
+    return sqrt(xdist * xdist + ydist * ydist);
+}
+
+int main() {
+    struct Point ps1[10];
+    struct Point ps2[10];
+    int cnt = 0;
+    float dist = 0.0;
+    while (cnt < 10) {
+        ps1[cnt] = createCartPoint(dist, dist);
+        ps2[cnt] = createPolarPoint(dist, dist);
+        dist = calDist(ps1[cnt], ps2[cnt]);
+        cnt = cnt + 1;
+    }
+    {
+        struct Point p = ps1[dist];
+    }
+    return 0;
+}

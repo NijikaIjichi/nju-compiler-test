@@ -1,0 +1,19 @@
+struct OneDimVector {
+  int id;
+  float x;
+};
+
+struct OneDimVector _, _1, _2;
+
+int foo() {
+  struct OneDimVector __;
+
+  _.id = 0;
+  _1.id = 1;
+  _2.id = 2;
+  __.id = -1;
+
+  _.x = _1.x = _2.x = __.x = 0.1;
+
+  return ___.id;
+}

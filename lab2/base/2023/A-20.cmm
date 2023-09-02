@@ -1,0 +1,19 @@
+struct Student {
+  int sid;
+  int age = 10;
+};
+
+struct Teacher {
+  int tid;
+  int course;
+};
+
+struct ClassRoom{
+  struct Student students[100];
+  struct Teacher teacher;
+};
+
+int main(){
+  struct ClassRoom classRoom1;
+  classRoom1.teacher.course = 10;
+}

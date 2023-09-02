@@ -1,0 +1,60 @@
+struct Combinations {
+	struct Combination{
+    int c_base;
+	  int c_num;
+  } combinations[10];
+	int c_answer = 100;
+};
+
+struct Permutations {
+	int p_answer;
+  struct Permutation{
+    int p_base;
+	  int p_num;
+  } permutations[10];
+};
+
+
+int factorial(int n){
+	int f_sum = 1;
+	int f_index = n;
+	while(f_index > 1){
+		f_sum = f_sum * f_index;
+		f_index = f_index - 1;
+	}
+	return f_sum;
+}
+
+int calculation_combination(struct Combination com){
+	int cc_sum = 1.0;
+	cc_sum = cc_sum * factorial(com.c_base);
+	cc_sum = cc_sum / factorial(com.c_num);
+	cc_sum = cc_sum / factorial(com.c_base - com.c_num);
+	return cc_sum;
+}
+
+
+int calculation_permutation(struct Permutation per){
+	int cp_sum = 1;
+	cp_sum = cp_sum * factorial(per.p_base);
+	cp_sum = cp_sum / factorial(per.p_base - per.p_num);
+	return cp_sum;
+}
+
+int calculation(struct Combinations coms){
+  int c_index = 0;
+  int c_sum = 0;
+  while(c_index < 10){
+    c_sum = c_sum + calculation_combination(coms.combinations[c_index]);
+    c_index = c_index + 1;
+  }
+  return c_sum;
+}
+
+int main(){
+	struct Combinations com1;
+	struct Permutations per1;
+  com1.c_answer = calculation(com1);
+  per1.p_answer = calculation(per1);
+	return 0;
+}

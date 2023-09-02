@@ -1,0 +1,41 @@
+struct Array {
+  int elements[10];
+  float curr;
+} global_array;
+
+struct Array newArray(int value) {
+  struct Array result;
+  int ii = 0;
+  while (ii < 10) {
+    result.elements[ii] = value;
+  }
+  result.curr = 1.0;
+  return result;
+}
+
+float multiplyBy(float m, float n) {
+  return m * n;
+}
+
+int main() {
+  struct Array local_arrays[10];
+  int i = 0;
+  float pointer = 1.0;
+
+  global_array.curr = 1.0;
+
+  while (i < 10) {
+    global_array.elements[i] = i;
+    global_array.curr = global_array.curr * pointer;
+
+    local_arrays[i] = newArray(i);
+    local_arrays[i].curr = pointer;
+
+    i = i + 1;
+    pointer = pointer + 1.0;
+  }
+
+  i = local_arrays[0].elements[multiplyBy(global_array.curr, local_arrays[9].curr)];
+
+  return i;
+}

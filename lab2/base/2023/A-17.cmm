@@ -1,0 +1,17 @@
+struct Node {
+  int id;
+  int next;
+  int prev;
+};
+
+struct Edge edges[100];
+
+int add_next(struct Node curNode, struct Node nextNode){
+  curNode.next = nextNode.id;
+  nextNode.prev = curNode.id;
+}
+
+int main(){
+  struct Node node1, node2;
+  add_next(node1, node2);
+}

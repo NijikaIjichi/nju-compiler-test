@@ -1,0 +1,27 @@
+struct IntVector {
+  int ix, iy;
+};
+
+int ivec_is_equal(struct IntVector iv, struct IntVector iw) {
+  if (iv.ix == iw.ix && iv.iy == iw.iy) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  struct IntVector iv1, iv2;
+
+  iv1.ix = 0;
+  iv1.iy = 0;
+
+  iv2.ix = 0;
+  iv2.iy = 1;
+
+  if (ivec_is_equal(iv1, iv2) = 0) {
+    iv2 = iv1;
+  }
+
+  return 0;
+}

@@ -1,0 +1,30 @@
+struct Stack {
+    int _capacity;
+    int _size;
+    int _content[100];
+};
+
+struct Stack initStack(int tryCapacity) {
+    struct Stack stk;
+    stk._capacity = 100;
+    stk._size     = 0;
+    if (tryCapacity > 0 && tryCapacity < 100) {
+        stk._capacity = tryCapacity;
+    }
+    return stk;
+}
+
+int size(struct Stack Stack) {
+    return Stack._size;
+}
+
+int empty(struct Stack stk2) {
+    return stk2._size == 0;
+}
+
+int top(struct Stack stk3) {
+    if (stk3._size == 0) {
+        return -1;
+    }
+    return stk3._content[stk3._size - 1];
+}

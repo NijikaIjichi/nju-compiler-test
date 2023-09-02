@@ -1,0 +1,52 @@
+struct Point {
+    int   _mode;
+    float _x;
+    float _y;
+    float _r;
+    float _theta;
+};
+
+struct Point createCartPoint(float x, float y) {
+    struct Point cartPoint;
+    cartPoint._mode  = 0;
+    cartPoint._x     = x;
+    cartPoint._y     = y;
+    cartPoint._r     = 0.0;
+    cartPoint._theta = 0.0;
+    return cartPoint;
+}
+
+struct Point createPolarPoint(float r, float theta) {
+    struct Point polarPoint;
+    polarPoint._mode  = 1;
+    polarPoint._x     = 0.0;
+    polarPoint._y     = 0.0;
+    polarPoint._r     = r;
+    polarPoint._theta = theta;
+    return polarPoint;
+}
+
+float cos(float cosv) {
+    return -1.0;
+}
+
+float getX(struct Point p1) {
+    if (p1._mode == 0) {
+        return p1._x;
+    } else {
+        return p1._r * cos(p1._theta);
+    }
+}
+
+int main() {
+    struct Point ps[10];
+    int cnt = 0;
+    float px = 0.0;
+    while (cnt < 10) {
+        ps[cnt] = createPolarPoint(px, px);
+        px = getX(ps[cnt]);
+        px();
+        cnt = cnt + 1;
+    }
+    return 0;
+}

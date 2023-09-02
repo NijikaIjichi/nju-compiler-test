@@ -1,0 +1,96 @@
+struct {
+    int _stk[100];
+    int _top;
+} stkVM;
+int STK_MDEP;
+int errno;
+
+int init() {
+    STK_MDEP   = 100;
+    errno      = 0;
+    stkVM._top = -1;
+    return 0;
+}
+
+int pop() {
+    if (errno == -1) {
+        return -1;
+    }
+    if (stkVM._top == -1) {
+        errno = -1;
+        return -1;
+    } else {
+        int ret = stkVM._stk[stkVM._top];
+        stkVM._top = stkVM._top - 1;
+        return ret;
+    }
+}
+
+int push(int i) { 
+    if (errno == -1) {
+        return -1;
+    }
+    if (stkVM._top == STK_MDEP - 1) {
+        errno = -1;
+        return -1;
+    } else {
+        stkVM._top = stkVM._top + 1;
+        stkVM._stk[stkVM._top] = i;
+        return 0;
+    }
+}
+
+int add(int a1, int a2) {
+    if (errno == -1) {
+        return -1;
+    }
+    a1 = pop();
+    a2 = pop();
+    push(a1 + a2);
+    return 0;
+}
+
+int sub(int s1, int s2) {
+    if (errno == -1) {
+        return -1;
+    }
+    s1 = pop();
+    s2 = pop();
+    push(s1 - s1);
+    return 0;
+}
+
+int mul(int m1, int m2) {
+    if (errno == -1) {
+        return -1;
+    }
+    m1 = pop();
+    m2 = pop();
+    push(m1 * m2);
+    return 0;
+}
+
+int div(int d1, int d2) {
+    if (errno == -1) {
+        return -1;
+    }
+    d1 = pop();
+    d2 = pop();
+    if (d2 == 0) {
+        errno = -1;
+        return -1;
+    } else {
+        push(d1 / d2);
+        return 0;
+    }
+}
+
+int main() {
+   int res = -1;
+   init();
+   add(push(1), add(push(2), push(3)));
+   if (errno == 0) {
+       res = pop();
+   }
+   return res;
+}

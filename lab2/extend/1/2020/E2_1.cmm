@@ -1,0 +1,23 @@
+int equal(int ax, int ay);
+
+int substract(int cx, int cy);
+int substract(int fx, float fy);
+
+int main() {
+  int mix = 0, miy = 1;
+  float mfx = 1.2, mfy = 4.2;
+
+  int   mir;
+  float mfr;
+
+  {
+    mir = substract(mfx, miy);
+    if (mir == 0) {
+      return 1;
+    }
+
+    mfr = substract(mfx, mfy);
+  }
+
+  return 0;
+}

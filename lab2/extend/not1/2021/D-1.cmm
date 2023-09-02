@@ -1,0 +1,97 @@
+int O_ADD;
+int O_PRD;
+int O_SUB;
+int O_DIV;
+struct Operation {
+    int oType;
+    int opt;
+};
+
+int T_INT;
+int T_FLT;
+struct BinData {
+    int   bdType;
+    int   bdIData[2];
+    float bdFData[2];
+};
+
+int MLEN;
+struct MulData {
+    int   mdType;
+    int   mdIData[100];
+    float mdFData[100];
+};
+
+struct Result {
+    int   rType;
+    int   valid;
+    int   iRes;
+    float fRes;
+};
+
+int initArith() {
+    O_ADD = 0;
+    O_PRD = 1;
+    O_SUB = 2;
+    O_DIV = 3;
+    T_INT = 4;
+    T_FLT = 5;
+    MLEN  = 100;
+    return 0;
+}
+
+struct Result binOperator(struct Operation bOperation, struct BinData binData);
+
+struct Result binOperator(struct Operation bOperation, struct BinData binData) {
+    struct Result bOpRes;
+    bOpRes.valid = 1;
+    if (bOperation.opt == O_ADD) {
+        bOpRes.iRes = binData.bdIData[0] + binData.bdIData[1];
+        bOpRes.fRes = binData.bdFData[0] + binData.bdFData[1];
+    } else if (bOperation.opt == O_PRD) {
+        bOpRes.iRes = binData.bdIData[0] * binData.bdIData[1];
+        bOpRes.fRes = binData.bdFData[0] * binData.bdFData[1];
+    } else if (bOperation.opt == O_SUB) {
+        bOpRes.iRes = binData.bdIData[0] - binData.bdIData[1];
+        bOpRes.fRes = binData.bdFData[0] - binData.bdFData[1];
+    } else if (bOperation.opt == O_DIV) {
+        bOpRes.iRes = binData.bdIData[0] / binData.bdIData[1];
+        bOpRes.fRes = binData.bdFData[0] / binData.bdFData[1];
+    } else {
+        bOpRes.valid = 0; 
+    }
+    bOpRes.valid = bOpRes.valid && (bOperation.oType == binData.bdType);
+    bOpRes.rType = bOperation.oType;
+    return bOpRes;
+}
+
+struct Result mulOperation(struct Operation mOperation, struct MulData mulData) {
+    struct Result mOpRes;
+    int cnt = 0;
+    mOpRes.valid = 1;
+    if (mOperation.opt == O_ADD) {
+        mOpRes.iRes = 0;
+        mOpRes.fRes = 0.0;
+    } else if (mOperation.opt == O_PRD) {
+        mOpRes.iRes = 1;
+        mOpRes.fRes = 1.0;
+    } else {
+        mOpRes.valid = 0; 
+    }
+    while (cnt < MLEN) {
+        if (mOperation.opt == O_ADD) {
+            mOpRes.iRes = mOpRes.iRes + mulData.mdIData[cnt];
+            mOpRes.fRes = mOpRes.fRes + mulData.mdFData[cnt];
+        } else if (mOperation.opt == O_PRD) {
+            mOpRes.iRes = mOpRes.iRes * mulData.mdIData[cnt];
+            mOpRes.fRes = mOpRes.fRes * mulData.mdFData[cnt];
+        }
+        cnt = cnt + 1;
+    }
+    mOpRes.valid = mOpRes.valid && (mOperation.oType == mulData.mdType);
+    mOpRes.rType = mOperation.oType;
+    return mOpRes;
+}
+
+struct Result mulOperation(struct Operation mOperation, struct MulData mulData);
+struct Result binOperator(struct Operation bOperation, struct BinData binData);

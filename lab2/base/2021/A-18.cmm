@@ -1,0 +1,14 @@
+struct S {
+    int   si;
+    float sf;
+    int   sia[10];
+    float sfa[10];
+} sa[10];
+
+int foo(int fi, float ff, struct S fs) {
+    return 0;
+}
+
+int main() {
+    foo(sa[0].si - sa[0].sia, sa[0].sf, sa[0]);
+}

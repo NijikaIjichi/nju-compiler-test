@@ -1,0 +1,96 @@
+struct FibLikeArray {
+  int a0, a1;
+  int _buf[32];
+};
+
+int min(int b0, int b1) {
+  if (b0 < b1) {
+    return b0;
+  } else {
+    return b1;
+  }
+}
+
+int max(int d0, int d1) {
+  if (d0 > d1) {
+    return d0;
+  } else {
+    return d1;
+  }
+}
+
+struct FibLikeArray makeFibLikeArray(int c0, int c1) {
+  struct FibLikeArray cfla;
+
+  if (c0 < 0 || c1 < 0 || (c0 + c1 == 0)) {
+    cfla.a0 = -1;
+    return cfla;
+  }
+
+  cfla.a0 = min(c0, c1);
+  cfla.a1 = max(c0, c1);
+  
+  {
+    int ci = 2;
+
+    cfla._buf[0] = cfla.a0;
+    cfla._buf[1] = cfla.a1;
+    cfla._buf[2] = -1;
+
+    while (ci < 32) {
+      cfla._buf[ci] = cfla._buf[ci - 1] + cfla._buf[ci - 2];
+      ci = ci + 1;
+    }
+  }
+
+  return cfla;
+}
+
+int flaIsGuardian(struct FibLikeArray farray) {
+  if (farray.a0 == -1) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int flaGet(struct FibLikeArray efla, int eindex) {
+  if (flaIsGuardian(efla)) {
+    return -1;
+  }
+
+  if (eindex <= 32) {
+    return efla._buf[eindex];
+  }
+
+  {
+    int e0 = efla._buf[32 - 2];
+    int e1 = efla._buf[32 - 1];
+    int er;
+    int ei = 32;
+
+    while (ei <= eindex) {
+      er = e0 + e1;
+      e0 = e1;
+      e1 = er;
+      ei = ei + 1;
+    }
+
+    return er;
+  }
+}
+
+int main() {
+  struct FibLikeArray mfla = makeFibLikeArray(0, 1);
+  int m0, m1, mr;
+
+  if (flaIsGuardian(mfla)) {
+    return 1;
+  }
+
+  m0 = flaGet(mfla, 10);
+  m1 = flaGet(mfla, 37);
+  mr = m1 * mr;
+
+  return 0;
+}

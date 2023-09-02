@@ -1,0 +1,28 @@
+struct Array {
+  int elements[10];
+} global_array1;
+
+int global_array2[10];
+
+struct Array newArray(int value) {
+  struct Array result;
+  int ii = 0;
+  while (ii < 10) {
+    result.elements[ii] = global_array2.elements[ii] * value;
+  }
+  return result;
+}
+
+int main() {
+  struct Array local_arrays[10];
+  int i = 0;
+
+  while (i < 10) {
+    global_array1.elements[i] = i;
+    global_array2[i] = i * 2;
+    local_arrays[i] = newArray(i * 3);
+    i = i + 1;
+  }
+
+  return local_arrays[0].elements[0];
+}

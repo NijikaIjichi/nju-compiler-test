@@ -1,0 +1,49 @@
+struct S113 {
+  int S113_m0_i;
+  float S113_m1_a1_f[1];
+  int S113_m2_i;
+};
+
+struct S114 {
+  int S114_m0_i;
+  struct S113 S114_m1_a2_S113[2];
+};
+
+
+
+
+int i_func_857(struct S114 i_func_857_S114_0, struct S114 i_func_857_S114_1) {
+  i_func_857_S114_0.S114_m1_a2_S113[i_func_857_S114_0.S114_m0_i].S113_m2_i = (i_func_857_S114_0.S114_m0_i <= i_func_857_S114_0.S114_m0_i);
+  return i_func_857_S114_1.S114_m0_i = i_func_857(i_func_857_S114_1, i_func_857_S114_0);
+}
+
+int top_caller() {
+  int redef_L7;
+  int redef_L7;
+  struct S114 S114_L0;
+  float a1_f_L129[1];
+  struct S113 S113_L0;
+  S114_L0.S114_m1_a2_S113[1].S113_m2_i = 1650495982;
+  S114_L0.S114_m1_a2_S113[1].S113_m1_a1_f[0] = -514172.062500;
+  S114_L0.S114_m1_a2_S113[1].S113_m0_i = -1370324037;
+  S114_L0.S114_m1_a2_S113[0].S113_m2_i = 1;
+  S114_L0.S114_m1_a2_S113[0].S113_m1_a1_f[0] = -3390005716437669332910080.000000;
+  S114_L0.S114_m1_a2_S113[0].S113_m0_i = -719602326;
+  S114_L0.S114_m0_i = -673364726;
+  a1_f_L129[0] = -0.007554;
+  S113_L0.S113_m2_i = S114_L0.S114_m0_i + -700600956;
+  S113_L0.S113_m1_a1_f[0] = 169720632311808.000000 * a1_f_L129[-150612664];
+  S113_L0.S113_m0_i = top_caller();
+  S113_L0.S113_m2_i = (S113_L0.S113_m2_i > S113_L0.S113_m0_i);
+  S113_L0.S113_m0_i = top_caller();
+  return top_caller();
+}
+
+int initialize_global_objects() {
+  return 0;
+}
+
+int main() {
+  initialize_global_objects();
+  return 0;
+}

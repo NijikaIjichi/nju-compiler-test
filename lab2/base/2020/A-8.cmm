@@ -1,0 +1,27 @@
+struct IntVector {
+  int ix, iy;
+};
+
+int diffX(struct IntVector v1, struct IntVector v2) {
+  struct IntVector result;
+  result.ix = v1.ix - v2.ix;
+  result.iy = v1.iy;
+  return result;
+}
+
+int main() {
+  struct IntVector rv, cv;
+  int i = 0;
+
+  rv.ix = 0;
+  rv.iy = 0;
+  cv.ix = 1;
+  cv.iy = 2;
+
+  while (i < 10) {
+    rv.ix = diffX(rv, cv) + cv.ix;
+    i = i + 1;
+  }
+
+  return 0;
+}

@@ -1,0 +1,49 @@
+struct Combination {
+	int c_base;
+	int c_num;
+	int c_answer;
+};
+
+struct Permutation{
+	int p_base;
+	int p_num;
+	int p_answer;
+};
+
+int factorial(int n){
+	int sum = 1;
+	int index = n;
+  int tempArray;
+  tempArray[0] = 1;
+	while(index > 1){
+		sum = sum * index;
+		index = index - 1;
+	}
+	return sum;
+}
+
+int calculation_combination(struct Combination com){
+	int sum = 1;
+	sum = sum * factorial(com.c_base) * 1.0;
+	sum = sum / factorial(com.c_num);
+	sum = sum / factorial(com.c_base - com.c_num);
+	return sum;
+}
+
+
+int calculation_permutation(struct Permutation per){
+	int sum = 1;
+	sum = sum * factorial(per.p_base);
+	sum = sum / factorial(per.p_base - per.p_answer);
+	return sum;
+}
+
+int main(){
+	struct Combination com1;
+	struct Permutation per1;
+	per1.p_base = com1.c_base = 4;
+	per1.p_num = com1.c_num = 2;
+  calculation_combination(com1) = com1.c_answer;
+	per1.p_answer = calculation_permutation(per1);
+	return 0;
+}

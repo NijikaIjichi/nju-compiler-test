@@ -1,0 +1,25 @@
+struct Array {
+  int elements[10];
+} global_array;
+
+int main() {
+  struct Array local_arrays[10];
+  int i = 0;
+
+  while (i < 10) {
+    global_array.elements[i] = i;
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < 10) {
+    int j = 0;
+    while (j < 10) {
+      local_arrays[i].elements[j] = global_array.elements[j];
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+
+  return local_arrays[0][0];
+}

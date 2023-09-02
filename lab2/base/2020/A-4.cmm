@@ -1,0 +1,33 @@
+struct IntVector {
+  int ix, iy;
+};
+
+struct FloatVector {
+  int fx, fy;
+};
+
+int vec_is_equal(struct IntVector iv, struct IntVector iw) {
+  if (iv.ix == iw.ix && iv.iy == iw.iy) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int vec_is_equal(struct FloatVector fv, struct FloatVector fw) {
+  if (fv.fx == fw.fx && fv.fy == fw.fy) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  struct IntVector v1;
+  struct FloatVector v2;
+
+  vec_is_equal(v1, v1);
+  vec_is_equal(v2, v2);
+
+  return 0;
+}

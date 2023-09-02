@@ -1,0 +1,67 @@
+struct S90 {
+  int S90_m0_i;
+  int S90_m1_a2_i[2];
+};
+
+struct S91 {
+  int S91_m0_i;
+  int S91_m1_a1_i[1];
+  int S91_m2_a2_i[2];
+};
+
+struct S92 {
+  int S92_m0_a1_i[1];
+  int S92_m1_a2_a1_i[2][1];
+  int S92_m2_i;
+  int S92_m3_i;
+  int S92_m4_i;
+  struct S91 S92_m5_a1_S91[1];
+  int S92_m6_i;
+  int S92_m7_i;
+  int S92_m8_i;
+  float S92_m9_a2_f[2];
+};
+
+struct S93 {
+  int S93_m0_i;
+};
+
+int i_G8;
+float a1_a2_f_G0[1][2];
+
+
+
+int i_func_588(struct S92 i_func_588_S92_0, int i_func_588_i_0, int i_func_588_a1_i_0[1]) {
+  float a2_f_L60[2];
+  struct S90 S90_L0;
+  a2_f_L60[1] = 1535367680.000000;
+  a2_f_L60[0] = -5910962401438724976885729591296.000000;
+  S90_L0.S90_m1_a2_i[1] = i_func_588_S92_0.S92_m8_i = i_func_588(i_func_588_S92_0, 556788062, i_func_588_S92_0.S92_m0_a1_i);
+  S90_L0.S90_m1_a2_i[0] = i_func_588_S92_0.S92_m5_a1_S91[i_func_596()].S91_m1_a1_i[i_func_588_S92_0.S92_m2_i] = i_func_588(i_func_588_S92_0, i_func_588_S92_0.S92_m4_i, i_func_588_S92_0.S92_m1_a2_a1_i[2109719668]);
+  S90_L0.S90_m0_i = i_func_588_S92_0.S92_m1_a2_a1_i[305860468][i_func_588_S92_0.S92_m4_i] = (i_func_599() || i_func_588_S92_0.S92_m2_i);
+  a1_a2_f_G0[i_func_588_S92_0.S92_m2_i][i_func_589()] = (a2_f_L60[677492081] - a2_f_L60[-411469910]);
+  i_func_588_S92_0.S92_m6_i = i_func_593();
+  return i_func_588((i_func_588_S92_0 = (i_func_588_S92_0 = i_func_588_S92_0)), i_func_588_S92_0.S92_m6_i, i_func_588_S92_0.S92_m0_a1_i);
+}
+
+int top_caller() {
+  struct S93 S93_L0;
+  float a2_f_L61[2];
+  S93_L0.S93_m0_i = 314211100;
+  a2_f_L61[1] = -26249.197266;
+  a2_f_L61[0] = 0.000000;
+  a1_a2_f_G0[S93_L0.S93_m0_i][S93_L0.S93_m0_i] = (i_func_603() / a2_f_L61[1006484669]);
+  return S93_L0.S93_m0_i = (S93_L0.S93_m0_i >= i_func_606());
+}
+
+int initialize_global_objects() {
+  i_G8 = !2534195;
+  a1_a2_f_G0[0][1] = -434785621047771136.000000 - 5139917139592584618338964585054208.000000;
+  a1_a2_f_G0[0][0] = 0.000000 - -0.000000;
+  return 0;
+}
+
+int main() {
+  initialize_global_objects();
+  return 0;
+}

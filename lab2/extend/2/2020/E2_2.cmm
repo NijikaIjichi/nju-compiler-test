@@ -1,0 +1,98 @@
+struct FibLikeArray {
+  int a0, a1;
+  int _buf[32];
+};
+
+int min(int a, int b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+int max(int a, int b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+struct FibLikeArray makeFibLikeArray(int a0, int a1) {
+  struct FibLikeArray fla;
+
+  if (a0 < 0 || a1 < 0 || (a0 + a1 == 0)) {
+    fla.a0 = -1;
+    return fla;
+  }
+
+  fla.a0 = min(a0, a1);
+  fla.a1 = max(a0, a1);
+  
+  {
+    fla._buf[0] = fla.a0;
+    fla._buf[1] = fla.a1;
+    fla._buf[2] = -1;
+
+    while (ci < 32) {
+      fla._buf[ci] = fla._buf[ci - 1] + fla._buf[ci - 2];
+      ci = ci + 1;
+    }
+  }
+
+  return fla;
+}
+
+int flaIsGuardian(struct FibLikeArray fla) {
+  if (fla.a0 == -1) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int flaGet(struct FibLikeArray fla, int index) {
+  if (flaIsGuardian(fla)) {
+    return -1;
+  }
+
+  if (index <= 32) {
+    return fla._buf[index];
+  }
+
+  {
+    int e0 = fla._buf[32 - 2];
+    int e1 = fla._buf[32 - 1];
+    int er;
+    int ei = 32;
+    int er = ei;
+
+    while (ei <= index) {
+      er = e0 + e1;
+      e0 = e1;
+      e1 = er;
+      ei = ei + 1;
+    }
+
+    er = e0 + e1;
+    er = er * 193;
+
+    return er;
+  }
+}
+
+int main() {
+  struct FibLikeArray fla = makeFibLikeArray(0, 1);
+  int m0, m1, mr;
+
+  if (flaIsGuardian(fla)) {
+    return 1;
+  }
+
+  m0 = flaGet(fla, 10);
+  m1 = flaGet(fla, 37);
+  mr = m1 * mr;
+
+  return 0;
+}

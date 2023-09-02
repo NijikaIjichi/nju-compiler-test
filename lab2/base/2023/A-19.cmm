@@ -1,0 +1,24 @@
+struct Point_int{
+  int i_x;
+  int i_y;
+};
+
+struct Point_float{
+  float f_x;
+  float f_y;
+};
+
+int distance_int(struct Point_int ip1, struct Point_int ip2){
+  return (ip1.i_x - ip2.i_x) * (ip1.i_x - ip2.i_x) + (ip1.i_y - ip2.i_y) * (ip1.i_y - ip2.i_y);
+}
+
+float distance_float(struct Point_float fp1, struct Point_float fp2){
+  return (fp1.f_x - fp2.f_x) * (fp1.f_x - fp2.f_x) + (fp1.f_y - fp2.f_y) * (fp1.f_y - fp2.f_y);
+}
+
+int main(){
+  struct Point_int pi1, pi2;
+  struct Point_float pf1, pf2;
+  distance_float(pi1, pi2);
+  distance_float(pf1, pf2);
+}

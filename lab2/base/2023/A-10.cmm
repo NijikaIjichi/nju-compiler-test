@@ -1,0 +1,42 @@
+struct ClassRoom {
+  int cid;
+  struct Position {
+    int bid;
+    int rid;
+  } position;
+
+  struct Teacher {
+    int tid;
+    int tgender;
+    int course;
+  } teacher;
+
+  struct Student {
+    int sid;
+    int sgender;
+    int grade;
+  } students[100];
+
+} classRoom1, classRoom2, classRoom3;
+
+int ave_grade(struct ClassRoom cr){
+  int sum = 0;
+  int index = 0;
+  while(index < 100){
+    sum = sum + cr.students[index].grade;
+  }
+  return sum / 100;
+}
+
+int main() {
+  int ave1 = ave_grade(classRoom1);
+  int ave2 = ave_grade(classRoom2);
+  int ave3 = ave_grade(classRoom3);
+
+  if(ave1 > ave2 && ave1 > ave3[0]){
+    return 1;
+  }
+  else{
+    return 0;
+  }
+}

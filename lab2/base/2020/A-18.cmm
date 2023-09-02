@@ -1,0 +1,36 @@
+struct IntVector {
+  int ix, iy;
+};
+
+int ivec_is_equal(struct IntVector iv01, struct IntVector iv02) {
+  if (iv01.ix == iv02.ix && iv01.iy == iv02.iy) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int ivec3_is_equal(struct IntVector iv03, struct IntVector iv04, struct IntVector iv05) {
+  if (ivec_is_equal(iv03, iv04) == 1 && ivec_is_equal(iv04, iv05) == 1) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  struct IntVector iv1, iv2, iv3;
+
+  iv1.ix = 0;
+  iv1.iy = 0;
+
+  iv2 = iv1;
+  iv2.ix = iv2.ix + 1;
+
+  iv3 = iv1;
+  iv3.iy = iv3.iy + 10;
+
+  ivec3_is_equal(iv1, iv2);
+
+  return 0;
+}

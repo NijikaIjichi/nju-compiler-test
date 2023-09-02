@@ -1,0 +1,14 @@
+struct WeighedFood {
+  float price, weight;
+} f1;
+
+int main() {
+  struct CountedFood {
+    struct {
+      int max = 1024, min, bought;
+    } counter;
+    float per_price;
+  } f2;
+
+  return 0;
+}

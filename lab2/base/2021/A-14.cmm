@@ -1,0 +1,35 @@
+struct PersonInfo {
+    int id;
+    int age;
+    int phoneNo;
+};
+
+int BLEN;
+int CLEN;
+struct AddressBook {
+    int volNo;
+    struct PersonInfo contacts[100];
+} addrBooks[10];
+
+int initAddrBooks() {
+    int bcnt = 0;
+    int ccnt = 0;
+    BLEN = 10;
+    CLEN = 100;
+    while (bcnt < BLEN) {
+        addrBooks[bcnt].volNo = bcnt;
+        ccnt = 0;
+        while (ccnt < CLEN) {
+            addrBooks[bcnt].contacts[ccnt].id = -1;
+            ccnt = ccnt + 1;
+        }
+        bcnt = bcnt + 1;
+    }
+    return 0;
+}
+
+int main() {
+    int h;
+    initAddrBooks();
+    h = addrBooks[0].contacts[0].hight;
+}

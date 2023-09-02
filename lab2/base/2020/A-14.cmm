@@ -1,0 +1,31 @@
+struct Array {
+  int elements[10];
+  struct {
+    int curr;
+    int prev;
+  } pointer;
+} global_array;
+
+struct Array newArray(int value) {
+  struct Array result;
+  int ii = 0;
+  while (ii < 10) {
+    result.elements[ii] = value;
+  }
+  return result;
+}
+
+int main() {
+  struct Array local_arrays[10];
+  int i = 0;
+
+  while (i < 10) {
+    global_array.elements[i] = i;
+    global_array.pointer.curr = i;
+    global_array.pointer.prev = i - 1;
+    local_arrays[i] = newArray(i * 3);
+    i = i + 1;
+  }
+
+  return local_arrays[0].elements[global_array.curr];
+}

@@ -1,0 +1,14 @@
+struct Node{
+  int id;
+};
+
+struct Edge {
+  struct Node from;
+  struct Node to;
+} edges[100];
+
+
+int main(){
+  int a = 100;
+  return edges + a;
+}

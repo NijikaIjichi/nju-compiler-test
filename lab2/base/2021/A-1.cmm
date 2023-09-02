@@ -1,0 +1,19 @@
+struct Point {
+    float _x;
+    float _y;
+};
+
+struct Point createPoint(float x, float y) {
+    struct Point p; 
+    p._x = x;
+    p._y = y;
+    return p;
+}
+
+float getX(struct Point p1) {
+    return p1._x;
+}
+
+float getY(struct Point p2) {
+    return p2_y;
+}

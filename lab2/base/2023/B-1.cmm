@@ -1,0 +1,28 @@
+struct Rectangle{
+  float r_length = 100.0;
+  float r_width;
+};
+
+struct Triangle{
+  float t_height;
+  float t_width;
+};
+
+float area_rec(struct Rectangle rec){
+  return rec.r_length * rec.r_width;
+}
+
+int area_tri(struct Triangle tri1){
+  return tri1.t_height * tri1.t_width;
+}
+
+float area_tri(struct Triangle tri2){
+  return tri2.t_height * tri2.t_width;
+}
+
+int main(){
+  struct Rectangle rectangles[100];
+  struct Triangle triangles[50];
+  float area;
+  area_rec(rectangles[0]) = area;
+}

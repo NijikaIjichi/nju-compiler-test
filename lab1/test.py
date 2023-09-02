@@ -43,7 +43,7 @@ def main():
 
 
 def getsub(file: str):
-  return file.rsplit('.', 1)[1]
+  return x[1] if len(x := file.rsplit('.', 1)) > 1 else ''
 
 
 def chsub(file: str, sub: str):
@@ -88,7 +88,7 @@ def analyse_out(output: str, distinguish=True):
     if res:
       err.append((int(res[2]), res[1]))
   if distinguish:
-    return [f'{y}{x}' for x, y in sorted(err)]
+    return [f'{y}{x}' for x, y in sorted(set(err))]
   else:
     return set(x for x, _ in err)
 
@@ -97,10 +97,10 @@ def run_one(file: str):
   try:
     p = run([parser, file], stdin=PIPE, stdout=PIPE, stderr=PIPE, text=True, encoding="utf-8", timeout=timeout)
   except TimeoutExpired:
-    print(f"{file} {color('red', 'TLE')}")
+    print(f"[{file}] {color('red', 'TLE')}")
     return False
   if p.returncode != 0:
-    print(f"{file} {color('red', 'RE')}")
+    print(f"[{file}] {color('red', 'RE')}")
     return False
   return p
 
@@ -113,19 +113,19 @@ def test_one(file: str):
   if ans:
     err = analyse_out(p.stdout)
     if err in ans:
-      print(f"{file} {color('green', 'AC')}")
+      print(f"[{file}] {color('green', 'AC')}")
       return True
     else:
-      print(f"{file} {color('red', 'WA')}: got {err}, expect {ans[0]}")
+      print(f"[{file}] {color('red', 'WA')}: got {err}, expect {ans[0]}")
       return False
   else:
     with open(chsub(file, 'out')) as fp:
       ans = fp.read()
     if p.stdout.strip() == ans.strip():
-      print(f"{file} {color('green', 'AC')}")
+      print(f"[{file}] {color('green', 'AC')}")
       return True
     else:
-      print(f"{file} {color('red', 'WA')}")
+      print(f"[{file}] {color('red', 'WA')}")
       return False
 
 
@@ -191,18 +191,18 @@ def test_advance_one(file: str):
     else:
       ac = anserr == outerr
     if ac:
-      print(f"{file} {color('green', 'AC')}")
+      print(f"[{file}] {color('green', 'AC')}")
       return True
     else:
-      print(f"{file} {color('red', 'WA')}: got {sorted(outerr)}, expect {sorted(anserr)}")
+      print(f"[{file}] {color('red', 'WA')}: got {sorted(outerr)}, expect {sorted(anserr)}")
       return False
   else:
     i, o, a = compare(p.stdout.strip().splitlines(), clean_ans(ans))
     if i == 0:
-      print(f"{file} {color('green', 'AC')}")
+      print(f"[{file}] {color('green', 'AC')}")
       return True
     else:
-      print(f"{file} {color('red', 'WA')}: err @ Line{i}, got {o}, expect {a}")
+      print(f"[{file}] {color('red', 'WA')}: err @ Line{i}, got {o}, expect {a}")
       return False
 
 

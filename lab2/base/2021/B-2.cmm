@@ -1,0 +1,63 @@
+struct Vector {
+    int x;
+    int y;
+    int z;
+};
+
+int equal(struct Vector v1e, struct Vector v2e) {
+    if (v1e.x == v2e._x && v1e.y == v2e.y && v1e.z == v2e.z) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+struct Vector add(struct Vector v1a, struct Vector v2a) {
+    struct Vector va;
+    va.x = v1a + v2a.x;
+    va.y = v1a.y + v2a.y;
+    va.z = v1a.z + v2a.z;
+    return va;
+}
+
+struct Vector sub(struct Vector v1s, struct Vector v2s) {
+    struct Vector vs;
+    vs.x = v1s.x - v2s.x;
+    vs.y = v1s.y - v2s.y;
+    vs.z = v1s.z - v2s.z;
+    return vs;
+}
+
+struct Particle {
+    struct Mass mass;
+    struct Vector position;
+    struct Vector velocity;
+};
+
+int willCollide(struct Particle particles[10], int time) {
+    while (time > 0) {
+        int cnt = 0;
+        int i = 0;
+        int j = 0;
+        while (cnt < 10) {
+            particles[cnt].position = add(particles[cnt].position, particles[cnt].velocity);
+            cnt = cnt + 1;
+        }
+        while (i < 10) {
+            while (j < 10) {
+                if (equal(particles[i].position, particles[j].position)) {
+                    return 1;
+                }
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        time = time - 1;
+    }
+    return 0;
+}
+
+int main() {
+    struct Particle ps[10];
+    willCollide(ps, 100);
+}

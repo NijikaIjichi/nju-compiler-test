@@ -1,0 +1,44 @@
+struct IntArray10 {
+  int iaa10[10];
+};
+
+struct IntArray100 {
+  int iaa100[100];
+};
+
+struct IntVector {
+  int ix, iy;
+  int ia[2];
+  struct {
+    struct IntArray10 id[10];
+    struct IntArray100 ie;
+  } ib;
+};
+
+struct FloatVector {
+  int fx, fy;
+  int fa[39];
+  struct {
+    struct IntArray100 fd;
+    struct IntArray10 fe[10];
+  } fb;
+};
+
+int vec_is_equal(struct IntVector iv, struct IntVector iw) {
+  if (iv.ix == iw.ix && iv.iy == iw.iy) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  struct IntVector v1;
+  struct FloatVector v2;
+
+  if (!vec_is_equal(v1, v2)) {
+    v2 = v1;
+  }
+
+  return 0;
+}

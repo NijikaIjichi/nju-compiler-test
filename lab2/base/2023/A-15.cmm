@@ -1,0 +1,23 @@
+int a;
+float b;
+
+struct Car {
+  int c_id;
+  float c_speed;
+  struct Location {
+    float c_longitude;
+    float c_latitue;
+  } c_location;
+
+  struct {
+    int c_x;
+    int c_y;
+  } c_location;
+};
+
+int foo(){
+  struct Car c;
+  c.c_id = 0;
+  c.c_speed = 1.0;
+  return 0;
+}

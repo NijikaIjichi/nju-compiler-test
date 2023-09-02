@@ -1,0 +1,23 @@
+int sort(int a[10]) {
+  int i = 0;
+  while (i < 10) {
+    int j = 0;
+    while (j < 10) {
+      if (a[j] <= a[j+1]) {
+        a[j] = 0;
+      } else {
+        swap(a, j, j + 1);
+      }
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+  return 1;
+}
+
+int swap(int aa[0], int x, int y) {
+  int t = aa[x];
+  aa[x] = aa[y];
+  aa[y] = t;
+  return 0;
+}

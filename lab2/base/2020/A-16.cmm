@@ -1,0 +1,22 @@
+struct Hammer {
+  int size;
+  int weight; 
+  struct Price {
+    int amount; 
+    float currency;
+  } p;
+};
+
+struct Thor {
+  struct Hammer hh;
+  int age; 
+  struct Hammer {
+    int am;
+    float current;
+  } ww;
+} avenger;
+
+int main() {
+  avenger.age = 100;
+  return avenger.age;
+}

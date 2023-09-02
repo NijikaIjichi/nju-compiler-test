@@ -1,0 +1,94 @@
+int O_ADD;
+int O_PRD;
+int O_SUB;
+int O_DIV;
+struct Operation {
+    int oType;
+    int opt;
+};
+
+int T_INT;
+int T_FLT;
+struct BinData {
+    int   bdType;
+    int   bdIData[2];
+    float bdFData[2];
+};
+
+int MLEN;
+struct MulData {
+    int   mdType;
+    int   mdIData[100];
+    float mdFData[100];
+};
+
+struct Result {
+    int   rType;
+    int   valid;
+    int   iRes;
+    float fRes;
+};
+
+int initArith() {
+    O_ADD = 0;
+    O_PRD = 1;
+    O_SUB = 2;
+    O_DIV = 3;
+    T_INT = 4;
+    T_FLT = 5;
+    MLEN  = 100;
+    return 0;
+}
+
+int cnt;
+
+struct Result binOperator(struct Operation operation, struct BinData binData) {
+    struct Result result;
+    result.valid = 1;
+    if (operation.opt == O_ADD) {
+        result.iRes = binData.bdIData[0] + binData.bdIData[1];
+        result.fRes = binData.bdFData[0] + binData.bdFData[1];
+    } else if (operation.opt == O_PRD) {
+        result.iRes = binData.bdIData[0] * binData.bdIData[1];
+        result.fRes = binData.bdFData[0] * binData.bdFData[1];
+    } else if (operation.opt == O_SUB) {
+        result.iRes = binData.bdIData[0] - binData.bdIData[1];
+        result.fRes = binData.bdFData[0] - binData.bdFData[1];
+    } else if (operation.opt == O_DIV) {
+        result.iRes = binData.bdIData[0] / binData.bdIData[1];
+        result.fRes = binData.bdFData[0] / binData.bdFData[1];
+    } else {
+        result.valid = 0; 
+    }
+    result.valid = result.valid && (operation.oType == binData.bdType);
+    result.rType = operation.oType;
+    return result;
+}
+
+struct Result mulOperation(struct Operation operation, struct MulData mulData) {
+    struct Result result;
+    int cnt = 0;
+    result.valid = 1;
+    if (operation.opt == O_ADD) {
+        result.iRes = 0;
+        result.fRes = 0.0;
+    } else if (operation.opt == O_PRD) {
+        result.iRes = 1;
+        result.fRes = 1.0;
+    } else {
+        result.valid = 0; 
+    }
+    while (cnt < MLEN) {
+        if (operation.opt == O_ADD) {
+            result.iRes = result.iRes + mulData.mdIData[cnt];
+            result.fRes = result.fRes + mulData.mdFData[cnt];
+        } else if (operation.opt == O_PRD) {
+            result.iRes = result.iRes * mulData.mdIData[cnt];
+            result.fRes = result.fRes * mulData.mdFData[cnt];
+        }
+        cnt = cnt + 1;
+    }
+    result.valid = result.valid && (operation.oType == mulData.mdType);
+    result.rType = operation.oType;
+    return result;
+}

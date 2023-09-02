@@ -1,0 +1,34 @@
+struct Position {
+  float x;
+  float y;
+};
+
+float cal(struct Position pp1, struct Position pp2){
+  return (pp1.x - pp2.x) * (pp1.x - pp2.x) + (pp1.y - pp2.y) * (pp1.y - pp2.y);
+}
+
+float xDis(struct Position pp3, struct Position pp4){
+  return pp3.x - pp4.x;
+}
+
+float yDis(struct Position pp5, struct Position pp6){
+  return pp5.y - pp6.y;
+}
+
+struct {
+  int _i;
+  int _j;
+  int _ads;
+} persons;
+
+struct tempStruct{
+  float _f;
+  float _g;
+} structures[100];
+
+float main(){
+  struct Position p1, p2;
+  structures[0]._g = yDis(p1, p2);
+  persons + structures;
+  return cal(p1, p2);
+}

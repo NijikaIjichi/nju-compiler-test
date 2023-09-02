@@ -1,0 +1,184 @@
+struct S3 {
+  int S3_m0_i;
+  int S3_m1_i;
+};
+
+struct S4 {
+  struct S3 S4_m0_a1_S3[1];
+  int S4_m1_i;
+};
+
+struct S5 {
+  struct S4 S5_m0_a1_S4[1];
+  struct S4 S5_m1_a2_S4[2];
+  int S5_m2_i;
+  struct S4 S5_m3_a1_S4[1];
+  int S5_m4_i;
+  int S5_m5_i;
+};
+
+struct S3 a1_S3_G0[1];
+int i_G1;
+
+
+
+int i_func_7(struct S3 i_func_7_a1_S3_0[1], struct S4 i_func_7_S4_0) {
+  float f_L1;
+  float f_L0;
+  struct S4 a1_S4_L0[1];
+  struct S5 S5_L0;
+  f_L1 = 33362147354010769802827661312.000000;
+  f_L0 = f_L1 / f_L1;
+  a1_S4_L0[0].S4_m1_i = i_func_7_S4_0.S4_m1_i;
+  a1_S4_L0[0].S4_m0_a1_S3[0].S3_m1_i = i_func_7_S4_0.S4_m1_i;
+  a1_S4_L0[0].S4_m0_a1_S3[0].S3_m0_i = i_func_7_S4_0.S4_m1_i;
+  S5_L0.S5_m5_i = a1_S4_L0[l94].S4_m0_a1_S3[1074079320].S3_m1_i = (i_func_7_S4_0.S4_m1_i < i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m4_i = i_func_7_S4_0.S4_m1_i = (!1358577014);
+  S5_L0.S5_m3_a1_S4[0].S4_m1_i = i_func_7_S4_0.S4_m1_i = i_func_7(a1_S4_L0[1035374866].S4_m0_a1_S3, a1_S4_L0[927275082]);
+  S5_L0.S5_m3_a1_S4[0].S4_m0_a1_S3[0].S3_m1_i = a1_S4_L0[i_func_7_S4_0.S4_m1_i].S4_m0_a1_S3[i_func_7_S4_0.S4_m1_i].S3_m0_i = (i_func_7_S4_0.S4_m1_i || i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m3_a1_S4[0].S4_m0_a1_S3[0].S3_m0_i = i_func_7_S4_0.S4_m1_i = (i_func_7_S4_0.S4_m1_i && i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m2_i = i_func_7_S4_0.S4_m1_i = (i_func_7_S4_0.S4_m1_i < i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m1_a2_S4[1].S4_m1_i = i_func_7_S4_0.S4_m1_i = (i_func_7_S4_0.S4_m1_i < i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m1_a2_S4[1].S4_m0_a1_S3[0].S3_m1_i = i_func_7_S4_0.S4_m1_i = (i_func_7_S4_0.S4_m1_i < i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m1_a2_S4[1].S4_m0_a1_S3[0].S3_m0_i = i_func_7_S4_0.S4_m1_i = (i_func_7_S4_0.S4_m1_i = i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m1_a2_S4[0].S4_m1_i = i_func_7_a1_S3_0[i_func_7_S4_0.S4_m1_i].S3_m1_i = i_func_7_S4_0.S4_m1_i;
+  S5_L0.S5_m1_a2_S4[0].S4_m0_a1_S3[0].S3_m1_i = i_func_7_S4_0.S4_m1_i = i_func_7(a1_S4_L0[-1174629993].S4_m0_a1_S3, a1_S4_L0[-1671651085]);
+  S5_L0.S5_m1_a2_S4[0].S4_m0_a1_S3[0].S3_m0_i = i_func_7_S4_0.S4_m1_i = (i_func_7_S4_0.S4_m1_i - i_func_7_S4_0.S4_m1_i);
+  S5_L0.S5_m0_a1_S4[0].S4_m1_i = i_func_7(a1_S4_L0[418815645].S4_m0_a1_S3, a1_S4_L0[i_func_7_S4_0.S4_m1_i]);
+  S5_L0.S5_m0_a1_S4[0].S4_m0_a1_S3[0].S3_m1_i = i_func_7_S4_0.S4_m1_i = i_func_7_S4_0.S4_m1_i;
+  S5_L0.S5_m0_a1_S4[0].S4_m0_a1_S3[0].S3_m0_i = i_func_7_S4_0.S4_m1_i = i_func_7(a1_S4_L0[123806838].S4_m0_a1_S3, a1_S4_L0[-647167758]);
+  f_L0 = (f_L0 / f_L0);
+  f_L0 = (f_L0 * f_L0);
+  i_func_7_S4_0.S4_m1_i = (i_func_7_S4_0.S4_m1_i + 338118348);
+  i_func_7_S4_0.S4_m0_a1_S3[i_func_7_S4_0.S4_m1_i].S3_m0_i = i_func_7(i_func_7_S4_0.S4_m0_a1_S3, a1_S4_L0[129402019]);
+  f_L1 = (f_L1 * f_L1);
+  i_func_7_S4_0.S4_m1_i = (-1774766836 >= i_func_7_S4_0.S4_m1_i);
+  return i_func_7_S4_0.S4_m1_i = i_func_7(a1_S4_L0[600577882].S4_m0_a1_S3, a1_S4_L0[-1474377709]);
+}
+
+int i_func_8(struct S3 i_func_8_a1_S3_0[1], int i_func_8_i_0, struct S4 i_func_8_a2_S4_0[2], struct S5 i_func_8_S5_0) {
+  i_func_8(i_func_8_S5_0.S5_m3_a1_S4[i_func_8_S5_0.S5_m4_i].S4_m0_a1_S3, (i_func_8_S5_0.S5_m2_i < 2113383446), i_func_8_S5_0.S5_m1_a2_S4, (i_func_8_S5_0 = (i_func_8_S5_0 = i_func_8_S5_0)));
+  return i_func_8_S5_0.S5_m5_i = i_func_8(i_func_8_S5_0.S5_m1_a2_S4[-235178630].S4_m0_a1_S3, i_func_8_S5_0.S5_m2_i, i_func_8_S5_0.S5_m1_a2_S4, i_func_8_S5_0);
+}
+
+int i_func_9(int i_func_9_i_0, struct S3 i_func_9_S3_0) {
+  struct S4 S4_L0;
+  struct S5 S5_L1;
+  float f_L6;
+  float f_L5;
+  S4_L0.S4_m1_i = i_func_9_S3_0.S3_m0_i;
+  S4_L0.S4_m0_a1_S3[0].S3_m1_i = i_func_9_S3_0.S3_m0_i;
+  S4_L0.S4_m0_a1_S3[0].S3_m0_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m5_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m4_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m3_a1_S4[0].S4_m1_i = 861058215;
+  S5_L1.S5_m3_a1_S4[0].S4_m0_a1_S3[0].S3_m1_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m3_a1_S4[0].S4_m0_a1_S3[0].S3_m0_i = 882280142;
+  S5_L1.S5_m2_i = 214954179;
+  S5_L1.S5_m1_a2_S4[1].S4_m1_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m1_a2_S4[1].S4_m0_a1_S3[0].S3_m1_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m1_a2_S4[1].S4_m0_a1_S3[0].S3_m0_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m1_a2_S4[0].S4_m1_i = S4_L0.S4_m1_i;
+  S5_L1.S5_m1_a2_S4[0].S4_m0_a1_S3[0].S3_m1_i = -1043383862;
+  S5_L1.S5_m1_a2_S4[0].S4_m0_a1_S3[0].S3_m0_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m0_a1_S4[0].S4_m1_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m0_a1_S4[0].S4_m0_a1_S3[0].S3_m1_i = i_func_9_S3_0.S3_m0_i;
+  S5_L1.S5_m0_a1_S4[0].S4_m0_a1_S3[0].S3_m0_i = i_func_9_S3_0.S3_m0_i;
+  f_L6 = 48.518986;
+  f_L5 = -213562.984375 - f_L6;
+  i_func_9(i_func_8(S4_L0.S4_m0_a1_S3, i_func_9_S3_0.S3_m0_i, S5_L1.S5_m1_a2_S4, S5_L1), S4_L0.S4_m0_a1_S3[i_func_9_S3_0.S3_m1_i]);
+  if (S5_L1.S5_m0_a1_S4[S4_L0.S4_m1_i].S4_m1_i = i_func_9(S4_L0.S4_m1_i, S4_L0.S4_m0_a1_S3[-661822000])) {
+    float f_L2;
+    f_L2 = 759.796570;
+    return S5_L1.S5_m3_a1_S4[i_func_9_S3_0.S3_m1_i].S4_m0_a1_S3[S4_L0.S4_m1_i].S3_m1_i = i_func_7(S5_L1.S5_m1_a2_S4[1169802553].S4_m0_a1_S3, S5_L1.S5_m0_a1_S4[-427187241]);
+    f_L2 = (f_L2 - f_L2);
+    S5_L1.S5_m5_i = i_func_9(i_func_9_S3_0.S3_m1_i, S4_L0.S4_m0_a1_S3[859989612]);
+    S4_L0.S4_m0_a1_S3[S5_L1.S5_m2_i].S3_m0_i = i_func_9(i_func_9_S3_0.S3_m0_i, S4_L0.S4_m0_a1_S3[23890819]);
+  }
+  else {
+    float f_L4;
+    float f_L3;
+    f_L4 = -0.367997;
+    f_L3 = f_L4 + f_L4;
+    f_L3 = (f_L3 * f_L3);
+    S5_L1.S5_m1_a2_S4[-1206945488].S4_m1_i = (i_func_9_S3_0.S3_m1_i + S5_L1.S5_m2_i);
+    f_L4 = (f_L4 / f_L3);
+    f_L3 = (f_L3 - f_L3);
+    f_L3 = (f_L3 / f_L3);
+    f_L4 = (f_L3 + f_L4);
+    f_L3 = -2708354196234769006592.000000;
+    f_L4 = (f_L3 - f_L4);
+    f_L4 = (-118903058406962901681377902592.000000 - f_L3);
+  }
+  S5_L1.S5_m3_a1_S4[S5_L1.S5_m5_i].S4_m0_a1_S3[S5_L1.S5_m5_i].S3_m0_i = -2023575145;
+  S5_L1.S5_m5_i = (S5_L1.S5_m2_i != i_func_9_S3_0.S3_m1_i);
+  f_L5 = (f_L5 + f_L6);
+  S5_L1.S5_m4_i = (!i_func_9_S3_0.S3_m1_i);
+  return S5_L1.S5_m2_i = (S4_L0.S4_m1_i >= i_func_9_S3_0.S3_m1_i);
+}
+
+int top_caller() {
+  struct S4 S4_L1;
+  struct S5 S5_L2;
+  S4_L1.S4_m1_i = i_G1 <= i_G1;
+  S4_L1.S4_m0_a1_S3[0].S3_m1_i = i_G1 >= i_G1;
+  S4_L1.S4_m0_a1_S3[0].S3_m0_i = top_caller();
+  S5_L2.S5_m5_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m4_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m3_a1_S4[0].S4_m1_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m3_a1_S4[0].S4_m0_a1_S3[0].S3_m1_i = 278570963;
+  S5_L2.S5_m3_a1_S4[0].S4_m0_a1_S3[0].S3_m0_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m2_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m1_a2_S4[1].S4_m1_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m1_a2_S4[1].S4_m0_a1_S3[0].S3_m1_i = 1614820644;
+  S5_L2.S5_m1_a2_S4[1].S4_m0_a1_S3[0].S3_m0_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m1_a2_S4[0].S4_m1_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m1_a2_S4[0].S4_m0_a1_S3[0].S3_m1_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m1_a2_S4[0].S4_m0_a1_S3[0].S3_m0_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m0_a1_S4[0].S4_m1_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m0_a1_S4[0].S4_m0_a1_S3[0].S3_m1_i = S4_L1.S4_m1_i;
+  S5_L2.S5_m0_a1_S4[0].S4_m0_a1_S3[0].S3_m0_i = S4_L1.S4_m1_i;
+  while (S4_L1.S4_m1_i = i_func_8(S4_L1.S4_m0_a1_S3, S4_L1.S4_m1_i, S5_L2.S5_m1_a2_S4, S5_L2)) {
+    float f_L8;
+    float f_L7;
+    f_L8 = -0.000000;
+    f_L7 = f_L8 - f_L8;
+    S4_L1.S4_m0_a1_S3[S5_L2.S5_m4_i].S3_m1_i = (S4_L1.S4_m1_i == S5_L2.S5_m5_i);
+    S5_L2.S5_m2_i = (S4_L1.S4_m1_i + S5_L2.S5_m5_i);
+    S5_L2.S5_m3_a1_S4[S5_L2.S5_m2_i].S4_m0_a1_S3[-591210993].S3_m1_i = i_func_8(S4_L1.S4_m0_a1_S3, S5_L2.S5_m4_i, S5_L2.S5_m1_a2_S4, S5_L2);
+    S5_L2.S5_m5_i = (S5_L2.S5_m2_i >= S4_L1.S4_m1_i);
+    f_L7 = (0.000000 + -9526908005831447385061807724953600.000000);
+    f_L7 = (f_L7 + f_L8);
+    f_L8 = 0.000000;
+    f_L8 = (f_L8 * f_L7);
+    return S4_L1.S4_m1_i = top_caller();
+  }
+  a1_S3_G0[S4_L1.S4_m1_i].S3_m0_i = (S5_L2.S5_m2_i * S5_L2.S5_m4_i);
+  while (S5_L2.S5_m2_i = (626339330 * S5_L2.S5_m4_i)) {
+    S5_L2.S5_m2_i = (S4_L1.S4_m1_i || S5_L2.S5_m5_i);
+  }
+  while (a1_S3_G0[S5_L2.S5_m2_i].S3_m0_i = (S4_L1.S4_m1_i != S4_L1.S4_m1_i)) {
+    float f_L10;
+    float f_L9;
+    f_L10 = 32536505705729006981513204172062720.000000;
+    f_L9 = f_L10 + f_L10;
+    f_L9 = (f_L9 - f_L10);
+    S5_L2.S5_m0_a1_S4[S4_L1.S4_m1_i].S4_m0_a1_S3[S5_L2.S5_m4_i].S3_m0_i = i_func_8(S5_L2.S5_m1_a2_S4[759450746].S4_m0_a1_S3, -642369877, S5_L2.S5_m1_a2_S4, S5_L2);
+    return S5_L2.S5_m0_a1_S4[S4_L1.S4_m1_i].S4_m0_a1_S3[S4_L1.S4_m1_i].S3_m0_i = (S4_L1.S4_m1_i <= -457684899);
+    f_L9 = -0.000000;
+    S5_L2.S5_m5_i = (S4_L1.S4_m1_i + S4_L1.S4_m1_i);
+  }
+  return S5_L2.S5_m4_i = i_func_7(S5_L2.S5_m0_a1_S4[-747793400].S4_m0_a1_S3, S5_L2.S5_m1_a2_S4[-1198993540]);
+}
+
+int initialize_global_objects() {
+  a1_S3_G0[0].S3_m1_i = -165475023 + 202755591;
+  a1_S3_G0[0].S3_m0_i = -1057277040 >= 990363989;
+  i_G1 = -1850013119 >= -767233033;
+  return 0;
+}
+
+int main() {
+  initialize_global_objects();
+  return 0;
+}
