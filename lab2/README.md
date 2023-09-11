@@ -3,7 +3,7 @@
 ## 使用方法
 
 ```bash
-python3 test.py [-p parser路径] [-g 组号] [-a] [-w] [-t] [-m]
+python3 test.py [-p parser路径] [-g 组号] [-a] [-w] [-t 时限] [-m]
 ```
 
 ## 参数说明

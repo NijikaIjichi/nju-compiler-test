@@ -1,0 +1,4 @@
+FUNCTION main :
+DEC v1 10240
+t1 := CALL main
+RETURN #0

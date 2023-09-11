@@ -1,0 +1,18 @@
+struct Giant {
+    int id;
+    int age;
+    int height;
+    int weight;
+};
+
+int main() {
+    struct Giant g;
+    int bmi = 0;
+    g.id = 0;
+    g.age = 20;
+    g.height = 2;
+    g.weight = 90;
+    bmi = g.weight / (g.height * g.height);
+    write(bmi);
+    return 0;
+}

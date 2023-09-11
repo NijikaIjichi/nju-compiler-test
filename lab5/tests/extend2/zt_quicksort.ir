@@ -1,0 +1,149 @@
+FUNCTION display :
+PARAM v1
+PARAM v2
+v3 := #0
+LABEL L0 :
+IF v3 < v2 GOTO L1
+GOTO L2
+LABEL L1 :
+t0 := v3 * #4
+t1 := v1 + t0
+t2 := *t1
+WRITE t2
+t3 := v3 + #1
+v3 := t3
+GOTO L0
+LABEL L2 :
+RETURN #0
+FUNCTION quicksort :
+PARAM v5
+PARAM v6
+PARAM v7
+IF v6 < v7 GOTO L3
+GOTO L4
+LABEL L3 :
+v8 := v6
+v9 := v7
+t4 := v6 * #4
+t5 := v5 + t4
+t6 := *t5
+v10 := t6
+LABEL L5 :
+IF v8 < v9 GOTO L6
+GOTO L7
+LABEL L6 :
+LABEL L8 :
+IF v8 < v9 GOTO L11
+GOTO L10
+LABEL L11 :
+t7 := v9 * #4
+t8 := v5 + t7
+t9 := *t8
+IF t9 >= v10 GOTO L9
+GOTO L10
+LABEL L9 :
+t10 := v9 - #1
+v9 := t10
+GOTO L8
+LABEL L10 :
+IF v8 < v9 GOTO L12
+GOTO L13
+LABEL L12 :
+t11 := v8 * #4
+t12 := v5 + t11
+t13 := v9 * #4
+t14 := v5 + t13
+t15 := *t14
+*t12 := t15
+t16 := v8 + #1
+v8 := t16
+LABEL L13 :
+LABEL L14 :
+IF v8 < v9 GOTO L17
+GOTO L16
+LABEL L17 :
+t17 := v8 * #4
+t18 := v5 + t17
+t19 := *t18
+IF t19 < v10 GOTO L15
+GOTO L16
+LABEL L15 :
+t20 := v8 + #1
+v8 := t20
+GOTO L14
+LABEL L16 :
+IF v8 < v9 GOTO L18
+GOTO L19
+LABEL L18 :
+t21 := v9 * #4
+t22 := v5 + t21
+t23 := v8 * #4
+t24 := v5 + t23
+t25 := *t24
+*t22 := t25
+t26 := v9 - #1
+v9 := t26
+LABEL L19 :
+GOTO L5
+LABEL L7 :
+t27 := v8 * #4
+t28 := v5 + t27
+*t28 := v10
+t29 := v8 - #1
+ARG t29
+ARG v6
+ARG v5
+t30 := CALL quicksort
+t31 := v8 + #1
+ARG v7
+ARG t31
+ARG v5
+t32 := CALL quicksort
+LABEL L4 :
+RETURN #0
+FUNCTION main :
+DEC v11 40
+v12 := &v11
+v13 := #10
+t33 := #0 * #4
+t34 := v12 + t33
+*t34 := #12
+t35 := #1 * #4
+t36 := v12 + t35
+*t36 := #85
+t37 := #2 * #4
+t38 := v12 + t37
+*t38 := #25
+t39 := #3 * #4
+t40 := v12 + t39
+*t40 := #16
+t41 := #4 * #4
+t42 := v12 + t41
+*t42 := #34
+t43 := #5 * #4
+t44 := v12 + t43
+*t44 := #23
+t45 := #6 * #4
+t46 := v12 + t45
+*t46 := #49
+t47 := #7 * #4
+t48 := v12 + t47
+*t48 := #95
+t49 := #8 * #4
+t50 := v12 + t49
+*t50 := #17
+t51 := #9 * #4
+t52 := v12 + t51
+*t52 := #61
+ARG v13
+ARG v12
+t53 := CALL display
+t54 := v13 - #1
+ARG t54
+ARG #0
+ARG v12
+t55 := CALL quicksort
+ARG v13
+ARG v12
+t56 := CALL display
+RETURN #0

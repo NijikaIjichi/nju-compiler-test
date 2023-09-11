@@ -1,0 +1,44 @@
+int main() {
+    int cnum = 3, charges[3];
+    int amount = 100, dp[101];
+    int valid = 1;
+    int i = 0, j = 0;
+    while (i < cnum) {
+        charges[i] = read();
+        if (charges[i] <= 0) {
+            valid = 0;
+        }
+        i = i + 1;
+    }
+    if (valid == 0) {
+        write(-1);
+        return 0;
+    }
+   
+    dp[0] = 0;
+    i = 1;
+    while (i < amount + 1) {
+        dp[i] = amount + 1;
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i < cnum) {
+        int chg = charges[i];
+        j = chg;
+        while (j < amount + 1) {
+            if (dp[j - chg] + 1 < dp[j]) {
+                dp[j] = dp[j - chg] + 1;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+
+    if (dp[amount] > amount) {
+        write(-1);
+    } else {
+        write(dp[amount]);
+    }
+    return 0;
+}

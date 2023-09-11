@@ -1,0 +1,21 @@
+int mod(int x,int n)
+{
+    return x - (x / n) * n;
+}
+
+int main()
+{
+    int year,a;
+    year = read();
+    if(mod(year, 400) == 0)
+        a = 1;
+    else
+    {
+        if(mod(year, 4) == 0 && mod(year, 100) != 0)
+            a = 1;
+        else
+            a = 0;
+    }
+    write(a);
+    return 0;
+}

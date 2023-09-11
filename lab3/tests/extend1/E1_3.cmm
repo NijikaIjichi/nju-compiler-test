@@ -1,0 +1,46 @@
+struct Worker
+{
+    int id;
+    int salary;
+    int group;
+};
+
+struct Group
+{
+    int group_id;
+    struct Worker workers[10];
+    int avg_salary;
+};
+
+int calculate_avg(struct Group g) 
+{
+    int sum = 0, k = 0;
+    while (k < 10) 
+    {
+        sum = sum + g.workers[k].salary;
+        k = k + 1;
+    }
+    g.avg_salary = sum / 10;
+    return g.avg_salary;
+}
+int main()
+{
+    struct Group company[5];
+    int i = 0 , j, avg = 0;
+    while(i < 5)
+    {
+        j = 0;
+        company[i].group_id = i;
+        while (j < 10)
+        {
+            company[i].workers[j].salary = 3000 + i * 100 + j * 150;
+            j = j + 1;
+        }
+	company[i].avg_salary = calculate_avg(company[i]);
+        avg = avg + company[i].avg_salary;
+        i = i + 1;
+    }
+    avg = avg / 5;
+    write(avg);
+    return 0;
+}

@@ -1,0 +1,68 @@
+int fact(int i1) {
+    if (i1 <= 0) {
+        return 1;
+    } else {
+        return i1 * fact(i1 - 1);
+    }
+}
+
+int isqrt(int i2) {
+    int c1 = 0;
+    while (c1 < i2) {
+        if (c1 * c1 <= i2 && (c1 + 1) * (c1 + 1) > i2) {
+            return c1;
+        }
+        c1 = c1 + 1;
+    }
+    return -1;
+}
+
+int mod(int i3, int i4) {
+    return i3 - i3 / i4 * i4;
+}
+
+int main() {
+    int a = 1331;
+    int b = 1217; 
+    int c = -22121;
+    int d = 5;
+    int i = b * 7 / a + (1990 + 9 * 10) / (b + 23);
+    int j = (2000 - 1) * 10  / (b + 2 * 10 + 3);
+    int k = 0;
+    int l = 0;
+    int m = 0;
+    int arr[1000];
+    while (k < fact(isqrt(isqrt(b)))) {
+        arr[k] = fact(mod(k, 4));
+        a = k + k / 4 * 4;
+        a = a + k / 4 * 4;
+        a = a + k / 4 * 4;
+        a = a + k / 4 * 4;
+        while (c < d * d * d) {
+            c = mod(a, 10) + 10 + c + 1 + i - j;
+        }
+        c = c + fact(mod(isqrt(c), 10));
+        k = k + 1;
+    }
+
+    k = 0;
+    while(k < 10) {
+        l = 0;
+        while (l < 10) {
+            if (k == 0 && l == 0) {
+                m = 1;
+            } else {
+                m = 0;
+            }
+            while (m < 10) {
+                d = d + arr[k * 10 * 10 + l * 10 + m] - arr[k * 10 * 10 + l * 10 + m - 1];
+                m = m + 1;
+            }
+            l = l + 1;
+        }
+        k = k + 1;
+    }
+    k = d + c;
+    write(k);
+    return 0;
+}

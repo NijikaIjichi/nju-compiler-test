@@ -1,0 +1,87 @@
+FUNCTION mod :
+PARAM v0
+PARAM v1
+t0 := v0 / v1
+t1 := t0 * v1
+t2 := v0 - t1
+RETURN t2
+FUNCTION quick_power_mod :
+PARAM v2
+PARAM v3
+PARAM v4
+v5 := #1
+IF v2 <= #0 GOTO L0
+GOTO L4
+LABEL L4 :
+IF v3 <= #0 GOTO L0
+GOTO L3
+LABEL L3 :
+IF v4 <= #0 GOTO L0
+GOTO L1
+LABEL L0 :
+t3 := #0 - #1
+RETURN t3
+GOTO L2
+LABEL L1 :
+ARG v4
+ARG v2
+t4 := CALL mod
+v2 := t4
+LABEL L5 :
+IF v3 != #0 GOTO L6
+GOTO L7
+LABEL L6 :
+ARG #2
+ARG v3
+t5 := CALL mod
+IF t5 == #1 GOTO L8
+GOTO L9
+LABEL L8 :
+t6 := v5 * v2
+ARG v4
+ARG t6
+t7 := CALL mod
+v5 := t7
+LABEL L9 :
+t8 := v3 / #2
+v3 := t8
+t9 := v2 * v2
+ARG v4
+ARG t9
+t10 := CALL mod
+v2 := t10
+GOTO L5
+LABEL L7 :
+RETURN v5
+LABEL L2 :
+FUNCTION main :
+DEC v6 12
+v7 := &v6
+v8 := #0
+LABEL L10 :
+IF v8 < #3 GOTO L11
+GOTO L12
+LABEL L11 :
+t11 := v8 * #4
+t12 := v7 + t11
+READ t13
+*t12 := t13
+t14 := v8 + #1
+v8 := t14
+GOTO L10
+LABEL L12 :
+t15 := #0 * #4
+t16 := v7 + t15
+t17 := *t16
+t18 := #1 * #4
+t19 := v7 + t18
+t20 := *t19
+t21 := #2 * #4
+t22 := v7 + t21
+t23 := *t22
+ARG t23
+ARG t20
+ARG t17
+t24 := CALL quick_power_mod
+WRITE t24
+RETURN #0

@@ -1,0 +1,15 @@
+struct Counter {
+    int cnt;
+};
+int inc_and_print(struct Counter cout) {
+    cout.cnt = cout.cnt + 1;
+    write(cout.cnt);
+    return cout.cnt;
+}
+int main() {
+    struct Counter c;
+    c.cnt = 0;
+    c.cnt = 1 + inc_and_print(c);
+    3 * 2 + inc_and_print(c);
+    return 0;
+}

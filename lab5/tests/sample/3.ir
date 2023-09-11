@@ -1,0 +1,17 @@
+FUNCTION main :
+DEC v6 40
+v1 := #30
+t1 := v1 / #5
+v2 := t1
+t2 := #9 - v2
+v2 := t2
+t3 := v2 * #4
+v3 := t3
+t4 := #2 * v3
+t5 := v1 - t4
+v4 := t5
+t6 := v4 * #4
+t7 := &v6 + t6
+t8 := *t7
+v5 := t8
+RETURN #0

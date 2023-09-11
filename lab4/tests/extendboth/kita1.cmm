@@ -1,0 +1,230 @@
+struct B {
+  int x[2][2][2];
+  int y[2][2][2];
+};
+
+struct D {
+  int x[2][2];
+  int y[2][2];
+};
+
+struct C {
+  int x[2][2];
+  struct D d[2][2];
+};
+
+struct A {
+  struct B b[2];
+  struct C c[2][2];
+};
+
+int set2(int x[2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    int j = 0;
+    while (j < 2) {
+      x[i][j] = start;
+      start = start + 1;
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+  return start;
+}
+
+int set3(int x[2][2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = set2(x[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int setb(struct B b, int start) {
+  start = set3(b.x, start);
+  start = set3(b.y, start);
+  return start;
+}
+
+int setb1(struct B b[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = setb(b[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int setd(struct D d, int start) {
+  start = set2(d.x, start);
+  start = set2(d.y, start);
+  return start;
+}
+
+int setd1(struct D d[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = setd(d[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int setd2(struct D d[2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = setd1(d[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int setc(struct C c, int start) {
+  start = set2(c.x, start);
+  start = setd2(c.d, start);
+  return start;
+}
+
+int setc1(struct C c[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = setc(c[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int setc2(struct C c[2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = setc1(c[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int seta(struct A a, int start) {
+  start = setb1(a.b, start);
+  start = setc2(a.c, start);
+  return start;
+}
+
+int seta1(struct A a[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = seta(a[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int get2(int x[2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    int j = 0;
+    while (j < 2) {
+      write(x[i][j]);
+      start = start + 1;
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+  return start;
+}
+
+int get3(int x[2][2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = get2(x[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int getb(struct B b, int start) {
+  start = get3(b.x, start);
+  start = get3(b.y, start);
+  return start;
+}
+
+int getb1(struct B b[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = getb(b[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int getd(struct D d, int start) {
+  start = get2(d.x, start);
+  start = get2(d.y, start);
+  return start;
+}
+
+int getd1(struct D d[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = getd(d[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int getd2(struct D d[2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = getd1(d[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int getc(struct C c, int start) {
+  start = get2(c.x, start);
+  start = getd2(c.d, start);
+  return start;
+}
+
+int getc1(struct C c[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = getc(c[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int getc2(struct C c[2][2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = getc1(c[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int geta(struct A a, int start) {
+  start = getb1(a.b, start);
+  start = getc2(a.c, start);
+  return start;
+}
+
+int geta1(struct A a[2], int start) {
+  int i = 0;
+  while (i < 2) {
+    start = geta(a[i], start);
+    i = i + 1;
+  }
+  return start;
+}
+
+int main() {
+  struct A a[2];
+  write(seta1(a, 0));
+  write(geta1(a, 0));
+  a[1] = a[0];
+  write(geta1(a, 0));
+  return 0;
+}

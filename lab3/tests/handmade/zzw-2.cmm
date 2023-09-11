@@ -1,0 +1,16 @@
+//This sample aims to test the correctness of implementation
+//1. Function Call
+int f() { return 1; }
+
+int g(int a) { return f() * a * 2; }
+
+int x(int b, int d) { return b - d; }
+
+int y(int c) { return c; }
+
+int main(){
+	int p;
+	g(x(x(y((g(f()))), 2), 2));
+	write(g(x(x(y((g(f()))), 2), 2)));
+	return 0;
+}

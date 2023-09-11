@@ -1,0 +1,86 @@
+FUNCTION f :
+PARAM v1
+DEC v2 20
+v3 := &v2
+t0 := v1 + #0
+t1 := *t0
+t2 := v3 + #0
+*t2 := t1
+t3 := v1 + #4
+t4 := *t3
+t5 := v3 + #4
+*t5 := t4
+t6 := v1 + #8
+t7 := *t6
+t8 := v3 + #8
+*t8 := t7
+t9 := v1 + #12
+t10 := *t9
+t11 := v3 + #12
+*t11 := t10
+t12 := v1 + #16
+t13 := *t12
+t14 := v3 + #16
+*t14 := t13
+v4 := #0
+LABEL L0 :
+IF v4 < #5 GOTO L1
+GOTO L2
+LABEL L1 :
+t15 := v4 * #4
+t16 := v3 + t15
+t17 := *t16
+WRITE t17
+t18 := v4 + #1
+v4 := t18
+GOTO L0
+LABEL L2 :
+RETURN #0
+FUNCTION g :
+PARAM v6
+DEC v7 8
+v8 := &v7
+t19 := v6 + #0
+t20 := *t19
+t21 := v8 + #0
+*t21 := t20
+t22 := v6 + #4
+t23 := *t22
+t24 := v8 + #4
+*t24 := t23
+t25 := v8 + #0
+t26 := *t25
+WRITE t26
+t27 := v8 + #4
+t28 := *t27
+WRITE t28
+RETURN #0
+FUNCTION main :
+DEC v9 20
+v10 := &v9
+DEC v11 8
+v12 := &v11
+t29 := #0 * #4
+t30 := v10 + t29
+*t30 := #114
+t31 := #1 * #4
+t32 := v10 + t31
+*t32 := #514
+t33 := #2 * #4
+t34 := v10 + t33
+*t34 := #19
+t35 := #3 * #4
+t36 := v10 + t35
+*t36 := #198
+t37 := #4 * #4
+t38 := v10 + t37
+*t38 := #10
+t39 := v12 + #0
+*t39 := #114514
+t40 := v12 + #4
+*t40 := #1919810
+ARG v10
+t41 := CALL f
+ARG v12
+t42 := CALL g
+RETURN #0

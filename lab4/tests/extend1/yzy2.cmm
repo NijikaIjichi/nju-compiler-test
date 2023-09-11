@@ -1,0 +1,14 @@
+struct qwq {
+    int a[4];
+    int b;
+};
+
+int main() {
+    struct qwq q1, q2;
+    q1.a[0] = 0;
+    q1.a[1] = 1;
+    q1.a[2] = 2;
+    q1.a[3] = 3;
+    q1.b = 4;
+    return 0;
+}

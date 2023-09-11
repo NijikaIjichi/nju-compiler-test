@@ -1,0 +1,18 @@
+FUNCTION test :
+PARAM p1
+t1 := p1
+IF t1 == #1 GOTO label1
+RETURN #0
+
+LABEL label1 :
+ARG #0
+dummy := CALL test
+WRITE t1
+RETURN #0
+
+FUNCTION main :
+ARG #1
+dummy := CALL test
+WRITE dummy
+RETURN #0
+

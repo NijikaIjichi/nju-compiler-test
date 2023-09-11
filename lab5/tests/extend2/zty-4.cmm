@@ -1,0 +1,40 @@
+int sort(int _a[10], int _n) {
+  int _cnt = 0;
+  int _i = 0, _j = 0;
+  while (_i < _n) {
+    _j = 0;
+    while (_j < _n - _i - 1) {
+      if (_a[_j] > _a[_j + 1]) {
+        int _tmp = _a[_j];
+        _a[_j] = _a[_j + 1];
+        _a[_j + 1] = _tmp;
+        _cnt = _cnt + 1;
+      }
+      _j = _j + 1;
+    }
+    _i = _i + 1;
+  }
+  return _cnt;
+}
+
+int main() {
+  int a[10];
+  int n = 0, i = 0;
+
+  n = read();
+  i = 0;
+  while (i < n) {
+    a[i] = read();
+    i = i + 1;
+  }
+
+  sort(a, n);
+
+  i = 0;
+  while (i < n) {
+    write(a[i]);
+    i = i + 1;
+  }
+
+  return 0;
+}

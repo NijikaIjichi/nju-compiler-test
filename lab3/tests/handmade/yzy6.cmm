@@ -1,0 +1,22 @@
+//Arith as bool
+int main() {
+    if(1 > 2) {
+        write(1);
+    }
+    if(2 < 2) {
+        write(1);
+    }
+    if(1 >= 2) {
+        write(1);
+    }
+    if(3 <= 2) {
+        write(1);
+    }
+    if(1 == 2) {
+        write(1);
+    }
+    if(7 != 7) {
+        write(1);
+    }
+    return 0;
+}

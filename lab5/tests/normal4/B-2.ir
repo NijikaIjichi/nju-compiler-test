@@ -1,0 +1,62 @@
+FUNCTION main :
+DEC v1 40
+v2 := &v1
+READ t0
+v0 := t0
+IF v0 > #10 GOTO L0
+GOTO L1
+LABEL L0 :
+v0 := #10
+LABEL L1 :
+v4 := #0
+LABEL L2 :
+IF v4 < v0 GOTO L3
+GOTO L4
+LABEL L3 :
+t1 := v4 * #4
+t2 := v2 + t1
+READ t3
+*t2 := t3
+t4 := v4 + #1
+v4 := t4
+GOTO L2
+LABEL L4 :
+READ t5
+v3 := t5
+v6 := #0
+t6 := v0 - #1
+v7 := t6
+LABEL L5 :
+IF v6 < v7 GOTO L6
+GOTO L7
+LABEL L6 :
+t7 := v6 + v7
+t8 := t7 / #2
+v4 := t8
+t9 := v4 * #4
+t10 := v2 + t9
+t11 := *t10
+IF t11 == v3 GOTO L8
+GOTO L9
+LABEL L8 :
+WRITE v4
+RETURN #0
+GOTO L10
+LABEL L9 :
+t12 := v4 * #4
+t13 := v2 + t12
+t14 := *t13
+IF t14 > v3 GOTO L11
+GOTO L12
+LABEL L11 :
+t15 := v4 - #1
+v7 := t15
+GOTO L13
+LABEL L12 :
+t16 := v4 + #1
+v6 := t16
+LABEL L13 :
+LABEL L10 :
+GOTO L5
+LABEL L7 :
+RETURN #0

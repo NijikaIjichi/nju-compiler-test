@@ -1,0 +1,92 @@
+FUNCTION main :
+READ t0
+v0 := t0
+READ t1
+v1 := t1
+READ t2
+v2 := t2
+READ t3
+v3 := t3
+READ t4
+v4 := t4
+READ t5
+v5 := t5
+READ t6
+v6 := t6
+READ t7
+v7 := t7
+IF v0 == v2 GOTO L0
+GOTO L5
+LABEL L5 :
+IF v1 == v3 GOTO L0
+GOTO L4
+LABEL L4 :
+IF v4 == v6 GOTO L0
+GOTO L3
+LABEL L3 :
+IF v5 == v7 GOTO L0
+GOTO L1
+LABEL L0 :
+t8 := #0 - #1
+WRITE t8
+GOTO L2
+LABEL L1 :
+IF v0 < v2 GOTO L6
+GOTO L7
+LABEL L6 :
+v8 := v0
+v9 := v2
+GOTO L8
+LABEL L7 :
+v8 := v2
+v9 := v0
+LABEL L8 :
+IF v1 < v3 GOTO L9
+GOTO L10
+LABEL L9 :
+v10 := v3
+v11 := v1
+GOTO L11
+LABEL L10 :
+v10 := v1
+v11 := v3
+LABEL L11 :
+IF v4 < v6 GOTO L12
+GOTO L13
+LABEL L12 :
+v12 := v4
+v13 := v6
+GOTO L14
+LABEL L13 :
+v12 := v6
+v13 := v4
+LABEL L14 :
+IF v5 < v7 GOTO L15
+GOTO L16
+LABEL L15 :
+v14 := v7
+v15 := v5
+GOTO L17
+LABEL L16 :
+v14 := v5
+v15 := v7
+LABEL L17 :
+IF v12 >= v9 GOTO L18
+GOTO L23
+LABEL L23 :
+IF v13 <= v8 GOTO L18
+GOTO L22
+LABEL L22 :
+IF v15 >= v10 GOTO L18
+GOTO L21
+LABEL L21 :
+IF v14 <= v11 GOTO L18
+GOTO L19
+LABEL L18 :
+WRITE #0
+GOTO L20
+LABEL L19 :
+WRITE #1
+LABEL L20 :
+LABEL L2 :
+RETURN #0

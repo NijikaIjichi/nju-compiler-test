@@ -1,0 +1,14 @@
+FUNCTION process :
+v_dummy := #9996
+RETURN #0
+
+FUNCTION main :
+v_i := #0
+LABEL l6 :
+t72 := CALL process
+WRITE v_h
+v_h := #9
+v_i := v_i + #1
+WRITE v_h
+IF v_i <= #1 GOTO l6
+RETURN #0

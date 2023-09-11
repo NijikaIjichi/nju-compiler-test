@@ -1,0 +1,81 @@
+
+int id_pyOYkf(int id_aQNDDzu, int id_oWF8u) {
+  if((((id_aQNDDzu > 0) && (id_oWF8u > 0) && (id_aQNDDzu > (2147483647 - id_oWF8u))) || ((id_aQNDDzu < 0) && (id_oWF8u < 0) && (id_aQNDDzu < (-2147483648 - id_oWF8u)))))
+  {
+    return id_aQNDDzu;
+  }
+  return id_aQNDDzu + id_oWF8u;
+}
+
+int id_spFOGusIS3(int id_z1w, int id_OszkVD) {
+  if(((id_z1w > 0) && (id_OszkVD < 0) && (id_z1w > 2147483647 + id_OszkVD))|| ((id_z1w < 0) && (id_OszkVD > 0) && (id_z1w < -2147483648 + id_OszkVD)))
+  {
+    return id_z1w;
+  }
+  return id_z1w - id_OszkVD;
+}
+
+int id_sGXn(int id_AJ2eHmx9, int id_J0_) {
+  if((((id_AJ2eHmx9 > 0) && (id_J0_ > 0) && (id_AJ2eHmx9 > (2147483647 / id_J0_))) || ((id_AJ2eHmx9 > 0) && (id_J0_ <= 0) && (id_J0_ < (-2147483648 / id_AJ2eHmx9))) || ((id_AJ2eHmx9 <= 0) && (id_J0_ > 0) && (id_AJ2eHmx9 < (-2147483648 / id_J0_))) || ((id_AJ2eHmx9 <= 0) && (id_J0_ <= 0) && (id_AJ2eHmx9 != 0) && (id_J0_ < (2147483647 / id_AJ2eHmx9)))))
+  {
+    return id_AJ2eHmx9;
+  }
+  return id_AJ2eHmx9 * id_J0_;
+}
+
+int id_V(int id_Rd, int id_BCunpBVWtZ) {
+  if(((id_BCunpBVWtZ == 0) || ((id_Rd == -2147483648) && (id_BCunpBVWtZ == (-1)))))
+  {
+    return id_Rd;
+  }
+  return id_Rd / id_BCunpBVWtZ;
+}
+
+int id_cXDeYVIg(int id_o8QgYds2XQ, int id_Q86et9) {
+  if(id_o8QgYds2XQ < 0 || id_o8QgYds2XQ >= id_Q86et9)
+  {
+    return 0;
+  }
+  return id_o8QgYds2XQ;
+}
+
+int id_KVPmO0rmVw()
+{
+  int id_d_56BZkNz[9];
+  int id__oEr;
+  int id__;
+  id_d_56BZkNz[0] = 62411;
+  id_d_56BZkNz[1] = 13968;
+  id_d_56BZkNz[2] = 29982;
+  id_d_56BZkNz[3] = 12397;
+  id_d_56BZkNz[4] = 14329;
+  id_d_56BZkNz[5] = 32344;
+  id_d_56BZkNz[6] = 35044;
+  id_d_56BZkNz[7] = 43582;
+  id_d_56BZkNz[8] = 62978;
+  id__oEr = 53967;
+  id__ = 5084;
+  write(id_d_56BZkNz[0]);
+  write(id_d_56BZkNz[1]);
+  write(id_d_56BZkNz[2]);
+  write(id_d_56BZkNz[3]);
+  write(id_d_56BZkNz[4]);
+  write(id_d_56BZkNz[5]);
+  write(id_d_56BZkNz[6]);
+  write(id_d_56BZkNz[7]);
+  write(id_d_56BZkNz[8]);
+  write(id__oEr);
+  write(id__);
+  return id__oEr = id_d_56BZkNz[4] && 8045 + id__;
+}
+
+int id_B39lMMvq()
+{
+  id_KVPmO0rmVw();
+  return 41481;
+}
+
+int main() {
+  write(id_B39lMMvq());
+  return 0;
+}

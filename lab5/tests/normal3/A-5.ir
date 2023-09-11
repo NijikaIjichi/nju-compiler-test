@@ -1,0 +1,42 @@
+FUNCTION add :
+PARAM v0
+PARAM v1
+t0 := v0 + v1
+RETURN t0
+FUNCTION sub :
+PARAM v2
+PARAM v3
+t1 := v2 - v3
+RETURN t1
+FUNCTION mul :
+PARAM v4
+PARAM v5
+t2 := v4 * v5
+RETURN t2
+FUNCTION main :
+READ t3
+v6 := t3
+READ t4
+v7 := t4
+READ t5
+v8 := t5
+READ t6
+v9 := t6
+ARG v7
+ARG v6
+t7 := CALL sub
+ARG v7
+ARG v6
+t8 := CALL sub
+ARG t8
+ARG t7
+t9 := CALL mul
+ARG v9
+ARG v8
+t10 := CALL add
+ARG t10
+ARG t9
+t11 := CALL add
+v10 := t11
+WRITE v10
+RETURN #0

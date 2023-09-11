@@ -1,0 +1,33 @@
+FUNCTION main :
+DEC v0 100
+v1 := &v0
+v2 := #0
+LABEL L0 :
+IF v2 < #25 GOTO L1
+GOTO L2
+LABEL L1 :
+t0 := #0 * #20
+t1 := v1 + t0
+t2 := v2 * #4
+t3 := t1 + t2
+*t3 := v2
+t4 := v2 + #1
+v2 := t4
+GOTO L0
+LABEL L2 :
+v2 := #0
+LABEL L3 :
+IF v2 < #5 GOTO L4
+GOTO L5
+LABEL L4 :
+t5 := v2 * #20
+t6 := v1 + t5
+t7 := v2 * #4
+t8 := t6 + t7
+t9 := *t8
+WRITE t9
+t10 := v2 + #1
+v2 := t10
+GOTO L3
+LABEL L5 :
+RETURN #0

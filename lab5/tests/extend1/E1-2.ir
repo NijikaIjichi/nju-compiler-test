@@ -1,0 +1,76 @@
+FUNCTION cal_bmi :
+PARAM v1
+t0 := v1 + #16
+t1 := v1 + #12
+t2 := *t1
+t3 := v1 + #8
+t4 := *t3
+t5 := v1 + #8
+t6 := *t5
+t7 := t4 * t6
+t8 := t2 / t7
+*t0 := t8
+RETURN #0
+FUNCTION main :
+v2 := #0
+v3 := #10
+DEC v4 200
+v5 := &v4
+LABEL L0 :
+IF v2 < v3 GOTO L1
+GOTO L2
+LABEL L1 :
+t9 := v2 * #20
+t10 := v5 + t9
+t11 := t10 + #0
+*t11 := v2
+t12 := v2 * #20
+t13 := v5 + t12
+t14 := t13 + #4
+t15 := #20 + v2
+*t14 := t15
+t16 := v2 * #20
+t17 := v5 + t16
+t18 := t17 + #8
+t19 := #2 + v2
+*t18 := t19
+t20 := v2 * #20
+t21 := v5 + t20
+t22 := t21 + #12
+t23 := v2 * v2
+t24 := t23 * v2
+t25 := t24 * v2
+t26 := #90 + t25
+*t22 := t26
+t27 := v2 + #1
+v2 := t27
+GOTO L0
+LABEL L2 :
+v2 := #0
+LABEL L3 :
+IF v2 < v3 GOTO L4
+GOTO L5
+LABEL L4 :
+t28 := v2 * #20
+t29 := v5 + t28
+ARG t29
+t30 := CALL cal_bmi
+t31 := v2 + #1
+v2 := t31
+GOTO L3
+LABEL L5 :
+v2 := #0
+LABEL L6 :
+IF v2 < v3 GOTO L7
+GOTO L8
+LABEL L7 :
+t32 := v2 * #20
+t33 := v5 + t32
+t34 := t33 + #16
+t35 := *t34
+WRITE t35
+t36 := v2 + #1
+v2 := t36
+GOTO L6
+LABEL L8 :
+RETURN #0

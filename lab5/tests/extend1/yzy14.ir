@@ -1,0 +1,28 @@
+FUNCTION inc_and_print :
+PARAM v1
+t0 := v1 + #0
+t1 := v1 + #0
+t2 := *t1
+t3 := t2 + #1
+*t0 := t3
+t4 := v1 + #0
+t5 := *t4
+WRITE t5
+t6 := v1 + #0
+t7 := *t6
+RETURN t7
+FUNCTION main :
+DEC v2 4
+v3 := &v2
+t8 := v3 + #0
+*t8 := #0
+t9 := v3 + #0
+ARG v3
+t10 := CALL inc_and_print
+t11 := #1 + t10
+*t9 := t11
+t12 := #3 * #2
+ARG v3
+t13 := CALL inc_and_print
+t14 := t12 + t13
+RETURN #0

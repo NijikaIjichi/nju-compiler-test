@@ -1,0 +1,30 @@
+struct Book
+{
+    int book_id;
+    int year;
+    int price;
+};
+ 
+int main( )
+{
+    struct Book books[8];
+    int i = 0, j = 0, sum = 0, r;
+    while(i < 8)
+    {
+        books[i].book_id = i;
+        books[i].year = 2012 + i;
+        books[i].price = 30 + i * 2;
+        i = i + 1;
+    }
+    while(j < 8)
+    {
+	if(books[j].book_id < 4)
+	    r = 1;
+	else 
+	    r = 2;
+	sum = sum + books[j].price * r * (2020 - books[j].year);
+	j = j + 1;
+    }
+   write(sum);
+   return 0;
+}

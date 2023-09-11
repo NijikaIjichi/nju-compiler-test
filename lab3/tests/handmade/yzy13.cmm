@@ -1,0 +1,13 @@
+//short-circuit
+int main() {
+    int n, m = 0;
+    n = read();
+    if(!(n && (m = 1))) {
+        write(m);
+    }
+    n = read();
+    if(!(n || (m = 2))) {
+        write(m);
+    }
+    return 0;
+}

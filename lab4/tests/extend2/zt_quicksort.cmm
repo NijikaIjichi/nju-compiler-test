@@ -1,0 +1,66 @@
+
+
+int display(int array[10], int maxlen) {
+    int i;
+    i = 0;
+    while (i < maxlen) {
+        write(array[i]);
+        i = i + 1;
+    }
+
+    return 0;
+}
+
+int quicksort(int arr[10], int low, int high) {
+    if (low < high) {
+        int qi = low;
+        int j = high;
+        int k = arr[low];
+        while (qi < j) {
+            while (qi < j && arr[j] >= k) {
+                j = j - 1;
+            }
+
+            if (qi < j) {
+                arr[qi] = arr[j];
+                qi = qi + 1;
+            }
+
+            while (qi < j && arr[qi] < k) {
+                qi = qi + 1;
+            }
+
+            if (qi < j) {
+                arr[j] = arr[qi];
+                j = j - 1;
+            }
+        }
+
+        arr[qi] = k;
+
+        quicksort(arr, low, qi - 1);
+        quicksort(arr, qi + 1, high);
+    }
+
+    return 0;
+}
+
+int main() {
+    int marray[10];
+    int mmaxlen = 10;
+    marray[0] = 12;
+    marray[1] = 85;
+    marray[2] = 25;
+    marray[3] = 16;
+    marray[4] = 34;
+    marray[5] = 23;
+    marray[6] = 49;
+    marray[7] = 95;
+    marray[8] = 17;
+    marray[9] = 61;
+
+    display(marray, mmaxlen);
+    quicksort(marray, 0, mmaxlen - 1);
+    display(marray, mmaxlen);
+    return 0;
+}

@@ -1,0 +1,149 @@
+FUNCTION bit_and :
+PARAM v0
+PARAM v1
+IF v0 == #0 GOTO L0
+GOTO L1
+LABEL L0 :
+RETURN #0
+GOTO L2
+LABEL L1 :
+RETURN v1
+LABEL L2 :
+FUNCTION bit_or :
+PARAM v2
+PARAM v3
+IF v2 == #0 GOTO L3
+GOTO L4
+LABEL L3 :
+RETURN v3
+GOTO L5
+LABEL L4 :
+RETURN #1
+LABEL L5 :
+FUNCTION bit_not :
+PARAM v4
+IF v4 == #0 GOTO L6
+GOTO L7
+LABEL L6 :
+RETURN #1
+GOTO L8
+LABEL L7 :
+RETURN #0
+LABEL L8 :
+FUNCTION mod :
+PARAM v5
+PARAM v6
+t0 := v5 / v6
+t1 := t0 * v6
+t2 := v5 - t1
+RETURN t2
+FUNCTION and :
+PARAM v7
+PARAM v8
+v9 := #32
+DEC v10 128
+v11 := &v10
+DEC v12 128
+v13 := &v12
+DEC v14 128
+v15 := &v14
+v16 := #0
+v17 := #0
+IF v7 <= #0 GOTO L9
+GOTO L11
+LABEL L11 :
+IF v8 <= #0 GOTO L9
+GOTO L10
+LABEL L9 :
+RETURN #0
+LABEL L10 :
+LABEL L12 :
+IF v16 < v9 GOTO L13
+GOTO L14
+LABEL L13 :
+t3 := v16 * #4
+t4 := v11 + t3
+*t4 := #0
+t5 := v16 * #4
+t6 := v13 + t5
+*t6 := #0
+t7 := v16 * #4
+t8 := v15 + t7
+*t8 := #0
+t9 := v16 + #1
+v16 := t9
+GOTO L12
+LABEL L14 :
+v16 := #0
+LABEL L15 :
+IF v16 < v9 GOTO L16
+GOTO L17
+LABEL L16 :
+t10 := v16 * #4
+t11 := v11 + t10
+ARG #2
+ARG v7
+t12 := CALL mod
+*t11 := t12
+t13 := v16 * #4
+t14 := v13 + t13
+ARG #2
+ARG v8
+t15 := CALL mod
+*t14 := t15
+t16 := v7 / #2
+v7 := t16
+t17 := v8 / #2
+v8 := t17
+t18 := v16 + #1
+v16 := t18
+GOTO L15
+LABEL L17 :
+v16 := #0
+LABEL L18 :
+IF v16 < v9 GOTO L19
+GOTO L20
+LABEL L19 :
+t19 := v16 * #4
+t20 := v15 + t19
+t21 := v16 * #4
+t22 := v11 + t21
+t23 := *t22
+t24 := v16 * #4
+t25 := v13 + t24
+t26 := *t25
+ARG t26
+ARG t23
+t27 := CALL bit_and
+*t20 := t27
+t28 := v16 + #1
+v16 := t28
+GOTO L18
+LABEL L20 :
+t29 := v9 - #1
+v16 := t29
+LABEL L21 :
+IF v16 >= #0 GOTO L22
+GOTO L23
+LABEL L22 :
+t30 := v17 * #2
+t31 := v16 * #4
+t32 := v15 + t31
+t33 := *t32
+t34 := t30 + t33
+v17 := t34
+t35 := v16 - #1
+v16 := t35
+GOTO L21
+LABEL L23 :
+RETURN v17
+FUNCTION main :
+READ t36
+v18 := t36
+READ t37
+v19 := t37
+ARG v19
+ARG v18
+t38 := CALL and
+WRITE t38
+RETURN #0

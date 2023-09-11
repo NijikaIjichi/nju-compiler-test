@@ -1,0 +1,15 @@
+FUNCTION main :
+t0 := #1 + #1
+v0 := t0
+t1 := #2 * #7
+v1 := t1
+WRITE v0
+t2 := #0 - #3
+WRITE t2
+WRITE v1
+t3 := #13 / #3
+v0 := t3
+WRITE v0
+t4 := v0 + v1
+WRITE t4
+RETURN #0

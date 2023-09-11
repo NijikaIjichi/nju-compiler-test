@@ -1,0 +1,45 @@
+FUNCTION f :
+RETURN #1
+FUNCTION g :
+PARAM v0
+t0 := CALL f
+t1 := t0 * v0
+t2 := t1 * #2
+RETURN t2
+FUNCTION x :
+PARAM v1
+PARAM v2
+t3 := v1 - v2
+RETURN t3
+FUNCTION y :
+PARAM v3
+RETURN v3
+FUNCTION main :
+t4 := CALL f
+ARG t4
+t5 := CALL g
+ARG t5
+t6 := CALL y
+ARG #2
+ARG t6
+t7 := CALL x
+ARG #2
+ARG t7
+t8 := CALL x
+ARG t8
+t9 := CALL g
+t10 := CALL f
+ARG t10
+t11 := CALL g
+ARG t11
+t12 := CALL y
+ARG #2
+ARG t12
+t13 := CALL x
+ARG #2
+ARG t13
+t14 := CALL x
+ARG t14
+t15 := CALL g
+WRITE t15
+RETURN #0

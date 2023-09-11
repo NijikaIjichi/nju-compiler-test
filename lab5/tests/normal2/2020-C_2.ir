@@ -1,0 +1,107 @@
+FUNCTION mod :
+PARAM v0
+PARAM v1
+t0 := v0 / v1
+t1 := t0 * v1
+t2 := v0 - t1
+RETURN t2
+FUNCTION IsLeap :
+PARAM v2
+ARG #400
+ARG v2
+t3 := CALL mod
+IF t3 == #0 GOTO L0
+GOTO L3
+LABEL L3 :
+ARG #4
+ARG v2
+t4 := CALL mod
+IF t4 == #0 GOTO L4
+GOTO L1
+LABEL L4 :
+ARG #100
+ARG v2
+t5 := CALL mod
+IF t5 != #0 GOTO L0
+GOTO L1
+LABEL L0 :
+RETURN #1
+GOTO L2
+LABEL L1 :
+RETURN #0
+LABEL L2 :
+FUNCTION main :
+v7 := #0
+v8 := #0
+DEC v9 20
+v10 := &v9
+t6 := #0 * #4
+t7 := v10 + t6
+*t7 := #0
+t8 := #1 * #4
+t9 := v10 + t8
+*t9 := #31
+t10 := #2 * #4
+t11 := v10 + t10
+*t11 := #28
+t12 := #3 * #4
+t13 := v10 + t12
+*t13 := #31
+t14 := #4 * #4
+t15 := v10 + t14
+*t15 := #30
+READ t16
+v3 := t16
+v4 := #1900
+LABEL L5 :
+IF v4 < v3 GOTO L6
+GOTO L7
+LABEL L6 :
+ARG v4
+t17 := CALL IsLeap
+IF t17 != #0 GOTO L8
+GOTO L9
+LABEL L8 :
+t18 := v7 + #366
+v7 := t18
+GOTO L10
+LABEL L9 :
+t19 := v7 + #365
+v7 := t19
+LABEL L10 :
+t20 := v4 + #1
+v4 := t20
+GOTO L5
+LABEL L7 :
+ARG v3
+t21 := CALL IsLeap
+IF t21 != #0 GOTO L11
+GOTO L12
+LABEL L11 :
+t22 := #2 * #4
+t23 := v10 + t22
+*t23 := #29
+LABEL L12 :
+v4 := #1
+LABEL L13 :
+IF v4 < #5 GOTO L14
+GOTO L15
+LABEL L14 :
+t24 := v4 * #4
+t25 := v10 + t24
+t26 := *t25
+t27 := v7 + t26
+v7 := t27
+t28 := v4 + #1
+v4 := t28
+GOTO L13
+LABEL L15 :
+ARG #7
+ARG v7
+t29 := CALL mod
+v5 := t29
+t30 := #14 - v5
+v6 := t30
+WRITE #5
+WRITE v6
+RETURN #0

@@ -1,0 +1,123 @@
+FUNCTION cal_bmi :
+PARAM v1
+t0 := v1 + #16
+t1 := v1 + #12
+t2 := *t1
+t3 := v1 + #8
+t4 := *t3
+t5 := v1 + #8
+t6 := *t5
+t7 := t4 * t6
+t8 := t2 / t7
+*t0 := t8
+RETURN #0
+FUNCTION cal_avg_bmi :
+PARAM v3
+v4 := #0
+v5 := #0
+LABEL L0 :
+IF v4 < #5 GOTO L1
+GOTO L2
+LABEL L1 :
+t9 := v3 + #0
+t10 := v4 * #20
+t11 := t9 + t10
+ARG t11
+t12 := CALL cal_bmi
+t13 := v3 + #0
+t14 := v4 * #20
+t15 := t13 + t14
+t16 := t15 + #16
+t17 := *t16
+t18 := v5 + t17
+v5 := t18
+t19 := v4 + #1
+v4 := t19
+GOTO L0
+LABEL L2 :
+t20 := v3 + #100
+t21 := v5 / #5
+*t20 := t21
+RETURN #0
+FUNCTION main :
+DEC v8 1040
+v9 := &v8
+v6 := #0
+LABEL L3 :
+IF v6 < #10 GOTO L4
+GOTO L5
+LABEL L4 :
+v7 := #0
+LABEL L6 :
+IF v7 < #5 GOTO L7
+GOTO L8
+LABEL L7 :
+t22 := v6 * #104
+t23 := v9 + t22
+t24 := t23 + #0
+t25 := v7 * #20
+t26 := t24 + t25
+t27 := t26 + #0
+t28 := v6 / #2
+t29 := t28 + v7
+*t27 := t29
+t30 := v6 * #104
+t31 := v9 + t30
+t32 := t31 + #0
+t33 := v7 * #20
+t34 := t32 + t33
+t35 := t34 + #4
+t36 := v6 / #2
+t37 := t36 + #20
+t38 := t37 + v7
+*t35 := t38
+t39 := v6 * #104
+t40 := v9 + t39
+t41 := t40 + #0
+t42 := v7 * #20
+t43 := t41 + t42
+t44 := t43 + #8
+t45 := v6 / #2
+t46 := t45 + #2
+t47 := t46 + v7
+*t44 := t47
+t48 := v6 * #104
+t49 := v9 + t48
+t50 := t49 + #0
+t51 := v7 * #20
+t52 := t50 + t51
+t53 := t52 + #12
+t54 := v6 / #2
+t55 := t54 + #90
+t56 := v7 * v7
+t57 := t56 * v7
+t58 := t57 * v7
+t59 := t55 + t58
+*t53 := t59
+t60 := v7 + #1
+v7 := t60
+GOTO L6
+LABEL L8 :
+t61 := v6 * #104
+t62 := v9 + t61
+ARG t62
+t63 := CALL cal_avg_bmi
+t64 := v6 + #1
+v6 := t64
+GOTO L3
+LABEL L5 :
+v6 := #0
+LABEL L9 :
+IF v6 < #10 GOTO L10
+GOTO L11
+LABEL L10 :
+t65 := v6 * #104
+t66 := v9 + t65
+t67 := t66 + #100
+t68 := *t67
+WRITE t68
+t69 := v6 + #1
+v6 := t69
+GOTO L9
+LABEL L11 :
+RETURN #0

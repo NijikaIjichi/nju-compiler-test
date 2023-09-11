@@ -1,0 +1,91 @@
+FUNCTION sort :
+PARAM v1
+PARAM v2
+v3 := #0
+v4 := #0
+v5 := #0
+LABEL L0 :
+IF v4 < v2 GOTO L1
+GOTO L2
+LABEL L1 :
+v5 := #0
+LABEL L3 :
+t0 := v2 - v4
+t1 := t0 - #1
+IF v5 < t1 GOTO L4
+GOTO L5
+LABEL L4 :
+t2 := v5 * #4
+t3 := v1 + t2
+t4 := *t3
+t5 := v5 + #1
+t6 := t5 * #4
+t7 := v1 + t6
+t8 := *t7
+IF t4 > t8 GOTO L6
+GOTO L7
+LABEL L6 :
+t9 := v5 * #4
+t10 := v1 + t9
+t11 := *t10
+v6 := t11
+t12 := v5 * #4
+t13 := v1 + t12
+t14 := v5 + #1
+t15 := t14 * #4
+t16 := v1 + t15
+t17 := *t16
+*t13 := t17
+t18 := v5 + #1
+t19 := t18 * #4
+t20 := v1 + t19
+*t20 := v6
+t21 := v3 + #1
+v3 := t21
+LABEL L7 :
+t22 := v5 + #1
+v5 := t22
+GOTO L3
+LABEL L5 :
+t23 := v4 + #1
+v4 := t23
+GOTO L0
+LABEL L2 :
+RETURN v3
+FUNCTION main :
+DEC v7 40
+v8 := &v7
+v9 := #0
+v10 := #0
+READ t24
+v9 := t24
+v10 := #0
+LABEL L8 :
+IF v10 < v9 GOTO L9
+GOTO L10
+LABEL L9 :
+t25 := v10 * #4
+t26 := v8 + t25
+READ t27
+*t26 := t27
+t28 := v10 + #1
+v10 := t28
+GOTO L8
+LABEL L10 :
+ARG v9
+ARG v8
+t29 := CALL sort
+v10 := #0
+LABEL L11 :
+IF v10 < v9 GOTO L12
+GOTO L13
+LABEL L12 :
+t30 := v10 * #4
+t31 := v8 + t30
+t32 := *t31
+WRITE t32
+t33 := v10 + #1
+v10 := t33
+GOTO L11
+LABEL L13 :
+RETURN #0

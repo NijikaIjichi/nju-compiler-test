@@ -1,0 +1,9 @@
+FUNCTION f :
+PARAM v1
+t1 := v1
+RETURN t1
+FUNCTION main :
+ARG #100
+t := CALL f
+WRITE t
+RETURN #0

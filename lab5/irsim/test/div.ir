@@ -1,0 +1,34 @@
+FUNCTION main :
+t1 := #0 - #3
+t2 := #2
+t3 := t1 / t2
+WRITE t3
+t1 := #0 - #3
+t2 := #0 - #2
+t3 := t1 / t2
+WRITE t3
+t1 := #3
+t2 := #0 - #2
+t3 := t1 / t2
+WRITE t3
+t1 := #3
+t2 := #2
+t3 := t1 / t2
+WRITE t3
+t1 := #0 - #4
+t2 := #2
+t3 := t1 / t2
+WRITE t3
+t1 := #0 - #4
+t2 := #0 - #2
+t3 := t1 / t2
+WRITE t3
+t1 := #4
+t2 := #0 - #2
+t3 := t1 / t2
+WRITE t3
+t1 := #4
+t2 := #2
+t3 := t1 / t2
+WRITE t3
+RETURN #0

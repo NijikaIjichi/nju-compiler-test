@@ -1,0 +1,25 @@
+struct Rectangle {
+  int r_length;
+  int r_width;
+  int r_area;
+};
+
+struct Triangle {
+  int t_width;
+  int t_height;
+  int t_area;
+};
+
+int main() {
+  struct Rectangle r;
+  struct Triangle t;
+  r.r_length = 100;
+  r.r_width = 25;
+  t.t_height = 36;
+  t.t_width = 24;
+  r.r_area = r.r_length * r.r_width;
+  t.t_area = t.t_height * t.t_width / 2;
+  write(r.r_area);
+  write(t.t_area);
+  return 0;
+}

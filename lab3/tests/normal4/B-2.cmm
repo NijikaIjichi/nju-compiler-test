@@ -1,0 +1,37 @@
+int main(){
+  int num, arr[10], key;
+  int i, res;
+  int left, right;
+  num = read();
+  if(num > 10){
+    num = 10;
+  }
+
+  i = 0;
+  while(i < num){
+    arr[i] = read();
+    i = i + 1;
+  }
+
+  key = read();
+  
+  left = 0;
+  right = num - 1;
+  while(left < right){
+    i = (left + right) / 2;
+    if(arr[i] == key){
+      write(i);
+      return 0;
+    }
+    else{
+      if(arr[i] > key){
+          right = i - 1;
+      }
+      else{
+          left = i + 1;
+      }
+    }
+  }
+
+  return 0;
+}

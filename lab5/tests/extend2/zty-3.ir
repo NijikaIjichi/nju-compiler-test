@@ -1,0 +1,220 @@
+FUNCTION floyd :
+PARAM v1
+PARAM v2
+v3 := #0
+v4 := #0
+v5 := #0
+v6 := #0
+LABEL L0 :
+IF v5 < v2 GOTO L1
+GOTO L2
+LABEL L1 :
+v4 := #0
+v3 := v4
+LABEL L3 :
+IF v3 < v2 GOTO L4
+GOTO L5
+LABEL L4 :
+v4 := #0
+LABEL L6 :
+IF v4 < v2 GOTO L7
+GOTO L8
+LABEL L7 :
+t0 := v3 * #40
+t1 := v1 + t0
+t2 := v4 * #4
+t3 := t1 + t2
+t4 := *t3
+t5 := v3 * #40
+t6 := v1 + t5
+t7 := v5 * #4
+t8 := t6 + t7
+t9 := *t8
+t10 := v5 * #40
+t11 := v1 + t10
+t12 := v4 * #4
+t13 := t11 + t12
+t14 := *t13
+t15 := t9 + t14
+IF t4 > t15 GOTO L9
+GOTO L10
+LABEL L9 :
+t16 := v3 * #40
+t17 := v1 + t16
+t18 := v4 * #4
+t19 := t17 + t18
+t20 := v3 * #40
+t21 := v1 + t20
+t22 := v5 * #4
+t23 := t21 + t22
+t24 := *t23
+t25 := v5 * #40
+t26 := v1 + t25
+t27 := v4 * #4
+t28 := t26 + t27
+t29 := *t28
+t30 := t24 + t29
+*t19 := t30
+LABEL L10 :
+t31 := v4 + #1
+v4 := t31
+GOTO L6
+LABEL L8 :
+t32 := v3 + #1
+v3 := t32
+GOTO L3
+LABEL L5 :
+t33 := v5 + #1
+v5 := t33
+GOTO L0
+LABEL L2 :
+v4 := #0
+v3 := v4
+LABEL L11 :
+IF v3 < v2 GOTO L12
+GOTO L13
+LABEL L12 :
+v4 := #0
+LABEL L14 :
+IF v4 < v2 GOTO L15
+GOTO L16
+LABEL L15 :
+t34 := v3 * #40
+t35 := v1 + t34
+t36 := v4 * #4
+t37 := t35 + t36
+t38 := *t37
+IF t38 > v6 GOTO L19
+GOTO L18
+LABEL L19 :
+t39 := v3 * #40
+t40 := v1 + t39
+t41 := v4 * #4
+t42 := t40 + t41
+t43 := *t42
+IF t43 != #114514 GOTO L17
+GOTO L18
+LABEL L17 :
+t44 := v3 * #40
+t45 := v1 + t44
+t46 := v4 * #4
+t47 := t45 + t46
+t48 := *t47
+v6 := t48
+LABEL L18 :
+t49 := v4 + #1
+v4 := t49
+GOTO L14
+LABEL L16 :
+t50 := v3 + #1
+v3 := t50
+GOTO L11
+LABEL L13 :
+RETURN v6
+FUNCTION main :
+v7 := #0
+v8 := #0
+v9 := #0
+v10 := #0
+v11 := #0
+v12 := #0
+v13 := #0
+v14 := #0
+DEC v15 400
+v16 := &v15
+READ t51
+v7 := t51
+READ t52
+v8 := t52
+READ t53
+v9 := t53
+v11 := #0
+v10 := v11
+LABEL L20 :
+IF v10 < v7 GOTO L21
+GOTO L22
+LABEL L21 :
+v11 := #0
+LABEL L23 :
+IF v11 < v7 GOTO L24
+GOTO L25
+LABEL L24 :
+IF v10 == v11 GOTO L26
+GOTO L27
+LABEL L26 :
+t54 := v10 * #40
+t55 := v16 + t54
+t56 := v11 * #4
+t57 := t55 + t56
+*t57 := #0
+GOTO L28
+LABEL L27 :
+t58 := v10 * #40
+t59 := v16 + t58
+t60 := v11 * #4
+t61 := t59 + t60
+*t61 := #114514
+LABEL L28 :
+t62 := v11 + #1
+v11 := t62
+GOTO L23
+LABEL L25 :
+t63 := v10 + #1
+v10 := t63
+GOTO L20
+LABEL L22 :
+v14 := #0
+v13 := v14
+v12 := v13
+v10 := v12
+LABEL L29 :
+IF v10 < v8 GOTO L30
+GOTO L31
+LABEL L30 :
+READ t64
+v12 := t64
+READ t65
+v13 := t65
+READ t66
+v14 := t66
+t67 := v12 * #40
+t68 := v16 + t67
+t69 := v13 * #4
+t70 := t68 + t69
+t71 := v13 * #40
+t72 := v16 + t71
+t73 := v12 * #4
+t74 := t72 + t73
+*t74 := v14
+t75 := *t74
+*t70 := t75
+t76 := v10 + #1
+v10 := t76
+GOTO L29
+LABEL L31 :
+ARG v7
+ARG v16
+t77 := CALL floyd
+WRITE t77
+v13 := #0
+v12 := v13
+v10 := v12
+LABEL L32 :
+IF v10 < v9 GOTO L33
+GOTO L34
+LABEL L33 :
+READ t78
+v12 := t78
+READ t79
+v13 := t79
+t80 := v12 * #40
+t81 := v16 + t80
+t82 := v13 * #4
+t83 := t81 + t82
+t84 := *t83
+WRITE t84
+t85 := v10 + #1
+v10 := t85
+GOTO L32
+LABEL L34 :
+RETURN #0

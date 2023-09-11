@@ -1,0 +1,95 @@
+FUNCTION Joseph :
+PARAM v0
+DEC v1 400
+v2 := &v1
+v3 := #0
+v4 := v0
+v5 := #0
+v6 := #0
+LABEL L0 :
+IF v3 < v0 GOTO L1
+GOTO L2
+LABEL L1 :
+t0 := v3 * #4
+t1 := v2 + t0
+*t1 := #1
+t2 := v3 + #1
+v3 := t2
+GOTO L0
+LABEL L2 :
+LABEL L3 :
+IF v4 > #2 GOTO L4
+GOTO L5
+LABEL L4 :
+t3 := v5 * #4
+t4 := v2 + t3
+t5 := *t4
+IF t5 == #1 GOTO L6
+GOTO L7
+LABEL L6 :
+t6 := v6 + #1
+v6 := t6
+IF #3 == v6 GOTO L8
+GOTO L9
+LABEL L8 :
+t7 := v5 * #4
+t8 := v2 + t7
+*t8 := #0
+v6 := #0
+t9 := v4 - #1
+v4 := t9
+LABEL L9 :
+LABEL L7 :
+t10 := v5 + #1
+v5 := t10
+IF v5 == v0 GOTO L10
+GOTO L11
+LABEL L10 :
+v5 := #0
+LABEL L11 :
+GOTO L3
+LABEL L5 :
+v3 := #0
+LABEL L12 :
+IF v3 < v0 GOTO L13
+GOTO L14
+LABEL L13 :
+t11 := v3 * #4
+t12 := v2 + t11
+t13 := *t12
+IF #1 == t13 GOTO L15
+GOTO L16
+LABEL L15 :
+t14 := v3 + #1
+WRITE t14
+LABEL L16 :
+t15 := v3 + #1
+v3 := t15
+GOTO L12
+LABEL L14 :
+RETURN #0
+FUNCTION main :
+READ t16
+v7 := t16
+IF v7 > #3 GOTO L23
+GOTO L21
+LABEL L23 :
+IF v7 <= #100 GOTO L20
+GOTO L21
+LABEL L20 :
+t17 := #1
+GOTO L22
+LABEL L21 :
+t17 := #0
+LABEL L22 :
+IF t17 == #0 GOTO L17
+GOTO L18
+LABEL L17 :
+t18 := #0 - #1
+WRITE t18
+GOTO L19
+LABEL L18 :
+ARG v7
+t19 := CALL Joseph
+LABEL L19 :
+RETURN #0

@@ -1,0 +1,56 @@
+int mod(int x,int y)
+{
+    return x -(x / y) * y;
+}
+
+int gcd(int c, int d)
+{
+    if(c==0) 
+        return d;
+    return gcd(mod(d, c),c);
+}
+
+int lcm(int e, int f)
+{
+    return e * f / (gcd(e, f));
+}
+
+int main()
+{
+    int n, i, g;
+    int tmp, sum = 0;
+    int a[50];
+    int b[50];
+    n = read();
+    i = 0;
+    while(i < n)
+    {
+        a[i] = read();
+        b[i] = read();
+        i = i + 1;
+    }
+    tmp = b[0];
+    i = 1;
+    while(i < n)
+    {
+        tmp = lcm(tmp, b[i]);
+        i = i + 1;
+    }
+    i = 0;
+    while(i < n)
+    {
+        sum = sum + a[i] * (tmp / b[i]);
+        i = i + 1;
+    }
+    g = gcd(sum, tmp);
+    sum = sum / g;
+    tmp = tmp / g;
+    if(tmp == 1)
+        write(sum);
+    else 
+    {
+        write(sum);
+        write(tmp);
+    }
+    return 0;
+}

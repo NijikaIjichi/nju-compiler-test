@@ -1,0 +1,79 @@
+FUNCTION main :
+READ t0
+v0 := t0
+READ t1
+v1 := t1
+READ t2
+v2 := t2
+t3 := v0 + v1
+IF t3 > v2 GOTO L4
+GOTO L1
+LABEL L4 :
+t4 := v1 + v2
+IF t4 > v0 GOTO L3
+GOTO L1
+LABEL L3 :
+t5 := v0 + v2
+IF t5 > v1 GOTO L0
+GOTO L1
+LABEL L0 :
+t6 := v0 + v1
+t7 := t6 + v2
+v3 := t7
+IF v0 == v1 GOTO L8
+GOTO L6
+LABEL L8 :
+IF v0 == v2 GOTO L5
+GOTO L6
+LABEL L5 :
+v4 := #1
+GOTO L7
+LABEL L6 :
+IF v0 == v1 GOTO L9
+GOTO L13
+LABEL L13 :
+IF v0 == v2 GOTO L9
+GOTO L12
+LABEL L12 :
+IF v1 == v2 GOTO L9
+GOTO L10
+LABEL L9 :
+v4 := #2
+GOTO L11
+LABEL L10 :
+t8 := v0 * v0
+t9 := v1 * v1
+t10 := t8 + t9
+t11 := v2 * v2
+IF t10 == t11 GOTO L14
+GOTO L18
+LABEL L18 :
+t12 := v0 * v0
+t13 := v2 * v2
+t14 := t12 + t13
+t15 := v1 * v1
+IF t14 == t15 GOTO L14
+GOTO L17
+LABEL L17 :
+t16 := v1 * v1
+t17 := v2 * v2
+t18 := t16 + t17
+t19 := v0 * v0
+IF t18 == t19 GOTO L14
+GOTO L15
+LABEL L14 :
+v4 := #3
+GOTO L16
+LABEL L15 :
+v4 := #0
+LABEL L16 :
+LABEL L11 :
+LABEL L7 :
+WRITE v4
+WRITE v3
+GOTO L2
+LABEL L1 :
+t20 := #0 - #1
+WRITE t20
+LABEL L2 :
+RETURN #0

@@ -1,0 +1,9 @@
+int main() {
+    int n, m;
+    n = read();
+    if(m = (n > 0 && n < 2)) {
+        write(n);
+    }
+    write(m);
+    return 0;
+}

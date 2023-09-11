@@ -1,0 +1,16 @@
+FUNCTION main :
+v0 := #2
+IF v0 != #0 GOTO L0
+GOTO L1
+LABEL L0 :
+WRITE #2
+LABEL L1 :
+t0 := v0 + v0
+v0 := t0
+IF v0 != #0 GOTO L2
+GOTO L3
+LABEL L2 :
+WRITE #3
+LABEL L3 :
+WRITE v0
+RETURN #0

@@ -1,0 +1,36 @@
+int gcd1(int a, int b) {
+    int result;
+    int temp;
+    temp = a - a / b * b;
+    while (temp != 0) {
+        a = b;
+        b = temp;
+        temp = a - a / b * b;
+    }
+    result = b;
+    return result;
+}
+int gcd2(int x, int y) {
+    int remainder = 0;
+    if (x > y) {
+        remainder = x - x / y * y;
+        if (remainder == 0)
+            return y;
+        else
+            return gcd2(y, remainder);
+    }
+    else {
+        remainder = y - y / x * x;
+        if (remainder == 0)
+            return x;
+        else
+            return gcd2(x, remainder);
+    }
+}
+int main(){
+	int m = read();
+	int n = read();
+	write(gcd1(m, n));
+	write(gcd2(m, n));
+	return 0;
+}

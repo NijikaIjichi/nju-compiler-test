@@ -1,0 +1,13 @@
+int main() {
+    int i = 1, j = 11, k = 39;
+    int result = 0;
+    i = (-i) + k + (-(17 * i));
+    write(i);
+    j = 11 * j - (k + i * i) * i;
+    write(j);
+    k = i * (i / j) + k;
+    write(k);
+    result = 4 * i + j / 17 + i * k;
+    write(result);
+    return 0;
+}

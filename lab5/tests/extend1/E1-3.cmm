@@ -1,0 +1,54 @@
+struct Giant {
+    int id;
+    int age;
+    int height;
+    int weight;
+    int bmi;
+};
+
+struct Family {
+    struct Giant giants[5];
+    int avg_bmi;
+};
+
+int cal_bmi(struct Giant g) {
+    g.bmi = g.weight / (g.height * g.height);
+    return 0;
+}
+
+int cal_avg_bmi(struct Family f) {
+    int c = 0;
+    int sum = 0;
+    while (c < 5) {
+        cal_bmi(f.giants[c]);
+        sum = sum + f.giants[c].bmi;
+        c = c + 1;
+    }
+    f.avg_bmi = sum / 5;
+    return 0;
+}
+
+int main() {
+    int i, j;
+    struct Family gf[10];
+    i = 0;
+    while (i < 10) {
+        j = 0;
+        while (j < 5) {
+            gf[i].giants[j].id = i / 2 + j;
+            gf[i].giants[j].age = i / 2 + 20 + j;
+            gf[i].giants[j].height = i / 2 + 2 + j;
+            gf[i].giants[j].weight = i / 2 + 90 + j * j * j * j;
+            j = j + 1;
+        }
+        cal_avg_bmi(gf[i]);
+        i = i + 1;
+    }
+   
+    i = 0;
+    while (i < 10) {
+        write(gf[i].avg_bmi);
+        i = i + 1;
+    }
+    return 0;
+}

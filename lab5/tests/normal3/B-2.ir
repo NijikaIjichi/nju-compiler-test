@@ -1,0 +1,113 @@
+FUNCTION main :
+v0 := #3
+DEC v1 12
+v2 := &v1
+v3 := #100
+DEC v4 404
+v5 := &v4
+v6 := #1
+v7 := #0
+v8 := #0
+LABEL L0 :
+IF v7 < v0 GOTO L1
+GOTO L2
+LABEL L1 :
+t0 := v7 * #4
+t1 := v2 + t0
+READ t2
+*t1 := t2
+t3 := v7 * #4
+t4 := v2 + t3
+t5 := *t4
+IF t5 <= #0 GOTO L3
+GOTO L4
+LABEL L3 :
+v6 := #0
+LABEL L4 :
+t6 := v7 + #1
+v7 := t6
+GOTO L0
+LABEL L2 :
+IF v6 == #0 GOTO L5
+GOTO L6
+LABEL L5 :
+t7 := #0 - #1
+WRITE t7
+RETURN #0
+LABEL L6 :
+t8 := #0 * #4
+t9 := v5 + t8
+*t9 := #0
+v7 := #1
+LABEL L7 :
+t10 := v3 + #1
+IF v7 < t10 GOTO L8
+GOTO L9
+LABEL L8 :
+t11 := v7 * #4
+t12 := v5 + t11
+t13 := v3 + #1
+*t12 := t13
+t14 := v7 + #1
+v7 := t14
+GOTO L7
+LABEL L9 :
+v7 := #0
+LABEL L10 :
+IF v7 < v0 GOTO L11
+GOTO L12
+LABEL L11 :
+t15 := v7 * #4
+t16 := v2 + t15
+t17 := *t16
+v9 := t17
+v8 := v9
+LABEL L13 :
+t18 := v3 + #1
+IF v8 < t18 GOTO L14
+GOTO L15
+LABEL L14 :
+t19 := v8 - v9
+t20 := t19 * #4
+t21 := v5 + t20
+t22 := *t21
+t23 := t22 + #1
+t24 := v8 * #4
+t25 := v5 + t24
+t26 := *t25
+IF t23 < t26 GOTO L16
+GOTO L17
+LABEL L16 :
+t27 := v8 * #4
+t28 := v5 + t27
+t29 := v8 - v9
+t30 := t29 * #4
+t31 := v5 + t30
+t32 := *t31
+t33 := t32 + #1
+*t28 := t33
+LABEL L17 :
+t34 := v8 + #1
+v8 := t34
+GOTO L13
+LABEL L15 :
+t35 := v7 + #1
+v7 := t35
+GOTO L10
+LABEL L12 :
+t36 := v3 * #4
+t37 := v5 + t36
+t38 := *t37
+IF t38 > v3 GOTO L18
+GOTO L19
+LABEL L18 :
+t39 := #0 - #1
+WRITE t39
+GOTO L20
+LABEL L19 :
+t40 := v3 * #4
+t41 := v5 + t40
+t42 := *t41
+WRITE t42
+LABEL L20 :
+RETURN #0

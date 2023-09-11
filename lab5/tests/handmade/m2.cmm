@@ -1,0 +1,7 @@
+int main(){
+  int n = 1;
+  n = read();
+  write(-n+1);
+  if(n) return main();
+  else return 0;
+}

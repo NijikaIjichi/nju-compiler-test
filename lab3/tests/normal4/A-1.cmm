@@ -1,0 +1,11 @@
+int main(){
+  int answer = 0;
+  int x = 369, y = 258, z = 147;
+  int a = (x + y + z) * (x - y) / (x - z);
+  write(a);
+  a = a + (a * 2) / (z * 3);
+  write(a);
+  answer = x*y + y*z + z*x + a;
+  write(answer);
+  return 0;
+}

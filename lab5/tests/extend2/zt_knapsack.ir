@@ -1,0 +1,209 @@
+FUNCTION max :
+PARAM v0
+PARAM v1
+IF v0 >= v1 GOTO L0
+GOTO L1
+LABEL L0 :
+RETURN v0
+GOTO L2
+LABEL L1 :
+RETURN v1
+LABEL L2 :
+FUNCTION knapsack :
+PARAM v2
+PARAM v4
+PARAM v6
+PARAM v8
+PARAM v9
+DEC v10 160000
+v11 := &v10
+v12 := #0
+LABEL L3 :
+IF v12 <= v2 GOTO L4
+GOTO L5
+LABEL L4 :
+t0 := v12 * #800
+t1 := v11 + t0
+t2 := #0 * #4
+t3 := t1 + t2
+*t3 := #0
+t4 := v12 + #1
+v12 := t4
+GOTO L3
+LABEL L5 :
+v13 := #0
+LABEL L6 :
+IF v13 <= v9 GOTO L7
+GOTO L8
+LABEL L7 :
+t5 := #0 * #800
+t6 := v11 + t5
+t7 := v13 * #4
+t8 := t6 + t7
+*t8 := #0
+t9 := v13 + #1
+v13 := t9
+GOTO L6
+LABEL L8 :
+v12 := #1
+LABEL L9 :
+IF v12 <= v2 GOTO L10
+GOTO L11
+LABEL L10 :
+v13 := #1
+LABEL L12 :
+IF v13 <= v9 GOTO L13
+GOTO L14
+LABEL L13 :
+t10 := v12 - #1
+t11 := t10 * #4
+t12 := v4 + t11
+t13 := *t12
+IF v13 < t13 GOTO L15
+GOTO L16
+LABEL L15 :
+t14 := v12 * #800
+t15 := v11 + t14
+t16 := v13 * #4
+t17 := t15 + t16
+t18 := v12 - #1
+t19 := t18 * #800
+t20 := v11 + t19
+t21 := v13 * #4
+t22 := t20 + t21
+t23 := *t22
+*t17 := t23
+GOTO L17
+LABEL L16 :
+t24 := v12 * #800
+t25 := v11 + t24
+t26 := v13 * #4
+t27 := t25 + t26
+t28 := v12 - #1
+t29 := t28 * #800
+t30 := v11 + t29
+t31 := v13 * #4
+t32 := t30 + t31
+t33 := *t32
+t34 := v12 - #1
+t35 := t34 * #800
+t36 := v11 + t35
+t37 := v12 - #1
+t38 := t37 * #4
+t39 := v4 + t38
+t40 := *t39
+t41 := v13 - t40
+t42 := t41 * #4
+t43 := t36 + t42
+t44 := *t43
+t45 := v12 - #1
+t46 := t45 * #4
+t47 := v6 + t46
+t48 := *t47
+t49 := t44 + t48
+ARG t49
+ARG t33
+t50 := CALL max
+*t27 := t50
+LABEL L17 :
+t51 := v13 + #1
+v13 := t51
+GOTO L12
+LABEL L14 :
+t52 := v12 + #1
+v12 := t52
+GOTO L9
+LABEL L11 :
+v13 := v9
+v12 := v2
+LABEL L18 :
+IF v12 >= #1 GOTO L19
+GOTO L20
+LABEL L19 :
+t53 := v12 * #800
+t54 := v11 + t53
+t55 := v13 * #4
+t56 := t54 + t55
+t57 := *t56
+t58 := v12 - #1
+t59 := t58 * #800
+t60 := v11 + t59
+t61 := v13 * #4
+t62 := t60 + t61
+t63 := *t62
+IF t57 > t63 GOTO L21
+GOTO L22
+LABEL L21 :
+t64 := v12 * #4
+t65 := v8 + t64
+*t65 := #1
+t66 := v12 - #1
+t67 := t66 * #4
+t68 := v4 + t67
+t69 := *t68
+t70 := v13 - t69
+v13 := t70
+GOTO L23
+LABEL L22 :
+t71 := v12 * #4
+t72 := v8 + t71
+*t72 := #0
+LABEL L23 :
+t73 := v12 - #1
+v12 := t73
+GOTO L18
+LABEL L20 :
+t74 := v2 * #800
+t75 := v11 + t74
+t76 := v9 * #4
+t77 := t75 + t76
+t78 := *t77
+RETURN t78
+FUNCTION main :
+DEC v15 60
+v16 := &v15
+DEC v17 60
+v18 := &v17
+DEC v19 60
+v20 := &v19
+v23 := #10
+v21 := #5
+t79 := #0 * #4
+t80 := v16 + t79
+*t80 := #2
+t81 := #1 * #4
+t82 := v16 + t81
+*t82 := #2
+t83 := #2 * #4
+t84 := v16 + t83
+*t84 := #6
+t85 := #3 * #4
+t86 := v16 + t85
+*t86 := #5
+t87 := #4 * #4
+t88 := v16 + t87
+*t88 := #4
+t89 := #0 * #4
+t90 := v18 + t89
+*t90 := #6
+t91 := #1 * #4
+t92 := v18 + t91
+*t92 := #3
+t93 := #2 * #4
+t94 := v18 + t93
+*t94 := #5
+t95 := #3 * #4
+t96 := v18 + t95
+*t96 := #4
+t97 := #4 * #4
+t98 := v18 + t97
+*t98 := #6
+ARG v23
+ARG v20
+ARG v18
+ARG v16
+ARG v21
+t99 := CALL knapsack
+v14 := t99
+WRITE v14
+RETURN #0

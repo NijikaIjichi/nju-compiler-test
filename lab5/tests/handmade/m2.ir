@@ -1,0 +1,16 @@
+FUNCTION main :
+v0 := #1
+READ t0
+v0 := t0
+t1 := #0 - v0
+t2 := t1 + #1
+WRITE t2
+IF v0 != #0 GOTO L0
+GOTO L1
+LABEL L0 :
+t3 := CALL main
+RETURN t3
+GOTO L2
+LABEL L1 :
+RETURN #0
+LABEL L2 :

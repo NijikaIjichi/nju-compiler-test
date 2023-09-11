@@ -1,0 +1,7 @@
+int main(){
+  int n = 0, m = read();
+  while(n < m){
+    write(n = n+1);
+  }
+  return 0;
+}

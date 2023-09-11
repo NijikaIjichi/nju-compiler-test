@@ -1,0 +1,37 @@
+struct Comp {
+  int real, imag;
+};
+
+int one(int a[1]) {
+  a[0] = a[0] + 1;
+  return 1;
+}
+
+int main() {
+  int x = 0;
+  int t[1];
+  struct Comp c;
+
+  one(t);
+  t[one(t)];
+  x + one(t);
+  x;
+  -one(t);
+  c.real * t[one(t)];
+  if (one(t)) {
+    c.imag / one(t);
+    if (!one(t)) {
+      one(t);
+    } else {
+      one(t);
+      while (x + one(t) < 10) {
+        one(t);
+        x = x + 1;
+      }
+    }
+  } else if (one(t)) one(t); else
+    if (one(t)) one(t); else one(t);
+  write(one(t));
+  write(t[0]);
+  return 0;
+}

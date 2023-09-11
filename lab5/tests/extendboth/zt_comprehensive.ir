@@ -1,0 +1,174 @@
+FUNCTION array_structure :
+DEC v0 8040
+v1 := &v0
+t0 := #0 * #804
+t1 := v1 + t0
+t2 := t1 + #0
+*t2 := #2
+t3 := #0 * #804
+t4 := v1 + t3
+t5 := t4 + #4
+t6 := #0 * #8
+t7 := t5 + t6
+t8 := t7 + #0
+*t8 := #1234
+t9 := #0 * #804
+t10 := v1 + t9
+t11 := t10 + #4
+t12 := #0 * #8
+t13 := t11 + t12
+t14 := t13 + #4
+t15 := #0 * #804
+t16 := v1 + t15
+t17 := t16 + #4
+t18 := #0 * #8
+t19 := t17 + t18
+t20 := t19 + #0
+t21 := *t20
+*t14 := t21
+t22 := #0 * #804
+t23 := v1 + t22
+t24 := t23 + #4
+t25 := #0 * #8
+t26 := t24 + t25
+t27 := t26 + #4
+t28 := *t27
+WRITE t28
+RETURN #0
+FUNCTION func_overflow :
+PARAM v3
+t29 := #0 - #1
+t30 := t29 * #4
+t31 := v3 + t30
+t32 := #1 * #4
+t33 := v3 + t32
+t34 := *t33
+*t31 := t34
+RETURN #0
+FUNCTION danger_ops :
+DEC v4 12
+v5 := &v4
+DEC v6 12
+v7 := &v6
+t35 := v5 + #0
+*t35 := #2019
+t36 := v5 + #8
+*t36 := #2020
+t37 := v5 + #4
+t38 := #0 - #1
+t39 := t38 * #4
+t40 := t37 + t39
+t41 := #0 - #1
+*t40 := t41
+t42 := v5 + #4
+t43 := #1 * #4
+t44 := t42 + t43
+t45 := #0 - #2
+*t44 := t45
+t46 := v5 + #0
+t47 := *t46
+WRITE t47
+t48 := v5 + #8
+t49 := *t48
+WRITE t49
+t50 := v7 + #0
+*t50 := #123
+t51 := v7 + #8
+*t51 := #456
+t52 := v7 + #4
+ARG t52
+t53 := CALL func_overflow
+t54 := v7 + #0
+t55 := *t54
+WRITE t55
+t56 := v7 + #8
+t57 := *t56
+WRITE t57
+t58 := #0 - #1
+RETURN t58
+FUNCTION keyword_names :
+v25 := v26
+v24 := v25
+v23 := v24
+v22 := v23
+v21 := v22
+v20 := v21
+v19 := v20
+v18 := v19
+v17 := v18
+v16 := v17
+v15 := v16
+v14 := v15
+v13 := v14
+v12 := v13
+v11 := v12
+v10 := v11
+v9 := v10
+v8 := v9
+RETURN #0
+FUNCTION partial_array_copy :
+DEC v27 100
+v28 := &v27
+DEC v29 100
+v30 := &v29
+v31 := #0
+LABEL L0 :
+IF v31 < #5 GOTO L1
+GOTO L2
+LABEL L1 :
+t59 := #3 * #20
+t60 := v28 + t59
+t61 := v31 * #4
+t62 := t60 + t61
+t63 := v31 * v31
+*t62 := t63
+t64 := v31 + #1
+v31 := t64
+GOTO L0
+LABEL L2 :
+t65 := #2 * #20
+t66 := v30 + t65
+t67 := #3 * #20
+t68 := v28 + t67
+t69 := t68 + #0
+t70 := *t69
+t71 := t66 + #0
+*t71 := t70
+t72 := t68 + #4
+t73 := *t72
+t74 := t66 + #4
+*t74 := t73
+t75 := t68 + #8
+t76 := *t75
+t77 := t66 + #8
+*t77 := t76
+t78 := t68 + #12
+t79 := *t78
+t80 := t66 + #12
+*t80 := t79
+t81 := t68 + #16
+t82 := *t81
+t83 := t66 + #16
+*t83 := t82
+v31 := #0
+LABEL L3 :
+IF v31 < #5 GOTO L4
+GOTO L5
+LABEL L4 :
+t84 := #2 * #20
+t85 := v30 + t84
+t86 := v31 * #4
+t87 := t85 + t86
+t88 := *t87
+WRITE t88
+t89 := v31 + #1
+v31 := t89
+GOTO L3
+LABEL L5 :
+RETURN #0
+FUNCTION main :
+t90 := CALL array_structure
+t91 := CALL danger_ops
+t92 := CALL keyword_names
+t93 := CALL partial_array_copy
+RETURN #0

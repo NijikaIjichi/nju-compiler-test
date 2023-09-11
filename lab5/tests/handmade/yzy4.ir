@@ -1,0 +1,22 @@
+FUNCTION main :
+READ t0
+v0 := t0
+IF v0 > #0 GOTO L5
+GOTO L3
+LABEL L5 :
+IF v0 < #2 GOTO L2
+GOTO L3
+LABEL L2 :
+t1 := #1
+GOTO L4
+LABEL L3 :
+t1 := #0
+LABEL L4 :
+v1 := t1
+IF v1 != #0 GOTO L0
+GOTO L1
+LABEL L0 :
+WRITE v0
+LABEL L1 :
+WRITE v1
+RETURN #0

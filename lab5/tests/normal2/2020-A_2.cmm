@@ -1,0 +1,25 @@
+int main()
+{
+    int a, b, c;
+    int cirf, type;
+    a = read();
+    b = read();
+    c = read();
+    if(a + b > c && b + c > a && a + c > b)
+    {
+        cirf = a + b + c;
+        if(a == b && a == c)
+            type = 1;
+        else if(a == b || a == c || b == c)
+            type = 2;
+        else if((a * a + b * b == c * c)||(a * a + c * c == b * b)||(b * b + c * c == a * a))
+            type = 3;
+        else
+            type = 0;
+        write(type);
+        write(cirf);
+    }
+    else
+        write(-1);
+    return 0;
+}

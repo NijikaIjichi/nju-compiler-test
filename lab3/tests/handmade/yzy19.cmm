@@ -1,0 +1,24 @@
+int main() {
+    int a = read();
+    if(a == 5) {
+        write(1);
+    }
+    if(a != 5) {
+        write(2);
+    }
+    if(a > 5) {
+        write(3);
+    }
+    if(a < 5) {
+        write(4);
+    }
+    if(a <= 5) {
+        write(5);
+    }
+    if(a >= 5) {
+        write(6);
+    }
+    a = (a > 2);
+    write(a);
+    return 0;
+}

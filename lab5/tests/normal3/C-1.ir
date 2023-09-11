@@ -1,0 +1,102 @@
+FUNCTION fact :
+PARAM v0
+IF v0 <= #0 GOTO L0
+GOTO L1
+LABEL L0 :
+RETURN #1
+GOTO L2
+LABEL L1 :
+t0 := v0 - #1
+ARG t0
+t1 := CALL fact
+t2 := t1 * v0
+RETURN t2
+LABEL L2 :
+FUNCTION isqrt :
+PARAM v1
+v2 := #0
+LABEL L3 :
+IF v2 < v1 GOTO L4
+GOTO L5
+LABEL L4 :
+t3 := v2 * v2
+IF t3 <= v1 GOTO L8
+GOTO L7
+LABEL L8 :
+t4 := v2 + #1
+t5 := v2 + #1
+t6 := t4 * t5
+IF t6 > v1 GOTO L6
+GOTO L7
+LABEL L6 :
+RETURN v2
+LABEL L7 :
+t7 := v2 + #1
+v2 := t7
+GOTO L3
+LABEL L5 :
+t8 := #0 - #1
+RETURN t8
+FUNCTION mod :
+PARAM v3
+PARAM v4
+IF v3 < #0 GOTO L9
+GOTO L12
+LABEL L12 :
+IF v4 <= #0 GOTO L9
+GOTO L10
+LABEL L9 :
+t9 := #0 - #1
+RETURN t9
+GOTO L11
+LABEL L10 :
+t10 := v3 / v4
+t11 := t10 * v4
+t12 := v3 - t11
+RETURN t12
+LABEL L11 :
+FUNCTION is_prime :
+PARAM v5
+v6 := #2
+ARG v5
+t13 := CALL isqrt
+v7 := t13
+LABEL L13 :
+IF v6 <= v7 GOTO L14
+GOTO L15
+LABEL L14 :
+ARG v6
+ARG v5
+t14 := CALL mod
+IF t14 == #0 GOTO L16
+GOTO L17
+LABEL L16 :
+RETURN #0
+LABEL L17 :
+t15 := v6 + #1
+v6 := t15
+GOTO L13
+LABEL L15 :
+RETURN #1
+FUNCTION main :
+v8 := #2
+READ t16
+v9 := t16
+LABEL L18 :
+ARG v9
+t17 := CALL fact
+IF v8 < t17 GOTO L19
+GOTO L20
+LABEL L19 :
+ARG v8
+t18 := CALL is_prime
+IF t18 != #0 GOTO L21
+GOTO L22
+LABEL L21 :
+WRITE v8
+LABEL L22 :
+t19 := v8 + #1
+v8 := t19
+GOTO L18
+LABEL L20 :
+RETURN #0

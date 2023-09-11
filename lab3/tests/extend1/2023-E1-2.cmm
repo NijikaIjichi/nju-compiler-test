@@ -1,0 +1,23 @@
+struct Good {
+  int price;
+  int number;
+};
+
+int main(){
+  struct Good goods[10];
+  int cnt = 0;
+  int sum = 0;
+  while(cnt < 10){
+    goods[cnt].price = cnt + 101;
+    goods[cnt].number = cnt + 1;
+    cnt = cnt + 1;
+  }
+
+  cnt = 0;
+  while(cnt < 10){
+    sum = sum + goods[cnt].price * goods[cnt].number;
+    cnt = cnt + 1;
+  }
+  write(sum);
+  return 0;
+}

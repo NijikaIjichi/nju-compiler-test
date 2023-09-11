@@ -1,0 +1,101 @@
+
+
+struct complex {
+    int real;
+    int img;
+};
+
+struct array {
+    int size;
+    struct complex nums[100];
+};
+
+int array_structure() {
+    struct array arr_of_arr[10];
+    arr_of_arr[0].size = 2;
+    arr_of_arr[0].nums[0].real = 1234;
+    arr_of_arr[0].nums[0].img = arr_of_arr[0].nums[0].real;
+
+    //output: 1234
+    return write(arr_of_arr[0].nums[0].img);
+}
+struct some_struct {
+    int a;
+    int arr[1];
+    int b;
+};
+
+
+int func_overflow(int _arr[1]) {
+    _arr[-1] = _arr[1];
+    return 0;
+}
+
+int danger_ops() {
+    struct some_struct s1;
+    struct some_struct s2;
+    s1.a = 2019;
+    s1.b = 2020;
+    s1.arr[-1] = -1;
+    s1.arr[1] = -2;
+
+
+    //output: -1
+    write(s1.a);
+    //output: -2
+    write(s1.b);
+
+    s2.a = 123;
+    s2.b = 456;
+    func_overflow(s2.arr);
+
+    //output: 456
+    write(s2.a);
+    //output: 456
+    write(s2.b);
+    return -1;
+}
+
+int keyword_names() {
+    int main, CALL, PARAM, DEC, LABEL,
+            GOTO, IF, READ, WRITE, FUNCTION;
+
+    int v1, v2, v3;
+    int t1, t2, t3;
+    int label1, label2, label3;
+    main = CALL = PARAM = DEC = LABEL =
+    GOTO = IF = READ = WRITE = FUNCTION = v1 = v2 = v3 =
+    t1 = t2 = t3 = label1 = label2 = label3;
+
+    return 0;
+}
+
+int partial_array_copy() {
+    int multi_a[5][5];
+    int multi_b[5][5];
+
+
+    int i = 0;
+    while (i < 5) {
+        multi_a[3][i] = i * i;
+        i = i + 1;
+    }
+    multi_b[2] = multi_a[3];
+
+    i = 0;
+    while (i < 5) {
+        //output: i^2
+        write(multi_b[2][i]);
+        i = i + 1;
+    }
+    return 0;
+}
+
+int main() {
+    array_structure();
+    danger_ops();
+    keyword_names();
+    partial_array_copy();
+    return 0;
+}
+

@@ -1,0 +1,27 @@
+int succ(int i) {
+    return i + 1;
+}
+int zero() {
+    return 0;
+}
+int one() {
+    return succ(zero());
+}
+int two() {
+    return succ(one());
+}
+int three() {
+    return succ(two());
+}
+int four() {
+    return succ(three());
+}
+int five() {
+    return succ(four());
+}
+int main() {
+    int ii = five() * four();
+    write(ii);
+    return 0;
+}
+

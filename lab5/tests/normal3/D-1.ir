@@ -1,0 +1,197 @@
+FUNCTION fact :
+PARAM v0
+IF v0 <= #0 GOTO L0
+GOTO L1
+LABEL L0 :
+RETURN #1
+GOTO L2
+LABEL L1 :
+t0 := v0 - #1
+ARG t0
+t1 := CALL fact
+t2 := v0 * t1
+RETURN t2
+LABEL L2 :
+FUNCTION isqrt :
+PARAM v1
+v2 := #0
+LABEL L3 :
+IF v2 < v1 GOTO L4
+GOTO L5
+LABEL L4 :
+t3 := v2 * v2
+IF t3 <= v1 GOTO L8
+GOTO L7
+LABEL L8 :
+t4 := v2 + #1
+t5 := v2 + #1
+t6 := t4 * t5
+IF t6 > v1 GOTO L6
+GOTO L7
+LABEL L6 :
+RETURN v2
+LABEL L7 :
+t7 := v2 + #1
+v2 := t7
+GOTO L3
+LABEL L5 :
+t8 := #0 - #1
+RETURN t8
+FUNCTION mod :
+PARAM v3
+PARAM v4
+t9 := v3 / v4
+t10 := t9 * v4
+t11 := v3 - t10
+RETURN t11
+FUNCTION main :
+v5 := #1331
+v6 := #1217
+t12 := #0 - #22121
+v7 := t12
+v8 := #5
+t13 := v6 * #7
+t14 := t13 / v5
+t15 := #9 * #10
+t16 := #1990 + t15
+t17 := v6 + #23
+t18 := t16 / t17
+t19 := t14 + t18
+v9 := t19
+t20 := #2000 - #1
+t21 := t20 * #10
+t22 := #2 * #10
+t23 := v6 + t22
+t24 := t23 + #3
+t25 := t21 / t24
+v10 := t25
+v11 := #0
+v12 := #0
+v13 := #0
+DEC v14 4000
+v15 := &v14
+LABEL L9 :
+ARG v6
+t26 := CALL isqrt
+ARG t26
+t27 := CALL isqrt
+ARG t27
+t28 := CALL fact
+IF v11 < t28 GOTO L10
+GOTO L11
+LABEL L10 :
+t29 := v11 * #4
+t30 := v15 + t29
+ARG #4
+ARG v11
+t31 := CALL mod
+ARG t31
+t32 := CALL fact
+*t30 := t32
+t33 := v11 / #4
+t34 := t33 * #4
+t35 := v11 + t34
+v5 := t35
+t36 := v11 / #4
+t37 := t36 * #4
+t38 := v5 + t37
+v5 := t38
+t39 := v11 / #4
+t40 := t39 * #4
+t41 := v5 + t40
+v5 := t41
+t42 := v11 / #4
+t43 := t42 * #4
+t44 := v5 + t43
+v5 := t44
+LABEL L12 :
+t45 := v8 * v8
+t46 := t45 * v8
+IF v7 < t46 GOTO L13
+GOTO L14
+LABEL L13 :
+ARG #10
+ARG v5
+t47 := CALL mod
+t48 := t47 + #10
+t49 := t48 + v7
+t50 := t49 + #1
+t51 := t50 + v9
+t52 := t51 - v10
+v7 := t52
+GOTO L12
+LABEL L14 :
+ARG v7
+t53 := CALL isqrt
+ARG #10
+ARG t53
+t54 := CALL mod
+ARG t54
+t55 := CALL fact
+t56 := v7 + t55
+v7 := t56
+t57 := v11 + #1
+v11 := t57
+GOTO L9
+LABEL L11 :
+v11 := #0
+LABEL L15 :
+IF v11 < #10 GOTO L16
+GOTO L17
+LABEL L16 :
+v12 := #0
+LABEL L18 :
+IF v12 < #10 GOTO L19
+GOTO L20
+LABEL L19 :
+IF v11 == #0 GOTO L24
+GOTO L22
+LABEL L24 :
+IF v12 == #0 GOTO L21
+GOTO L22
+LABEL L21 :
+v13 := #1
+GOTO L23
+LABEL L22 :
+v13 := #0
+LABEL L23 :
+LABEL L25 :
+IF v13 < #10 GOTO L26
+GOTO L27
+LABEL L26 :
+t58 := v11 * #10
+t59 := t58 * #10
+t60 := v12 * #10
+t61 := t59 + t60
+t62 := t61 + v13
+t63 := t62 * #4
+t64 := v15 + t63
+t65 := *t64
+t66 := v8 + t65
+t67 := v11 * #10
+t68 := t67 * #10
+t69 := v12 * #10
+t70 := t68 + t69
+t71 := t70 + v13
+t72 := t71 - #1
+t73 := t72 * #4
+t74 := v15 + t73
+t75 := *t74
+t76 := t66 - t75
+v8 := t76
+t77 := v13 + #1
+v13 := t77
+GOTO L25
+LABEL L27 :
+t78 := v12 + #1
+v12 := t78
+GOTO L18
+LABEL L20 :
+t79 := v11 + #1
+v11 := t79
+GOTO L15
+LABEL L17 :
+t80 := v8 + v7
+v11 := t80
+WRITE v11
+RETURN #0

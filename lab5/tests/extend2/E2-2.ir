@@ -1,0 +1,134 @@
+FUNCTION dot_product :
+PARAM v1
+PARAM v3
+t0 := #0 * #4
+t1 := v1 + t0
+t2 := *t1
+t3 := #0 * #4
+t4 := v3 + t3
+t5 := *t4
+t6 := t2 * t5
+t7 := #1 * #4
+t8 := v1 + t7
+t9 := *t8
+t10 := #1 * #4
+t11 := v3 + t10
+t12 := *t11
+t13 := t9 * t12
+t14 := t6 + t13
+t15 := #2 * #4
+t16 := v1 + t15
+t17 := *t16
+t18 := #2 * #4
+t19 := v3 + t18
+t20 := *t19
+t21 := t17 * t20
+t22 := t14 + t21
+RETURN t22
+FUNCTION cross_product :
+PARAM v5
+PARAM v7
+PARAM v9
+t23 := #0 * #4
+t24 := v9 + t23
+t25 := #1 * #4
+t26 := v5 + t25
+t27 := *t26
+t28 := #2 * #4
+t29 := v7 + t28
+t30 := *t29
+t31 := t27 * t30
+t32 := #2 * #4
+t33 := v5 + t32
+t34 := *t33
+t35 := #1 * #4
+t36 := v7 + t35
+t37 := *t36
+t38 := t34 * t37
+t39 := t31 - t38
+*t24 := t39
+t40 := #1 * #4
+t41 := v9 + t40
+t42 := #2 * #4
+t43 := v5 + t42
+t44 := *t43
+t45 := #0 * #4
+t46 := v7 + t45
+t47 := *t46
+t48 := t44 * t47
+t49 := #0 * #4
+t50 := v5 + t49
+t51 := *t50
+t52 := #2 * #4
+t53 := v7 + t52
+t54 := *t53
+t55 := t51 * t54
+t56 := t48 - t55
+*t41 := t56
+t57 := #2 * #4
+t58 := v9 + t57
+t59 := #0 * #4
+t60 := v5 + t59
+t61 := *t60
+t62 := #1 * #4
+t63 := v7 + t62
+t64 := *t63
+t65 := t61 * t64
+t66 := #1 * #4
+t67 := v5 + t66
+t68 := *t67
+t69 := #0 * #4
+t70 := v7 + t69
+t71 := *t70
+t72 := t68 * t71
+t73 := t65 - t72
+*t58 := t73
+RETURN #0
+FUNCTION main :
+DEC v12 24
+v13 := &v12
+DEC v14 12
+v15 := &v14
+v10 := #0
+LABEL L0 :
+IF v10 < #2 GOTO L1
+GOTO L2
+LABEL L1 :
+v11 := #0
+LABEL L3 :
+IF v11 < #3 GOTO L4
+GOTO L5
+LABEL L4 :
+t74 := v10 * #12
+t75 := v13 + t74
+t76 := v11 * #4
+t77 := t75 + t76
+t78 := v10 + #1
+t79 := v10 + #1
+t80 := t78 * t79
+t81 := v11 + #1
+t82 := v11 + #1
+t83 := t81 * t82
+t84 := t80 + t83
+*t77 := t84
+t85 := v11 + #1
+v11 := t85
+GOTO L3
+LABEL L5 :
+t86 := v10 + #1
+v10 := t86
+GOTO L0
+LABEL L2 :
+t87 := #0 * #12
+t88 := v13 + t87
+t89 := #1 * #12
+t90 := v13 + t89
+ARG v15
+ARG t90
+ARG t88
+t91 := CALL cross_product
+ARG v15
+ARG v15
+t92 := CALL dot_product
+WRITE t92
+RETURN #0

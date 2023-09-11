@@ -1,0 +1,37 @@
+FUNCTION main :
+v0 := #30
+v1 := #0
+v2 := #1
+v3 := #1
+LABEL L0 :
+IF v3 <= v0 GOTO L1
+GOTO L2
+LABEL L1 :
+LABEL L3 :
+IF v2 <= v3 GOTO L4
+GOTO L5
+LABEL L4 :
+t0 := v3 / v2
+t1 := t0 * v2
+IF v3 == t1 GOTO L6
+GOTO L7
+LABEL L6 :
+t2 := v1 + #1
+v1 := t2
+LABEL L7 :
+t3 := v2 + #1
+v2 := t3
+GOTO L3
+LABEL L5 :
+IF v1 == #2 GOTO L8
+GOTO L9
+LABEL L8 :
+WRITE v3
+LABEL L9 :
+v2 := #1
+v1 := #0
+t4 := v3 + #1
+v3 := t4
+GOTO L0
+LABEL L2 :
+RETURN #0

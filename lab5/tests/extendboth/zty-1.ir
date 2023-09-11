@@ -1,0 +1,104 @@
+FUNCTION one :
+PARAM v1
+t0 := #0 * #4
+t1 := v1 + t0
+t2 := #0 * #4
+t3 := v1 + t2
+t4 := *t3
+t5 := t4 + #1
+*t1 := t5
+RETURN #1
+FUNCTION main :
+v2 := #0
+DEC v3 4
+v4 := &v3
+DEC v5 8
+v6 := &v5
+ARG v4
+t6 := CALL one
+ARG v4
+t7 := CALL one
+t8 := t7 * #4
+t9 := v4 + t8
+ARG v4
+t10 := CALL one
+t11 := v2 + t10
+ARG v4
+t12 := CALL one
+t13 := #0 - t12
+t14 := v6 + #0
+t15 := *t14
+ARG v4
+t16 := CALL one
+t17 := t16 * #4
+t18 := v4 + t17
+t19 := *t18
+t20 := t15 * t19
+ARG v4
+t21 := CALL one
+IF t21 != #0 GOTO L0
+GOTO L1
+LABEL L0 :
+t22 := v6 + #4
+t23 := *t22
+ARG v4
+t24 := CALL one
+t25 := t23 / t24
+ARG v4
+t26 := CALL one
+IF t26 == #0 GOTO L3
+GOTO L4
+LABEL L3 :
+ARG v4
+t27 := CALL one
+GOTO L5
+LABEL L4 :
+ARG v4
+t28 := CALL one
+LABEL L6 :
+ARG v4
+t29 := CALL one
+t30 := v2 + t29
+IF t30 < #10 GOTO L7
+GOTO L8
+LABEL L7 :
+ARG v4
+t31 := CALL one
+t32 := v2 + #1
+v2 := t32
+GOTO L6
+LABEL L8 :
+LABEL L5 :
+GOTO L2
+LABEL L1 :
+ARG v4
+t33 := CALL one
+IF t33 != #0 GOTO L9
+GOTO L10
+LABEL L9 :
+ARG v4
+t34 := CALL one
+GOTO L11
+LABEL L10 :
+ARG v4
+t35 := CALL one
+IF t35 != #0 GOTO L12
+GOTO L13
+LABEL L12 :
+ARG v4
+t36 := CALL one
+GOTO L14
+LABEL L13 :
+ARG v4
+t37 := CALL one
+LABEL L14 :
+LABEL L11 :
+LABEL L2 :
+ARG v4
+t38 := CALL one
+WRITE t38
+t39 := #0 * #4
+t40 := v4 + t39
+t41 := *t40
+WRITE t41
+RETURN #0

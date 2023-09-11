@@ -1,0 +1,12 @@
+int main()
+{
+    int a = 3, b = 8, c = 24;
+    int final;
+    b = (a * a + c / b)  * 4;
+    write(b);
+    c = (b + 3 * a - c) * 55 / a;
+    write(c);
+    final = a + 10 * a * b + c * 4 + (b / a - 6);
+    write(final);
+    return 0;
+}

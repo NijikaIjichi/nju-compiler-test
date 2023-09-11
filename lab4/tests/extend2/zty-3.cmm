@@ -1,0 +1,79 @@
+int floyd(int _dis[10][10], int _n) {
+  int _i = 0, _j = 0, _k = 0;
+  int _max = 0;
+  while (_k < _n) {
+    _i = _j = 0;
+    while (_i < _n) {
+      _j = 0;
+      while (_j < _n) {
+        if (_dis[_i][_j] > _dis[_i][_k] + _dis[_k][_j]) {
+          _dis[_i][_j] = _dis[_i][_k] + _dis[_k][_j];
+        }
+        _j = _j + 1;
+      }
+      _i = _i + 1;
+    }
+    _k = _k + 1;
+  }
+  _i = _j = 0;
+  while (_i < _n) {
+    _j = 0;
+    while (_j < _n) {
+      if (_dis[_i][_j] > _max && _dis[_i][_j] != 114514) {
+        _max = _dis[_i][_j];
+      }
+      _j = _j + 1;
+    }
+    _i = _i + 1;
+  }
+  return _max;
+}
+
+int main() {
+  int n = 0, m = 0, q = 0;
+  int i = 0, j = 0;
+  int u = 0, v = 0, d = 0;
+  int dis[10][10];
+
+  n = read();
+  m = read();
+  q = read();
+  {
+    i = j = 0;
+    while (i < n) {
+      j = 0;
+      while (j < n) {
+        if (i == j) {
+          dis[i][j] = 0;
+        } else
+          dis[i][j] = 114514;
+        j = j + 1;
+      }
+      i = i + 1;
+    }
+  }
+
+  {
+    i = u = v = d = 0;
+    while (i < m) {
+      u = read();
+      v = read();
+      d = read();
+      dis[u][v] = dis[v][u] = d;
+      i = i + 1;
+    }
+  }
+
+  write(floyd(dis, n));
+
+  {
+    i = u = v = 0;
+    while (i < q) {
+      u = read();
+      v = read();
+      write(dis[u][v]);
+      i = i + 1;
+    }
+  }
+  return 0;
+}

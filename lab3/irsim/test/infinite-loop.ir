@@ -1,0 +1,4 @@
+FUNCTION main :
+LABEL loop :
+GOTO loop
+RETURN #0

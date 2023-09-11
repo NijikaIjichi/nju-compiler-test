@@ -1,0 +1,75 @@
+int bit_and(int aop1, int aop2) {
+    if (aop1 == 0) {
+        return 0;
+    } else {
+        return aop2;
+    }
+}
+
+int bit_or(int oop1, int oop2) {
+    if (oop1 == 0) {
+        return oop2;
+    } else {
+        return 1;
+    }
+}
+
+int bit_not(int nop) {
+    if (nop == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int mod(int mop1, int mop2) {
+   return mop1 - mop1 / mop2 * mop2; 
+}
+
+int and(int m, int n) {
+    int isize = 32;
+    int am[32];
+    int an[32];
+    int res[32];
+    int i = 0;
+    int mn = 0;
+    if (m <= 0 || n <= 0) {
+        return 0;
+    }
+
+    while (i < isize) {
+        am[i] = 0;
+        an[i] = 0;
+        res[i] = 0;
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i < isize) {
+        am[i] = mod(m, 2);
+        an[i] = mod(n, 2);
+        m = m / 2;
+        n = n / 2;
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i < isize) {
+        res[i] = bit_and(am[i], an[i]);
+        i = i + 1;
+    }
+
+    i = isize - 1;
+    while (i >= 0) {
+        mn = mn * 2 + res[i];
+        i = i - 1;
+    }
+    return mn;
+}
+
+int main() {
+    int x = read();
+    int y = read();
+    write(and(x, y));
+    return 0;
+}

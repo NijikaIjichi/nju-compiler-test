@@ -1,0 +1,620 @@
+FUNCTION f0 :
+RETURN #1
+FUNCTION f1 :
+t0 := CALL f0
+t1 := CALL f0
+t2 := t0 + t1
+t3 := t2 + #1
+RETURN t3
+FUNCTION f2 :
+t4 := CALL f1
+t5 := CALL f1
+t6 := t4 + t5
+t7 := t6 + #2
+RETURN t7
+FUNCTION f3 :
+t8 := CALL f2
+t9 := CALL f2
+t10 := t8 + t9
+t11 := t10 + #3
+RETURN t11
+FUNCTION f4 :
+t12 := CALL f3
+t13 := CALL f3
+t14 := t12 + t13
+t15 := t14 + #4
+RETURN t15
+FUNCTION f5 :
+t16 := CALL f4
+t17 := CALL f4
+t18 := t16 + t17
+t19 := t18 + #5
+RETURN t19
+FUNCTION f6 :
+t20 := CALL f5
+t21 := CALL f5
+t22 := t20 + t21
+t23 := t22 + #6
+RETURN t23
+FUNCTION f7 :
+t24 := CALL f6
+t25 := CALL f6
+t26 := t24 + t25
+t27 := t26 + #7
+RETURN t27
+FUNCTION f8 :
+t28 := CALL f7
+t29 := CALL f7
+t30 := t28 + t29
+t31 := t30 + #8
+RETURN t31
+FUNCTION f9 :
+t32 := CALL f8
+t33 := CALL f8
+t34 := t32 + t33
+t35 := t34 + #9
+RETURN t35
+FUNCTION f10 :
+t36 := CALL f9
+t37 := CALL f9
+t38 := t36 + t37
+t39 := t38 + #10
+RETURN t39
+FUNCTION f11 :
+t40 := CALL f10
+t41 := CALL f10
+t42 := t40 + t41
+t43 := t42 + #11
+RETURN t43
+FUNCTION f12 :
+t44 := CALL f11
+t45 := CALL f11
+t46 := t44 + t45
+t47 := t46 + #12
+RETURN t47
+FUNCTION f13 :
+t48 := CALL f12
+t49 := CALL f12
+t50 := t48 + t49
+t51 := t50 + #13
+RETURN t51
+FUNCTION f14 :
+t52 := CALL f13
+t53 := CALL f13
+t54 := t52 + t53
+t55 := t54 + #14
+RETURN t55
+FUNCTION f15 :
+t56 := CALL f14
+t57 := CALL f14
+t58 := t56 + t57
+t59 := t58 + #15
+RETURN t59
+FUNCTION f16 :
+t60 := CALL f15
+t61 := CALL f15
+t62 := t60 + t61
+t63 := t62 + #16
+RETURN t63
+FUNCTION f17 :
+t64 := CALL f16
+t65 := CALL f16
+t66 := t64 + t65
+t67 := t66 + #17
+RETURN t67
+FUNCTION f18 :
+t68 := CALL f17
+t69 := CALL f17
+t70 := t68 + t69
+t71 := t70 + #18
+RETURN t71
+FUNCTION f19 :
+t72 := CALL f18
+t73 := CALL f18
+t74 := t72 + t73
+t75 := t74 + #19
+RETURN t75
+FUNCTION f20 :
+t76 := CALL f19
+t77 := CALL f19
+t78 := t76 + t77
+t79 := t78 + #20
+RETURN t79
+FUNCTION f21 :
+t80 := CALL f20
+t81 := CALL f20
+t82 := t80 + t81
+t83 := t82 + #21
+RETURN t83
+FUNCTION f22 :
+t84 := CALL f21
+t85 := CALL f21
+t86 := t84 + t85
+t87 := t86 + #22
+RETURN t87
+FUNCTION f23 :
+t88 := CALL f22
+t89 := CALL f22
+t90 := t88 + t89
+t91 := t90 + #23
+RETURN t91
+FUNCTION f24 :
+t92 := CALL f23
+t93 := CALL f23
+t94 := t92 + t93
+t95 := t94 + #24
+RETURN t95
+FUNCTION f25 :
+t96 := CALL f24
+t97 := CALL f24
+t98 := t96 + t97
+t99 := t98 + #25
+RETURN t99
+FUNCTION f26 :
+t100 := CALL f25
+t101 := CALL f25
+t102 := t100 + t101
+t103 := t102 + #26
+RETURN t103
+FUNCTION f27 :
+t104 := CALL f26
+t105 := CALL f26
+t106 := t104 + t105
+t107 := t106 + #27
+RETURN t107
+FUNCTION f28 :
+t108 := CALL f27
+t109 := CALL f27
+t110 := t108 + t109
+t111 := t110 + #28
+RETURN t111
+FUNCTION f29 :
+t112 := CALL f28
+t113 := CALL f28
+t114 := t112 + t113
+t115 := t114 + #29
+RETURN t115
+FUNCTION f30 :
+t116 := CALL f29
+t117 := CALL f29
+t118 := t116 + t117
+t119 := t118 + #30
+RETURN t119
+FUNCTION f31 :
+t120 := CALL f30
+t121 := CALL f30
+t122 := t120 + t121
+t123 := t122 + #31
+RETURN t123
+FUNCTION f32 :
+t124 := CALL f31
+t125 := CALL f31
+t126 := t124 + t125
+t127 := t126 + #32
+RETURN t127
+FUNCTION f33 :
+t128 := CALL f32
+t129 := CALL f32
+t130 := t128 + t129
+t131 := t130 + #33
+RETURN t131
+FUNCTION f34 :
+t132 := CALL f33
+t133 := CALL f33
+t134 := t132 + t133
+t135 := t134 + #34
+RETURN t135
+FUNCTION f35 :
+t136 := CALL f34
+t137 := CALL f34
+t138 := t136 + t137
+t139 := t138 + #35
+RETURN t139
+FUNCTION f36 :
+t140 := CALL f35
+t141 := CALL f35
+t142 := t140 + t141
+t143 := t142 + #36
+RETURN t143
+FUNCTION f37 :
+t144 := CALL f36
+t145 := CALL f36
+t146 := t144 + t145
+t147 := t146 + #37
+RETURN t147
+FUNCTION f38 :
+t148 := CALL f37
+t149 := CALL f37
+t150 := t148 + t149
+t151 := t150 + #38
+RETURN t151
+FUNCTION f39 :
+t152 := CALL f38
+t153 := CALL f38
+t154 := t152 + t153
+t155 := t154 + #39
+RETURN t155
+FUNCTION f40 :
+t156 := CALL f39
+t157 := CALL f39
+t158 := t156 + t157
+t159 := t158 + #40
+RETURN t159
+FUNCTION f41 :
+t160 := CALL f40
+t161 := CALL f40
+t162 := t160 + t161
+t163 := t162 + #41
+RETURN t163
+FUNCTION f42 :
+t164 := CALL f41
+t165 := CALL f41
+t166 := t164 + t165
+t167 := t166 + #42
+RETURN t167
+FUNCTION f43 :
+t168 := CALL f42
+t169 := CALL f42
+t170 := t168 + t169
+t171 := t170 + #43
+RETURN t171
+FUNCTION f44 :
+t172 := CALL f43
+t173 := CALL f43
+t174 := t172 + t173
+t175 := t174 + #44
+RETURN t175
+FUNCTION f45 :
+t176 := CALL f44
+t177 := CALL f44
+t178 := t176 + t177
+t179 := t178 + #45
+RETURN t179
+FUNCTION f46 :
+t180 := CALL f45
+t181 := CALL f45
+t182 := t180 + t181
+t183 := t182 + #46
+RETURN t183
+FUNCTION f47 :
+t184 := CALL f46
+t185 := CALL f46
+t186 := t184 + t185
+t187 := t186 + #47
+RETURN t187
+FUNCTION f48 :
+t188 := CALL f47
+t189 := CALL f47
+t190 := t188 + t189
+t191 := t190 + #48
+RETURN t191
+FUNCTION f49 :
+t192 := CALL f48
+t193 := CALL f48
+t194 := t192 + t193
+t195 := t194 + #49
+RETURN t195
+FUNCTION f50 :
+t196 := CALL f49
+t197 := CALL f49
+t198 := t196 + t197
+t199 := t198 + #50
+RETURN t199
+FUNCTION f51 :
+t200 := CALL f50
+t201 := CALL f50
+t202 := t200 + t201
+t203 := t202 + #51
+RETURN t203
+FUNCTION f52 :
+t204 := CALL f51
+t205 := CALL f51
+t206 := t204 + t205
+t207 := t206 + #52
+RETURN t207
+FUNCTION f53 :
+t208 := CALL f52
+t209 := CALL f52
+t210 := t208 + t209
+t211 := t210 + #53
+RETURN t211
+FUNCTION f54 :
+t212 := CALL f53
+t213 := CALL f53
+t214 := t212 + t213
+t215 := t214 + #54
+RETURN t215
+FUNCTION f55 :
+t216 := CALL f54
+t217 := CALL f54
+t218 := t216 + t217
+t219 := t218 + #55
+RETURN t219
+FUNCTION f56 :
+t220 := CALL f55
+t221 := CALL f55
+t222 := t220 + t221
+t223 := t222 + #56
+RETURN t223
+FUNCTION f57 :
+t224 := CALL f56
+t225 := CALL f56
+t226 := t224 + t225
+t227 := t226 + #57
+RETURN t227
+FUNCTION f58 :
+t228 := CALL f57
+t229 := CALL f57
+t230 := t228 + t229
+t231 := t230 + #58
+RETURN t231
+FUNCTION f59 :
+t232 := CALL f58
+t233 := CALL f58
+t234 := t232 + t233
+t235 := t234 + #59
+RETURN t235
+FUNCTION f60 :
+t236 := CALL f59
+t237 := CALL f59
+t238 := t236 + t237
+t239 := t238 + #60
+RETURN t239
+FUNCTION f61 :
+t240 := CALL f60
+t241 := CALL f60
+t242 := t240 + t241
+t243 := t242 + #61
+RETURN t243
+FUNCTION f62 :
+t244 := CALL f61
+t245 := CALL f61
+t246 := t244 + t245
+t247 := t246 + #62
+RETURN t247
+FUNCTION f63 :
+t248 := CALL f62
+t249 := CALL f62
+t250 := t248 + t249
+t251 := t250 + #63
+RETURN t251
+FUNCTION f64 :
+t252 := CALL f63
+t253 := CALL f63
+t254 := t252 + t253
+t255 := t254 + #64
+RETURN t255
+FUNCTION f65 :
+t256 := CALL f64
+t257 := CALL f64
+t258 := t256 + t257
+t259 := t258 + #65
+RETURN t259
+FUNCTION f66 :
+t260 := CALL f65
+t261 := CALL f65
+t262 := t260 + t261
+t263 := t262 + #66
+RETURN t263
+FUNCTION f67 :
+t264 := CALL f66
+t265 := CALL f66
+t266 := t264 + t265
+t267 := t266 + #67
+RETURN t267
+FUNCTION f68 :
+t268 := CALL f67
+t269 := CALL f67
+t270 := t268 + t269
+t271 := t270 + #68
+RETURN t271
+FUNCTION f69 :
+t272 := CALL f68
+t273 := CALL f68
+t274 := t272 + t273
+t275 := t274 + #69
+RETURN t275
+FUNCTION f70 :
+t276 := CALL f69
+t277 := CALL f69
+t278 := t276 + t277
+t279 := t278 + #70
+RETURN t279
+FUNCTION f71 :
+t280 := CALL f70
+t281 := CALL f70
+t282 := t280 + t281
+t283 := t282 + #71
+RETURN t283
+FUNCTION f72 :
+t284 := CALL f71
+t285 := CALL f71
+t286 := t284 + t285
+t287 := t286 + #72
+RETURN t287
+FUNCTION f73 :
+t288 := CALL f72
+t289 := CALL f72
+t290 := t288 + t289
+t291 := t290 + #73
+RETURN t291
+FUNCTION f74 :
+t292 := CALL f73
+t293 := CALL f73
+t294 := t292 + t293
+t295 := t294 + #74
+RETURN t295
+FUNCTION f75 :
+t296 := CALL f74
+t297 := CALL f74
+t298 := t296 + t297
+t299 := t298 + #75
+RETURN t299
+FUNCTION f76 :
+t300 := CALL f75
+t301 := CALL f75
+t302 := t300 + t301
+t303 := t302 + #76
+RETURN t303
+FUNCTION f77 :
+t304 := CALL f76
+t305 := CALL f76
+t306 := t304 + t305
+t307 := t306 + #77
+RETURN t307
+FUNCTION f78 :
+t308 := CALL f77
+t309 := CALL f77
+t310 := t308 + t309
+t311 := t310 + #78
+RETURN t311
+FUNCTION f79 :
+t312 := CALL f78
+t313 := CALL f78
+t314 := t312 + t313
+t315 := t314 + #79
+RETURN t315
+FUNCTION f80 :
+t316 := CALL f79
+t317 := CALL f79
+t318 := t316 + t317
+t319 := t318 + #80
+RETURN t319
+FUNCTION f81 :
+t320 := CALL f80
+t321 := CALL f80
+t322 := t320 + t321
+t323 := t322 + #81
+RETURN t323
+FUNCTION f82 :
+t324 := CALL f81
+t325 := CALL f81
+t326 := t324 + t325
+t327 := t326 + #82
+RETURN t327
+FUNCTION f83 :
+t328 := CALL f82
+t329 := CALL f82
+t330 := t328 + t329
+t331 := t330 + #83
+RETURN t331
+FUNCTION f84 :
+t332 := CALL f83
+t333 := CALL f83
+t334 := t332 + t333
+t335 := t334 + #84
+RETURN t335
+FUNCTION f85 :
+t336 := CALL f84
+t337 := CALL f84
+t338 := t336 + t337
+t339 := t338 + #85
+RETURN t339
+FUNCTION f86 :
+t340 := CALL f85
+t341 := CALL f85
+t342 := t340 + t341
+t343 := t342 + #86
+RETURN t343
+FUNCTION f87 :
+t344 := CALL f86
+t345 := CALL f86
+t346 := t344 + t345
+t347 := t346 + #87
+RETURN t347
+FUNCTION f88 :
+t348 := CALL f87
+t349 := CALL f87
+t350 := t348 + t349
+t351 := t350 + #88
+RETURN t351
+FUNCTION f89 :
+t352 := CALL f88
+t353 := CALL f88
+t354 := t352 + t353
+t355 := t354 + #89
+RETURN t355
+FUNCTION f90 :
+t356 := CALL f89
+t357 := CALL f89
+t358 := t356 + t357
+t359 := t358 + #90
+RETURN t359
+FUNCTION f91 :
+t360 := CALL f90
+t361 := CALL f90
+t362 := t360 + t361
+t363 := t362 + #91
+RETURN t363
+FUNCTION f92 :
+t364 := CALL f91
+t365 := CALL f91
+t366 := t364 + t365
+t367 := t366 + #92
+RETURN t367
+FUNCTION f93 :
+t368 := CALL f92
+t369 := CALL f92
+t370 := t368 + t369
+t371 := t370 + #93
+RETURN t371
+FUNCTION f94 :
+t372 := CALL f93
+t373 := CALL f93
+t374 := t372 + t373
+t375 := t374 + #94
+RETURN t375
+FUNCTION f95 :
+t376 := CALL f94
+t377 := CALL f94
+t378 := t376 + t377
+t379 := t378 + #95
+RETURN t379
+FUNCTION f96 :
+t380 := CALL f95
+t381 := CALL f95
+t382 := t380 + t381
+t383 := t382 + #96
+RETURN t383
+FUNCTION f97 :
+t384 := CALL f96
+t385 := CALL f96
+t386 := t384 + t385
+t387 := t386 + #97
+RETURN t387
+FUNCTION f98 :
+t388 := CALL f97
+t389 := CALL f97
+t390 := t388 + t389
+t391 := t390 + #98
+RETURN t391
+FUNCTION f99 :
+t392 := CALL f98
+t393 := CALL f98
+t394 := t392 + t393
+t395 := t394 + #99
+RETURN t395
+FUNCTION main :
+t396 := CALL f99
+WRITE t396
+t397 := CALL f98
+WRITE t397
+t398 := CALL f94
+WRITE t398
+t399 := CALL f89
+WRITE t399
+t400 := CALL f84
+WRITE t400
+t401 := CALL f81
+WRITE t401
+t402 := CALL f72
+WRITE t402
+t403 := CALL f69
+WRITE t403
+t404 := CALL f63
+WRITE t404
+t405 := CALL f60
+WRITE t405
+t406 := CALL f29
+WRITE t406
+RETURN #0

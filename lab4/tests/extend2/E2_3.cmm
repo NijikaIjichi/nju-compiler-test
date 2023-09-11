@@ -1,0 +1,58 @@
+int Swap(int a[8], int l, int h)
+{
+    int temp;
+    temp = a[l];
+    a[l] = a[h];
+    a[h] = temp;
+    return 0;
+}
+
+int Partition(int b[8], int low, int high)
+{
+    int base = b[low];
+    while(low < high)
+    {
+        while(low < high && b[high] >= base)
+        {
+            high = high - 1;
+        }
+        Swap(b, low, high);
+        while(low < high && b[low] <= base)
+        {
+            low = low + 1;
+        }
+        Swap(b, low, high);
+    }
+    return low;
+}
+ 
+int QuickSort(int c[8], int low1, int high1)
+{
+    if(low1 < high1)
+    {
+        int base1 = Partition(c, low1, high1);
+        QuickSort(c, low1, base1 - 1);
+        QuickSort(c, base1 + 1, high1);
+    }
+    return 0;
+}
+ 
+int main()
+{
+    int n = 8;
+    int arr[8];
+    int i = 0;
+    while(i < n)
+    {
+        arr[i] =  read();
+        i = i + 1;
+    }
+    QuickSort(arr, 0, n-1);
+    i = 0; 
+    while(i < n)
+    {
+        write(arr[i]);
+        i = i + 1;
+    }
+    return 0;
+}

@@ -1,0 +1,88 @@
+
+int id_x(int id_DB8D, int id_mQoi) {
+  if((((id_DB8D > 0) && (id_mQoi > 0) && (id_DB8D > (2147483647 - id_mQoi))) || ((id_DB8D < 0) && (id_mQoi < 0) && (id_DB8D < (-2147483648 - id_mQoi)))))
+  {
+    return id_DB8D;
+  }
+  return id_DB8D + id_mQoi;
+}
+
+int id_PD(int id_fK1T6WKTQ, int id_UgZdMOR) {
+  if(((id_fK1T6WKTQ > 0) && (id_UgZdMOR < 0) && (id_fK1T6WKTQ > 2147483647 + id_UgZdMOR))|| ((id_fK1T6WKTQ < 0) && (id_UgZdMOR > 0) && (id_fK1T6WKTQ < -2147483648 + id_UgZdMOR)))
+  {
+    return id_fK1T6WKTQ;
+  }
+  return id_fK1T6WKTQ - id_UgZdMOR;
+}
+
+int id_BkQODdWs3J(int id_IjAwpfZY5, int id_cRfAu4bzT) {
+  if((((id_IjAwpfZY5 > 0) && (id_cRfAu4bzT > 0) && (id_IjAwpfZY5 > (2147483647 / id_cRfAu4bzT))) || ((id_IjAwpfZY5 > 0) && (id_cRfAu4bzT <= 0) && (id_cRfAu4bzT < (-2147483648 / id_IjAwpfZY5))) || ((id_IjAwpfZY5 <= 0) && (id_cRfAu4bzT > 0) && (id_IjAwpfZY5 < (-2147483648 / id_cRfAu4bzT))) || ((id_IjAwpfZY5 <= 0) && (id_cRfAu4bzT <= 0) && (id_IjAwpfZY5 != 0) && (id_cRfAu4bzT < (2147483647 / id_IjAwpfZY5)))))
+  {
+    return id_IjAwpfZY5;
+  }
+  return id_IjAwpfZY5 * id_cRfAu4bzT;
+}
+
+int id_uDJ(int id_PguuDdB8l, int id_aHXAtKvZ) {
+  if(((id_aHXAtKvZ == 0) || ((id_PguuDdB8l == -2147483648) && (id_aHXAtKvZ == (-1)))))
+  {
+    return id_PguuDdB8l;
+  }
+  return id_PguuDdB8l / id_aHXAtKvZ;
+}
+
+int id_DZ3(int id_kRRZyE4SZw, int id_zu3XO) {
+  if(id_kRRZyE4SZw < 0 || id_kRRZyE4SZw >= id_zu3XO)
+  {
+    return 0;
+  }
+  return id_kRRZyE4SZw;
+}
+
+int id_Wzc60d7(int id_M3HBb6pr)
+{
+  int id_NeNf[9];
+  id_NeNf[0] = 3725;
+  id_NeNf[1] = 14363;
+  id_NeNf[2] = 19378;
+  id_NeNf[3] = 61335;
+  id_NeNf[4] = 27469;
+  id_NeNf[5] = 52476;
+  id_NeNf[6] = 29162;
+  id_NeNf[7] = 23155;
+  id_NeNf[8] = 29291;
+  - 19858;
+  40825 * id_M3HBb6pr * - 26110 + 60222 / id_M3HBb6pr / id_M3HBb6pr || id_Wzc60d7(- id_NeNf[1]);
+  write(id_NeNf[0]);
+  write(id_NeNf[1]);
+  write(id_NeNf[2]);
+  write(id_NeNf[3]);
+  write(id_NeNf[4]);
+  write(id_NeNf[5]);
+  write(id_NeNf[6]);
+  write(id_NeNf[7]);
+  write(id_NeNf[8]);
+  return ! - 11749;
+}
+
+int id_MBut7(int id_D, int id_I)
+{
+  return id_D = ! 31165;
+}
+
+int id_QcNkdIK()
+{
+  int id_ShqBdFSlPX;
+  int id_beqgyHdUr8;
+  id_ShqBdFSlPX = 29937;
+  id_beqgyHdUr8 = 40143;
+  id_MBut7(id_beqgyHdUr8 || id_ShqBdFSlPX || 29392, (id_beqgyHdUr8) >= (24214));
+  write(id_ShqBdFSlPX);
+  write(id_beqgyHdUr8);
+  return 33363;
+}
+
+int main() {
+  write(id_QcNkdIK());
+  return 0;
+}

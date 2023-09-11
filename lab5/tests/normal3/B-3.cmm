@@ -1,0 +1,92 @@
+int main() {
+    int n = 5, arr[5], tmp[5];
+    int i, intv;
+    int s1, e1, cur1, s2, e2, cur2;
+    i = 0;
+    while (i < n) {
+        arr[i] = read();
+        i = i + 1;
+    }
+
+    intv = 1;
+    while (intv < n) {
+        i = 0;
+        while (i <= n - 2 * intv) {
+            s1 = i;
+            e1 = s1 + intv;
+            cur1 = s1;
+            s2 = e1;
+            e2 = s2 + intv;
+            cur2 = s2;
+            while (cur1 < e1 && cur2 < e2) {
+                if (arr[cur1] < arr[cur2]) {
+                    tmp[i] = arr[cur1];
+                    cur1 = cur1 + 1;
+                } else {
+                    tmp[i] = arr[cur2];
+                    cur2 = cur2 + 1;
+                }
+                i = i + 1;
+            }
+            while (cur1 < e1) {
+                tmp[i] = arr[cur1];
+                cur1 = cur1 + 1;
+                i = i + 1;
+            }
+            while (cur2 < e2) {
+                tmp[i] = arr[cur2];
+                cur2 = cur2 + 1;
+                i = i + 1;
+            }
+        }
+
+        if (i + intv < n) {
+            s1 = i;
+            e1 = s1 + intv;
+            cur1 = s1;
+            s2 = e1;
+            e2 = n;
+            cur2 = s2;
+            while (cur1 < e1 && cur2 < e2) {
+                if (arr[cur1] < arr[cur2]) {
+                    tmp[i] = arr[cur1];
+                    cur1 = cur1 + 1;
+                    i = i + 1;
+                } else {
+                    tmp[i] = arr[cur2];
+                    cur2 = cur2 + 1;
+                    i = i + 1;
+                }
+            }
+            while (cur1 < e1) {
+                tmp[i] = arr[cur1];
+                cur1 = cur1 + 1;
+                i = i + 1;
+            }
+            while (cur2 < e2) {
+                tmp[i] = arr[cur2];
+                cur2 = cur2 + 1;
+                i = i + 1;
+            }
+        } else {
+            while (i < n) {
+                tmp[i] = arr[i];
+                i = i + 1;
+            }
+        }
+
+        i = 0;
+        while (i < n) {
+            arr[i] = tmp[i];
+            i = i + 1;
+        }
+        intv = intv * 2;
+    }
+
+    i = 0;
+    while (i < n) {
+        write(arr[i]);
+        i = i + 1;
+    }
+    return 0;
+}

@@ -1,0 +1,164 @@
+FUNCTION distance :
+PARAM v1
+PARAM v3
+v4 := #0
+v5 := #0
+t0 := v1 + #0
+t1 := *t0
+t2 := v3 + #0
+t3 := *t2
+IF t1 > t3 GOTO L0
+GOTO L1
+LABEL L0 :
+t4 := v1 + #0
+t5 := *t4
+t6 := v3 + #0
+t7 := *t6
+t8 := t5 - t7
+v4 := t8
+GOTO L2
+LABEL L1 :
+t9 := v3 + #0
+t10 := *t9
+t11 := v1 + #0
+t12 := *t11
+t13 := t10 - t12
+v4 := t13
+LABEL L2 :
+t14 := v1 + #4
+t15 := *t14
+t16 := v3 + #4
+t17 := *t16
+IF t15 > t17 GOTO L3
+GOTO L4
+LABEL L3 :
+t18 := v1 + #4
+t19 := *t18
+t20 := v3 + #4
+t21 := *t20
+t22 := t19 - t21
+v5 := t22
+GOTO L5
+LABEL L4 :
+t23 := v3 + #4
+t24 := *t23
+t25 := v1 + #4
+t26 := *t25
+t27 := t24 - t26
+v5 := t27
+LABEL L5 :
+t28 := v4 + v5
+RETURN t28
+FUNCTION sum_distance :
+PARAM v7
+v8 := #0
+t29 := v7 + #8
+t30 := #0 * #12
+t31 := t29 + t30
+t32 := v7 + #8
+t33 := #1 * #12
+t34 := t32 + t33
+ARG t34
+ARG t31
+t35 := CALL distance
+t36 := v8 + t35
+v8 := t36
+t37 := v7 + #8
+t38 := #1 * #12
+t39 := t37 + t38
+t40 := v7 + #8
+t41 := #2 * #12
+t42 := t40 + t41
+ARG t42
+ARG t39
+t43 := CALL distance
+t44 := v8 + t43
+v8 := t44
+t45 := v7 + #8
+t46 := #2 * #12
+t47 := t45 + t46
+t48 := v7 + #8
+t49 := #0 * #12
+t50 := t48 + t49
+ARG t50
+ARG t47
+t51 := CALL distance
+t52 := v8 + t51
+v8 := t52
+RETURN v8
+FUNCTION ave_speed :
+PARAM v10
+PARAM v12
+PARAM v14
+t53 := v10 + #8
+t54 := *t53
+t55 := v12 + #8
+t56 := *t55
+t57 := t54 + t56
+t58 := v14 + #8
+t59 := *t58
+t60 := t57 + t59
+t61 := t60 / #3
+RETURN t61
+FUNCTION initStreet :
+PARAM v16
+v17 := #0
+t62 := v16 + #0
+*t62 := #0
+t63 := v16 + #4
+*t63 := #0
+LABEL L6 :
+IF v17 < #3 GOTO L7
+GOTO L8
+LABEL L7 :
+t64 := v16 + #8
+t65 := v17 * #12
+t66 := t64 + t65
+t67 := t66 + #0
+t68 := #30 * v17
+t69 := t68 + #10
+*t67 := t69
+t70 := v16 + #8
+t71 := v17 * #12
+t72 := t70 + t71
+t73 := t72 + #4
+t74 := v17 + #1
+t75 := #20 * t74
+t76 := t75 - #15
+*t73 := t76
+t77 := v16 + #8
+t78 := v17 * #12
+t79 := t77 + t78
+t80 := t79 + #8
+t81 := v17 + #1
+t82 := t81 * #100
+t83 := t82 - #50
+*t80 := t83
+t84 := v17 + #1
+v17 := t84
+GOTO L6
+LABEL L8 :
+RETURN #0
+FUNCTION main :
+DEC v18 44
+v19 := &v18
+ARG v19
+t85 := CALL initStreet
+ARG v19
+t86 := CALL sum_distance
+WRITE t86
+t87 := v19 + #8
+t88 := #0 * #12
+t89 := t87 + t88
+t90 := v19 + #8
+t91 := #1 * #12
+t92 := t90 + t91
+t93 := v19 + #8
+t94 := #2 * #12
+t95 := t93 + t94
+ARG t95
+ARG t92
+ARG t89
+t96 := CALL ave_speed
+WRITE t96
+RETURN #0

@@ -1,0 +1,12 @@
+//Assign arith as bool
+int main() {
+    int n, m;
+    if(n = 2) {
+        write(2);
+    }
+    if(n = (n + n)) {
+        write(3);
+    }
+    write(n);
+    return 0;
+}

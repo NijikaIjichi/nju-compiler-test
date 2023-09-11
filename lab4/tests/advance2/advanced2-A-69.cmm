@@ -1,0 +1,83 @@
+
+int id_pd396C(int id__2, int id_FJlQekuB) {
+  if((((id__2 > 0) && (id_FJlQekuB > 0) && (id__2 > (2147483647 - id_FJlQekuB))) || ((id__2 < 0) && (id_FJlQekuB < 0) && (id__2 < (-2147483648 - id_FJlQekuB)))))
+  {
+    return id__2;
+  }
+  return id__2 + id_FJlQekuB;
+}
+
+int id_Phv3bXGsnL(int id_mSkyYRa_Pc, int id_Usm) {
+  if(((id_mSkyYRa_Pc > 0) && (id_Usm < 0) && (id_mSkyYRa_Pc > 2147483647 + id_Usm))|| ((id_mSkyYRa_Pc < 0) && (id_Usm > 0) && (id_mSkyYRa_Pc < -2147483648 + id_Usm)))
+  {
+    return id_mSkyYRa_Pc;
+  }
+  return id_mSkyYRa_Pc - id_Usm;
+}
+
+int id_SMs_6(int id_KQ, int id_rT) {
+  if((((id_KQ > 0) && (id_rT > 0) && (id_KQ > (2147483647 / id_rT))) || ((id_KQ > 0) && (id_rT <= 0) && (id_rT < (-2147483648 / id_KQ))) || ((id_KQ <= 0) && (id_rT > 0) && (id_KQ < (-2147483648 / id_rT))) || ((id_KQ <= 0) && (id_rT <= 0) && (id_KQ != 0) && (id_rT < (2147483647 / id_KQ)))))
+  {
+    return id_KQ;
+  }
+  return id_KQ * id_rT;
+}
+
+int id_h1pTvyI9(int id_qN0OrZC, int id_VhBh) {
+  if(((id_VhBh == 0) || ((id_qN0OrZC == -2147483648) && (id_VhBh == (-1)))))
+  {
+    return id_qN0OrZC;
+  }
+  return id_qN0OrZC / id_VhBh;
+}
+
+int id_jiHNc(int id_Mqqi2dSI, int id_L) {
+  if(id_Mqqi2dSI < 0 || id_Mqqi2dSI >= id_L)
+  {
+    return 0;
+  }
+  return id_Mqqi2dSI;
+}
+
+int id_Jdfb9(int id_Mh44zQ3, int id_sKBxM, int id_AL9LmjfYD)
+{
+  int id_NkKIj[9];
+  id_NkKIj[0] = 32356;
+  id_NkKIj[1] = 20841;
+  id_NkKIj[2] = 5341;
+  id_NkKIj[3] = 4960;
+  id_NkKIj[4] = 27917;
+  id_NkKIj[5] = 57650;
+  id_NkKIj[6] = 33740;
+  id_NkKIj[7] = 52522;
+  id_NkKIj[8] = 23365;
+  ! - id_sKBxM;
+  id_NkKIj[(- id_Mh44zQ3) > (id_NkKIj[id_Mh44zQ3])];
+  write(id_NkKIj[0]);
+  write(id_NkKIj[1]);
+  write(id_NkKIj[2]);
+  write(id_NkKIj[3]);
+  write(id_NkKIj[4]);
+  write(id_NkKIj[5]);
+  write(id_NkKIj[6]);
+  write(id_NkKIj[7]);
+  write(id_NkKIj[8]);
+  return id_Mh44zQ3;
+}
+
+int id_VkNQe()
+{
+  int id_O5SJ;
+  int id_m4fF1QFC;
+  id_O5SJ = 34225;
+  id_m4fF1QFC = 9279;
+  id_Jdfb9(64462 && 45828 || id_m4fF1QFC, 38218, id_O5SJ = id_m4fF1QFC);
+  write(id_O5SJ);
+  write(id_m4fF1QFC);
+  return 50620;
+}
+
+int main() {
+  write(id_VkNQe());
+  return 0;
+}

@@ -1,0 +1,38 @@
+struct Giant {
+    int id;
+    int age;
+    int height;
+    int weight;
+    int bmi;
+};
+
+int cal_bmi(struct Giant g) {
+    g.bmi = g.weight / (g.height * g.height);
+    return 0;
+}
+
+int main() {
+    int i = 0;
+    int n = 10;
+    struct Giant giants[10];
+    while (i < n) {
+        giants[i].id = i;
+        giants[i].age = 20 + i;
+        giants[i].height = 2 + i;
+        giants[i].weight = 90 + i * i * i * i;
+        i = i + 1;
+    }
+    
+    i = 0;
+    while (i < n) {
+        cal_bmi(giants[i]);
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i < n) {
+        write(giants[i].bmi);
+        i = i + 1;
+    }
+    return 0;
+}

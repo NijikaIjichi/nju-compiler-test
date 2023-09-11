@@ -1,0 +1,13 @@
+int main() {
+    int i;
+    if(write(i = 5)) {
+        write(114);
+    } else if(write(i = i + 1)){
+        write(514);
+    } else if(i = read()) {
+        write(i);
+    } else {
+        write(996);
+    }
+    return 0;
+}

@@ -1,0 +1,28 @@
+int main(){
+  int src[3];
+  int dst[3];
+  int index = 0;
+  int res = 0;
+
+  while(index < 3){
+    src[index] = read();
+    index = index + 1;
+  }
+
+  index = 0;
+  while(index < 3){
+    dst[index] = src[index] * 2;
+    index = index + 1;
+  }
+
+  index = 0;
+  while(index < 3){
+    res = res + src[index] + dst[index];
+    index = index + 1;
+  }
+
+  write(res);
+
+  return 0;
+
+}

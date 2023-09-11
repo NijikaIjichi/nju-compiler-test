@@ -1,0 +1,66 @@
+
+int initW(int w[6]){
+   w[0] = 0;
+   w[1] = 1;
+   w[2] = 2;
+   w[3] = 5;
+   w[4] = 6;
+   w[5] = 7;
+   return 0;
+}
+
+int initV(int v[6]){
+  v[0] = 0;
+  v[1] = 1;
+  v[2] = 6;
+  v[3] = 18;
+  v[4] = 22;
+  v[5] = 28;
+  return 0;
+}
+
+int main(){
+  int weight[6];
+  int value[6];
+  int resutls[6][12];
+
+  int r_i;
+  int r_j;
+  int ki, kj;
+
+  initW(weight);
+  initV(value);
+
+  r_i = 0;
+  while(r_i < 6){
+    r_j = 0;
+    while(r_j < 12){
+      resutls[r_i][r_j] = 0;
+      r_j = r_j + 1;
+    }
+    r_i = r_i + 1;
+  }
+
+  ki = 1;
+  while(ki < 6){
+    kj = 1;
+    while(kj < 12){
+      if(kj < weight[ki]){
+        resutls[ki][kj] = resutls[ki-1][kj];
+      }
+      else{
+        if(resutls[ki-1][kj] > value[ki] + resutls[ki-1][kj - weight[ki]]){
+          resutls[ki][kj] = resutls[ki-1][kj];
+        }
+        else{
+          resutls[ki][kj] = value[ki] + resutls[ki-1][kj-weight[ki]];
+        }
+      }
+      kj = kj + 1;
+    }
+    ki = ki + 1;
+  }
+  
+  write(resutls[5][11]);
+  return 0;
+}

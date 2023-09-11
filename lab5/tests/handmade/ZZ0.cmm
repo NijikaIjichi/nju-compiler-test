@@ -1,0 +1,315 @@
+int f0(){
+  return 1;
+}
+int f1(){
+  return f0() + f0() + 1;
+}
+int f2(){
+  return f1() + f1() + 2;
+}
+int f3(){
+  return f2() + f2() + 3;
+}
+int f4(){
+  return f3() + f3() + 4;
+}
+int f5(){
+  return f4() + f4() + 5;
+}
+int f6(){
+  return f5() + f5() + 6;
+}
+int f7(){
+  return f6() + f6() + 7;
+}
+int f8(){
+  return f7() + f7() + 8;
+}
+int f9(){
+  return f8() + f8() + 9;
+}
+int f10(){
+  return f9() + f9() + 10;
+}
+int f11(){
+  return f10() + f10() + 11;
+}
+int f12(){
+  return f11() + f11() + 12;
+}
+int f13(){
+  return f12() + f12() + 13;
+}
+int f14(){
+  return f13() + f13() + 14;
+}
+int f15(){
+  return f14() + f14() + 15;
+}
+int f16(){
+  return f15() + f15() + 16;
+}
+int f17(){
+  return f16() + f16() + 17;
+}
+int f18(){
+  return f17() + f17() + 18;
+}
+int f19(){
+  return f18() + f18() + 19;
+}
+int f20(){
+  return f19() + f19() + 20;
+}
+int f21(){
+  return f20() + f20() + 21;
+}
+int f22(){
+  return f21() + f21() + 22;
+}
+int f23(){
+  return f22() + f22() + 23;
+}
+int f24(){
+  return f23() + f23() + 24;
+}
+int f25(){
+  return f24() + f24() + 25;
+}
+int f26(){
+  return f25() + f25() + 26;
+}
+int f27(){
+  return f26() + f26() + 27;
+}
+int f28(){
+  return f27() + f27() + 28;
+}
+int f29(){
+  return f28() + f28() + 29;
+}
+int f30(){
+  return f29() + f29() + 30;
+}
+int f31(){
+  return f30() + f30() + 31;
+}
+int f32(){
+  return f31() + f31() + 32;
+}
+int f33(){
+  return f32() + f32() + 33;
+}
+int f34(){
+  return f33() + f33() + 34;
+}
+int f35(){
+  return f34() + f34() + 35;
+}
+int f36(){
+  return f35() + f35() + 36;
+}
+int f37(){
+  return f36() + f36() + 37;
+}
+int f38(){
+  return f37() + f37() + 38;
+}
+int f39(){
+  return f38() + f38() + 39;
+}
+int f40(){
+  return f39() + f39() + 40;
+}
+int f41(){
+  return f40() + f40() + 41;
+}
+int f42(){
+  return f41() + f41() + 42;
+}
+int f43(){
+  return f42() + f42() + 43;
+}
+int f44(){
+  return f43() + f43() + 44;
+}
+int f45(){
+  return f44() + f44() + 45;
+}
+int f46(){
+  return f45() + f45() + 46;
+}
+int f47(){
+  return f46() + f46() + 47;
+}
+int f48(){
+  return f47() + f47() + 48;
+}
+int f49(){
+  return f48() + f48() + 49;
+}
+int f50(){
+  return f49() + f49() + 50;
+}
+int f51(){
+  return f50() + f50() + 51;
+}
+int f52(){
+  return f51() + f51() + 52;
+}
+int f53(){
+  return f52() + f52() + 53;
+}
+int f54(){
+  return f53() + f53() + 54;
+}
+int f55(){
+  return f54() + f54() + 55;
+}
+int f56(){
+  return f55() + f55() + 56;
+}
+int f57(){
+  return f56() + f56() + 57;
+}
+int f58(){
+  return f57() + f57() + 58;
+}
+int f59(){
+  return f58() + f58() + 59;
+}
+int f60(){
+  return f59() + f59() + 60;
+}
+int f61(){
+  return f60() + f60() + 61;
+}
+int f62(){
+  return f61() + f61() + 62;
+}
+int f63(){
+  return f62() + f62() + 63;
+}
+int f64(){
+  return f63() + f63() + 64;
+}
+int f65(){
+  return f64() + f64() + 65;
+}
+int f66(){
+  return f65() + f65() + 66;
+}
+int f67(){
+  return f66() + f66() + 67;
+}
+int f68(){
+  return f67() + f67() + 68;
+}
+int f69(){
+  return f68() + f68() + 69;
+}
+int f70(){
+  return f69() + f69() + 70;
+}
+int f71(){
+  return f70() + f70() + 71;
+}
+int f72(){
+  return f71() + f71() + 72;
+}
+int f73(){
+  return f72() + f72() + 73;
+}
+int f74(){
+  return f73() + f73() + 74;
+}
+int f75(){
+  return f74() + f74() + 75;
+}
+int f76(){
+  return f75() + f75() + 76;
+}
+int f77(){
+  return f76() + f76() + 77;
+}
+int f78(){
+  return f77() + f77() + 78;
+}
+int f79(){
+  return f78() + f78() + 79;
+}
+int f80(){
+  return f79() + f79() + 80;
+}
+int f81(){
+  return f80() + f80() + 81;
+}
+int f82(){
+  return f81() + f81() + 82;
+}
+int f83(){
+  return f82() + f82() + 83;
+}
+int f84(){
+  return f83() + f83() + 84;
+}
+int f85(){
+  return f84() + f84() + 85;
+}
+int f86(){
+  return f85() + f85() + 86;
+}
+int f87(){
+  return f86() + f86() + 87;
+}
+int f88(){
+  return f87() + f87() + 88;
+}
+int f89(){
+  return f88() + f88() + 89;
+}
+int f90(){
+  return f89() + f89() + 90;
+}
+int f91(){
+  return f90() + f90() + 91;
+}
+int f92(){
+  return f91() + f91() + 92;
+}
+int f93(){
+  return f92() + f92() + 93;
+}
+int f94(){
+  return f93() + f93() + 94;
+}
+int f95(){
+  return f94() + f94() + 95;
+}
+int f96(){
+  return f95() + f95() + 96;
+}
+int f97(){
+  return f96() + f96() + 97;
+}
+int f98(){
+  return f97() + f97() + 98;
+}
+int f99(){
+  return f98() + f98() + 99;
+}
+
+int main(){
+  write(f99());
+  write(f98());
+  write(f94());
+  write(f89());
+  write(f84());
+  write(f81());
+  write(f72());
+  write(f69());
+  write(f63());
+  write(f60());
+  write(f29());
+  return 0;
+}

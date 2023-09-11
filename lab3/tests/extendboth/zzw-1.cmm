@@ -1,0 +1,28 @@
+//This sample aims to test the correctness of implementation
+//1. Nested array and structure declare, usage and pass to function
+struct Operands
+{
+    int o1;
+    int o2;
+};
+
+struct Op
+{
+    int o1[2];
+    struct Operands o2;
+	struct Operands o3[5];
+};
+
+int nonsense(struct Op temp1[100], struct Operands temp2) {
+	temp1[temp1[5].o3[2].o1].o3[4].o1 = temp2.o1+6;
+	return 0;
+}
+
+int main()
+{
+	struct Op a[100];
+	a[5].o3[2].o1 = 3;
+	nonsense(a, a[5].o3[2]);
+	write(a[3].o3[4].o1);
+    return 0;
+}

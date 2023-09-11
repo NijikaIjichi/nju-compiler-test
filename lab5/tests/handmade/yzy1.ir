@@ -1,0 +1,38 @@
+FUNCTION succ :
+PARAM v0
+t0 := v0 + #1
+RETURN t0
+FUNCTION zero :
+RETURN #0
+FUNCTION one :
+t1 := CALL zero
+ARG t1
+t2 := CALL succ
+RETURN t2
+FUNCTION two :
+t3 := CALL one
+ARG t3
+t4 := CALL succ
+RETURN t4
+FUNCTION three :
+t5 := CALL two
+ARG t5
+t6 := CALL succ
+RETURN t6
+FUNCTION four :
+t7 := CALL three
+ARG t7
+t8 := CALL succ
+RETURN t8
+FUNCTION five :
+t9 := CALL four
+ARG t9
+t10 := CALL succ
+RETURN t10
+FUNCTION main :
+t11 := CALL five
+t12 := CALL four
+t13 := t11 * t12
+v1 := t13
+WRITE v1
+RETURN #0

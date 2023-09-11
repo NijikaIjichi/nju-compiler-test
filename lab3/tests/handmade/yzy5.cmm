@@ -1,0 +1,13 @@
+int main() {
+    int a[5], i = 0;
+    while(i < 5) {
+        a[i] = i;
+        i = i + 1;
+    }
+    write(a[0]);
+    write(a[1]);
+    write(a[2]);
+    write(a[3]);
+    write(a[4]);
+    return 0;
+}

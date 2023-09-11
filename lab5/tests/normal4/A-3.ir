@@ -1,0 +1,135 @@
+FUNCTION main :
+DEC v0 12
+v1 := &v0
+DEC v2 40
+v3 := &v2
+v4 := #0
+DEC v7 20
+v8 := &v7
+LABEL L0 :
+IF v4 < #5 GOTO L1
+GOTO L2
+LABEL L1 :
+t0 := v4 * #4
+t1 := v8 + t0
+READ t2
+*t1 := t2
+t3 := v4 + #1
+v4 := t3
+GOTO L0
+LABEL L2 :
+v4 := #0
+LABEL L3 :
+IF v4 < #4 GOTO L4
+GOTO L5
+LABEL L4 :
+t4 := v4 + #1
+v5 := t4
+LABEL L6 :
+IF v5 < #5 GOTO L7
+GOTO L8
+LABEL L7 :
+t5 := v4 * #4
+t6 := v8 + t5
+t7 := *t6
+t8 := v5 * #4
+t9 := v8 + t8
+t10 := *t9
+IF t7 > t10 GOTO L9
+GOTO L10
+LABEL L9 :
+t11 := v4 * #4
+t12 := v8 + t11
+t13 := *t12
+v6 := t13
+t14 := v4 * #4
+t15 := v8 + t14
+t16 := v5 * #4
+t17 := v8 + t16
+t18 := *t17
+*t15 := t18
+t19 := v5 * #4
+t20 := v8 + t19
+*t20 := v6
+LABEL L10 :
+t21 := v5 + #1
+v5 := t21
+GOTO L6
+LABEL L8 :
+t22 := v4 + #1
+v4 := t22
+GOTO L3
+LABEL L5 :
+v4 := #0
+LABEL L11 :
+IF v4 < #5 GOTO L12
+GOTO L13
+LABEL L12 :
+t23 := v4 * #4
+t24 := v8 + t23
+t25 := *t24
+WRITE t25
+t26 := v4 + #1
+v4 := t26
+GOTO L11
+LABEL L13 :
+t27 := v8 + #0
+t28 := *t27
+t29 := v1 + #0
+*t29 := t28
+t30 := v8 + #4
+t31 := *t30
+t32 := v1 + #4
+*t32 := t31
+t33 := v8 + #8
+t34 := *t33
+t35 := v1 + #8
+*t35 := t34
+t36 := v8 + #0
+t37 := *t36
+t38 := v3 + #0
+*t38 := t37
+t39 := v8 + #4
+t40 := *t39
+t41 := v3 + #4
+*t41 := t40
+t42 := v8 + #8
+t43 := *t42
+t44 := v3 + #8
+*t44 := t43
+t45 := v8 + #12
+t46 := *t45
+t47 := v3 + #12
+*t47 := t46
+t48 := v8 + #16
+t49 := *t48
+t50 := v3 + #16
+*t50 := t49
+v4 := #0
+LABEL L14 :
+IF v4 < #5 GOTO L15
+GOTO L16
+LABEL L15 :
+IF v4 < #3 GOTO L17
+GOTO L18
+LABEL L17 :
+t51 := v4 * #4
+t52 := v1 + t51
+t53 := *t52
+WRITE t53
+t54 := v4 * #4
+t55 := v3 + t54
+t56 := *t55
+WRITE t56
+GOTO L19
+LABEL L18 :
+t57 := v4 * #4
+t58 := v3 + t57
+t59 := *t58
+WRITE t59
+LABEL L19 :
+t60 := v4 + #1
+v4 := t60
+GOTO L14
+LABEL L16 :
+RETURN #0

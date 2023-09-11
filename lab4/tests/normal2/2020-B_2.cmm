@@ -1,0 +1,30 @@
+int main()
+{
+    int primes[10], N = 10;
+    int pc, m, k;
+    primes[0] = 2;
+    pc = 1;
+    m  = 3;
+    while(pc < N)
+    {
+        k = 0;
+	while(primes[k] * primes[k] <= m)
+	    if(m == primes[k] * (m / primes[k]))
+	    {
+                m = m + 2;
+		k = 1;
+	    }
+	    else
+                k = k + 1;
+        primes[pc] = m;
+        pc = pc + 1;
+	m = m + 2;
+    }
+    k = 0;
+    while(k < pc)
+    {
+	write(primes[k]);
+        k = k + 1;
+    }
+    return 0;
+}

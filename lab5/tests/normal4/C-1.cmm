@@ -1,0 +1,72 @@
+int factorial(int m){
+  int f_res = 1;
+  while(m > 1){
+    f_res = f_res * m;
+    m = m - 1;
+  }
+  return f_res;
+}
+
+int cal_combiniation(int c_base, int c_num){
+  return factorial(c_base) / (factorial(c_num) * factorial(c_base - c_num));
+}
+
+int cal_permutation(int p_base, int p_num){
+  return factorial(p_base) / factorial(p_base - p_num);
+}
+
+int isqrt(int n) {
+    int i = 0;
+    while (i < n) {
+        if (i * i <= n && (i + 1) * (i + 1) > n) {
+            return i;
+        }
+        i = i + 1;
+    }
+    return -1;
+}
+
+int mod(int k1, int k2) {
+    if (k1 < 0 || k2 <= 0) {
+        return -1;
+    } else {
+        return k1 - k1 / k2 * k2;
+    }
+}
+
+int is_prime(int l) {
+    int j = 2;
+    int end = isqrt(l);
+    while (j <= end) {
+        if (mod(l, j) == 0) {
+            return 0;
+        }
+        j = j + 1;
+    }
+    return 1;
+}
+
+
+int main(){
+  int base = read();
+  int key = read();
+  int com = cal_combiniation(base, key);
+  int per = cal_permutation(base,key);
+  int index = 1;
+  while(index <= com){
+    if(is_prime(index)){
+      write(index);
+    }
+    index = index + 1;
+  }
+
+  index = 1;
+  while(index <= per){
+    if(is_prime(index)){
+      write(index);
+    }
+    index = index + 1;
+  }
+
+  return 0;
+}

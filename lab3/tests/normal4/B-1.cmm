@@ -1,0 +1,24 @@
+int factorial(int m){
+  int f_res = 1;
+  while(m > 1){
+    f_res = f_res * m;
+    m = m - 1;
+  }
+  return f_res;
+}
+
+int cal_combiniation(int c_base, int c_num){
+  return factorial(c_base) / (factorial(c_num) * factorial(c_base - c_num));
+}
+
+int cal_permutation(int p_base, int p_num){
+  return factorial(p_base) / factorial(p_base - p_num);
+}
+
+int main() {
+  int n = read();
+  int k = read();
+  write(cal_combiniation(n, k));
+  write(cal_permutation(n, k));  
+  return 0;
+}
