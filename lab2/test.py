@@ -128,12 +128,12 @@ def test_dir(dir: str):
 
 def test_advance_one(file: str):
   p = run_one(file)
-  if not p:
-    return False
+  if isinstance(p, str):
+    return p
   with open(chsub(file, 'output')) as fp:
     ans = fp.read()
-  anserr = sorted(analyse_out(ans))
-  outerr = sorted(analyse_out(p.stdout))
+  anserr = analyse_out(ans)
+  outerr = analyse_out(p.stdout)
   if more:
     ac = set(anserr).issubset(outerr)
     false_positive = False

@@ -185,8 +185,8 @@ def test_advance_one(file: str):
     return p
   with open(chsub(file, 'output')) as fp:
     ans = fp.read()
-  if anserr := sorted(analyse_out(ans, False)):
-    outerr = sorted(analyse_out(p.stdout, False))
+  if anserr := analyse_out(ans, False):
+    outerr = analyse_out(p.stdout, False)
     if more:
       ac = set(anserr).issubset(outerr)
       false_positive = False
