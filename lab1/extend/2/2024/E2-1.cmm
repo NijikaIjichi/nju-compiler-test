@@ -1,0 +1,10 @@
+int main() {
+    float PI = 0314159.e-5;
+    float radius = 6.250e1;
+    float volume = (4.0 / 3.0) * PI * radius * radius * radius;
+    float length = 2.5e-03 / 3.54 + -(-123.0E-3);
+    float width = 1.88E2 + 100 * .57e-1;
+    float perimeter = 2 * (length + width);
+    float area = length * width;
+    return 0;
+}

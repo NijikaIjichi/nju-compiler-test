@@ -1,0 +1,565 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: minDistance
+        LP
+        VarList (1)
+          ParamDec (1)
+            Specifier (1)
+              TYPE: int
+            VarDec (1)
+              VarDec (1)
+                ID: dist
+              LB
+              INT: 6
+              RB
+          COMMA
+          VarList (1)
+            ParamDec (1)
+              Specifier (1)
+                TYPE: int
+              VarDec (1)
+                VarDec (1)
+                  ID: visited
+                LB
+                INT: 6
+                RB
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: int
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: min
+                ASSIGNOP
+                Exp (2)
+                  INT: 2147483647
+              COMMA
+              DecList (2)
+                Dec (2)
+                  VarDec (2)
+                    ID: min_index
+                COMMA
+                DecList (2)
+                  Dec (2)
+                    VarDec (2)
+                      ID: v
+                    ASSIGNOP
+                    Exp (2)
+                      INT: 0
+            SEMI
+        StmtList (3)
+          Stmt (3)
+            WHILE
+            LP
+            Exp (3)
+              Exp (3)
+                ID: v
+              RELOP
+              Exp (3)
+                INT: 6
+            RP
+            Stmt (3)
+              CompSt (3)
+                LC
+                StmtList (4)
+                  Stmt (4)
+                    IF
+                    LP
+                    Exp (4)
+                      Exp (4)
+                        NOT
+                        Exp (4)
+                          Exp (4)
+                            ID: visited
+                          LB
+                          Exp (4)
+                            ID: v
+                          RB
+                      AND
+                      Exp (4)
+                        Exp (4)
+                          Exp (4)
+                            ID: dist
+                          LB
+                          Exp (4)
+                            ID: v
+                          RB
+                        RELOP
+                        Exp (4)
+                          ID: min
+                    RP
+                    Stmt (4)
+                      CompSt (4)
+                        LC
+                        StmtList (5)
+                          Stmt (5)
+                            Exp (5)
+                              Exp (5)
+                                ID: min
+                              ASSIGNOP
+                              Exp (5)
+                                Exp (5)
+                                  ID: dist
+                                LB
+                                Exp (5)
+                                  ID: v
+                                RB
+                            SEMI
+                          StmtList (6)
+                            Stmt (6)
+                              Exp (6)
+                                Exp (6)
+                                  ID: min_index
+                                ASSIGNOP
+                                Exp (6)
+                                  ID: v
+                              SEMI
+                        RC
+                  StmtList (8)
+                    Stmt (8)
+                      Exp (8)
+                        Exp (8)
+                          ID: v
+                        ASSIGNOP
+                        Exp (8)
+                          Exp (8)
+                            ID: v
+                          PLUS
+                          Exp (8)
+                            INT: 1
+                      SEMI
+                RC
+          StmtList (10)
+            Stmt (10)
+              RETURN
+              Exp (10)
+                ID: min_index
+              SEMI
+        RC
+    ExtDefList (13)
+      ExtDef (13)
+        Specifier (13)
+          TYPE: int
+        FunDec (13)
+          ID: dijkstra
+          LP
+          VarList (13)
+            ParamDec (13)
+              Specifier (13)
+                TYPE: int
+              VarDec (13)
+                VarDec (13)
+                  VarDec (13)
+                    ID: graph
+                  LB
+                  INT: 6
+                  RB
+                LB
+                INT: 6
+                RB
+            COMMA
+            VarList (13)
+              ParamDec (13)
+                Specifier (13)
+                  TYPE: int
+                VarDec (13)
+                  ID: src
+          RP
+        CompSt (13)
+          LC
+          DefList (14)
+            Def (14)
+              Specifier (14)
+                TYPE: int
+              DecList (14)
+                Dec (14)
+                  VarDec (14)
+                    VarDec (14)
+                      ID: dist
+                    LB
+                    INT: 6
+                    RB
+              SEMI
+            DefList (15)
+              Def (15)
+                Specifier (15)
+                  TYPE: int
+                DecList (15)
+                  Dec (15)
+                    VarDec (15)
+                      VarDec (15)
+                        ID: visited
+                      LB
+                      INT: 6
+                      RB
+                SEMI
+              DefList (16)
+                Def (16)
+                  Specifier (16)
+                    TYPE: int
+                  DecList (16)
+                    Dec (16)
+                      VarDec (16)
+                        ID: i
+                      ASSIGNOP
+                      Exp (16)
+                        INT: 0
+                  SEMI
+                DefList (17)
+                  Def (17)
+                    Specifier (17)
+                      TYPE: int
+                    DecList (17)
+                      Dec (17)
+                        VarDec (17)
+                          ID: count
+                        ASSIGNOP
+                        Exp (17)
+                          INT: 0
+                    SEMI
+          StmtList (19)
+            Stmt (19)
+              WHILE
+              LP
+              Exp (19)
+                Exp (19)
+                  ID: i
+                RELOP
+                Exp (19)
+                  INT: 6
+              RP
+              Stmt (19)
+                CompSt (19)
+                  LC
+                  StmtList (20)
+                    Stmt (20)
+                      Exp (20)
+                        Exp (20)
+                          Exp (20)
+                            ID: dist
+                          LB
+                          Exp (20)
+                            ID: i
+                          RB
+                        ASSIGNOP
+                        Exp (20)
+                          INT: 2147483647
+                      SEMI
+                    StmtList (21)
+                      Stmt (21)
+                        Exp (21)
+                          Exp (21)
+                            Exp (21)
+                              ID: visited
+                            LB
+                            Exp (21)
+                              ID: i
+                            RB
+                          ASSIGNOP
+                          Exp (21)
+                            INT: 0
+                        SEMI
+                      StmtList (22)
+                        Stmt (22)
+                          Exp (22)
+                            Exp (22)
+                              ID: i
+                            ASSIGNOP
+                            Exp (22)
+                              Exp (22)
+                                ID: i
+                              PLUS
+                              Exp (22)
+                                INT: 1
+                          SEMI
+                  RC
+            StmtList (25)
+              Stmt (25)
+                Exp (25)
+                  Exp (25)
+                    Exp (25)
+                      ID: dist
+                    LB
+                    Exp (25)
+                      ID: src
+                    RB
+                  ASSIGNOP
+                  Exp (25)
+                    INT: 0
+                SEMI
+              StmtList (27)
+                Stmt (27)
+                  WHILE
+                  LP
+                  Exp (27)
+                    Exp (27)
+                      ID: count
+                    RELOP
+                    Exp (27)
+                      Exp (27)
+                        INT: 6
+                      MINUS
+                      Exp (27)
+                        INT: 1
+                  RP
+                  Stmt (27)
+                    CompSt (27)
+                      LC
+                      DefList (28)
+                        Def (28)
+                          Specifier (28)
+                            TYPE: int
+                          DecList (28)
+                            Dec (28)
+                              VarDec (28)
+                                ID: v
+                              ASSIGNOP
+                              Exp (28)
+                                INT: 0
+                            COMMA
+                            DecList (28)
+                              Dec (28)
+                                VarDec (28)
+                                  ID: u
+                                ASSIGNOP
+                                Exp (28)
+                                  ID: minDistance
+                                  LP
+                                  Args (28)
+                                    Exp (28)
+                                      ID: dist
+                                    COMMA
+                                    Args (28)
+                                      Exp (28)
+                                        ID: visited
+                                  RP
+                          SEMI
+                      StmtList (29)
+                        Stmt (29)
+                          Exp (29)
+                            Exp (29)
+                              Exp (29)
+                                ID: visited
+                              LB
+                              Exp (29)
+                                ID: u
+                              RB
+                            ASSIGNOP
+                            Exp (29)
+                              INT: 1
+                          SEMI
+                        StmtList (31)
+                          Stmt (31)
+                            WHILE
+                            LP
+                            Exp (31)
+                              Exp (31)
+                                ID: v
+                              RELOP
+                              Exp (31)
+                                INT: 6
+                            RP
+                            Stmt (31)
+                              CompSt (31)
+                                LC
+                                StmtList (32)
+                                  Stmt (32)
+                                    IF
+                                    LP
+                                    Exp (32)
+                                      Exp (32)
+                                        Exp (32)
+                                          Exp (32)
+                                            NOT
+                                            Exp (32)
+                                              Exp (32)
+                                                ID: visited
+                                              LB
+                                              Exp (32)
+                                                ID: v
+                                              RB
+                                          AND
+                                          Exp (32)
+                                            Exp (32)
+                                              Exp (32)
+                                                ID: graph
+                                              LB
+                                              Exp (32)
+                                                ID: u
+                                              RB
+                                            LB
+                                            Exp (32)
+                                              ID: v
+                                            RB
+                                        AND
+                                        Exp (32)
+                                          Exp (32)
+                                            Exp (32)
+                                              ID: dist
+                                            LB
+                                            Exp (32)
+                                              ID: u
+                                            RB
+                                          RELOP
+                                          Exp (32)
+                                            INT: 2147483647
+                                      AND
+                                      Exp (33)
+                                        Exp (33)
+                                          Exp (33)
+                                            Exp (33)
+                                              ID: dist
+                                            LB
+                                            Exp (33)
+                                              ID: u
+                                            RB
+                                          PLUS
+                                          Exp (33)
+                                            Exp (33)
+                                              Exp (33)
+                                                ID: graph
+                                              LB
+                                              Exp (33)
+                                                ID: u
+                                              RB
+                                            LB
+                                            Exp (33)
+                                              ID: v
+                                            RB
+                                        RELOP
+                                        Exp (33)
+                                          Exp (33)
+                                            ID: dist
+                                          LB
+                                          Exp (33)
+                                            ID: v
+                                          RB
+                                    RP
+                                    Stmt (33)
+                                      CompSt (33)
+                                        LC
+                                        StmtList (34)
+                                          Stmt (34)
+                                            Exp (34)
+                                              Exp (34)
+                                                Exp (34)
+                                                  ID: dist
+                                                LB
+                                                Exp (34)
+                                                  ID: v
+                                                RB
+                                              ASSIGNOP
+                                              Exp (34)
+                                                Exp (34)
+                                                  Exp (34)
+                                                    ID: dist
+                                                  LB
+                                                  Exp (34)
+                                                    ID: u
+                                                  RB
+                                                PLUS
+                                                Exp (34)
+                                                  Exp (34)
+                                                    Exp (34)
+                                                      ID: graph
+                                                    LB
+                                                    Exp (34)
+                                                      ID: u
+                                                    RB
+                                                  LB
+                                                  Exp (34)
+                                                    ID: v
+                                                  RB
+                                            SEMI
+                                        RC
+                                  StmtList (36)
+                                    Stmt (36)
+                                      Exp (36)
+                                        Exp (36)
+                                          ID: v
+                                        ASSIGNOP
+                                        Exp (36)
+                                          Exp (36)
+                                            ID: v
+                                          PLUS
+                                          Exp (36)
+                                            INT: 1
+                                      SEMI
+                                RC
+                          StmtList (38)
+                            Stmt (38)
+                              Exp (38)
+                                Exp (38)
+                                  ID: count
+                                ASSIGNOP
+                                Exp (38)
+                                  Exp (38)
+                                    ID: count
+                                  PLUS
+                                  Exp (38)
+                                    INT: 1
+                              SEMI
+                      RC
+                StmtList (40)
+                  Stmt (40)
+                    RETURN
+                    Exp (40)
+                      INT: 0
+                    SEMI
+          RC
+      ExtDefList (43)
+        ExtDef (43)
+          Specifier (43)
+            TYPE: int
+          FunDec (43)
+            ID: main
+            LP
+            RP
+          CompSt (43)
+            LC
+            DefList (44)
+              Def (44)
+                Specifier (44)
+                  TYPE: int
+                DecList (44)
+                  Dec (44)
+                    VarDec (44)
+                      VarDec (44)
+                        VarDec (44)
+                          ID: graph
+                        LB
+                        INT: 6
+                        RB
+                      LB
+                      INT: 6
+                      RB
+                SEMI
+            StmtList (45)
+              Stmt (45)
+                Exp (45)
+                  ID: dijkstra
+                  LP
+                  Args (45)
+                    Exp (45)
+                      ID: graph
+                    COMMA
+                    Args (45)
+                      Exp (45)
+                        INT: 0
+                  RP
+                SEMI
+              StmtList (46)
+                Stmt (46)
+                  RETURN
+                  Exp (46)
+                    INT: 0
+                  SEMI
+            RC

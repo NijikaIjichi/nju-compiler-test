@@ -1,0 +1,13 @@
+int multiplyNumbers(int n) {
+  if (n >= 1)
+    return n * multiplyNumbers(n - 1);
+  else
+    return 1;
+}
+
+int main() {
+  int x;
+  x = read();
+  write(multiplyNumbers(x));
+  return 0;
+}

@@ -1,0 +1,14 @@
+int addNumbers(int a, int b) {
+    int result = a + b;
+    return result;
+}
+
+int main() {
+    int num1, num2, sum;
+    sum = addNumbers(num1, num2);
+    return 0;
+}
+
+int addNumbers(int _a, int _b) {
+    return _a + _b;
+}

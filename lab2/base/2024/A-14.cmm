@@ -1,0 +1,20 @@
+struct Rectangle {
+  float length;
+  float width;
+};
+
+float calculateArea(struct Rectangle rect) {
+  float area = rect.length * rect.width;
+  return area;
+}
+
+int main() {
+  struct Rectangle myRect;
+
+  myRect.length = 5.0;
+  myRect.width = 3.0;
+
+  myRect.area = calculateArea(myRect);
+
+  return 0;
+}

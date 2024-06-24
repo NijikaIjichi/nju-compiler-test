@@ -1,0 +1,163 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: main
+        LP
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: float
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: PI
+                ASSIGNOP
+                Exp (2)
+                  FLOAT: 3.141590
+            SEMI
+          DefList (3)
+            Def (3)
+              Specifier (3)
+                TYPE: float
+              DecList (3)
+                Dec (3)
+                  VarDec (3)
+                    ID: radius
+                  ASSIGNOP
+                  Exp (3)
+                    FLOAT: 62.500000
+              SEMI
+            DefList (4)
+              Def (4)
+                Specifier (4)
+                  TYPE: float
+                DecList (4)
+                  Dec (4)
+                    VarDec (4)
+                      ID: volume
+                    ASSIGNOP
+                    Exp (4)
+                      Exp (4)
+                        Exp (4)
+                          Exp (4)
+                            Exp (4)
+                              LP
+                              Exp (4)
+                                Exp (4)
+                                  FLOAT: 4.000000
+                                DIV
+                                Exp (4)
+                                  FLOAT: 3.000000
+                              RP
+                            STAR
+                            Exp (4)
+                              ID: PI
+                          STAR
+                          Exp (4)
+                            ID: radius
+                        STAR
+                        Exp (4)
+                          ID: radius
+                      STAR
+                      Exp (4)
+                        ID: radius
+                SEMI
+              DefList (6)
+                Def (6)
+                  Specifier (6)
+                    TYPE: float
+                  DecList (6)
+                    Dec (6)
+                      VarDec (6)
+                        ID: length
+                      ASSIGNOP
+                      Exp (6)
+                        Exp (6)
+                          Exp (6)
+                            FLOAT: 0.002500
+                          DIV
+                          Exp (6)
+                            FLOAT: 3.540000
+                        PLUS
+                        Exp (6)
+                          MINUS
+                          Exp (6)
+                            LP
+                            Exp (6)
+                              MINUS
+                              Exp (6)
+                                FLOAT: 0.123000
+                            RP
+                  SEMI
+                DefList (7)
+                  Def (7)
+                    Specifier (7)
+                      TYPE: float
+                    DecList (7)
+                      Dec (7)
+                        VarDec (7)
+                          ID: width
+                        ASSIGNOP
+                        Exp (7)
+                          Exp (7)
+                            FLOAT: 188.000000
+                          PLUS
+                          Exp (7)
+                            Exp (7)
+                              INT: 100
+                            STAR
+                            Exp (7)
+                              FLOAT: 0.057000
+                    SEMI
+                  DefList (8)
+                    Def (8)
+                      Specifier (8)
+                        TYPE: float
+                      DecList (8)
+                        Dec (8)
+                          VarDec (8)
+                            ID: perimeter
+                          ASSIGNOP
+                          Exp (8)
+                            Exp (8)
+                              INT: 2
+                            STAR
+                            Exp (8)
+                              LP
+                              Exp (8)
+                                Exp (8)
+                                  ID: length
+                                PLUS
+                                Exp (8)
+                                  ID: width
+                              RP
+                      SEMI
+                    DefList (9)
+                      Def (9)
+                        Specifier (9)
+                          TYPE: float
+                        DecList (9)
+                          Dec (9)
+                            VarDec (9)
+                              ID: area
+                            ASSIGNOP
+                            Exp (9)
+                              Exp (9)
+                                ID: length
+                              STAR
+                              Exp (9)
+                                ID: width
+                        SEMI
+        StmtList (11)
+          Stmt (11)
+            RETURN
+            Exp (11)
+              INT: 0
+            SEMI
+        RC

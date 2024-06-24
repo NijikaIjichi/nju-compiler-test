@@ -1,0 +1,25 @@
+int main() {
+  int a = 10, b = 20, c, d, e, f, g, h, i, j;
+
+  c = a + b;
+  d = b - a;
+  e = a * b;
+  f = b / a;
+
+  g = (b + a) * (b - a);
+  h = (a + b) * (c - d);
+  i = e / (f + g);
+  j = (a * b) + (c / d) - (e + f);
+
+  write(c);
+  write(d);
+  write(e);
+  write(f);
+  write(g);
+
+  write(h);
+  write(i);
+  write(j);
+
+  return 0;
+}

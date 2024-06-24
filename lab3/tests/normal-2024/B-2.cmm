@@ -1,0 +1,28 @@
+int sumOfDigits(int num) {
+  int digit;
+  int sum = 0;
+  while (num > 0) {
+    digit = num - (num / 10) * 10;
+    sum = sum + digit;
+    num = num / 10;
+  }
+  return sum;
+}
+
+int sumOfSumsOfDigits(int s, int e) {
+  int totalSum = 0, i = s;
+  while (i <= e) {
+    totalSum = totalSum + sumOfDigits(i);
+    i = i + 1;
+  }
+  return totalSum;
+}
+
+int main() {
+  int start, end, result;
+  start = read();
+  end = read();
+  result = sumOfSumsOfDigits(start, end);
+  write(result);
+  return 0;
+}

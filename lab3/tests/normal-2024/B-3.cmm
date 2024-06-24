@@ -1,0 +1,31 @@
+
+int main() {
+  int a[10], b[10], c[10], n;
+  int i;
+  n = read();
+
+  i = 0;
+  while (i < n) {
+    a[i] = read();
+    i = i + 1;
+  }
+  i = 0;
+  while (i < n) {
+    b[i] = read();
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < n) {
+    c[i] = a[i] * b[i];
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < n) {
+    write(c[i]);
+    i = i + 1;
+  }
+
+  return 0;
+}

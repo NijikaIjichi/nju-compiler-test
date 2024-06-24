@@ -1,0 +1,23 @@
+struct Rectangle {
+  int length;
+  int width;
+};
+
+int calculateArea(struct Rectangle rect) { return rect.length * rect.width; }
+
+int main() {
+  int numRectangles;
+  int totalArea = 0;
+  struct Rectangle r;
+
+  numRectangles = read();
+  while (numRectangles > 0) {
+    r.length = read();
+    r.width = read();
+    totalArea = totalArea + calculateArea(r);
+    numRectangles = numRectangles - 1;
+  }
+
+  write(totalArea);
+  return 0;
+}

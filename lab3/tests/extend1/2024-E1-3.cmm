@@ -1,0 +1,43 @@
+
+struct Point {
+  int x;
+  int y;
+};
+
+struct Circle {
+  struct Point center;
+  int radius;
+};
+
+int calculateCircleArea(struct Circle circle) {
+  return 3 * circle.radius * circle.radius;
+}
+
+int sumOfAreasPlusDistanceSquared(struct Circle circle1,
+                                  struct Circle circle2) {
+  int area1 = calculateCircleArea(circle1);
+  int area2 = calculateCircleArea(circle2);
+  int sumOfAreas = area1 + area2;
+
+  int dx = circle1.center.x - circle2.center.x;
+  int dy = circle1.center.y - circle2.center.y;
+  int distance = dx * dx + dy * dy;
+
+  return sumOfAreas + distance;
+}
+
+int main() {
+  struct Circle c1, c2;
+
+  c1.center.x = read();
+  c1.center.y = read();
+  c1.radius = read();
+
+  c2.center.x = read();
+  c2.center.y = read();
+  c2.radius = read();
+
+  write(sumOfAreasPlusDistanceSquared(c1, c2));
+
+  return 0;
+}

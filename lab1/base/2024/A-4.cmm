@@ -1,0 +1,11 @@
+struct Student {
+  int id;
+  float gpa;
+};
+
+int main() {
+  Student student;
+  student.id = 1;
+  student.gpa = 32;
+  return 0;
+}

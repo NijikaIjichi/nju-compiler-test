@@ -1,0 +1,15 @@
+struct Dish {
+  float price;
+  struct {
+    int count = 0;
+    int positive;
+    int negative;
+  } comments;
+};
+
+int main() {
+  struct Dish myDish;
+  myDish.price = 12.99;
+
+  return 0;
+}

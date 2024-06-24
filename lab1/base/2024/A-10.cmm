@@ -1,0 +1,6 @@
+int hello_world() { return; }
+
+int main() {
+  hello_world();
+  return 0;
+}

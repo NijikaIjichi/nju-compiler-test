@@ -1,0 +1,9 @@
+int main() {
+  int n = 5;
+  int factorial = 1;
+  while (n > 0) {
+    factorial *= n;
+    n = n - 1;
+  }
+  return 0;
+}

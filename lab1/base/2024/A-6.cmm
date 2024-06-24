@@ -1,0 +1,15 @@
+int gcd = 0;
+
+int main() {
+  int a = 24;
+  int b = 36;
+  while (a != b) {
+    if (a > b) {
+      a = a - b;
+    } else {
+      b = b - a;
+    }
+  }
+  gcd = a;
+  return 0;
+}

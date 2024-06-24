@@ -1,0 +1,11 @@
+struct Teacher {
+  int id;
+  int age;
+  float salary;
+};
+
+int main() {
+  struct Student students[10];
+
+  return 0;
+}

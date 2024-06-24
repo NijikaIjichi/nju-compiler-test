@@ -1,0 +1,47 @@
+int minDistance(int dist[6], int visited[6]) {
+  int min = 2147483647, min_index, v = 0;
+  while (v < 6) {
+    if (!visited[v] && dist[v] <= min) {
+      min = dist[v];
+      min_index = v;
+    }
+    v = v + 1;
+  }
+  return min_index;
+}
+
+int dijkstra(int graph[6][6], int src) {
+  int dist[6];
+  int visited[6];
+  int i = 0;
+  int count = 0;
+
+  while (i < 6) {
+    dist[i] = 2147483647;
+    visited[i] = 0;
+    i = i + 1;
+  }
+
+  dist[src] = 0;
+
+  while (count < 6 - 1) {
+    int v = 0, u = minDistance(dist, visited);
+    visited[u] = 1;
+
+    while (v < 6) {
+      if (!visited[v] && graph[u][v] && dist[u] != 2147483647 &&
+          dist[u] + graph[u][v] < dist[v]) {
+        dist[v] = dist[u] + graph[u][v];
+      }
+      v = v + 1;
+    }
+    count = count + 1;
+  }
+  return 0;
+}
+
+int main() {
+  int graph[6][6];
+  dijkstra(graph, 0);
+  return 0;
+}

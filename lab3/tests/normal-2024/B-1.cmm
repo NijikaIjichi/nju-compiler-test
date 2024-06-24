@@ -1,0 +1,52 @@
+int binaryToDecimal(int binary) {
+  int decimal = 0;
+  int multiplier = 1;
+  while (binary != 0) {
+    decimal = decimal + (binary - (binary / 10) * 10) * multiplier;
+    binary = binary / 10;
+    multiplier = multiplier * 2;
+  }
+  return decimal;
+}
+
+int calculate_power(int base, int power) {
+  int i = 0, result = 1;
+  while (i < power) {
+    result = result * base;
+    i = i + 1;
+  }
+  return result;
+}
+
+int decimal_to_binary(int d) {
+  int digitCount = 1;
+  int j = digitCount - 1;
+  int temp = d;
+  while (temp >= 2) {
+    temp = temp / 2;
+    digitCount = digitCount + 1;
+  }
+  while (j >= 0) {
+    if (d >= calculate_power(2, j)) {
+      write(1);
+      d = d - calculate_power(2, j);
+    } else
+      write(0);
+    j = j - 1;
+  }
+  return 0;
+}
+
+int main() {
+  int bin;
+  int dec;
+
+  bin = read();
+  dec = binaryToDecimal(bin);
+  write(dec);
+
+  dec = read();
+  decimal_to_binary(dec);
+
+  return 0;
+}

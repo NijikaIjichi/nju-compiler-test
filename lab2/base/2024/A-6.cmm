@@ -1,0 +1,25 @@
+struct Rectangle {
+    float length;
+    float width;
+};
+
+float calculateArea(struct Rectangle rect1) {
+    float area = rect1.length * rect1.width;
+    return area;
+}
+
+float calculatePerimeter(struct Rectangle rect2) {
+    float perimeter = 2.0 * (rect2.length + rect2.width);
+    return perimeter;
+}
+
+int main() {
+    struct Rectangle myRect;
+
+    myRect.length = 5.0;
+    myRect.width = 3.0;
+
+    myRect.length + myRect.width = 8.0;
+
+    return 0;
+}

@@ -1,0 +1,130 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: foo
+        LP
+        VarList (1)
+          ParamDec (1)
+            Specifier (1)
+              TYPE: int
+            VarDec (1)
+              ID: a
+          COMMA
+          VarList (1)
+            ParamDec (1)
+              Specifier (1)
+                TYPE: int
+              VarDec (1)
+                ID: b
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: int
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: bar
+                ASSIGNOP
+                Exp (2)
+                  Exp (2)
+                    Exp (2)
+                      INT: 668
+                    STAR
+                    Exp (2)
+                      ID: a
+                  OR
+                  Exp (2)
+                    ID: b
+            SEMI
+        StmtList (3)
+          Stmt (3)
+            RETURN
+            Exp (3)
+              Exp (3)
+                ID: bar
+              PLUS
+              Exp (3)
+                INT: 57005
+            SEMI
+        RC
+    ExtDefList (6)
+      ExtDef (6)
+        Specifier (6)
+          TYPE: int
+        FunDec (6)
+          ID: main
+          LP
+          RP
+        CompSt (6)
+          LC
+          DefList (7)
+            Def (7)
+              Specifier (7)
+                TYPE: int
+              DecList (7)
+                Dec (7)
+                  VarDec (7)
+                    ID: octal_num
+                  ASSIGNOP
+                  Exp (7)
+                    INT: 10
+              SEMI
+            DefList (8)
+              Def (8)
+                Specifier (8)
+                  TYPE: int
+                DecList (8)
+                  Dec (8)
+                    VarDec (8)
+                      ID: hex_num
+                    ASSIGNOP
+                    Exp (8)
+                      INT: 26
+                SEMI
+              DefList (9)
+                Def (9)
+                  Specifier (9)
+                    TYPE: int
+                  DecList (9)
+                    Dec (9)
+                      VarDec (9)
+                        ID: sum
+                      ASSIGNOP
+                      Exp (9)
+                        Exp (9)
+                          ID: octal_num
+                        PLUS
+                        Exp (9)
+                          ID: hex_num
+                  SEMI
+          StmtList (10)
+            Stmt (10)
+              Exp (10)
+                Exp (10)
+                  ID: hex_num
+                ASSIGNOP
+                Exp (10)
+                  ID: foo
+                  LP
+                  Args (10)
+                    Exp (10)
+                      ID: octal_num
+                    COMMA
+                    Args (10)
+                      Exp (10)
+                        ID: sum
+                  RP
+              SEMI
+            StmtList (12)
+              Stmt (12)
+                RETURN
+                Exp (12)
+                  INT: 0
+                SEMI
+          RC

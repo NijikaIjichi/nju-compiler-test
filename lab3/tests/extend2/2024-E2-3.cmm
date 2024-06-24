@@ -1,0 +1,68 @@
+int minDistance(int n, int visited[10], int d[10]) {
+  int min = 2147483647, min_vertex;
+  int v = 0;
+  while (v < n) {
+    if (!visited[v] && d[v] <= min) {
+      min = d[v];
+      min_vertex = v;
+    }
+    v = v + 1;
+  }
+  return min_vertex;
+}
+
+int main() {
+  int i, j, k;
+  int graph[10][10], isvisited[10], dist[10];
+  int sizeOfGraph, Edges, minV;
+  sizeOfGraph = read();
+  i = 0;
+  j = 0;
+  while (i < sizeOfGraph) {
+    while (j < sizeOfGraph) {
+      graph[i][j] = 0;
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+  Edges = read();
+  i = 0;
+  while (i < Edges) {
+    j = read();
+    k = read();
+    graph[j][k] = read();
+    graph[k][j] = graph[j][k];
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < sizeOfGraph) {
+    dist[i] = 2147483647;
+    isvisited[i] = 0;
+    i = i + 1;
+  }
+
+  dist[0] = 0;
+
+  i = 0;
+  while (i < sizeOfGraph - 1) {
+    minV = minDistance(sizeOfGraph, isvisited, dist);
+    isvisited[minV] = 1;
+
+    j = 0;
+    while (j < sizeOfGraph) {
+      if (isvisited[j] == 0 && graph[minV][j] &&
+          dist[minV] + graph[minV][j] < dist[j])
+        dist[j] = dist[minV] + graph[minV][j];
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+
+  i = 0;
+  while (i < sizeOfGraph) {
+    write(dist[i]);
+    i = i + 1;
+  }
+  return 0;
+}

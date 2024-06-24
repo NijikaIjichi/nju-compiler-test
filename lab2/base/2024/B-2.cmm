@@ -1,0 +1,59 @@
+struct Product {
+  int id;
+  float price;
+  int quantity;
+};
+
+struct Product inventory[5];
+int numProducts;
+
+float calculateInventoryValue(int numProducts1) {
+  float totalValue = 0.0;
+  int i = 0;
+  while (i < numProducts1) {
+    totalValue = totalValue + inventory[i].price * inventory[i].quantity;
+    i = i + 1;
+  }
+  return totalValue;
+}
+
+int findProductById(int productId, int numProducts2) {
+  int j = 0;
+  while (j < numProducts2) {
+    if (inventory[j].id == productId) {
+      return j;
+    }
+    j = j + 1;
+  }
+  return -1;
+}
+
+float main() {
+  int productIdToFind = 3;
+  float inventoryValue;
+  numProducts = 5;
+
+  inventory.id = 1;
+  inventory[0].price = 19.99;
+  inventory[0].quantity = 10;
+
+  inventory[1].id = 2;
+  inventory[1].price = 49.99;
+  inventory[1].quantity = 5;
+
+  inventory[2].id = 3;
+  inventory[2].price = 79.99;
+  inventory[2].quantity = 3;
+
+  inventory[3].id = 4;
+  inventory[3].price = 4.99;
+  inventory[3].quantity = 20;
+
+  inventory[4].id = 5;
+  inventory[4].price = 14.99;
+  inventory[4].quantity = 8;
+
+  inventoryValue = calculateInventoryValue(numProducts);
+  findProductById(productIdToFind, numProducts) = productIdToFind;
+  return 0;
+}

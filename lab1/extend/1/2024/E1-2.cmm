@@ -1,0 +1,7 @@
+int main() {
+  int x = 0123456789;
+  int y = 0XABCdefGHI;
+  float result = sqrt(pow(x, 2) + pow(y, 2)) / (x + y) - pow(x * y, 2);
+
+  return 0;
+}

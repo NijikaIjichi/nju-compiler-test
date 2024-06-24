@@ -1,0 +1,38 @@
+int factorial(int n) {
+  if (n == 0)
+    return 1;
+  else
+    return n * factorial(n - 1);
+}
+
+int power(int base, int exponent) {
+  int result = 1;
+  int i = 0;
+  while (i < exponent) {
+    result = result * base;
+    i = i + 1;
+  }
+  return result;
+}
+
+int sinApproximation(int x, int terms) {
+  int result2 = 0;
+  int sign = 1, _n = 0;
+  while (_n < terms) {
+    int numerator = power(x, (2 * _n) + 1);
+    int denominator = factorial((2 * _n) + 1);
+    result2 = result2 + (sign * numerator) / denominator;
+    sign = (-1) * sign;
+    _n = _n + 1;
+  }
+  return result2;
+}
+
+int main() {
+  int value = 1;
+  int t = 10;
+
+  int sinValue = sinApproximation(value, t);
+
+  return 0;
+}
