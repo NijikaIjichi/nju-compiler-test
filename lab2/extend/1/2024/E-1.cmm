@@ -1,0 +1,34 @@
+struct Point {
+  int x;
+  int y;
+};
+
+struct Point shift_point(struct Point c, int d, int e);
+
+struct Location {
+  int a;
+  int b;
+};
+
+struct Rectangle {
+  struct Point topLeft;
+  struct Point bottomRight;
+};
+
+struct Point shift_point(struct Point p, int plus_x, int plus_y) {
+  struct Point _p;
+  _p.x = p.x + plus_x;
+  _p.y = p.y + plus_y;
+  return _p;
+}
+
+struct Rectangle shift_rectangle(struct Rectangle f, int g, int h);
+
+int main() {
+  struct Rectangle r1, r2;
+  r2 = shift_rectangle(r1, 1, 2);
+
+  return 0;
+}
+
+struct Location shift_point(struct Point c, int d, int e);

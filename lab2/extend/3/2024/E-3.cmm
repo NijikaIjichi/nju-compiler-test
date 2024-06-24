@@ -1,0 +1,37 @@
+struct Avg {
+    int r1;
+    struct {
+        int v2;
+        int weight;
+    } items[10];
+};
+
+struct Sum {
+    struct {
+        int v1;
+        int coefficient;
+    } parts[10];
+    int r2;
+};
+
+int calculate_sum(struct Sum sum) {
+    int i = 0;
+    sum.r2 = 0;
+    while (i < 10) {
+        sum.r2 = sum.r2 + sum.parts[i].coefficient * sum.parts[i].v1;
+        i = i + 1;
+    }
+    return sum.r2;
+}
+
+int calculate_avg(struct Avg avg) {
+    int s = calculate_sum(avg);
+    avg.r1 = s / 10;
+    return avg.r1;
+}
+
+int main() {
+    struct Avg a1;
+    calculate_avg(a1);
+    return 0;
+}

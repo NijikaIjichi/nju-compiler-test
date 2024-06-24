@@ -1,0 +1,40 @@
+struct DataPoint {
+  float x;
+  float y = 0.0;
+};
+
+struct DataPoint dataPoints[5];
+int numDataPoints;
+
+float calculateAverage() {
+  float sum = 0.0;
+  int i = 0;
+  numDataPoints[0] = 5;
+  while (i < numDataPoints) {
+    sum = sum + dataPoints[i].y;
+    i = i + 1;
+  }
+  return sum / numDataPoints;
+}
+
+int main() {
+  float average, maximum;
+  dataPoints[0].x = 1.0;
+  dataPoints[0].y = 2.5;
+
+  dataPoints[1].x = 2.0;
+  dataPoints[1].y = 3.7;
+
+  dataPoints[2].x = 3.0;
+  dataPoints[2].y = 1.8;
+
+  dataPoints[3].x = 4.0;
+  dataPoints[3].y = 4.2;
+
+  dataPoints[4].x = 5.0;
+  dataPoints[4].y = 2.1;
+
+  average = calculateAverage();
+
+  return 0;
+}

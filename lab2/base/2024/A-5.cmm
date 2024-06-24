@@ -1,0 +1,15 @@
+struct Student {
+  int id;
+  float grade;
+};
+
+int main() {
+  struct Student student1, student2;
+
+  student1.id = 1;
+  student1.grade = 85.5;
+  student2.id = 2;
+  student2.grade = student1.id;
+
+  return 0;
+}

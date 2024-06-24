@@ -1,0 +1,13 @@
+int foo(int a, int b) {
+  int bar = 01234 * a || b;
+  return bar + 0xdead;
+}
+
+int main() {
+  int octal_num = 012;
+  int hex_num = 0x1A;
+  int sum = octal_num + hex_num;
+  hex_num = foo(octal_num, sum);
+
+  return 0;
+}

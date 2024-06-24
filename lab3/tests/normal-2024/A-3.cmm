@@ -1,0 +1,23 @@
+int main() {
+  int arr[10];
+  int start, end, result = 0;
+  int i;
+
+  i = 0;
+  while (i < 10) {
+    arr[i] = i * i;
+    i = i + 1;
+  }
+
+  start = read();
+  end = read();
+
+  i = start;
+  while (i <= end) {
+    result = result + arr[i];
+    i = i + 1;
+  }
+  write(result);
+
+  return 0;
+}

@@ -1,0 +1,15 @@
+struct Pet {
+  int age;
+  float weight;
+};
+
+int is_older(struct Pet p1, int p2) { return p1.age > p2.age; }
+
+int main() {
+  struct Pet a;
+
+  a.age = 5;
+  a.weight = 12.5;
+
+  return 0;
+}

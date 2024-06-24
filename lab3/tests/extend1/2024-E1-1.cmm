@@ -1,0 +1,18 @@
+
+struct Activity {
+  int start;
+  int finish;
+};
+
+int main() {
+  struct Activity a1, a2;
+  a1.start = read();
+  a1.finish = read();
+  a2.finish = a1.start;
+  a2.start = a1.finish;
+  write(a1.start);
+  write(a1.finish);
+  write(a2.start);
+  write(a2.finish);
+  return 0;
+}

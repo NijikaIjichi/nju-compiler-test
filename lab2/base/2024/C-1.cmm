@@ -1,0 +1,44 @@
+struct Coefficients {
+  float c1, c2, c3, c4;
+} coefficients;
+
+float evaluatePolynomial(struct Coefficients c, int degree, float x) {
+  float res[1], _c;
+  int i = degree - 1;
+
+  if (degree == 1)
+    res[0] = c.c1;
+  else if (degree == 2)
+    res[0] = c.c2;
+  else if (degree == 3)
+    res[0] = c.c3;
+  else
+    res[0] = c.c4;
+
+  while (i >= 0) {
+    if (i == 1)
+      _c = c.c1;
+    else if (i == 2)
+      _c = c.c2;
+    else if (i == 3)
+      _c = c.c3;
+    else
+      _c = c.c4;
+    res[0] = res[0] * x + _c;
+  }
+  return res[0];
+}
+
+int main() {
+  int d = 4 / 4 - 1;
+  float f = 2.5;
+
+  float result = evaluatePolynomial(coefficients, d, f);
+
+  coefficients.c1 = 2.0;
+  coefficients.c2 = 3.0;
+  coefficients.c3 = 4.0;
+  coefficients.c4 = 5.0;
+
+  return d >= 1;
+}

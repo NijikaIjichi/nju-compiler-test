@@ -1,0 +1,30 @@
+int maxSumarray(int a[10], int s) {
+  int j = 0;
+  int max_sum_so_far = 0;
+  int max_ending_here = 0;
+
+  while (j < s) {
+    max_ending_here = max_ending_here + a[j];
+
+    if (max_ending_here < 0) {
+      max_ending_here = 0;
+    }
+    if (max_sum_so_far < max_ending_here) {
+      max_sum_so_far = max_ending_here;
+    }
+    j = j + 1;
+  }
+  return max_sum_so_far;
+}
+
+int main() {
+
+  int i = 0, size = 10;
+  int arr[10];
+  while (i < size) {
+    arr[i] = read();
+    i = i + 1;
+  }
+  write(maxSumarray(arr, size));
+  return 0;
+}

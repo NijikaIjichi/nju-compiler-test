@@ -1,0 +1,98 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: main
+        LP
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: int
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: oct1
+                ASSIGNOP
+                Exp (2)
+                  INT: 83
+            SEMI
+          DefList (3)
+            Def (3)
+              Specifier (3)
+                TYPE: int
+              DecList (3)
+                Dec (3)
+                  VarDec (3)
+                    ID: hex1
+                  ASSIGNOP
+                  Exp (3)
+                    INT: 182062866
+              SEMI
+            DefList (4)
+              Def (4)
+                Specifier (4)
+                  TYPE: int
+                DecList (4)
+                  Dec (4)
+                    VarDec (4)
+                      ID: hex2
+                    ASSIGNOP
+                    Exp (4)
+                      INT: 61875
+                SEMI
+              DefList (5)
+                Def (5)
+                  Specifier (5)
+                    TYPE: int
+                  DecList (5)
+                    Dec (5)
+                      VarDec (5)
+                        ID: oct2
+                      ASSIGNOP
+                      Exp (5)
+                        INT: 7
+                  SEMI
+                DefList (7)
+                  Def (7)
+                    Specifier (7)
+                      TYPE: int
+                    DecList (7)
+                      Dec (7)
+                        VarDec (7)
+                          ID: hex4
+                        ASSIGNOP
+                        Exp (7)
+                          Exp (7)
+                            ID: hex1
+                          PLUS
+                          Exp (7)
+                            ID: hex2
+                    SEMI
+        StmtList (8)
+          Stmt (8)
+            Exp (8)
+              Exp (8)
+                ID: oct2
+              ASSIGNOP
+              Exp (8)
+                NOT
+                Exp (8)
+                  LP
+                  Exp (8)
+                    MINUS
+                    Exp (8)
+                      ID: oct1
+                  RP
+            SEMI
+          StmtList (10)
+            Stmt (10)
+              RETURN
+              Exp (10)
+                INT: 0
+              SEMI
+        RC

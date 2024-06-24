@@ -1,0 +1,49 @@
+int main() {
+  int a, b, c, d, e;
+  int f = 60, g = 70;
+  a = read();
+  b = read();
+  c = read();
+  d = read();
+  e = read();
+
+  if (a < b) {
+    write(a);
+  }
+
+  if (c > b) {
+    write(b);
+  } else {
+    write(c);
+  }
+
+  if (d > a) {
+    if (d > b) {
+      write(d);
+    } else {
+      write(b);
+    }
+  } else {
+    write(a);
+  }
+
+  if (e < a)
+    write(1);
+  else if (e < b)
+    write(3);
+  else if (e < c)
+    write(5);
+  else if (e < d)
+    write(7);
+  else
+    write(9);
+
+  if ((f > a) && (g < b))
+    write(2);
+  else if ((f > a) || (g < b))
+    write(4);
+  else
+    write(6);
+
+  return 0;
+}

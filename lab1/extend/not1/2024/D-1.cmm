@@ -1,0 +1,11 @@
+int main() {
+  int oct1 = 0123;
+  int hex1 = 0xAdA0f12;
+  int hex2 = 0Xf1b3;
+  int oct2 = 0007;
+
+  int hex4 = hex1 + hex2;
+  oct2 = !(-oct1);
+
+  return 0;
+}

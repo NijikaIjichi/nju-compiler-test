@@ -1,0 +1,18 @@
+struct Point {
+  float x;
+  float y;
+};
+
+float distance(struct Point a, struct b) {
+  float d;
+  d = sqrt(square(a.x - b.x) + square(a.y - b.y));
+  float result = d;
+  return result;
+}
+
+int main(void) {
+  struct Point p;
+  p.x = 0.12.3;
+  p.y = .20;
+  return 0
+}

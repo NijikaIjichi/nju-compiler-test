@@ -1,0 +1,21 @@
+int main() {
+  int arr[10];
+  int size = 10;
+  int i = 0;
+  int j = 0;
+  int max;
+
+  while (i < size - 1) {
+    while (j < size - i - 1) {
+      if (arr[j] > arr[j + 1]) {
+        int temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+  max = arr[9.0];
+  return 0;
+}

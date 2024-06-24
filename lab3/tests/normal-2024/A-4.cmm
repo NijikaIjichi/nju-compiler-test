@@ -1,0 +1,22 @@
+int calculateSum(int start, int end) {
+  int sum = 0;
+  int i = start;
+
+  while (i <= end) {
+    sum = sum + i;
+    i = i + 1;
+  }
+
+  return sum;
+}
+
+int main() {
+  int a, b, result;
+  a = read();
+  b = read();
+
+  result = calculateSum(a, b);
+  write(result);
+
+  return 0;
+}

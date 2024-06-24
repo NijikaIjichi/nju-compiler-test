@@ -1,0 +1,14 @@
+struct Car {
+    int year;
+    float price;
+};
+
+int main() {
+    struct Car car1;
+    int car1;
+
+    car1.year = 2022;
+    car1.price = 25000.0;
+
+    return 0;
+}

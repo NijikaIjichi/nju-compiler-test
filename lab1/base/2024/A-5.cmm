@@ -1,0 +1,9 @@
+int main() {
+  int arr[5], ;
+  int sum = 0, i = 0;
+  while (i < 5) {
+    sum = sum + arr[i];
+    i = i + 1;
+  }
+  return 0;
+}
