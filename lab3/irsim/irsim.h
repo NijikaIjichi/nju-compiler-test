@@ -4,6 +4,7 @@
 #include <array>
 #include <cassert>
 #include <climits>
+#include <cstdint>
 #include <iostream>
 #include <map>
 #include <memory>
@@ -213,7 +214,7 @@ public:
 private:
   int *get_textptr() const { return textptr; }
   void check_eof(unsigned N) {
-    if (textptr + N + 2 >= &(*curblk)[curblk->size()]) {
+    if (textptr + N + 2 >= curblk->data() + curblk->size()) {
       curblk = new TransitionBlock;
       codes.push_back(
           std::unique_ptr<TransitionBlock>(curblk));
