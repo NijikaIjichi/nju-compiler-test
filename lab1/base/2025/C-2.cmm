@@ -1,0 +1,41 @@
+int data[10];
+
+int swap(int i, int j) {
+    int temp;
+    temp = data[i];
+    data[i] = data[j];
+    data[j] = temp;
+}
+
+int partition(int low, int high) {
+    int pivot;
+    int i;
+    int j;
+    pivot = data[high];
+    i = low - 1;
+    j = low;
+    
+    while (j < high) {
+        if (data[j] < pivot) {
+            i = i + 1;
+            swap(i, j);
+        }
+        j = j + 1;
+    }
+    swap(i + 1, high);
+    return i + 1;
+}
+
+int quick_sort(int low, int high) {
+    int pi;
+    if (low < high) {
+        pi = partition(low, high);
+        quick_sort(low, pi - 1);
+        quick_sort(pi + 1, high);
+    }
+}
+
+int main() {
+    quick_sort(0, 9);
+    return 0;
+}

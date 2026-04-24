@@ -1,0 +1,9 @@
+int main() {
+    int hex_val1 = 0xBd0f34;
+    int hex_val2 = 0X12DeF;
+    int oct_val1 = 0123;
+    int oct_val2 = 0077;
+
+    int result = hex_val1 + hex_val2 + oct_val1 + oct_val2;
+    return result;
+}

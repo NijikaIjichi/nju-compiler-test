@@ -1,0 +1,416 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      ExtDecList (1)
+        VarDec (1)
+          VarDec (1)
+            ID: data
+          LB
+          INT: 10
+          RB
+      SEMI
+    ExtDefList (3)
+      ExtDef (3)
+        Specifier (3)
+          TYPE: int
+        FunDec (3)
+          ID: swap
+          LP
+          VarList (3)
+            ParamDec (3)
+              Specifier (3)
+                TYPE: int
+              VarDec (3)
+                ID: i
+            COMMA
+            VarList (3)
+              ParamDec (3)
+                Specifier (3)
+                  TYPE: int
+                VarDec (3)
+                  ID: j
+          RP
+        CompSt (3)
+          LC
+          DefList (4)
+            Def (4)
+              Specifier (4)
+                TYPE: int
+              DecList (4)
+                Dec (4)
+                  VarDec (4)
+                    ID: temp
+              SEMI
+          StmtList (5)
+            Stmt (5)
+              Exp (5)
+                Exp (5)
+                  ID: temp
+                ASSIGNOP
+                Exp (5)
+                  Exp (5)
+                    ID: data
+                  LB
+                  Exp (5)
+                    ID: i
+                  RB
+              SEMI
+            StmtList (6)
+              Stmt (6)
+                Exp (6)
+                  Exp (6)
+                    Exp (6)
+                      ID: data
+                    LB
+                    Exp (6)
+                      ID: i
+                    RB
+                  ASSIGNOP
+                  Exp (6)
+                    Exp (6)
+                      ID: data
+                    LB
+                    Exp (6)
+                      ID: j
+                    RB
+                SEMI
+              StmtList (7)
+                Stmt (7)
+                  Exp (7)
+                    Exp (7)
+                      Exp (7)
+                        ID: data
+                      LB
+                      Exp (7)
+                        ID: j
+                      RB
+                    ASSIGNOP
+                    Exp (7)
+                      ID: temp
+                  SEMI
+          RC
+      ExtDefList (10)
+        ExtDef (10)
+          Specifier (10)
+            TYPE: int
+          FunDec (10)
+            ID: partition
+            LP
+            VarList (10)
+              ParamDec (10)
+                Specifier (10)
+                  TYPE: int
+                VarDec (10)
+                  ID: low
+              COMMA
+              VarList (10)
+                ParamDec (10)
+                  Specifier (10)
+                    TYPE: int
+                  VarDec (10)
+                    ID: high
+            RP
+          CompSt (10)
+            LC
+            DefList (11)
+              Def (11)
+                Specifier (11)
+                  TYPE: int
+                DecList (11)
+                  Dec (11)
+                    VarDec (11)
+                      ID: pivot
+                SEMI
+              DefList (12)
+                Def (12)
+                  Specifier (12)
+                    TYPE: int
+                  DecList (12)
+                    Dec (12)
+                      VarDec (12)
+                        ID: i
+                  SEMI
+                DefList (13)
+                  Def (13)
+                    Specifier (13)
+                      TYPE: int
+                    DecList (13)
+                      Dec (13)
+                        VarDec (13)
+                          ID: j
+                    SEMI
+            StmtList (14)
+              Stmt (14)
+                Exp (14)
+                  Exp (14)
+                    ID: pivot
+                  ASSIGNOP
+                  Exp (14)
+                    Exp (14)
+                      ID: data
+                    LB
+                    Exp (14)
+                      ID: high
+                    RB
+                SEMI
+              StmtList (15)
+                Stmt (15)
+                  Exp (15)
+                    Exp (15)
+                      ID: i
+                    ASSIGNOP
+                    Exp (15)
+                      Exp (15)
+                        ID: low
+                      MINUS
+                      Exp (15)
+                        INT: 1
+                  SEMI
+                StmtList (16)
+                  Stmt (16)
+                    Exp (16)
+                      Exp (16)
+                        ID: j
+                      ASSIGNOP
+                      Exp (16)
+                        ID: low
+                    SEMI
+                  StmtList (18)
+                    Stmt (18)
+                      WHILE
+                      LP
+                      Exp (18)
+                        Exp (18)
+                          ID: j
+                        RELOP
+                        Exp (18)
+                          ID: high
+                      RP
+                      Stmt (18)
+                        CompSt (18)
+                          LC
+                          StmtList (19)
+                            Stmt (19)
+                              IF
+                              LP
+                              Exp (19)
+                                Exp (19)
+                                  Exp (19)
+                                    ID: data
+                                  LB
+                                  Exp (19)
+                                    ID: j
+                                  RB
+                                RELOP
+                                Exp (19)
+                                  ID: pivot
+                              RP
+                              Stmt (19)
+                                CompSt (19)
+                                  LC
+                                  StmtList (20)
+                                    Stmt (20)
+                                      Exp (20)
+                                        Exp (20)
+                                          ID: i
+                                        ASSIGNOP
+                                        Exp (20)
+                                          Exp (20)
+                                            ID: i
+                                          PLUS
+                                          Exp (20)
+                                            INT: 1
+                                      SEMI
+                                    StmtList (21)
+                                      Stmt (21)
+                                        Exp (21)
+                                          ID: swap
+                                          LP
+                                          Args (21)
+                                            Exp (21)
+                                              ID: i
+                                            COMMA
+                                            Args (21)
+                                              Exp (21)
+                                                ID: j
+                                          RP
+                                        SEMI
+                                  RC
+                            StmtList (23)
+                              Stmt (23)
+                                Exp (23)
+                                  Exp (23)
+                                    ID: j
+                                  ASSIGNOP
+                                  Exp (23)
+                                    Exp (23)
+                                      ID: j
+                                    PLUS
+                                    Exp (23)
+                                      INT: 1
+                                SEMI
+                          RC
+                    StmtList (25)
+                      Stmt (25)
+                        Exp (25)
+                          ID: swap
+                          LP
+                          Args (25)
+                            Exp (25)
+                              Exp (25)
+                                ID: i
+                              PLUS
+                              Exp (25)
+                                INT: 1
+                            COMMA
+                            Args (25)
+                              Exp (25)
+                                ID: high
+                          RP
+                        SEMI
+                      StmtList (26)
+                        Stmt (26)
+                          RETURN
+                          Exp (26)
+                            Exp (26)
+                              ID: i
+                            PLUS
+                            Exp (26)
+                              INT: 1
+                          SEMI
+            RC
+        ExtDefList (29)
+          ExtDef (29)
+            Specifier (29)
+              TYPE: int
+            FunDec (29)
+              ID: quick_sort
+              LP
+              VarList (29)
+                ParamDec (29)
+                  Specifier (29)
+                    TYPE: int
+                  VarDec (29)
+                    ID: low
+                COMMA
+                VarList (29)
+                  ParamDec (29)
+                    Specifier (29)
+                      TYPE: int
+                    VarDec (29)
+                      ID: high
+              RP
+            CompSt (29)
+              LC
+              DefList (30)
+                Def (30)
+                  Specifier (30)
+                    TYPE: int
+                  DecList (30)
+                    Dec (30)
+                      VarDec (30)
+                        ID: pi
+                  SEMI
+              StmtList (31)
+                Stmt (31)
+                  IF
+                  LP
+                  Exp (31)
+                    Exp (31)
+                      ID: low
+                    RELOP
+                    Exp (31)
+                      ID: high
+                  RP
+                  Stmt (31)
+                    CompSt (31)
+                      LC
+                      StmtList (32)
+                        Stmt (32)
+                          Exp (32)
+                            Exp (32)
+                              ID: pi
+                            ASSIGNOP
+                            Exp (32)
+                              ID: partition
+                              LP
+                              Args (32)
+                                Exp (32)
+                                  ID: low
+                                COMMA
+                                Args (32)
+                                  Exp (32)
+                                    ID: high
+                              RP
+                          SEMI
+                        StmtList (33)
+                          Stmt (33)
+                            Exp (33)
+                              ID: quick_sort
+                              LP
+                              Args (33)
+                                Exp (33)
+                                  ID: low
+                                COMMA
+                                Args (33)
+                                  Exp (33)
+                                    Exp (33)
+                                      ID: pi
+                                    MINUS
+                                    Exp (33)
+                                      INT: 1
+                              RP
+                            SEMI
+                          StmtList (34)
+                            Stmt (34)
+                              Exp (34)
+                                ID: quick_sort
+                                LP
+                                Args (34)
+                                  Exp (34)
+                                    Exp (34)
+                                      ID: pi
+                                    PLUS
+                                    Exp (34)
+                                      INT: 1
+                                  COMMA
+                                  Args (34)
+                                    Exp (34)
+                                      ID: high
+                                RP
+                              SEMI
+                      RC
+              RC
+          ExtDefList (38)
+            ExtDef (38)
+              Specifier (38)
+                TYPE: int
+              FunDec (38)
+                ID: main
+                LP
+                RP
+              CompSt (38)
+                LC
+                StmtList (39)
+                  Stmt (39)
+                    Exp (39)
+                      ID: quick_sort
+                      LP
+                      Args (39)
+                        Exp (39)
+                          INT: 0
+                        COMMA
+                        Args (39)
+                          Exp (39)
+                            INT: 9
+                      RP
+                    SEMI
+                  StmtList (40)
+                    Stmt (40)
+                      RETURN
+                      Exp (40)
+                        INT: 0
+                      SEMI
+                RC

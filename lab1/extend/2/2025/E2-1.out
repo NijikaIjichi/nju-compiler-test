@@ -1,0 +1,77 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: main
+        LP
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: float
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: charge
+              COMMA
+              DecList (2)
+                Dec (2)
+                  VarDec (2)
+                    ID: speed
+                COMMA
+                DecList (2)
+                  Dec (2)
+                    VarDec (2)
+                      ID: mass
+                  COMMA
+                  DecList (2)
+                    Dec (2)
+                      VarDec (2)
+                        ID: gravity
+                    COMMA
+                    DecList (2)
+                      Dec (2)
+                        VarDec (2)
+                          ID: energy
+            SEMI
+        StmtList (4)
+          Stmt (4)
+            Exp (4)
+              Exp (4)
+                ID: speed
+              ASSIGNOP
+              Exp (4)
+                FLOAT: 2997900.000000
+            SEMI
+          StmtList (5)
+            Stmt (5)
+              Exp (5)
+                Exp (5)
+                  ID: mass
+                ASSIGNOP
+                Exp (5)
+                  FLOAT: 0.091000
+              SEMI
+            StmtList (6)
+              Stmt (6)
+                Exp (6)
+                  Exp (6)
+                    ID: gravity
+                  ASSIGNOP
+                  Exp (6)
+                    FLOAT: 9.800000
+                SEMI
+              StmtList (7)
+                Stmt (7)
+                  Exp (7)
+                    Exp (7)
+                      ID: energy
+                    ASSIGNOP
+                    Exp (7)
+                      FLOAT: 12.345600
+                  SEMI
+        RC

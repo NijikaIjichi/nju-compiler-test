@@ -1,0 +1,555 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        StructSpecifier (1)
+          STRUCT
+          OptTag (1)
+            ID: Point
+          LC
+          DefList (2)
+            Def (2)
+              Specifier (2)
+                TYPE: int
+              DecList (2)
+                Dec (2)
+                  VarDec (2)
+                    ID: x
+              SEMI
+            DefList (3)
+              Def (3)
+                Specifier (3)
+                  TYPE: int
+                DecList (3)
+                  Dec (3)
+                    VarDec (3)
+                      ID: y
+                SEMI
+          RC
+      SEMI
+    ExtDefList (6)
+      ExtDef (6)
+        Specifier (6)
+          StructSpecifier (6)
+            STRUCT
+            OptTag (6)
+              ID: Circle
+            LC
+            DefList (7)
+              Def (7)
+                Specifier (7)
+                  StructSpecifier (7)
+                    STRUCT
+                    Tag (7)
+                      ID: Point
+                DecList (7)
+                  Dec (7)
+                    VarDec (7)
+                      ID: center
+                SEMI
+              DefList (8)
+                Def (8)
+                  Specifier (8)
+                    TYPE: int
+                  DecList (8)
+                    Dec (8)
+                      VarDec (8)
+                        ID: radius
+                  SEMI
+            RC
+        SEMI
+      ExtDefList (11)
+        ExtDef (11)
+          Specifier (11)
+            TYPE: int
+          ExtDecList (11)
+            VarDec (11)
+              ID: max_points
+          SEMI
+        ExtDefList (12)
+          ExtDef (12)
+            Specifier (12)
+              TYPE: int
+            ExtDecList (12)
+              VarDec (12)
+                ID: PI
+            SEMI
+          ExtDefList (14)
+            ExtDef (14)
+              Specifier (14)
+                TYPE: int
+              FunDec (14)
+                ID: distance_sq
+                LP
+                VarList (14)
+                  ParamDec (14)
+                    Specifier (14)
+                      StructSpecifier (14)
+                        STRUCT
+                        Tag (14)
+                          ID: Point
+                    VarDec (14)
+                      ID: p1
+                  COMMA
+                  VarList (14)
+                    ParamDec (14)
+                      Specifier (14)
+                        StructSpecifier (14)
+                          STRUCT
+                          Tag (14)
+                            ID: Point
+                      VarDec (14)
+                        ID: p2
+                RP
+              CompSt (14)
+                LC
+                DefList (15)
+                  Def (15)
+                    Specifier (15)
+                      TYPE: int
+                    DecList (15)
+                      Dec (15)
+                        VarDec (15)
+                          ID: dx
+                        ASSIGNOP
+                        Exp (15)
+                          Exp (15)
+                            Exp (15)
+                              ID: p2
+                            DOT
+                            ID: x
+                          MINUS
+                          Exp (15)
+                            Exp (15)
+                              ID: p1
+                            DOT
+                            ID: x
+                    SEMI
+                  DefList (16)
+                    Def (16)
+                      Specifier (16)
+                        TYPE: int
+                      DecList (16)
+                        Dec (16)
+                          VarDec (16)
+                            ID: dy
+                          ASSIGNOP
+                          Exp (16)
+                            Exp (16)
+                              Exp (16)
+                                ID: p2
+                              DOT
+                              ID: y
+                            MINUS
+                            Exp (16)
+                              Exp (16)
+                                ID: p1
+                              DOT
+                              ID: y
+                      SEMI
+                StmtList (17)
+                  Stmt (17)
+                    RETURN
+                    Exp (17)
+                      LP
+                      Exp (17)
+                        Exp (17)
+                          Exp (17)
+                            ID: dx
+                          STAR
+                          Exp (17)
+                            ID: dx
+                        PLUS
+                        Exp (17)
+                          Exp (17)
+                            ID: dy
+                          STAR
+                          Exp (17)
+                            ID: dy
+                      RP
+                    SEMI
+                RC
+            ExtDefList (20)
+              ExtDef (20)
+                Specifier (20)
+                  TYPE: int
+                FunDec (20)
+                  ID: cir_area
+                  LP
+                  VarList (20)
+                    ParamDec (20)
+                      Specifier (20)
+                        StructSpecifier (20)
+                          STRUCT
+                          Tag (20)
+                            ID: Circle
+                      VarDec (20)
+                        ID: c
+                  RP
+                CompSt (20)
+                  LC
+                  StmtList (21)
+                    Stmt (21)
+                      RETURN
+                      Exp (21)
+                        Exp (21)
+                          Exp (21)
+                            ID: PI
+                          STAR
+                          Exp (21)
+                            Exp (21)
+                              ID: c
+                            DOT
+                            ID: radius
+                        STAR
+                        Exp (21)
+                          Exp (21)
+                            ID: c
+                          DOT
+                          ID: radius
+                      SEMI
+                  RC
+              ExtDefList (24)
+                ExtDef (24)
+                  Specifier (24)
+                    TYPE: int
+                  FunDec (24)
+                    ID: main
+                    LP
+                    RP
+                  CompSt (24)
+                    LC
+                    DefList (25)
+                      Def (25)
+                        Specifier (25)
+                          TYPE: int
+                        DecList (25)
+                          Dec (25)
+                            VarDec (25)
+                              ID: count
+                        SEMI
+                      DefList (26)
+                        Def (26)
+                          Specifier (26)
+                            TYPE: int
+                          DecList (26)
+                            Dec (26)
+                              VarDec (26)
+                                ID: d_sq
+                          SEMI
+                        DefList (27)
+                          Def (27)
+                            Specifier (27)
+                              TYPE: int
+                            DecList (27)
+                              Dec (27)
+                                VarDec (27)
+                                  VarDec (27)
+                                    ID: areas
+                                  LB
+                                  INT: 10
+                                  RB
+                            SEMI
+                          DefList (28)
+                            Def (28)
+                              Specifier (28)
+                                StructSpecifier (28)
+                                  STRUCT
+                                  Tag (28)
+                                    ID: Point
+                              DecList (28)
+                                Dec (28)
+                                  VarDec (28)
+                                    VarDec (28)
+                                      ID: points
+                                    LB
+                                    INT: 2
+                                    RB
+                              SEMI
+                            DefList (29)
+                              Def (29)
+                                Specifier (29)
+                                  StructSpecifier (29)
+                                    STRUCT
+                                    Tag (29)
+                                      ID: Circle
+                                DecList (29)
+                                  Dec (29)
+                                    VarDec (29)
+                                      ID: my_cir
+                                SEMI
+                    StmtList (31)
+                      Stmt (31)
+                        Exp (31)
+                          Exp (31)
+                            ID: max_points
+                          ASSIGNOP
+                          Exp (31)
+                            INT: 100
+                        SEMI
+                      StmtList (32)
+                        Stmt (32)
+                          Exp (32)
+                            Exp (32)
+                              ID: PI
+                            ASSIGNOP
+                            Exp (32)
+                              INT: 3
+                          SEMI
+                        StmtList (33)
+                          Stmt (33)
+                            Exp (33)
+                              Exp (33)
+                                ID: count
+                              ASSIGNOP
+                              Exp (33)
+                                INT: 0
+                            SEMI
+                          StmtList (35)
+                            Stmt (35)
+                              Exp (35)
+                                Exp (35)
+                                  Exp (35)
+                                    Exp (35)
+                                      ID: my_cir
+                                    DOT
+                                    ID: center
+                                  DOT
+                                  ID: x
+                                ASSIGNOP
+                                Exp (35)
+                                  Exp (35)
+                                    Exp (35)
+                                      ID: points
+                                    LB
+                                    Exp (35)
+                                      INT: 0
+                                    RB
+                                  DOT
+                                  ID: x
+                              SEMI
+                            StmtList (36)
+                              Stmt (36)
+                                Exp (36)
+                                  Exp (36)
+                                    Exp (36)
+                                      Exp (36)
+                                        ID: my_cir
+                                      DOT
+                                      ID: center
+                                    DOT
+                                    ID: y
+                                  ASSIGNOP
+                                  Exp (36)
+                                    Exp (36)
+                                      Exp (36)
+                                        ID: points
+                                      LB
+                                      Exp (36)
+                                        INT: 0
+                                      RB
+                                    DOT
+                                    ID: y
+                                SEMI
+                              StmtList (37)
+                                Stmt (37)
+                                  Exp (37)
+                                    Exp (37)
+                                      Exp (37)
+                                        ID: my_cir
+                                      DOT
+                                      ID: radius
+                                    ASSIGNOP
+                                    Exp (37)
+                                      FLOAT: 5.000000
+                                  SEMI
+                                StmtList (39)
+                                  Stmt (39)
+                                    WHILE
+                                    LP
+                                    Exp (39)
+                                      Exp (39)
+                                        Exp (39)
+                                          ID: count
+                                        RELOP
+                                        Exp (39)
+                                          INT: 10
+                                      AND
+                                      Exp (39)
+                                        Exp (39)
+                                          ID: count
+                                        RELOP
+                                        Exp (39)
+                                          ID: max_points
+                                    RP
+                                    Stmt (39)
+                                      CompSt (39)
+                                        LC
+                                        StmtList (40)
+                                          Stmt (40)
+                                            Exp (40)
+                                              Exp (40)
+                                                Exp (40)
+                                                  ID: areas
+                                                LB
+                                                Exp (40)
+                                                  ID: count
+                                                RB
+                                              ASSIGNOP
+                                              Exp (40)
+                                                ID: cir_area
+                                                LP
+                                                Args (40)
+                                                  Exp (40)
+                                                    ID: my_cir
+                                                RP
+                                            SEMI
+                                          StmtList (41)
+                                            Stmt (41)
+                                              Exp (41)
+                                                Exp (41)
+                                                  Exp (41)
+                                                    ID: my_cir
+                                                  DOT
+                                                  ID: radius
+                                                ASSIGNOP
+                                                Exp (41)
+                                                  Exp (41)
+                                                    Exp (41)
+                                                      ID: my_cir
+                                                    DOT
+                                                    ID: radius
+                                                  PLUS
+                                                  Exp (41)
+                                                    INT: 1
+                                              SEMI
+                                            StmtList (42)
+                                              Stmt (42)
+                                                IF
+                                                LP
+                                                Exp (42)
+                                                  Exp (42)
+                                                    LP
+                                                    Exp (42)
+                                                      Exp (42)
+                                                        ID: count
+                                                      MINUS
+                                                      Exp (42)
+                                                        Exp (42)
+                                                          LP
+                                                          Exp (42)
+                                                            Exp (42)
+                                                              ID: count
+                                                            DIV
+                                                            Exp (42)
+                                                              INT: 2
+                                                          RP
+                                                        STAR
+                                                        Exp (42)
+                                                          INT: 2
+                                                    RP
+                                                  RELOP
+                                                  Exp (42)
+                                                    INT: 0
+                                                RP
+                                                Stmt (42)
+                                                  CompSt (42)
+                                                    LC
+                                                    StmtList (43)
+                                                      Stmt (43)
+                                                        Exp (43)
+                                                          Exp (43)
+                                                            Exp (43)
+                                                              ID: areas
+                                                            LB
+                                                            Exp (43)
+                                                              ID: count
+                                                            RB
+                                                          ASSIGNOP
+                                                          Exp (43)
+                                                            Exp (43)
+                                                              ID: count
+                                                            DIV
+                                                            Exp (43)
+                                                              INT: 2
+                                                        SEMI
+                                                    RC
+                                                ELSE
+                                                Stmt (44)
+                                                  CompSt (44)
+                                                    LC
+                                                    StmtList (45)
+                                                      Stmt (45)
+                                                        Exp (45)
+                                                          Exp (45)
+                                                            Exp (45)
+                                                              ID: areas
+                                                            LB
+                                                            Exp (45)
+                                                              ID: count
+                                                            RB
+                                                          ASSIGNOP
+                                                          Exp (45)
+                                                            Exp (45)
+                                                              ID: count
+                                                            STAR
+                                                            Exp (45)
+                                                              INT: 2
+                                                        SEMI
+                                                    RC
+                                              StmtList (47)
+                                                Stmt (47)
+                                                  Exp (47)
+                                                    Exp (47)
+                                                      ID: count
+                                                    ASSIGNOP
+                                                    Exp (47)
+                                                      Exp (47)
+                                                        ID: count
+                                                      PLUS
+                                                      Exp (47)
+                                                        INT: 1
+                                                  SEMI
+                                        RC
+                                  StmtList (50)
+                                    Stmt (50)
+                                      IF
+                                      LP
+                                      Exp (50)
+                                        Exp (50)
+                                          LP
+                                          Exp (50)
+                                            Exp (50)
+                                              ID: d_sq
+                                            RELOP
+                                            Exp (50)
+                                              INT: 10000
+                                          RP
+                                        OR
+                                        Exp (50)
+                                          LP
+                                          Exp (50)
+                                            Exp (50)
+                                              ID: d_sq
+                                            RELOP
+                                            Exp (50)
+                                              INT: 2500
+                                          RP
+                                      RP
+                                      Stmt (50)
+                                        CompSt (50)
+                                          LC
+                                          StmtList (51)
+                                            Stmt (51)
+                                              RETURN
+                                              Exp (51)
+                                                INT: 1
+                                              SEMI
+                                          RC
+                                    StmtList (54)
+                                      Stmt (54)
+                                        RETURN
+                                        Exp (54)
+                                          ID: d_sq
+                                        SEMI
+                    RC
