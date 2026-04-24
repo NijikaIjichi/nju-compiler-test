@@ -1,0 +1,10 @@
+struct Point {
+    float x;
+    float y;
+} points[5.5];
+
+int main() {
+    points[0].x = 3.14;
+    points[0].y = points[0].x * 2.0;
+    return 0;
+}

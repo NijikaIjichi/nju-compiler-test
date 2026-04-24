@@ -1,0 +1,14 @@
+int cal_permission(int base_addr) {
+    if (base_addr < 0x2000) {
+        return 0777; 
+    }
+    return 0x00;
+} 
+
+int main() {
+    
+    int permission = 0644;
+    int base_addr = 0x1FF0;
+    
+    return cal_permission(base_addr);
+}

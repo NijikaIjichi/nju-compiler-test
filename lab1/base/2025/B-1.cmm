@@ -1,0 +1,40 @@
+struct Car {
+    int color;
+    float weight;
+};
+
+struct Fee {
+    struct vehicle;
+    int pass_count;
+    float toll;
+};
+
+int calculate(int f,) {
+    struct { int type; };
+    float base = 50.0;
+    float sensors[10] = {2.1};
+    struct Fee totalFee[10];
+    struct Car truck;
+    truck.weight = 3.8;
+    truck.color = 2;
+
+    while (truck.weight > 3.0);
+
+    while (truck.weight > 3.0) {
+        if (sensors[5] > 3.0) {
+            base = base + 1.111;
+        }
+
+        if (v == 2) {
+            base = base * 1.2;
+        }
+
+        truck.weight = truck.weight - 1.0;
+    }
+
+    if (base >= 100.0) {
+        return base;
+    }
+    
+    return 0;
+}

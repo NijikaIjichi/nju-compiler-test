@@ -1,0 +1,12 @@
+struct Vector3D {
+    float x;
+    float y;
+    float z;
+};
+
+int main() {
+    Vector3D v;    
+    v.x = 1.5;
+    v.y = -0.3;
+    v.z = v.x * 2.0 + v.y;
+}
