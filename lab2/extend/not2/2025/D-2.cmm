@@ -1,0 +1,31 @@
+struct Coordinate {
+    int x;
+    int y;
+};
+
+float calculate_area(int radius) {
+    float pi = 3.14159;
+    return pi;
+}
+
+int main() {
+    int counter = 0;
+    int total = 0;
+
+    struct Coordinate pos;
+    int data[3];
+    
+    {
+        int counter = 5;     
+        float total = calculate_area(counter);
+        pos.x = counter;        
+
+        while (counter > 0) {
+            int data = 99;      
+            counter = counter - 1;
+        }
+    }
+    
+    data[0] = 99;
+    return 0;
+}
