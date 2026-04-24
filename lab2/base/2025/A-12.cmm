@@ -1,0 +1,8 @@
+int main() {
+    int temperature[24];
+    float hour = 3.1415; 
+
+    temperature[hour] = 25; 
+
+    return 0;
+}

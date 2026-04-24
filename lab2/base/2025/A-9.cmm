@@ -1,0 +1,19 @@
+struct Vector2D {
+    int x;
+    int y;
+};
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int main() {
+    struct Vector2D vec;
+    int product;
+    vec.x = 3;
+    vec.y = 4;
+    
+    product = multiply(vec.x);
+    
+    return product;
+}

@@ -1,0 +1,19 @@
+struct Dish {
+  float price;
+  struct Comment {
+    int count;
+    int positive;
+    int negative;
+  } comments[10];
+};
+
+struct Comment getComment(struct Dish dish) {
+  return dish.comments;
+}
+
+int main() {
+  struct Comment myComment;
+  struct Dish myDish;
+  myComment = getComment(myDish);
+  return 0;
+}
