@@ -1,0 +1,13 @@
+struct Data {
+    int values[10];
+};
+
+int main() {
+    struct Data d;
+    int i = 0;
+    while (i < 10) {
+        d.values[i] -= 2;
+        i = i + 1;
+    }
+    return 0;
+}

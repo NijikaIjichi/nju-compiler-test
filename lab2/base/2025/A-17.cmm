@@ -1,0 +1,10 @@
+struct DefinedStruct {
+    int value;
+};
+
+int main() {
+    struct UndefinedStruct s;
+    struct DefinedStruct ds;
+    ds.value = 10;
+    return 0;
+}

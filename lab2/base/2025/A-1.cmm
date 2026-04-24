@@ -1,0 +1,18 @@
+struct Product {
+    int sku;
+    float price;
+    int stock;
+};
+
+int main() {
+    struct Product item1, item2;
+    
+    item1.sku = 1001;
+    item1.price = 29.99;
+    item1.stock = 50;
+    
+    item2.sku = 1002;
+    item2.price = discount_price;  
+    
+    return 0;
+}

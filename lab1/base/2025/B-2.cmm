@@ -1,0 +1,31 @@
+float grades[5]];
+
+float;
+
+int find_max() {
+    float max = 0;
+    int first = 0; 
+    while (first < 5) {
+        if (grades[first] > max) {
+            max = grades[first]; 
+        }
+        first++;
+    }
+    return max;
+}
+
+float calc_avg(int size) {
+    float total = 0.0;
+    if (total > = 0) {
+        return total / size;
+    }
+    return 0.0;
+}
+
+int main(void) {
+    
+    int max_score = find_max(5);
+    float avg_score = calc_avg(5);
+    
+    return 0;
+}

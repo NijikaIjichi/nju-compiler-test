@@ -1,0 +1,91 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: cal_permission
+        LP
+        VarList (1)
+          ParamDec (1)
+            Specifier (1)
+              TYPE: int
+            VarDec (1)
+              ID: base_addr
+        RP
+      CompSt (1)
+        LC
+        StmtList (2)
+          Stmt (2)
+            IF
+            LP
+            Exp (2)
+              Exp (2)
+                ID: base_addr
+              RELOP
+              Exp (2)
+                INT: 8192
+            RP
+            Stmt (2)
+              CompSt (2)
+                LC
+                StmtList (3)
+                  Stmt (3)
+                    RETURN
+                    Exp (3)
+                      INT: 511
+                    SEMI
+                RC
+          StmtList (5)
+            Stmt (5)
+              RETURN
+              Exp (5)
+                INT: 0
+              SEMI
+        RC
+    ExtDefList (8)
+      ExtDef (8)
+        Specifier (8)
+          TYPE: int
+        FunDec (8)
+          ID: main
+          LP
+          RP
+        CompSt (8)
+          LC
+          DefList (10)
+            Def (10)
+              Specifier (10)
+                TYPE: int
+              DecList (10)
+                Dec (10)
+                  VarDec (10)
+                    ID: permission
+                  ASSIGNOP
+                  Exp (10)
+                    INT: 420
+              SEMI
+            DefList (11)
+              Def (11)
+                Specifier (11)
+                  TYPE: int
+                DecList (11)
+                  Dec (11)
+                    VarDec (11)
+                      ID: base_addr
+                    ASSIGNOP
+                    Exp (11)
+                      INT: 8176
+                SEMI
+          StmtList (13)
+            Stmt (13)
+              RETURN
+              Exp (13)
+                ID: cal_permission
+                LP
+                Args (13)
+                  Exp (13)
+                    ID: base_addr
+                RP
+              SEMI
+          RC

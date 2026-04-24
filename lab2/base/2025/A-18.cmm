@@ -1,0 +1,13 @@
+struct Order {
+    int id;
+    struct {
+        float weight = 3.5; 
+        int unit[4];
+    } details;
+};
+
+int main() {
+    struct Order myOrder;
+    myOrder.id = 2023;
+    return 0;
+}

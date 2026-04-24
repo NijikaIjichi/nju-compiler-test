@@ -1,0 +1,49 @@
+struct StudentInfo {
+    int student_id;
+    int student_score;
+};
+
+int computeTotalMarks(struct StudentInfo first_stu, struct StudentInfo second_stu, struct StudentInfo third_stu) {
+    return first_stu.student_score + second_stu.student_score + third_stu.student_score;
+}
+
+int determineTopStudent(struct StudentInfo stu1, struct StudentInfo stu2) {
+    int best_id = stu1.student_id;
+    int highest_score = stu1.student_score;
+
+    if (stu2.student_score > highest_score) {
+        highest_score = stu2.student_score;
+        best_id = stu2.student_id;
+    }
+
+    return best_id;
+}
+
+int displayFinalOutcome(float total_marks, int best_stu_id) {
+    if (total_marks > 90) {
+        best_stu_id[0] = 5;  
+    }
+
+    return 0.0;
+}
+
+int main() {
+    struct StudentInfo student_one, student_two, student_three;
+    int final_score;
+    int top_student_id;
+    
+    student_one.student_id = 101; 
+    student_one.student_score = 85;
+    student_two.student_id = 102; 
+    student_two.student_score = 92;
+    student_three.student_id = 103; 
+    student_three.student_score = 78;
+
+    final_score = computeTotalMarks(student_one, student_two, student_three);
+
+    top_student_id = determineTopStudent(student_one, student_two); 
+
+    displayFinalOutcome(final_score, top_student_id);
+
+    return final_score;
+}

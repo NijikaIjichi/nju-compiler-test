@@ -1,0 +1,23 @@
+struct Vector3D {
+    int x;
+    int y;
+    int z;
+};
+
+int calculate_magnitude(int xx, int yy, int zz) {
+    return xx * xx + yy * yy + zz * zz;
+}
+
+int main() {
+    struct Vector3D vec;
+    int result;
+    vec.x = 3;
+    vec.y = 4;
+    vec.z = 5;
+    result = calculate_magnitude(vec.x, vec.y, vec.z);
+    return result;
+}
+
+int calculate_magnitude(int a, int b, int c) {
+    return a * a + b * b + c * c;
+}

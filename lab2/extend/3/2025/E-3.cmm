@@ -1,0 +1,26 @@
+struct Data {
+    float values[3];
+    struct { float idx; int scorex; } meta[10];  
+    float fvalue;
+};
+
+struct Info {
+    float numbers[4];  
+    struct {         
+        int id;      
+        float score;
+    } detailed_info[10];
+}; 
+
+struct Info get_info(struct Data ret) {
+    return ret;
+}
+
+int main() {
+    struct Data data;
+    struct Info info;
+    
+    data.meta = info.detailed_info; 
+    
+    return 0;
+}

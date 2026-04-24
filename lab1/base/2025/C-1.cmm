@@ -1,0 +1,55 @@
+struct Point {
+    int x;
+    int y;
+};
+
+struct Circle {
+    struct Point center;
+    int radius;
+};
+
+int max_points;
+int PI;
+
+int distance_sq(struct Point p1, struct Point p2) {
+    int dx = p2.x - p1.x;
+    int dy = p2.y - p1.y;
+    return (dx * dx + dy * dy);
+}
+
+int cir_area(struct Circle c) {
+    return PI * c.radius * c.radius;
+}
+
+int main() {
+    int count;
+    int d_sq;
+    int areas[10];
+    struct Point points[2];
+    struct Circle my_cir;
+
+    max_points = 100;
+    PI = 3;
+    count = 0;
+
+    my_cir.center.x = points[0].x;
+    my_cir.center.y = points[0].y;
+    my_cir.radius = 5.0;
+
+    while (count < 10 && count <= max_points) {
+        areas[count] = cir_area(my_cir);
+        my_cir.radius = my_cir.radius + 1;
+        if ((count - (count / 2) * 2) == 0) {
+            areas[count] = count / 2;
+        } else {
+            areas[count] = count * 2;
+        }
+        count = count + 1;
+    }
+
+    if ((d_sq > 10000) || (d_sq < 2500)) {
+        return 1;
+    }
+
+    return d_sq;
+}

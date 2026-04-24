@@ -1,0 +1,16 @@
+struct Matrix {
+    int data[3][3];
+    int rows;
+    int cols;
+};
+
+
+int main() {
+    struct Matrix m1,m2;
+    m1.rows = 3;
+    m1.cols = 3;
+    m2.rows = 4;
+    m2.cols = 4;
+    m2 = m1 + m2;
+    return 0;
+}

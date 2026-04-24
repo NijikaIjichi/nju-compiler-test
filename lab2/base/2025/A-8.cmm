@@ -1,0 +1,14 @@
+struct Sensor {
+    float temperature;
+    int status_code;
+};
+
+int read_temperature() {
+    struct Sensor device;
+    device.temperature = 36.5;
+    return device.temperature;
+}
+
+int main() {
+    return 0;
+}

@@ -1,0 +1,9 @@
+int main() {
+  int num /* Declare a int variable named num */;
+  num = 1;
+  if (num == 1) { // Check if num is equal to 1
+    return 0;
+  }
+  return 1;
+}
+

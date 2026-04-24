@@ -1,0 +1,7 @@
+int matrix[3][3];
+int scale = 2; 
+
+int main() {
+    int local = scale * matrix[1][1];   
+    matrix[1][1] = 10;
+}

@@ -1,0 +1,15 @@
+struct Calculator {
+    int result;
+};
+
+int compute(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    struct Calculator calc;
+    calc.result = 0;
+    
+    calc(5, 3); 
+    return 0;
+}

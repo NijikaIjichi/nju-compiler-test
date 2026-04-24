@@ -1,0 +1,8 @@
+int sum(int a, int b) {
+}
+
+int main() {
+    int x = sum(5, ); 
+    int y = sum(3, 7);
+    return x + y;
+}

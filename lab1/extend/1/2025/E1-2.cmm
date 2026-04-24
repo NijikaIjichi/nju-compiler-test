@@ -1,0 +1,8 @@
+int main() {
+    
+    int mode = 089778; 
+    int code = 0xGHda;  
+    
+    code = sqrt(pow(mode, 2) + pow(code, 2)) / (mode + code) - pow(mode * code, 2);
+    return code;
+}

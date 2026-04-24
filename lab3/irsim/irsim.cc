@@ -415,7 +415,15 @@ bool Compiler::handle_func(
 
   auto &f = toks.at(1);
   prog->gen_inst(Opc::abort); // for last func
-  funcs[f] = prog->get_textptr();
+  
+  auto f_ptr = prog->get_textptr();
+  funcs[f] = f_ptr;
+
+  for (auto *ptr : backfill_funcs[f]) {
+    ptr[0] = ptr_lo(f_ptr);
+    ptr[1] = ptr_hi(f_ptr);
+  }
+  backfill_funcs.erase(f);
 
   if (prog->curf[0] == (int)Opc::alloca) {
     dbgs("alloca %d\n", stack_size + 1);
@@ -598,7 +606,14 @@ bool Compiler::handle_call(
   auto &to = toks.at(0);
   auto &f = toks.at(3);
 
-  prog->gen_call(funcs[f]);
+  auto f_ptr = funcs[f];
+  auto code = prog->gen_call(f_ptr);
+  if (!f_ptr) {
+    // code 是指向 Opc::call 指令开始的指针
+    // code + 1 是 ptr_lo, code + 2 是 ptr_hi
+    backfill_funcs[f].push_back(code + 1); 
+  }
+  
   prog->gen_inst(Opc::mfcr, getVar(to), CR_RET);
   return true;
 }

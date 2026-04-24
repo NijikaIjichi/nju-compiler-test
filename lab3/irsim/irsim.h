@@ -273,6 +273,7 @@ class Compiler {
   std::map<std::string, int *> labels;
   std::map<int, bool> temps;
   std::map<std::string, std::vector<int *>> backfill_labels;
+  std::map<std::string, std::vector<int *>> backfill_funcs;
 
   static constexpr int m1[] = {1};
   static constexpr int m2[] = {1, 2};

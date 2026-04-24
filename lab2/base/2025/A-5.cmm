@@ -1,0 +1,15 @@
+struct Temperature {
+    int celsius;
+    float fahrenheit;
+};
+
+int main() {
+    int warning_level;
+    struct Temperature t1;
+    float current_temp = 36.6;
+
+    t1.fahrenheit = 98.8;          
+    warning_level = t1.fahrenheit;
+
+    return t1.celsius;
+}

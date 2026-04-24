@@ -1,0 +1,45 @@
+struct Point {
+    int x;
+    int y;
+};
+
+int distanceSquared(struct Point px, struct Point py) {
+    int dx = px.x - py.x;
+    int dy = px.y - py.y;
+    return dx * dx + dy * dy;
+}
+
+int main() {
+    struct Point p1, p2;
+    int x_values[5];
+    int i = 0;
+    int total_distance = 0;
+
+    p1.x = 3;
+    p1.y = 4;
+    p2.x = 6; 
+    p2.y = 8;
+
+    while (i < 5) {
+        total_distance = total_distance + x_values[i];
+        i = i + 1;
+    }
+
+    total_distance = x_values + p1;
+
+    distanceSquared(p1, p2) = total_distance;
+
+    if (total_distance > 10) {
+        p1.x = p1.x + 1;
+    } else {
+        p1.x = p1.x - 1;
+    }
+
+    total_distance = total_distance.x;
+
+    p1.y = p1.y + 2;
+
+    total_distance = p1.z;
+
+    return total_distance;
+}

@@ -1,0 +1,65 @@
+struct Computation {
+    int total_sum;
+    int max_value;
+};
+
+int calculateSum(int sum_list[3], int sum_count);
+
+int calculateSum(int input_numbers[3], int entry_limit) {
+    int index1 = 0, sum_result = 0;
+    while (index1 < entry_limit) {
+        sum_result = sum_result + input_numbers[index1];
+        index1 = index1 + 1;
+    }
+    return sum_result;
+}
+
+int determineMax(int value_series[3], int count_entries) {
+    int index2 = 0, max_found = value_series[0];
+    while (index2 < count_entries) {
+        if (value_series[index2] > max_found) {
+            max_found = value_series[index2];
+        }
+        index2 = index2 + 1;
+    }
+    return max_found;
+}
+
+struct Computation executeProcess(int first_input, int second_input, int num_series[3], int series_length) {
+    struct Computation result_data;
+    result_data.total_sum = calculateSum(num_series, series_length);
+    result_data.max_value = determineMax(num_series, series_length);
+    
+    if (first_input > second_input) {
+        result_data.max_value = result_data.max_value + first_input;
+    } else {
+        result_data.total_sum = result_data.total_sum + second_input;
+    }
+    
+    return result_data;
+}
+
+int main() {
+    struct Computation final_result;
+    int num_list[3];
+    int input_x, input_y;
+    int loop_counter = 0;
+
+    while (loop_counter < 3) {
+        num_list[loop_counter] = loop_counter * 5 + 3;
+        loop_counter = loop_counter + 1;
+    }
+
+    input_x = num_list[0] + 2;
+    input_y = num_list[1] + 4;
+
+    final_result = executeProcess(input_x, input_y, num_list, 3);
+
+    if (final_result.total_sum > final_result.max_value) {
+        return final_result.total_sum;
+    } else {
+        return final_result.max_value;
+    }
+}
+
+int determineMax(int largest_list1[3], int max_count1);

@@ -1,0 +1,17 @@
+struct Coordinate {
+    float x;
+    float y;
+};
+
+struct Coordinate { 
+    float z;
+    int axis;
+};
+
+int main() {
+    struct Coordinate point;
+    point.x = 1.5;
+    point.y = 3.2;
+
+    return 0;
+}
