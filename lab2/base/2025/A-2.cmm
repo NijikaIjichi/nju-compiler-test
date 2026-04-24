@@ -1,0 +1,17 @@
+struct Inventory {
+    int item_id;
+    float unit_cost;
+};
+
+int main() {
+    struct Inventory box;
+    int total_quantity = 10;
+    float total = 500.0;
+    
+    box.item_id = 3005;
+    box.unit_cost = 48.75;
+    
+    total = calculate_total(box.unit_cost, total_quantity);
+
+    return 0;
+}

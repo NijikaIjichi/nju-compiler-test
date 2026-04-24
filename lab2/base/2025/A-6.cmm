@@ -1,0 +1,14 @@
+struct Circle {
+    float radius;
+    float center_x;
+    float center_y;
+};
+
+int main() {
+    struct Circle ball;
+    
+    float pi = 3.14159;
+    pi * ball.radius = 15.7;
+    
+    return 0;
+}

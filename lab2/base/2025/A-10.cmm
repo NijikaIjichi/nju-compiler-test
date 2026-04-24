@@ -1,0 +1,23 @@
+int sort() {
+    int n = 5;
+    int data[5];
+    int i = 0, j = 0;
+    while (i < n - 1) {
+        while (j < n - i - 1) {
+            if (data[j] > data[j+1]) {
+                int temp = data[j];
+                data[j] = data[j+1];
+                data[j+1] = temp;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    return n[0];
+}
+
+int main() {
+    int arr[5];
+    int result = sort();
+    return result;
+}

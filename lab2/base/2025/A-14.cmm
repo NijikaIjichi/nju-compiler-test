@@ -1,0 +1,28 @@
+struct Sensor {
+    float temperature;
+    int status;
+};
+
+int checkStatus(struct Sensor s) {
+    if (s.status > 0) {
+        return 1;
+    } else {
+        return s.error_code;
+    }
+}
+
+int main() {
+    struct Sensor device;
+    int result;
+    device.temperature = 36.5;
+    device.status = 1;
+    
+    result = checkStatus(device);
+    
+    while (result == 0) {
+        device.status = device.status + 1;
+        result = checkStatus(device);
+    }
+    
+    return 0;
+}

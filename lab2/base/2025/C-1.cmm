@@ -1,0 +1,88 @@
+struct StudentData {
+    int student_id;
+    int student_score;
+};
+
+struct ProcessedStudent {
+    int processed_id;
+    int updated_score;
+};
+
+int sumScores(int score_array[5], int total_count) {
+    int index_counter = 0;
+    int overall_sum = 0;
+    while (index_counter < total_count) {
+        overall_sum = overall_sum + score_array[index_counter];
+        index_counter = index_counter + 1;
+    }
+    return overall_sum;
+}
+
+int getMaxScore(int score_collection[5], int entry_size) {
+    int position_marker = 0;
+    int highest_value = score_collection[0];
+
+    while (position_marker < entry_size) {
+        if (score_collection[position_marker] > highest_value) {
+            highest_value = score_collection[position_marker];
+        }
+        position_marker = position_marker + 1;
+    }
+    return highest_value;
+}
+
+struct ProcessedStudent updateStudentData(struct StudentData single_record, int extra_points) {
+    struct ProcessedStudent modified_entry;
+    modified_entry.processed_id = single_record.student_id;
+    modified_entry.updated_score = single_record.student_score + extra_points;
+    return modified_entry;
+}
+
+int main() {
+    struct StudentData entry_one, entry_two, entry_three;
+    struct ProcessedStudent final_one, final_two;
+    int score_list[3];
+    int id_list[3];
+    int final_sum, top_score, iteration_var;
+    
+    iteration_var = 0;
+    while (iteration_var < 3) {
+        id_list[iteration_var] = 201 + iteration_var;
+        score_list[iteration_var] = 75 + iteration_var * 6;
+        iteration_var = iteration_var + 1;
+    }
+
+    entry_one.student_id = id_list[0];
+    entry_one.student_score = score_list[0];
+    entry_two.student_id = id_list[1];
+    entry_two.student_score = score_list[1];
+    entry_three.student_id = id_list[2];
+    entry_three.student_score = score_list[2];
+
+    final_sum = sumScores(score_list, 3);
+    top_score = getMaxScore(score_list, 3);
+    
+    iteration_var = 0;
+    while (iteration_var < 3) {
+        if (score_list[iteration_var] == top_score) {
+            final_one = updateStudentData(entry_one, 4);
+        } else {
+            final_two = updateStudentData(entry_two, 2);
+        }
+        iteration_var = iteration_var + 1;
+    }
+
+    if (final_one.updated_score > final_two.updated_score) {
+        if (final_one.updated_score > entry_three.student_score) {
+            return final_one.processed_id;
+        } else {
+            return entry_three.student_id;
+        }
+    } else {
+        if (final_two.updated_score > entry_three.student_score) {
+            return final_two.processed_id;
+        } else {
+            return entry_three.student_id;
+        }
+    }
+}

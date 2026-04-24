@@ -1,0 +1,36 @@
+struct S1 { int a; float b; } s1;  
+struct S2 { int c; float d; } s2; 
+
+struct M1 { int arr1[3][3]; } m1;
+struct M2 { int arr2[2][4]; } m2;
+
+struct Data {
+    int values[3];
+    struct { int idx; float scorex; } meta;  
+};
+
+struct Info {
+    int numbers[4];  
+    struct {         
+        int id;      
+        float score;
+    } detailed_info;
+}; 
+
+struct Info get_info(struct Data ret) {
+    return ret;
+}
+
+int main() {
+    float total;
+    struct Data data;
+    struct Info info;
+    
+    s1 = s2;  
+
+    m1 = m2;  
+
+    data = get_info(data);               
+    
+    return 0;
+}
