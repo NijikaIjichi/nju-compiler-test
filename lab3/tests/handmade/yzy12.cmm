@@ -1,5 +1,5 @@
-//short-circuit
 int main() {
+    int short_circuit;
     int n, m = 0;
     n = read();
     if(n && (m = 1)) {

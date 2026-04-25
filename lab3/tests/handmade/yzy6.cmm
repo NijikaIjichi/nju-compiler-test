@@ -1,5 +1,5 @@
-//Arith as bool
 int main() {
+    int Arith_as_bool;
     if(1 > 2) {
         write(1);
     }

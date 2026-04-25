@@ -4,8 +4,13 @@ struct A {
 };
 
 int f(int x[5]) {
-  int y[5] = x;
+  int y[5];
   int i = 0;
+  while (i < 5) {
+    y[i] = x[i];
+    i = i + 1;
+  }
+  i = 0;
   while (i < 5) {
     write(y[i]);
     i = i + 1;
@@ -14,7 +19,9 @@ int f(int x[5]) {
 }
 
 int g(struct A a) {
-  struct A b = a;
+  struct A b;
+  b.x = a.x;
+  b.y = a.y;
   write(b.x);
   write(b.y);
   return 0;
