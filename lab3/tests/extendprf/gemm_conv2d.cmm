@@ -1,0 +1,135 @@
+int init_array(int init_arr[1024], int init_len, int init_seed) {
+    int init_i = 0;
+    int init_curr_seed = init_seed;
+    int init_m = 100;
+    int init_prod = 0;
+    int init_div = 0;
+    while (init_i < init_len) {
+        init_prod = init_curr_seed * 131 + 313;
+        init_div = init_prod / init_m;
+        init_curr_seed = init_prod - init_div * init_m;
+        init_arr[init_i] = init_curr_seed;
+        init_i = init_i + 1;
+    }
+    return init_curr_seed;
+}
+
+int init_kernel(int ker_arr[9], int ker_len, int ker_seed) {
+    int ker_i = 0;
+    int ker_curr_seed = ker_seed;
+    int ker_m = 100;
+    int ker_prod = 0;
+    int ker_div = 0;
+    while (ker_i < ker_len) {
+        ker_prod = ker_curr_seed * 131 + 313;
+        ker_div = ker_prod / ker_m;
+        ker_curr_seed = ker_prod - ker_div * ker_m;
+        ker_arr[ker_i] = ker_curr_seed;
+        ker_i = ker_i + 1;
+    }
+    return ker_curr_seed;
+}
+
+int gemm(int gemm_a[1024], int gemm_b[1024], int gemm_c[1024], int gemm_n) {
+    int gemm_i = 0;
+    int gemm_j = 0;
+    int gemm_k = 0;
+    while (gemm_i < gemm_n) {
+        gemm_j = 0;
+        while (gemm_j < gemm_n) {
+            gemm_c[gemm_i * gemm_n + gemm_j] = 0;
+            gemm_j = gemm_j + 1;
+        }
+        gemm_i = gemm_i + 1;
+    }
+    gemm_i = 0;
+    while (gemm_i < gemm_n) {
+        gemm_k = 0;
+        while (gemm_k < gemm_n) {
+            gemm_j = 0;
+            while (gemm_j < gemm_n) {
+                gemm_c[gemm_i * gemm_n + gemm_j] = gemm_c[gemm_i * gemm_n + gemm_j] + gemm_a[gemm_i * gemm_n + gemm_k] * gemm_b[gemm_k * gemm_n + gemm_j];
+                gemm_j = gemm_j + 1;
+            }
+            gemm_k = gemm_k + 1;
+        }
+        gemm_i = gemm_i + 1;
+    }
+    return 0;
+}
+
+int conv2d(int conv_img[1024], int conv_kernel[9], int conv_out[1024], int conv_img_w, int conv_ker_w) {
+    int conv_out_w = conv_img_w - conv_ker_w + 1;
+    int conv_i = 0;
+    int conv_j = 0;
+    int conv_ki = 0;
+    int conv_kj = 0;
+    int conv_sum = 0;
+    int conv_img_idx = 0;
+    int conv_ker_idx = 0;
+    int conv_out_idx = 0;
+    while (conv_i < conv_out_w) {
+        conv_j = 0;
+        while (conv_j < conv_out_w) {
+            conv_sum = 0;
+            conv_ki = 0;
+            while (conv_ki < conv_ker_w) {
+                conv_kj = 0;
+                while (conv_kj < conv_ker_w) {
+                    conv_img_idx = (conv_i + conv_ki) * conv_img_w + (conv_j + conv_kj);
+                    conv_ker_idx = conv_ki * conv_ker_w + conv_kj;
+                    conv_sum = conv_sum + conv_img[conv_img_idx] * conv_kernel[conv_ker_idx];
+                    conv_kj = conv_kj + 1;
+                }
+                conv_ki = conv_ki + 1;
+            }
+            conv_out_idx = conv_i * conv_out_w + conv_j;
+            conv_out[conv_out_idx] = conv_sum;
+            conv_j = conv_j + 1;
+        }
+        conv_i = conv_i + 1;
+    }
+    return 0;
+}
+
+int hash_array(int hash_arr[1024], int hash_len) {
+    int hash_i = 0;
+    int hash_sum = 0;
+    int hash_div = 0;
+    while (hash_i < hash_len) {
+        hash_sum = hash_sum + hash_arr[hash_i] * (hash_i + 1);
+        hash_div = hash_sum / 997;
+        hash_sum = hash_sum - hash_div * 997;
+        hash_i = hash_i + 1;
+    }
+    return hash_sum;
+}
+
+int main() {
+    int main_seed = 0;
+    int main_a[1024];
+    int main_b[1024];
+    int main_c[1024];
+    int main_img[1024];
+    int main_kernel[9];
+    int main_out[1024];
+    int main_hash_c = 0;
+    int main_hash_out = 0;
+    
+    main_seed = read();
+    main_seed = init_array(main_a, 1024, main_seed);
+    main_seed = init_array(main_b, 1024, main_seed);
+    main_seed = init_array(main_img, 1024, main_seed);
+    main_seed = init_kernel(main_kernel, 9, main_seed);
+    
+    gemm(main_a, main_b, main_c, 32);
+    conv2d(main_img, main_kernel, main_out, 32, 3);
+    
+    main_hash_c = hash_array(main_c, 1024);
+    main_hash_out = hash_array(main_out, 900);
+    
+    write(main_hash_c);
+    write(main_hash_out);
+    
+    return 0;
+}
