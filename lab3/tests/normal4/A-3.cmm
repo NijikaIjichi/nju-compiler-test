@@ -1,3 +1,7 @@
+int min__(int arg1,int arg2) {
+    if (arg1 < arg2) return arg1;
+    return arg2;
+}
 int main()
 {
     int b[3], c[10];
@@ -29,8 +33,18 @@ int main()
         write(a[i]);
         i = i + 1;
     }
-    b = a;
-    c = a;
+    i = 0;
+    while(i < min__(3,5))
+    {
+        b[i] = a[i];
+        i = i + 1;
+    }
+    i = 0;
+    while(i < min__(10,5))
+    {
+        c[i] = a[i];
+        i = i + 1;
+    }
     i = 0;
     while(i < 5){
         if(i < 3){

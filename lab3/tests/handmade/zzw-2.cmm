@@ -1,5 +1,13 @@
-//This sample aims to test the correctness of implementation
-//1. Function Call
+int description() {
+	int This_sample;
+	int aims_to;
+	int test_the;
+	int correctness_of;
+	int implementation;
+	int Function_Call;
+	return 0;
+}
+
 int f() { return 1; }
 
 int g(int a) { return f() * a * 2; }

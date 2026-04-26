@@ -1,5 +1,5 @@
-//Bool as arith
 int main() {
+    int Bool_as_arith;
     int n = read();
     if(((n > 1) + (n < 4)) == n) {
         write(n);

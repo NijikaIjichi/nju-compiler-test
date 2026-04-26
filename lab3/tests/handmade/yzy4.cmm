@@ -1,5 +1,5 @@
-//Assign bool as bool
 int main() {
+    int Assign_bool, as_bool;
     int n, m;
     n = read();
     if(m = (n > 0 && n < 2)) {
