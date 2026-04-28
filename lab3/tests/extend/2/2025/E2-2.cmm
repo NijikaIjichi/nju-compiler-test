@@ -1,0 +1,19 @@
+int incrementElemFunc(int targetVector[4], int indexFixed) {
+    targetVector[indexFixed] = targetVector[indexFixed] + 1;
+    return targetVector[indexFixed]; 
+}
+
+int main() {
+    int dataList[4];   
+    int modifyFixedIdx = 1; 
+    int valModified;
+
+    dataList[0]=10; dataList[1]=30; dataList[2]=50; dataList[3]=70;
+    
+    valModified = incrementElemFunc(dataList, modifyFixedIdx); 
+    
+    write(valModified);
+    write(dataList[0]);
+
+    return 0;
+}

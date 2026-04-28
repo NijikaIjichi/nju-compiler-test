@@ -1,0 +1,77 @@
+int processFixed1DArrayWithCheck(int arrayParam[4], int checkVal) {
+    int sum = 0;
+    int i = 0;
+    
+    while (i < 4) {
+        if (arrayParam[i] != checkVal) {
+            sum = sum + arrayParam[i];
+        }
+        i = i + 1;
+    }
+    return sum;
+}
+
+int main() {
+    int cubeStorage[2][3][2]; 
+    int lineVector[4];       
+    int iDim = 0;
+    int jDim = 0;
+    int kDim = 0;
+    int lineProcResult;
+    int cubeEvenSum = 0; 
+    int skipValue;     
+    int finalComp;     
+    
+    iDim = 0;
+    while (iDim < 4) {
+        lineVector[iDim] = iDim * 3 + 1; 
+        iDim = iDim + 1;
+    }
+    
+    iDim = 0;
+    while (iDim < 2) {
+        jDim = 0;
+        while (jDim < 3) {
+            kDim = 0;
+            while (kDim < 2) {
+                cubeStorage[iDim][jDim][kDim] = iDim * 100 + jDim * 10 + kDim;
+                kDim = kDim + 1;
+            }
+            jDim = jDim + 1;
+        }
+        iDim = iDim + 1;
+    }
+
+    skipValue = read();
+    lineProcResult = processFixed1DArrayWithCheck(lineVector, skipValue);
+    
+    iDim = 0;
+    while (iDim < 2) {
+        jDim = 0;
+        while (jDim < 3) {
+            kDim = 0;
+            while (kDim < 2) {
+                int currentCubeVal;
+                currentCubeVal = cubeStorage[iDim][jDim][kDim];
+                if ((currentCubeVal / 2) * 2 == currentCubeVal) {
+                    cubeEvenSum = cubeEvenSum + currentCubeVal;
+                }
+                kDim = kDim + 1;
+            }
+            jDim = jDim + 1;
+        }
+        iDim = iDim + 1;
+    }
+    
+    if (lineProcResult > cubeEvenSum) {
+        finalComp = 1;
+    } else {
+        finalComp = 0;
+    }
+
+    write(lineProcResult); 
+    write(cubeEvenSum);    
+    write(finalComp);      
+
+    return 0;
+}

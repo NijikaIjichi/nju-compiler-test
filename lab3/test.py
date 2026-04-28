@@ -13,7 +13,8 @@ BOLD, NORMAL = '\033[1m', '\033[0m'
 def parse_args():
     parser = argparse.ArgumentParser(description="Compiler Parallel Test Runner")
     parser.add_argument("-r", "--run", required=True, help="parser executable path")
-    parser.add_argument("-e", "--extend", choices=['base', 'extend1', 'extend2', 'both', 'prf'], default='base')
+    parser.add_argument("-e", "--extend", choices=['base', 'extend1', 'extend2', 'both'], default='base')
+    parser.add_argument("-p", "--prf", action='store_true', help="test performance (prf) cases")
     parser.add_argument("-a", "--advance", action='store_true', help="test advance")
     parser.add_argument("-c", "--continue_on_error", action='store_true', help="do not stop when test failed")
     parser.add_argument("-t", "--timeout", type=int, default=10, help="timeout per test")
@@ -26,35 +27,49 @@ print("Making(Updating) irsim...")
 subprocess.run(["make", "-C", "irsim"], check=True)
 Path("workdir").mkdir(exist_ok=True)
 
-# 自动递归搜索对应大类下的所有测试
+# 自动递归搜索，并区分普通样例和 prf 样例
 def get_tests(category):
-    return list(Path("tests").rglob(f"{category}/**/*.cmm"))
+    all_tests = list(Path("tests").rglob(f"{category}/**/*.cmm"))
+    # 通过判断路径的目录部分是否包含 'prf' 来分类
+    normal = [t for t in all_tests if 'prf' not in t.parts[:-1]]
+    prf = [t for t in all_tests if 'prf' in t.parts[:-1]]
+    return normal, prf
 
 tests_dict = {
     'base': get_tests('base'),
     'advance': get_tests('advance'),
     'extend1': get_tests('extend/1'),
     'extend2': get_tests('extend/2'),
-    'both': get_tests('extend/both'),
-    'prf': get_tests('extend/prf')
+    'both': get_tests('extend/both')
 }
 
-should_pass = tests_dict['base'].copy()
+# 辅助函数：将对应类别的测试加入列表
+def add_tests(target_list, category):
+    target_list.extend(tests_dict[category][0]) # 加入普通样例
+    if args.prf:
+        target_list.extend(tests_dict[category][1]) # 如果开启了 -p，则加入该类别的 prf 样例
+
+should_pass = []
+add_tests(should_pass, 'base')
+
 if args.advance:
-    should_pass.extend(tests_dict['advance'])
+    add_tests(should_pass, 'advance')
 
 should_fail = []
-if args.extend == 'extend1':
-    should_pass.extend(tests_dict['extend1'])
-    should_fail.extend(tests_dict['extend2'] + tests_dict['both'] + tests_dict['prf'])
-elif args.extend == 'extend2':
-    should_pass.extend(tests_dict['extend2'])
-    should_fail.extend(tests_dict['extend1'] + tests_dict['both'] + tests_dict['prf'])
-elif args.extend == 'both':
-    should_pass.extend(tests_dict['extend1'] + tests_dict['extend2'] + tests_dict['both'])
-elif args.extend == 'prf':
-    should_pass.extend(tests_dict['extend1'] + tests_dict['extend2'] + tests_dict['both'] + tests_dict['prf'])
 
+if args.extend == 'extend1':
+    add_tests(should_pass, 'extend1')
+    add_tests(should_fail, 'extend2')
+    add_tests(should_fail, 'both')
+elif args.extend == 'extend2':
+    add_tests(should_fail, 'extend1')
+    add_tests(should_pass, 'extend2')
+    add_tests(should_fail, 'both')
+elif args.extend == 'both':
+    add_tests(should_pass, 'extend1')
+    add_tests(should_pass, 'extend2')
+    add_tests(should_pass, 'both')
+    
 total_passed = 0
 total_instructions = 0
 lock = threading.Lock()
