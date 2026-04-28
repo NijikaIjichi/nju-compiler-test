@@ -101,7 +101,7 @@ else
   PREFIX="";
 fi;
 
-base=(sample normal1 normal2 normal3 normal4 handmade)
+base=(sample normal1 normal2 normal3 normal4 normal-2024 normal-2025 handmade)
 advance=(advance1 advance2)
 extend1=(extend1)
 extend2=(extend2)

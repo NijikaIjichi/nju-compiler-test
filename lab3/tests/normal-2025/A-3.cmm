@@ -1,0 +1,28 @@
+int main() {
+    int dataArr[5];
+    int index1;
+    int index2;
+    int val1;
+    int calculatedVal;
+    int temp;
+
+    dataArr[0] = 10;
+    dataArr[4] = 50;
+
+    val1 = read();
+    index1 = read();
+    dataArr[index1] = val1;
+
+    index2 = read();
+
+    temp = dataArr[0] + dataArr[index1];
+    calculatedVal = temp * dataArr[index2];
+
+    write(dataArr[0]);
+    write(dataArr[index1]);
+    write(dataArr[index2]);
+    write(dataArr[4]);
+    write(calculatedVal);
+
+    return 0;
+}
