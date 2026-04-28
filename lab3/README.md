@@ -31,6 +31,20 @@ python3 test.py -r [parser_path] [-e extend] [-a] [-p] [-c] [-t timeout] [-j job
 
 会根据test.json里面的信息，将里面的输入作为ir代码解释执行的输入，然后比对ir代码的输出和test.json里面的输出是否吻合
 
+## 测试样例目录结构
+
+```
+tests/
+├── base/              # 基础测试用例
+├── advance/           # 进阶测试用例
+└── extend/            # 扩展特性测试用例
+    ├── 1/
+    ├── 2/
+    └── both/
+```
+
+若一个测试文件路径的目录部分包含 `prf`，则代表该测试为 prf 用例。例如，`tests/extend2/prf/NTT.cmm` 这个测试用例，表示它基于选做二的要求，且是一个 prf 用例。
+
 ## 添加测试文件
 
 请添加 `test.cmm` 和 `test.json` 两个文件。其中
@@ -48,7 +62,7 @@ python3 test.py -r [parser_path] [-e extend] [-a] [-p] [-c] [-t timeout] [-j job
 ```
 input和output分别对应输入和输出，也为**列表**，且列表的所有成员均为**整型数**
 
-示例：(`tests/sample/naive.json`)
+示例：(`tests/base/sample/naive.json`)
 ```
 [
     [[], [2, 0, 1, 7], 0]
