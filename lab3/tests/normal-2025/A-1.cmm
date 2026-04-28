@@ -1,0 +1,31 @@
+int main() {
+    int input1;
+    int input2;
+    int initialVal = 100;
+    int intermediateCalc;
+    int reusedVar;
+    int finalResult;
+    int lateAssignVar;
+
+    input1 = 7;
+    input2 = 12;
+
+    intermediateCalc = (input1 + 5) * (input2 - initialVal / 50);
+
+    reusedVar = intermediateCalc + input1;
+    write(reusedVar);
+
+    write(intermediateCalc);
+
+    finalResult = (reusedVar - input2) * 3;
+
+    reusedVar = finalResult / 2;
+    write(reusedVar);
+
+    lateAssignVar = input2 * 10;
+    write(lateAssignVar);
+
+    write(finalResult);
+
+    return 0;
+}

@@ -1,0 +1,32 @@
+int processHelper(int val) {
+    if (val < 0) {
+         return val * 2;
+    }
+    return val + 10;
+}
+
+int recursiveWithHelperCall(int n) {
+    int helperVal;
+    int recursiveVal;
+
+    if (n <= 0) {
+        return 0;
+    } else {
+        helperVal = processHelper(n);
+        recursiveVal = recursiveWithHelperCall(n - 2);
+        return helperVal + recursiveVal;
+    }
+}
+
+int main() {
+    int input;
+    int finalResult;
+
+    input = read();
+
+    finalResult = recursiveWithHelperCall(input);
+
+    write(finalResult);
+
+    return 0;
+}

@@ -1,0 +1,44 @@
+int calculateInnerLoopLimit(int totalSize, int outerLoopIndex) {
+    int limitResult;
+    limitResult = totalSize - outerLoopIndex - 1;
+    return limitResult;
+}
+
+int main() {
+    int sortArrayData[5]; 
+    int arrayDataSize = 5; 
+    int outerIdx = 0;    
+    int innerIdx = 0;    
+    int swapHolder;    
+    int outerLimit;    
+    int innerLimit;    
+    
+    while (outerIdx < arrayDataSize) {
+        sortArrayData[outerIdx] = read();
+        outerIdx = outerIdx + 1;
+    }
+    
+    outerIdx = 0;
+    outerLimit = arrayDataSize - 1;
+    while (outerIdx < outerLimit) {
+        innerIdx = 0;
+        innerLimit = calculateInnerLoopLimit(arrayDataSize, outerIdx);
+        while (innerIdx < innerLimit) {
+            if (sortArrayData[innerIdx] > sortArrayData[innerIdx + 1]) {
+                swapHolder = sortArrayData[innerIdx];
+                sortArrayData[innerIdx] = sortArrayData[innerIdx + 1];
+                sortArrayData[innerIdx + 1] = swapHolder;
+            }
+            innerIdx = innerIdx + 1;
+        }
+        outerIdx = outerIdx + 1;
+    }
+    
+    outerIdx = 0;
+    while (outerIdx < arrayDataSize) {
+        write(sortArrayData[outerIdx]);
+        outerIdx = outerIdx + 1;
+    }
+
+    return 0;
+}
