@@ -1,0 +1,46 @@
+struct ColorRGB {
+    int colorR;
+    int colorG;
+    int colorB;
+};
+
+struct PixelData {
+    int pixelX;
+    int pixelY;
+    struct ColorRGB pixelColorValue; 
+};
+
+int analyzePixel(struct PixelData pixelParam) {
+    int analysisCode = 0;
+    int redValue;
+    int xPos;
+
+    redValue = pixelParam.pixelColorValue.colorR; 
+    xPos = pixelParam.pixelX; 
+
+    if (redValue > 100) {
+        analysisCode = analysisCode + 10;
+    }
+    if (xPos < 50) {
+        analysisCode = analysisCode + 1;
+    }
+    return analysisCode;
+}
+
+int main() {
+    struct PixelData screenPixel;
+    int analysisResult;
+    
+    screenPixel.pixelColorValue.colorR = read();
+    screenPixel.pixelColorValue.colorG = 100; 
+    screenPixel.pixelColorValue.colorB = 50;  
+    
+    screenPixel.pixelX = read();
+    screenPixel.pixelY = 80; 
+    
+    analysisResult = analyzePixel(screenPixel);
+
+    write(analysisResult);
+
+    return 0;
+}

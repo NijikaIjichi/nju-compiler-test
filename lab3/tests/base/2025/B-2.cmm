@@ -1,0 +1,38 @@
+int processGridValue(int rowIdx, int colIdx, int factorParam) {
+    int gridResult = rowIdx * rowIdx + colIdx * factorParam;
+    if ((gridResult / 10) * 10 == gridResult) {
+        return gridResult / 10;
+    } else {
+        return gridResult + 5;
+    }
+}
+
+int main() {
+    int gridSize = 4;
+    int rowLoop = 0;
+    int colLoop = 0;
+    int procFactor;
+    int gridProcessedVal;
+    int gridTotalSum = 0;
+    int gridConditionCount = 0;
+
+    procFactor = read();
+
+    while (rowLoop < gridSize) {
+        colLoop = 0;
+        while (colLoop < gridSize) {
+            gridProcessedVal = processGridValue(rowLoop, colLoop, procFactor);
+            gridTotalSum = gridTotalSum + gridProcessedVal;
+            if (gridProcessedVal > 25) {
+                gridConditionCount = gridConditionCount + 1;
+            }
+            colLoop = colLoop + 1;
+        }
+        rowLoop = rowLoop + 1;
+    }
+
+    write(gridTotalSum);
+    write(gridConditionCount);
+
+    return 0;
+}

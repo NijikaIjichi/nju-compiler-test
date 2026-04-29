@@ -1,0 +1,153 @@
+int const_arr_size() { return 1024; }
+int const_mod() { return 998244353; }
+int const_G() { return 3; }
+
+int mul(int arga_mul, int argb_mul) {
+    int res = 0;
+    int mod = const_mod();
+    while (argb_mul > 0) {
+        int half_mul = argb_mul / 2;
+        int is_odd_mul = argb_mul - half_mul * 2;
+        if (is_odd_mul == 1) {
+            res = res + arga_mul;
+            if (res >= mod) {
+                res = res - mod;
+            }
+        }
+        arga_mul = arga_mul + arga_mul;
+        if (arga_mul >= mod) {
+            arga_mul = arga_mul - mod;
+        }
+        argb_mul = half_mul;
+    }
+    return res;
+}
+
+int qpow(int arga_qpow, int argb_qpow) {
+    int res_qpow = 1;
+    while (argb_qpow > 0) {
+        int half_qpow = argb_qpow / 2;
+        int is_odd_qpow = argb_qpow - half_qpow * 2;
+        if (is_odd_qpow == 1) {
+            res_qpow = mul(res_qpow, arga_qpow);
+        }
+        arga_qpow = mul(arga_qpow, arga_qpow);
+        argb_qpow = half_qpow;
+    }
+    return res_qpow;
+}
+
+int inv(int arga_inv) {
+    return qpow(arga_inv, const_mod() - 2);
+}
+
+int ntt(int a[1024], int rev_ntt[1024], int limit, int type) {
+    int mod_ntt = const_mod();
+    int i_ntt = 0;
+    int mid = 1;
+    while (i_ntt < limit) {
+        if (i_ntt < rev_ntt[i_ntt]) {
+            int temp = a[i_ntt];
+            a[i_ntt] = a[rev_ntt[i_ntt]];
+            a[rev_ntt[i_ntt]] = temp;
+        }
+        i_ntt = i_ntt + 1;
+    }
+    while (mid < limit) {
+        int Wn = qpow(const_G(), (mod_ntt - 1) / (mid * 2));
+        int j = 0;
+        if (type == 0) {
+            Wn = inv(Wn);
+        }
+        while (j < limit) {
+            int w = 1;
+            int k = 0;
+            while (k < mid) {
+                int x = a[j + k];
+                int y = mul(w, a[j + k + mid]);
+                a[j + k] = x + y;
+                if (a[j + k] >= mod_ntt) {
+                    a[j + k] = a[j + k] - mod_ntt;
+                }
+                a[j + k + mid] = x - y;
+                if (a[j + k + mid] < 0) {
+                    a[j + k + mid] = a[j + k + mid] + mod_ntt;
+                }
+                w = mul(w, Wn);
+                k = k + 1;
+            }
+            j = j + mid * 2;
+        }
+        mid = mid * 2;
+    }
+    return 0;
+}
+
+int poly_mul(int A_poly[1024], int B_poly[1024], int rev_poly[1024], int n_poly, int m_poly) {
+    int limit_poly = 1;
+    int i_poly = 0;
+    int inv_limit;
+    while (limit_poly <= n_poly + m_poly) {
+        limit_poly = limit_poly * 2;
+    }
+    while (i_poly < limit_poly) {
+        int half = i_poly / 2;
+        int is_odd = i_poly - half * 2;
+        rev_poly[i_poly] = (rev_poly[half] / 2) + is_odd * (limit_poly / 2);
+        i_poly = i_poly + 1;
+    }
+    ntt(A_poly, rev_poly, limit_poly, 1);
+    ntt(B_poly, rev_poly, limit_poly, 1);
+    i_poly = 0;
+    while (i_poly < limit_poly) {
+        A_poly[i_poly] = mul(A_poly[i_poly], B_poly[i_poly]);
+        i_poly = i_poly + 1;
+    }
+    ntt(A_poly, rev_poly, limit_poly, 0);
+    inv_limit = inv(limit_poly);
+    i_poly = 0;
+    while (i_poly < limit_poly) {
+        A_poly[i_poly] = mul(A_poly[i_poly], inv_limit);
+        i_poly = i_poly + 1;
+    }
+    return limit_poly;
+}
+
+int main() {
+    int n = read();
+    int m = read();
+    int A[1024];
+    int B[1024];
+    int rev[1024];
+    
+    int size = const_arr_size();
+    int i_main = 0;
+    while (i_main < size) {
+        A[i_main] = 0;
+        B[i_main] = 0;
+        rev[i_main] = 0;
+        i_main = i_main + 1;
+    }
+    
+    i_main = 0;
+    while (i_main <= n) {
+        A[i_main] = read();
+        i_main = i_main + 1;
+    }
+    
+    i_main = 0;
+    while (i_main <= m) {
+        B[i_main] = read();
+        i_main = i_main + 1;
+    }
+    
+    poly_mul(A, B, rev, n, m);
+    
+    i_main = 0;
+    while (i_main <= n + m) {
+        write(A[i_main]);
+        i_main = i_main + 1;
+    }
+    
+    return 0;
+}

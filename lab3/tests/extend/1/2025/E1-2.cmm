@@ -1,0 +1,29 @@
+struct Vector2D {
+  int vectorDx;
+  int vectorDy;
+};
+
+int processVector(struct Vector2D vecParam) {
+    int resultVal;
+    int tempDx;
+    int tempDy;
+
+    tempDx = vecParam.vectorDx;
+    tempDy = vecParam.vectorDy;
+    resultVal = tempDx + tempDy * 2;
+    return resultVal;
+}
+
+int main() {
+    struct Vector2D motionVector;
+    int processedResult;
+
+    motionVector.vectorDx = read();
+    motionVector.vectorDy = read();
+
+    processedResult = processVector(motionVector);
+
+    write(processedResult);
+
+    return 0;
+}

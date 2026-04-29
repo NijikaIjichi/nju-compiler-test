@@ -1,0 +1,10 @@
+int main() {
+    int Assign_bool, as_bool;
+    int n, m;
+    n = read();
+    if(m = (n > 0 && n < 2)) {
+        write(n);
+    }
+    write(m);
+    return 0;
+}

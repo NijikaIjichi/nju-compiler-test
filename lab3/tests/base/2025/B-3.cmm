@@ -1,0 +1,50 @@
+int getNextValue(int idxParam, int oldValParam, int modParam) {
+    int valueModifier;
+    if ((idxParam / 2) * 2 == idxParam) {
+        valueModifier = idxParam + 5;
+    } else {
+        valueModifier = idxParam * 3;
+    }
+    return oldValParam + valueModifier;
+}
+
+int checkComplexCondition(int valueToCheck, int checkThresholdParam) {
+    if (valueToCheck > 50 && checkThresholdParam < 5) { return 1; }
+    if (valueToCheck < 10 && checkThresholdParam > 0) { return 1; }
+    return 0;
+}
+
+int main() {
+    int mainArray[5];
+    int loopCounter = 0;
+    int valueModifierIn;
+    int complexCheckValIn;
+    int conditionMetCounter = 0;
+    int loopExecLimit;
+
+    mainArray[0]=5; mainArray[1]=8; mainArray[2]=3; mainArray[3]=12; mainArray[4]=7;
+    valueModifierIn = read();
+    complexCheckValIn = read();
+    loopExecLimit = read();
+    if (loopExecLimit > 5) { loopExecLimit = 5; }
+    if (loopExecLimit < 0) { loopExecLimit = 0; }
+
+    while (loopCounter < loopExecLimit) {
+        mainArray[loopCounter] = getNextValue(loopCounter, mainArray[loopCounter], valueModifierIn);
+        if (checkComplexCondition(mainArray[loopCounter], complexCheckValIn) == 1) {
+            conditionMetCounter = conditionMetCounter + 1;
+        }
+        loopCounter = loopCounter + 1;
+    }
+
+    write(mainArray[0]);
+    if (loopExecLimit > 0) {
+         write(mainArray[loopExecLimit-1]);
+    } else {
+         write(mainArray[0]);
+    }
+    write(conditionMetCounter);
+    write(loopCounter);
+
+    return 0;
+}

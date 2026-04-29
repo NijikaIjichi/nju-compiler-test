@@ -1,64 +1,49 @@
+# test/json_gen.py
 import json
+import sys
+import subprocess
 from os.path import splitext
-from sys import argv
-from os import system
+from pathlib import Path
 
-def msg(s):
-    print('\033[1m\033[91m' + s + '\033[0m\033[0m');
 def err(data_in, s):
-    msg("Wrong on input " + str(data_in) + "\n" + s)
-    exit(1)
+    print(f'\033[1m\033[91mWrong on input {data_in}\n{s}\033[0m', file=sys.stderr)
+    sys.exit(1)
 
-if len(argv) != 3:
-    print("Usage: python json_gen.py [IR file] [json file]")
-    print("Usage: python json_gen.py [cmm file] [json file]")
-    print("This program will read from given json file, ignore the output")
-    print("And using your output this time to overwrite the original output in json file")
-    print("So, you can leave the output in json as [], and just give the input to automatically generate a json file")
-    msg("Do not run more than one instance of this program or check.py parallelly!")
-    exit(0)
+if len(sys.argv) != 3:
+    print("Usage: python3 json_gen.py [IR file | cmm file] [json file]")
+    sys.exit(0)
 
-if splitext(argv[1])[1] == ".cmm":
-    f_ir = "workdir/a.ir"
-    print("Given a cmm file")
-    cmd = "./parser %s %s"%(argv[1], f_ir)
-    print("Running command: " + cmd + " to generate IR")
-    system(cmd)
-elif splitext(argv[1])[1] == ".ir":
-    f_ir = argv[1]
+f_in = sys.argv[1]
+f_json = sys.argv[2]
+program = "./irsim/build/irsim"
+
+if splitext(f_in)[1] == ".cmm":
+    Path("workdir").mkdir(exist_ok=True)
+    f_ir = f"workdir/temp_{Path(f_in).stem}.ir"
+    print(f"Given a cmm file, running parser to generate IR...")
+    subprocess.run(["./parser", f_in, f_ir], check=True)
+elif splitext(f_in)[1] == ".ir":
+    f_ir = f_in
 else:
-    msg(argv[1] + "is neither a cmm file nor an IR file!")
-    exit(1)
-
-if splitext(argv[2])[1] != ".json":
-    msg(argv[2] + " is not an valid json file!")
-    exit(1)
-
-f_json = argv[2]
-program = "irsim/build/irsim"
-irsim_in  = './workdir/irsim_in'
-irsim_out = './workdir/irsim_out'
+    print("Invalid file type")
+    sys.exit(1)
 
 data_with_output = []
+with open(f_json) as f:
+    test_cases = json.load(f)
 
-for data_in, dummy, ret_val in json.load(open(f_json)):
-    with open(irsim_in, 'w') as to_irsim_w:
-        for i in data_in:
-            to_irsim_w.write(str(i) + '\n')
-
-    ret = system("%s %s < %s > %s 2>/dev/null"%(program, f_ir , irsim_in , irsim_out))
-    # Suppose irsim is compiled by run.sh
-    if ret != 0:
-        with open(irsim_out, 'r') as from_irsim_r:
-            err(data_in,
-                "runtime error occured when running your IR code\n"
-                + from_irsim_r.read().splitlines()[-1]);
-    with open(irsim_out, 'r') as from_irsim_r:
-        output_lines = from_irsim_r.readlines()[:-1]
-        output_lines = list(map(int, output_lines))
-        data_with_output.append([data_in, output_lines, 0])
+for data_in, dummy, ret_val in test_cases:
+    input_str = '\n'.join(map(str, data_in)) + '\n'
+    proc = subprocess.run([program, f_ir], input=input_str, text=True, capture_output=True)
+    
+    if proc.returncode != 0:
+         err(data_in, f"Runtime error:\n{proc.stderr}")
+         
+    # 获取除最后一行（return X ...）外的所有输出行
+    out_lines = [int(x) for x in proc.stdout.strip().splitlines()[:-1]]
+    data_with_output.append([data_in, out_lines, 0])
 
 with open(f_json, "w") as out:
-    json.dump(data_with_output, out)
+    json.dump(data_with_output, out, indent=4)
 
 print("json file updated successfully")

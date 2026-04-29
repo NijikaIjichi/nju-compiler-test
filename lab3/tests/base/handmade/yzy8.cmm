@@ -1,0 +1,19 @@
+int main() {
+    int arith_as_bool;
+    if(1) {
+        write(1);
+    }
+    if(0) {
+        write(2);
+    }
+    if(-1) {
+        write(3);
+    }
+    if(1+1-2) {
+        write(4);
+    }
+    if(3) {
+        write(5);
+    }
+    return 0;
+}

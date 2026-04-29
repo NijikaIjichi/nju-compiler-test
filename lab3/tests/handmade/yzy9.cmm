@@ -1,8 +1,0 @@
-//Bool as arith
-int main() {
-    int n = read();
-    if(((n > 1) + (n < 4)) == n) {
-        write(n);
-    }
-    return 0;
-}

@@ -1,0 +1,25 @@
+struct Point2D {
+  int pointX;
+  int pointY;
+};
+
+int main() {
+    struct Point2D startPoint;
+    int tempValX;
+    int tempValY;
+    int calculatedDist; 
+
+    startPoint.pointX = 3;
+    startPoint.pointY = 5; 
+
+    tempValX = startPoint.pointX;
+    tempValY = startPoint.pointY;
+
+    calculatedDist = tempValX * tempValX + tempValY * tempValY;
+
+    write(tempValX);
+    write(tempValY);
+    write(calculatedDist);
+
+    return 0;
+}

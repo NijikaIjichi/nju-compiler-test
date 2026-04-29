@@ -1,0 +1,43 @@
+struct A {
+  int Ax;
+  int Ay;
+};
+
+int f(int x[5]) {
+  int y[5];
+  int i = 0;
+  while (i < 5) {
+    y[i] = x[i];
+    i = i + 1;
+  }
+  i = 0;
+  while (i < 5) {
+    write(y[i]);
+    i = i + 1;
+  }
+  return 0;
+}
+
+int g(struct A a) {
+  struct A b;
+  b.Ax = a.Ax;
+  b.Ay = a.Ay;
+  write(b.Ax);
+  write(b.Ay);
+  return 0;
+}
+
+int main() {
+  int arrr[5];
+  struct A p;
+  arrr[0] = 114;
+  arrr[1] = 514;
+  arrr[2] = 19;
+  arrr[3] = 198;
+  arrr[4] = 10;
+  p.Ax = 114514;
+  p.Ay = 1919810;
+  f(arrr);
+  g(p);
+  return 0;
+}

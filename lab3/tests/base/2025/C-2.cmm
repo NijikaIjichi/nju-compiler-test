@@ -1,0 +1,42 @@
+int isDivisibleBy(int numParam, int divisorParam) {
+    int quotient;
+    if (divisorParam <= 0) { return 0; } 
+    if (divisorParam == 1) { return 1; } 
+    quotient = numParam / divisorParam;
+    if (quotient * divisorParam == numParam) {
+        return 1; 
+    } else {
+        return 0; 
+    }
+}
+
+int isPrimeFunc(int numberParam) {
+    int divisorVar = 2; 
+    int checkLimit; 
+
+    if (numberParam <= 1) {
+        return 0; 
+    }
+
+    checkLimit = numberParam / 2 + 1; 
+
+    while (divisorVar < checkLimit) {
+        if (isDivisibleBy(numberParam, divisorVar) == 1) {
+            return 0; 
+        }
+        divisorVar = divisorVar + 1;
+    }
+    
+    return 1; 
+}
+
+int main() {
+    int numToCheck;
+    int primeResult;
+
+    numToCheck = read(); 
+    primeResult = isPrimeFunc(numToCheck);
+    write(primeResult); 
+
+    return 0;
+}
