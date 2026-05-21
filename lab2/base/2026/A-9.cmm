@@ -1,0 +1,17 @@
+struct Tuple {
+    int first;
+    int second;
+};
+
+int add_pair(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    struct Tuple t;
+    int s;
+    t.first = 1;
+    t.second = 2;
+    s = add_pair(t.first, t.second, 99);
+    return s;
+}

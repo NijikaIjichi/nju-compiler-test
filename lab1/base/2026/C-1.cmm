@@ -1,0 +1,31 @@
+struct Stack {
+  int data[10];
+  int top;
+};
+
+int main() {
+  struct Stack st;
+  int i;
+  int total;
+
+  st.top = 0;
+  i = 0;
+  total = 0;
+
+  while (i < 5) {
+    st.data[st.top] = i * i;
+    st.top = st.top + 1;
+    i = i + 1;
+  }
+
+  while (st.top > 0) {
+    st.top = st.top - 1;
+    total = total + st.data[st.top];
+  }
+
+  if (total > 30) {
+    return total - 30;
+  }
+
+  return total;
+}

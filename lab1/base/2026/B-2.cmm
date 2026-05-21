@@ -1,0 +1,27 @@
+int data[5]];
+
+int size;
+
+int fill(int val) {
+  int i = 0;
+  while (i < 5) {
+    data[i] = val;
+    i = i + 1;
+  }
+  int result = 0;
+  return result;
+}
+
+int process(int n) {
+  float avg = 0.0;
+  avg = avg + 1.0;
+  int count;
+  count = 0;
+  while (avg > 0.0) {
+    count = count + 1;
+    avg = avg - 0.5;
+  }
+  int final;
+  final = count;
+  return final;
+}

@@ -1,0 +1,13 @@
+struct Cell {
+    int row;
+    int col;
+};
+
+int main() {
+    struct Cell c;
+    float ratio = 1.5;
+    c.row = 2;
+    c.col = 3;
+    c.row = c.row + ratio;
+    return 0;
+}

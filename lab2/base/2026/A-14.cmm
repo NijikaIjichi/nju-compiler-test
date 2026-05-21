@@ -1,0 +1,28 @@
+struct Node {
+    float weight;
+    int flag;
+};
+
+int evalNode(struct Node n) {
+    if (n.flag > 0) {
+        return 1;
+    } else {
+        return n.err_field;
+    }
+}
+
+int main() {
+    struct Node nd;
+    int res;
+    nd.weight = 36.5;
+    nd.flag = 1;
+
+    res = evalNode(nd);
+
+    while (res == 0) {
+        nd.flag = nd.flag + 1;
+        res = evalNode(nd);
+    }
+
+    return 0;
+}

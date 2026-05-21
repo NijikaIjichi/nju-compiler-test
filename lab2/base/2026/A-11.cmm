@@ -1,0 +1,12 @@
+struct Handler {
+    int id;
+    float factor;
+};
+
+int main() {
+    struct Handler h;
+    h.id = 1;
+    h.factor = 2.5;
+    h(10);
+    return 0;
+}

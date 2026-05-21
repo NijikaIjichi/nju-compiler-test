@@ -1,0 +1,17 @@
+struct Box {
+    float w;
+    float h;
+};
+
+struct Box {
+    int id;
+    int len;
+};
+
+int main() {
+    struct Box b;
+    b.w = 1.5;
+    b.h = 2.5;
+
+    return 0;
+}

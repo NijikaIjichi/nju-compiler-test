@@ -1,0 +1,15 @@
+struct Cell {
+    int tag;
+    float val;
+    int tag;
+    int slot[16];
+};
+
+int main() {
+    struct Cell c;
+    int x;
+    c.tag = 1;
+    c.val = 2.5;
+
+    return 0;
+}

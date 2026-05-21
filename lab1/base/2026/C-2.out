@@ -1,0 +1,356 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      ExtDecList (1)
+        VarDec (1)
+          VarDec (1)
+            ID: fib
+          LB
+          INT: 20
+          RB
+      SEMI
+    ExtDefList (3)
+      ExtDef (3)
+        Specifier (3)
+          TYPE: int
+        FunDec (3)
+          ID: build_fib
+          LP
+          VarList (3)
+            ParamDec (3)
+              Specifier (3)
+                TYPE: int
+              VarDec (3)
+                ID: n
+          RP
+        CompSt (3)
+          LC
+          DefList (4)
+            Def (4)
+              Specifier (4)
+                TYPE: int
+              DecList (4)
+                Dec (4)
+                  VarDec (4)
+                    ID: i
+              SEMI
+          StmtList (5)
+            Stmt (5)
+              Exp (5)
+                Exp (5)
+                  Exp (5)
+                    ID: fib
+                  LB
+                  Exp (5)
+                    INT: 0
+                  RB
+                ASSIGNOP
+                Exp (5)
+                  INT: 0
+              SEMI
+            StmtList (6)
+              Stmt (6)
+                Exp (6)
+                  Exp (6)
+                    Exp (6)
+                      ID: fib
+                    LB
+                    Exp (6)
+                      INT: 1
+                    RB
+                  ASSIGNOP
+                  Exp (6)
+                    INT: 1
+                SEMI
+              StmtList (7)
+                Stmt (7)
+                  Exp (7)
+                    Exp (7)
+                      ID: i
+                    ASSIGNOP
+                    Exp (7)
+                      INT: 2
+                  SEMI
+                StmtList (8)
+                  Stmt (8)
+                    WHILE
+                    LP
+                    Exp (8)
+                      Exp (8)
+                        ID: i
+                      RELOP
+                      Exp (8)
+                        ID: n
+                    RP
+                    Stmt (8)
+                      CompSt (8)
+                        LC
+                        StmtList (9)
+                          Stmt (9)
+                            Exp (9)
+                              Exp (9)
+                                Exp (9)
+                                  ID: fib
+                                LB
+                                Exp (9)
+                                  ID: i
+                                RB
+                              ASSIGNOP
+                              Exp (9)
+                                Exp (9)
+                                  Exp (9)
+                                    ID: fib
+                                  LB
+                                  Exp (9)
+                                    Exp (9)
+                                      ID: i
+                                    MINUS
+                                    Exp (9)
+                                      INT: 1
+                                  RB
+                                PLUS
+                                Exp (9)
+                                  Exp (9)
+                                    ID: fib
+                                  LB
+                                  Exp (9)
+                                    Exp (9)
+                                      ID: i
+                                    MINUS
+                                    Exp (9)
+                                      INT: 2
+                                  RB
+                            SEMI
+                          StmtList (10)
+                            Stmt (10)
+                              Exp (10)
+                                Exp (10)
+                                  ID: i
+                                ASSIGNOP
+                                Exp (10)
+                                  Exp (10)
+                                    ID: i
+                                  PLUS
+                                  Exp (10)
+                                    INT: 1
+                              SEMI
+                        RC
+          RC
+      ExtDefList (14)
+        ExtDef (14)
+          Specifier (14)
+            TYPE: int
+          FunDec (14)
+            ID: sum_even
+            LP
+            VarList (14)
+              ParamDec (14)
+                Specifier (14)
+                  TYPE: int
+                VarDec (14)
+                  ID: n
+            RP
+          CompSt (14)
+            LC
+            DefList (15)
+              Def (15)
+                Specifier (15)
+                  TYPE: int
+                DecList (15)
+                  Dec (15)
+                    VarDec (15)
+                      ID: i
+                SEMI
+              DefList (16)
+                Def (16)
+                  Specifier (16)
+                    TYPE: int
+                  DecList (16)
+                    Dec (16)
+                      VarDec (16)
+                        ID: total
+                  SEMI
+            StmtList (17)
+              Stmt (17)
+                Exp (17)
+                  Exp (17)
+                    ID: i
+                  ASSIGNOP
+                  Exp (17)
+                    INT: 0
+                SEMI
+              StmtList (18)
+                Stmt (18)
+                  Exp (18)
+                    Exp (18)
+                      ID: total
+                    ASSIGNOP
+                    Exp (18)
+                      INT: 0
+                  SEMI
+                StmtList (19)
+                  Stmt (19)
+                    WHILE
+                    LP
+                    Exp (19)
+                      Exp (19)
+                        ID: i
+                      RELOP
+                      Exp (19)
+                        ID: n
+                    RP
+                    Stmt (19)
+                      CompSt (19)
+                        LC
+                        StmtList (20)
+                          Stmt (20)
+                            IF
+                            LP
+                            Exp (20)
+                              Exp (20)
+                                LP
+                                Exp (20)
+                                  Exp (20)
+                                    Exp (20)
+                                      ID: fib
+                                    LB
+                                    Exp (20)
+                                      ID: i
+                                    RB
+                                  MINUS
+                                  Exp (20)
+                                    Exp (20)
+                                      LP
+                                      Exp (20)
+                                        Exp (20)
+                                          Exp (20)
+                                            ID: fib
+                                          LB
+                                          Exp (20)
+                                            ID: i
+                                          RB
+                                        DIV
+                                        Exp (20)
+                                          INT: 2
+                                      RP
+                                    STAR
+                                    Exp (20)
+                                      INT: 2
+                                RP
+                              RELOP
+                              Exp (20)
+                                INT: 0
+                            RP
+                            Stmt (20)
+                              CompSt (20)
+                                LC
+                                StmtList (21)
+                                  Stmt (21)
+                                    Exp (21)
+                                      Exp (21)
+                                        ID: total
+                                      ASSIGNOP
+                                      Exp (21)
+                                        Exp (21)
+                                          ID: total
+                                        PLUS
+                                        Exp (21)
+                                          Exp (21)
+                                            ID: fib
+                                          LB
+                                          Exp (21)
+                                            ID: i
+                                          RB
+                                    SEMI
+                                RC
+                          StmtList (23)
+                            Stmt (23)
+                              Exp (23)
+                                Exp (23)
+                                  ID: i
+                                ASSIGNOP
+                                Exp (23)
+                                  Exp (23)
+                                    ID: i
+                                  PLUS
+                                  Exp (23)
+                                    INT: 1
+                              SEMI
+                        RC
+                  StmtList (25)
+                    Stmt (25)
+                      RETURN
+                      Exp (25)
+                        ID: total
+                      SEMI
+            RC
+        ExtDefList (28)
+          ExtDef (28)
+            Specifier (28)
+              TYPE: int
+            FunDec (28)
+              ID: main
+              LP
+              RP
+            CompSt (28)
+              LC
+              DefList (29)
+                Def (29)
+                  Specifier (29)
+                    TYPE: int
+                  DecList (29)
+                    Dec (29)
+                      VarDec (29)
+                        ID: n
+                  SEMI
+                DefList (30)
+                  Def (30)
+                    Specifier (30)
+                      TYPE: int
+                    DecList (30)
+                      Dec (30)
+                        VarDec (30)
+                          ID: result
+                    SEMI
+              StmtList (31)
+                Stmt (31)
+                  Exp (31)
+                    Exp (31)
+                      ID: n
+                    ASSIGNOP
+                    Exp (31)
+                      INT: 15
+                  SEMI
+                StmtList (32)
+                  Stmt (32)
+                    Exp (32)
+                      ID: build_fib
+                      LP
+                      Args (32)
+                        Exp (32)
+                          ID: n
+                      RP
+                    SEMI
+                  StmtList (33)
+                    Stmt (33)
+                      Exp (33)
+                        Exp (33)
+                          ID: result
+                        ASSIGNOP
+                        Exp (33)
+                          ID: sum_even
+                          LP
+                          Args (33)
+                            Exp (33)
+                              ID: n
+                          RP
+                      SEMI
+                    StmtList (34)
+                      Stmt (34)
+                        RETURN
+                        Exp (34)
+                          ID: result
+                        SEMI
+              RC

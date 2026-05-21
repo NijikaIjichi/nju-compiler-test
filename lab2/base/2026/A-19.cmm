@@ -1,0 +1,17 @@
+struct Grid {
+    int mat[3][3];
+    int nr;
+    int nc;
+};
+
+int main() {
+    struct Grid g1;
+    int vec[3];
+
+    g1.nr = 3;
+    g1.nc = 3;
+
+    g1.mat[0][0] = vec + g1.nr;
+
+    return 0;
+}

@@ -1,0 +1,13 @@
+struct Box {
+    float width;
+    float height;
+};
+
+int main() {
+    struct Box b;
+    float area = 2.5;
+    b.width = 3.0;
+    b.height = 4.0;
+    b.width * b.height = area;
+    return 0;
+}

@@ -1,0 +1,130 @@
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: check_range
+        LP
+        VarList (1)
+          ParamDec (1)
+            Specifier (1)
+              TYPE: int
+            VarDec (1)
+              ID: addr
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: int
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: lo
+                ASSIGNOP
+                Exp (2)
+                  INT: 0
+            SEMI
+          DefList (3)
+            Def (3)
+              Specifier (3)
+                TYPE: int
+              DecList (3)
+                Dec (3)
+                  VarDec (3)
+                    ID: hi
+                  ASSIGNOP
+                  Exp (3)
+                    INT: 65535
+              SEMI
+        StmtList (4)
+          Stmt (4)
+            IF
+            LP
+            Exp (4)
+              Exp (4)
+                ID: addr
+              RELOP
+              Exp (4)
+                ID: lo
+            RP
+            Stmt (4)
+              CompSt (4)
+                LC
+                StmtList (5)
+                  Stmt (5)
+                    IF
+                    LP
+                    Exp (5)
+                      Exp (5)
+                        ID: addr
+                      RELOP
+                      Exp (5)
+                        ID: hi
+                    RP
+                    Stmt (5)
+                      CompSt (5)
+                        LC
+                        StmtList (6)
+                          Stmt (6)
+                            RETURN
+                            Exp (6)
+                              INT: 493
+                            SEMI
+                        RC
+                RC
+          StmtList (9)
+            Stmt (9)
+              RETURN
+              Exp (9)
+                INT: 0
+              SEMI
+        RC
+    ExtDefList (12)
+      ExtDef (12)
+        Specifier (12)
+          TYPE: int
+        FunDec (12)
+          ID: main
+          LP
+          RP
+        CompSt (12)
+          LC
+          DefList (13)
+            Def (13)
+              Specifier (13)
+                TYPE: int
+              DecList (13)
+                Dec (13)
+                  VarDec (13)
+                    ID: base
+                  ASSIGNOP
+                  Exp (13)
+                    INT: 6656
+              SEMI
+            DefList (14)
+              Def (14)
+                Specifier (14)
+                  TYPE: int
+                DecList (14)
+                  Dec (14)
+                    VarDec (14)
+                      ID: code
+                    ASSIGNOP
+                    Exp (14)
+                      ID: check_range
+                      LP
+                      Args (14)
+                        Exp (14)
+                          ID: base
+                      RP
+                SEMI
+          StmtList (15)
+            Stmt (15)
+              RETURN
+              Exp (15)
+                ID: code
+              SEMI
+          RC

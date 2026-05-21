@@ -1,0 +1,13 @@
+struct Metric {
+    int count;
+    float rate;
+};
+
+int main() {
+    struct Metric m;
+    int threshold;
+    m.count = 10;
+    m.rate = 0.95;
+    threshold = m.rate;
+    return threshold;
+}

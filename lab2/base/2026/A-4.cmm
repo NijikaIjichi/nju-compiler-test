@@ -1,0 +1,18 @@
+struct Pair {
+    int left;
+    int right;
+};
+
+int merge(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x = 3, y = 5;
+    int z = merge(x, y);
+    return z;
+}
+
+int merge(int p) {
+    return p;
+}

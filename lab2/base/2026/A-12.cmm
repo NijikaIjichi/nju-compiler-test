@@ -1,0 +1,6 @@
+int main() {
+    int buf[20];
+    float idx = 2.7;
+    buf[idx] = 100;
+    return 0;
+}

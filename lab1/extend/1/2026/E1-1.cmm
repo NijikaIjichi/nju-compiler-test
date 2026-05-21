@@ -1,0 +1,16 @@
+int check_range(int addr) {
+  int lo = 0x0000;
+  int hi = 0xFFFF;
+  if (addr >= lo) {
+    if (addr <= hi) {
+      return 0755;
+    }
+  }
+  return 0x00;
+}
+
+int main() {
+  int base = 0x1A00;
+  int code = check_range(base);
+  return code;
+}
