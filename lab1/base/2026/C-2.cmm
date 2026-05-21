@@ -1,0 +1,35 @@
+int fib[20];
+
+int build_fib(int n) {
+  int i;
+  fib[0] = 0;
+  fib[1] = 1;
+  i = 2;
+  while (i < n) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+    i = i + 1;
+  }
+}
+
+int sum_even(int n) {
+  int i;
+  int total;
+  i = 0;
+  total = 0;
+  while (i < n) {
+    if ((fib[i] - (fib[i] / 2) * 2) == 0) {
+      total = total + fib[i];
+    }
+    i = i + 1;
+  }
+  return total;
+}
+
+int main() {
+  int n;
+  int result;
+  n = 15;
+  build_fib(n);
+  result = sum_even(n);
+  return result;
+}

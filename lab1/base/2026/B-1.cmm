@@ -1,0 +1,28 @@
+struct Sensor {
+  int id;
+  float value;
+  int active;
+};
+
+int readings[2.0];
+
+int offset;
+
+int process(int mode,) {
+  struct { int tag; };
+  int total = 0;
+  float weights[4] = {0.25, 0.5, 1.0};
+  struct Sensor s;
+  s.id = mode;
+  s.value = 0.0;
+  s.active = 1;
+
+  while (s.value > 0.0);
+
+  while (s.value > 0.0) {
+    s.value = s.value - 1.0;
+    total = total + 1;
+  }
+
+  return total;
+}

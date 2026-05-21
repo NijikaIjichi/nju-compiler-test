@@ -1,0 +1,10 @@
+int clamp(int val) {
+  if (val < 0) {
+    return;
+  }
+  return val;
+}
+
+int main() {
+  return clamp(5);
+}

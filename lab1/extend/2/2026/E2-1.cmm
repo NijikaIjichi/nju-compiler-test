@@ -1,0 +1,9 @@
+int main() {
+  float mass = 9.1e-2;
+  float speed = 2.99e8;
+  float gravity = 9.8E0;
+  float energy = 1.23e-4;
+  float result;
+  result = mass + speed + gravity + energy;
+  return 0;
+}

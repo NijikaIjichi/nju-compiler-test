@@ -1,0 +1,25 @@
+/* Matrix utility: supports init and trace */
+/* All values default to zero on init */
+
+int mat[3][3];
+
+/* Set all elements to val */
+int init_mat(int val) {
+  int i;
+  int j;
+  i = 0;
+  while (i < 3) {
+    j = 0;
+    while (j < 3) {
+      mat[i][j] = val; /* assign element */
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+}
+
+int main() {
+  init_mat(0);         /* zero out matrix */
+  mat[1][1] = 1;       /* set diagonal */
+  return mat[1][1];    // return center value
+}

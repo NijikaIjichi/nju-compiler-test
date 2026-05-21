@@ -1,0 +1,10 @@
+int run_count;
+
+int update(int inc) {
+  int base = 0;
+  if (inc > 0) {
+    base = inc;
+  }
+  run_count += base;
+  return run_count;
+}
