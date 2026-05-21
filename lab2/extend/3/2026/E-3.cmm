@@ -1,0 +1,34 @@
+struct S1 { int s1_a; float s1_b; } s1;
+struct S2 { float s2_d; int s2_c; } s2;
+
+struct X { float x_arr[3][3]; } x1;
+struct Y { int y_arr[2][4]; } y1;
+
+struct P {
+    int p_v[3];
+    int p_n;
+    struct { int p_m_id; float p_m_sc; } p_m;
+};
+
+struct Q {
+    int q_n[4];
+    struct { int q_d_id; float q_d_sc; } q_d;
+};
+
+struct Q get(struct P p_arg) {
+    return p_arg;
+}
+
+int main() {
+    float t;
+    struct P p_local;
+    struct Q q_local;
+
+    s1 = s2;
+
+    x1 = y1;
+
+    q_local = get(p_local);
+
+    return 0;
+}

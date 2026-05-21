@@ -1,0 +1,36 @@
+struct T1 { int t1_a; float t1_b; } v1;
+struct T2 { int t2_c; float t2_d; } v2;
+
+struct M1 { int m1_arr[3][3]; } m1;
+struct M2 { int m2_arr[2][4]; } m2;
+
+struct Payload {
+    int payload_vals[3];
+    struct { int payload_meta_id; float payload_meta_sc; } payload_meta;
+};
+
+struct Record {
+    int record_nums[4];
+    struct {
+        int record_det_id;
+        float record_det_sc;
+    } record_det;
+};
+
+struct Record fetch(struct Payload payload_arg) {
+    return payload_arg;
+}
+
+int main() {
+    float tot;
+    struct Payload payload_obj;
+    struct Record record_obj;
+
+    v1 = v2;
+
+    m1 = m2;
+
+    record_obj = fetch(payload_obj);
+
+    return 0;
+}

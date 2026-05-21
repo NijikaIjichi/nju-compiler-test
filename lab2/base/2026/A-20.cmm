@@ -1,0 +1,13 @@
+struct Node {
+    float data;
+};
+
+float read_node(struct Node n) {
+    return n.data;
+}
+
+int main() {
+    struct Node nd;
+    nd.data = 1.5;
+    return read_node(nd);
+}

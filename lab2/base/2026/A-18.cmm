@@ -1,0 +1,13 @@
+struct Item {
+    int code;
+    struct {
+        float mass = 2.0;
+        int cells[3];
+    } spec;
+};
+
+int main() {
+    struct Item it;
+    it.code = 100;
+    return 0;
+}

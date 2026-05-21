@@ -1,0 +1,31 @@
+struct Pt {
+    int x;
+    int y;
+};
+
+float area(int r) {
+    float pi = 3.14159;
+    return pi;
+}
+
+int main() {
+    int cnt = 0;
+    int tot = 0;
+
+    struct Pt p;
+    int buf[3];
+
+    {
+        int cnt = 5;
+        float tot = area(cnt);
+        p.x = cnt;
+
+        while (cnt > 0) {
+            int buf = 99;
+            cnt = cnt - 1;
+        }
+    }
+
+    buf[0] = 99;
+    return 0;
+}

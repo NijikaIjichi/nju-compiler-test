@@ -1,0 +1,63 @@
+struct Result {
+    int sum_val;
+    int max_val;
+};
+
+int sumArr(int sum_decl_arr[3], int sum_decl_count);
+
+int sumArr(int sum_def_arr[3], int sum_def_count) {
+    int sum_idx = 0, sum_acc = 0;
+    while (sum_idx < sum_def_count) {
+        sum_acc = sum_acc + sum_def_arr[sum_idx];
+        sum_idx = sum_idx + 1;
+    }
+    return sum_acc;
+}
+
+int maxArr(int max_def_arr[3], int max_def_count) {
+    int max_idx = 0, max_best = max_def_arr[0];
+    while (max_idx < max_def_count) {
+        if (max_def_arr[max_idx] > max_best) {
+            max_best = max_def_arr[max_idx];
+        }
+        max_idx = max_idx + 1;
+    }
+    return max_best;
+}
+
+struct Result compute(int comp_left, int comp_right, int comp_arr[3], int comp_count) {
+    struct Result comp_result;
+    comp_result.sum_val = sumArr(comp_arr, comp_count);
+    comp_result.max_val = maxArr(comp_arr, comp_count);
+    if (comp_left > comp_right) {
+        comp_result.max_val = comp_result.max_val + comp_left;
+    } else {
+        comp_result.sum_val = comp_result.sum_val + comp_right;
+    }
+    return comp_result;
+}
+
+int main() {
+    struct Result main_result;
+    int main_arr[3];
+    int main_x, main_y;
+    int main_idx = 0;
+
+    while (main_idx < 3) {
+        main_arr[main_idx] = main_idx * 5 + 2;
+        main_idx = main_idx + 1;
+    }
+
+    main_x = main_arr[0] + 1;
+    main_y = main_arr[1] + 3;
+
+    main_result = compute(main_x, main_y, main_arr, 3);
+
+    if (main_result.sum_val > main_result.max_val) {
+        return main_result.sum_val;
+    } else {
+        return main_result.max_val;
+    }
+}
+
+int maxArr(int max_decl_arr[3], int max_decl_count);

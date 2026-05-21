@@ -1,0 +1,45 @@
+struct Vec2 {
+    int x;
+    int y;
+};
+
+int distSq(struct Vec2 v1, struct Vec2 v2) {
+    int dx = v1.x - v2.x;
+    int dy = v1.y - v2.y;
+    return dx * dx + dy * dy;
+}
+
+int main() {
+    struct Vec2 p1, p2;
+    int arr[5];
+    int i = 0;
+    int sum = 0;
+
+    p1.x = 3;
+    p1.y = 4;
+    p2.x = 6;
+    p2.y = 8;
+
+    while (i < 5) {
+        sum = sum + arr[i];
+        i = i + 1;
+    }
+
+    sum = arr + p1;
+
+    distSq(p1, p2) = sum;
+
+    if (sum > 10) {
+        p1.x = p1.x + 1;
+    } else {
+        p1.x = p1.x - 1;
+    }
+
+    sum = sum.x;
+
+    p1.y = p1.y + 2;
+
+    sum = p1.z;
+
+    return sum;
+}

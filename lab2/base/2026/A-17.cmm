@@ -1,0 +1,10 @@
+struct KnownType {
+    int val;
+};
+
+int main() {
+    struct UnknownType u;
+    struct KnownType k;
+    k.val = 10;
+    return 0;
+}

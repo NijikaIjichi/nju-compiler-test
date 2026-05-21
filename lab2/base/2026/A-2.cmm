@@ -1,0 +1,16 @@
+struct Node {
+    int val;
+    float weight;
+};
+
+int main() {
+    struct Node n;
+    n.val = 7;
+    n.weight = 0.88;
+    n.val = n.val + 1;
+    n.val = n.val + 1;
+    n.val = n.val + 1;
+    n.val = n.val + 1;
+    n.val = fetch_value(n.val);
+    return 0;
+}

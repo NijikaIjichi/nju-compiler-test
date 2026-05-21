@@ -1,0 +1,13 @@
+struct Result {
+    int code;
+};
+
+float get_ratio() {
+    int x = 10;
+    return x;
+}
+
+int main() {
+    float r = get_ratio();
+    return 0;
+}

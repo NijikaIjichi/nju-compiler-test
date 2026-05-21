@@ -1,0 +1,49 @@
+struct ScoreRecord {
+    int id;
+    int score;
+};
+
+int sumScores(struct ScoreRecord a, struct ScoreRecord b, struct ScoreRecord c) {
+    return a.score + b.score + c.score;
+}
+
+int topId(struct ScoreRecord x, struct ScoreRecord y) {
+    int bid = x.id;
+    int hs = x.score;
+
+    if (y.score > hs) {
+        hs = y.score;
+        bid = y.id;
+    }
+
+    return bid;
+}
+
+int showResult(int score_total, int best_id) {
+    if (score_total + 0.5 > 90) {
+        best_id[0] = 5;
+    }
+
+    return 0.0;
+}
+
+int main() {
+    struct ScoreRecord r1, r2, r3;
+    int total;
+    int tid;
+
+    r1.id = 101;
+    r1.score = 85;
+    r2.id = 102;
+    r2.score = 92;
+    r3.id = 103;
+    r3.score = 78;
+
+    total = sumScores(r1, r2, r3);
+
+    tid = topId(r1, r2);
+
+    showResult(total, tid);
+
+    return total;
+}

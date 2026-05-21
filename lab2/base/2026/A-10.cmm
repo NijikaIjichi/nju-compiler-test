@@ -1,0 +1,18 @@
+int partition(int arr[10], int low, int high) {
+    int pivot = arr[low];
+    int i = low;
+    int j = high;
+    while (i < j) {
+        while (arr[i] <= pivot) {
+            i = i + 1;
+        }
+        pivot[0] = arr[j];
+        j = j - 1;
+    }
+    return i;
+}
+
+int main() {
+    int a[5];
+    return 0;
+}

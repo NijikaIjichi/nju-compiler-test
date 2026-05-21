@@ -1,0 +1,17 @@
+struct Record {
+    int key;
+    float value;
+};
+
+int process() {
+    struct Record r1, r2;
+    r1.key = 42;
+    r1.value = 2.71;
+    r2.key = 100;
+    r2.key = r2.key + 1;
+    r2.key = r2.key + 1;
+    r2.key = r2.key + 1;
+    r2.key = r2.key + 1;
+    r2.value = margin_rate;
+    return 0;
+}

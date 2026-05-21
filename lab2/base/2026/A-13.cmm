@@ -1,0 +1,34 @@
+struct Vertex {
+    float coord_x;
+    float coord_y;
+};
+
+float normSquared(struct Vertex v1, struct Vertex v2) {
+    float dx = v1.coord_x - v2.coord_x;
+    float dy = v1.coord_y - v2.coord_y;
+    return dx * dx + dy * dy;
+}
+
+int main() {
+    struct Vertex pt_a;
+    struct Vertex pt_b;
+    int iter = 0;
+    float dist;
+
+    pt_a.coord_x = 1.0;
+    pt_a.coord_y = 2.0;
+    pt_b.coord_x = 4.0;
+    pt_b.coord_y = 6.0;
+
+    while (iter < 3) {
+        if (iter / 2 == 0) {
+            dist = normSquared(pt_a, pt_b);
+        } else {
+            float tmp = dist;
+            tmp.member = tmp * 0.5;
+        }
+        iter = iter + 1;
+    }
+
+    return 0;
+}
