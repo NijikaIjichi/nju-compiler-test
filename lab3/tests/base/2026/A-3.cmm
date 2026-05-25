@@ -1,0 +1,15 @@
+int main() {
+    int buf[6];
+    int i;
+    int k;
+    i = 0;
+    while (i < 6) {
+        buf[i] = i * i + 3;
+        i = i + 1;
+    }
+    k = read();
+    write(buf[0]);
+    write(buf[k]);
+    write(buf[5]);
+    return 0;
+}

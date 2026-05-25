@@ -1,0 +1,29 @@
+int scoreAt(int val) {
+    return val * 2 + 1;
+}
+
+int main() {
+    int vals[6];
+    int i;
+    int best;
+    int bestIdx;
+    i = 0;
+    while (i < 6) {
+        vals[i] = read();
+        i = i + 1;
+    }
+    best = vals[0];
+    bestIdx = 0;
+    i = 1;
+    while (i < 6) {
+        if (vals[i] > best) {
+            best = vals[i];
+            bestIdx = i;
+        }
+        i = i + 1;
+    }
+    write(bestIdx);
+    write(best);
+    write(scoreAt(best));
+    return 0;
+}

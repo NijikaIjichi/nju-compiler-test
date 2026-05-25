@@ -1,0 +1,63 @@
+int excludeSum(int arr[4], int skip) {
+    int sum;
+    int idx;
+    sum = 0;
+    idx = 0;
+    while (idx < 4) {
+        if (arr[idx] != skip) {
+            sum = sum + arr[idx];
+        }
+        idx = idx + 1;
+    }
+    return sum;
+}
+
+int main() {
+    int cube[2][2][2];
+    int line[4];
+    int t;
+    int cnt;
+    int s;
+    int i;
+    int j;
+    int k;
+    i = 0;
+    while (i < 4) {
+        line[i] = i * 2 + 5;
+        i = i + 1;
+    }
+    i = 0;
+    while (i < 2) {
+        j = 0;
+        while (j < 2) {
+            k = 0;
+            while (k < 2) {
+                cube[i][j][k] = i * 9 + j * 3 + k;
+                k = k + 1;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    t = read();
+    cnt = 0;
+    i = 0;
+    while (i < 2) {
+        j = 0;
+        while (j < 2) {
+            k = 0;
+            while (k < 2) {
+                if (cube[i][j][k] == t) {
+                    cnt = cnt + 1;
+                }
+                k = k + 1;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    s = excludeSum(line, t);
+    write(cnt);
+    write(s);
+    return 0;
+}

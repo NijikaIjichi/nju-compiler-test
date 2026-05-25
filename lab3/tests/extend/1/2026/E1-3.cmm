@@ -1,0 +1,32 @@
+struct Inner {
+    int p;
+    int q;
+};
+
+struct Wrapper {
+    struct Inner u;
+    int tag;
+};
+
+int evalWrap(struct Wrapper wrap) {
+    int s;
+    s = 0;
+    if (wrap.tag > 0) {
+        s = s + wrap.u.p;
+    }
+    if (wrap.tag < 10) {
+        s = s + wrap.u.q * 2;
+    }
+    return s;
+}
+
+int main() {
+    struct Wrapper w;
+    int r;
+    w.u.p = read();
+    w.u.q = read();
+    w.tag = read();
+    r = evalWrap(w);
+    write(r);
+    return 0;
+}

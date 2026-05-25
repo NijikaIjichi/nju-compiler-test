@@ -1,0 +1,27 @@
+int pairVal(int a, int b) {
+    int s;
+    s = a + b;
+    return s * s + a;
+}
+
+int main() {
+    int thr;
+    int cnt;
+    int i;
+    int j;
+    thr = read();
+    cnt = 0;
+    i = 0;
+    while (i < 4) {
+        j = i + 1;
+        while (j < 4) {
+            if (pairVal(i, j) > thr) {
+                cnt = cnt + 1;
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    write(cnt);
+    return 0;
+}

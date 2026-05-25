@@ -1,0 +1,26 @@
+int prefixSum(int arr[4], int n) {
+    int s;
+    int i;
+    s = 0;
+    i = 0;
+    while (i < n) {
+        s = s + arr[i];
+        i = i + 1;
+    }
+    return s;
+}
+
+int main() {
+    int a[4];
+    int s3;
+    int s4;
+    a[0] = 4;
+    a[1] = 7;
+    a[2] = 1;
+    a[3] = 9;
+    s3 = prefixSum(a, 3);
+    s4 = prefixSum(a, 4);
+    write(s3);
+    write(s4);
+    return 0;
+}
