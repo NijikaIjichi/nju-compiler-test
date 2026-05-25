@@ -1,0 +1,17 @@
+struct Rect {
+    int width;
+    int height;
+};
+
+int main() {
+    struct Rect r;
+    int area;
+    int halfPerim;
+    r.width = 6;
+    r.height = 7;
+    area = r.width * r.height;
+    halfPerim = r.width + r.height;
+    write(area);
+    write(halfPerim);
+    return 0;
+}

@@ -1,0 +1,13 @@
+int main() {
+    int g[2][3];
+    int sumCorner;
+    int scaled;
+    g[0][0] = 1;
+    g[0][1] = 2;
+    g[1][2] = 30;
+    sumCorner = g[0][0] + g[1][2];
+    scaled = g[0][1] * 3;
+    write(sumCorner);
+    write(scaled);
+    return 0;
+}

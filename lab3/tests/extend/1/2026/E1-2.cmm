@@ -1,0 +1,18 @@
+struct Pair {
+    int first;
+    int second;
+};
+
+int mix(struct Pair p) {
+    return p.first * p.second - p.first;
+}
+
+int main() {
+    struct Pair q;
+    int outVal;
+    q.first = read();
+    q.second = read();
+    outVal = mix(q);
+    write(outVal);
+    return 0;
+}

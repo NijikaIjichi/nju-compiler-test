@@ -1,0 +1,16 @@
+int main() {
+    int n;
+    int prod;
+    int acc;
+    n = 5;
+    prod = 1;
+    acc = 0;
+    while (n > 0) {
+        prod = prod * n;
+        acc = acc + prod;
+        n = n - 1;
+    }
+    write(prod);
+    write(acc);
+    return 0;
+}

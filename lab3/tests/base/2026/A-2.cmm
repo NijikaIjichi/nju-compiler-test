@@ -1,0 +1,31 @@
+int main() {
+    int a;
+    int b;
+    int c;
+    int t;
+    a = read();
+    b = read();
+    c = read();
+    t = 0;
+    if (a > b) {
+        t = t + 1;
+    }
+    if (b > c) {
+        t = t + 2;
+    }
+    if (a > c) {
+        t = t + 4;
+    }
+    write(t);
+    if (a + b + c > 100) {
+        write(1000);
+    } else {
+        write(2000);
+    }
+    if ((a * b) / 2 > c) {
+        write(3000);
+    } else {
+        write(4000);
+    }
+    return 0;
+}

@@ -1,0 +1,21 @@
+int digitSum(int n) {
+    int s;
+    int x;
+    s = 0;
+    x = n;
+    if (x < 0) {
+        x = 0 - x;
+    }
+    while (x > 0) {
+        s = s + (x - (x / 10) * 10);
+        x = x / 10;
+    }
+    return s;
+}
+
+int main() {
+    int v;
+    v = read();
+    write(digitSum(v));
+    return 0;
+}
